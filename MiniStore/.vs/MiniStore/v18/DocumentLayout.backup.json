@@ -7,19 +7,6 @@
       "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCE8A711-A2A3-4D9B-A944-CBBBF6CB5ACE}|..\\MiniStoreDB_Business_Layer\\MiniStoreDB_Business_Layer.csproj|D:\\Programming\\Projects\\MiniStore_Project\\ministoredb_business_layer\\clsusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A261E28-1635-41EB-B4D5-6905E5619564}|..\\clsUsersData\\MiniStoreDB_DataAccess_Layer.csproj|D:\\Programming\\Projects\\MiniStore_Project\\clsusersdata\\clsusersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A261E28-1635-41EB-B4D5-6905E5619564}|..\\clsUsersData\\MiniStoreDB_DataAccess_Layer.csproj|D:\\Programming\\Projects\\MiniStore_Project\\clsusersdata\\clsdataaccesssettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|D:\\Programming\\Projects\\MiniStore_Project\\MiniStore\\global\\clscurrentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:global\\clscurrentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|D:\\Programming\\Projects\\MiniStore_Project\\MiniStore\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -31,32 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "clsDataAccessSettings.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\MiniStore_Project\\clsUsersData\\clsDataAccessSettings.cs",
-              "RelativeDocumentMoniker": "..\\clsUsersData\\clsDataAccessSettings.cs",
-              "ToolTip": "D:\\Programming\\Projects\\MiniStore_Project\\clsUsersData\\clsDataAccessSettings.cs",
-              "RelativeToolTip": "..\\clsUsersData\\clsDataAccessSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T14:07:59.968Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "clsCurrentUser.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\MiniStore_Project\\MiniStore\\Global\\clsCurrentUser.cs",
-              "RelativeDocumentMoniker": "Global\\clsCurrentUser.cs",
-              "ToolTip": "D:\\Programming\\Projects\\MiniStore_Project\\MiniStore\\Global\\clsCurrentUser.cs",
-              "RelativeToolTip": "Global\\clsCurrentUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T14:08:00.149Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -65,44 +28,20 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\Programming\\Projects\\MiniStore_Project\\MiniStore\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJEAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAuwGYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-10T14:08:00.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Programming\\Projects\\MiniStore_Project\\MiniStore\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
               "WhenOpened": "2026-07-10T14:08:00.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "clsUsers.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\MiniStore_Project\\MiniStoreDB_Business_Layer\\clsUsers.cs",
-              "RelativeDocumentMoniker": "..\\MiniStoreDB_Business_Layer\\clsUsers.cs",
-              "ToolTip": "D:\\Programming\\Projects\\MiniStore_Project\\MiniStoreDB_Business_Layer\\clsUsers.cs",
-              "RelativeToolTip": "..\\MiniStoreDB_Business_Layer\\clsUsers.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAmwFYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T14:08:00.698Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "clsUsersData.cs",
-              "DocumentMoniker": "D:\\Programming\\Projects\\MiniStore_Project\\clsUsersData\\clsUsersData.cs",
-              "RelativeDocumentMoniker": "..\\clsUsersData\\clsUsersData.cs",
-              "ToolTip": "D:\\Programming\\Projects\\MiniStore_Project\\clsUsersData\\clsUsersData.cs",
-              "RelativeToolTip": "..\\clsUsersData\\clsUsersData.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAswFgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T14:08:00.701Z"
             }
           ]
         }
