@@ -121,3 +121,36 @@ return
 	offset (@pageNumber - 1) * @RowPerPage ROWS
 	Fetch next @RowPerPage ROWS Only
 );
+
+
+
+
+------ Store Procedures
+
+select * from Users;
+
+create procedure SP_AddNewUser
+@UserName varchar(250),
+@Password varchar(300),
+@IsActive bit,
+@NewPersonID int OUTPUT
+as
+begin
+	insert into Users
+	(UserName, Password, IsActive)
+	values
+	(@UserName, @Password, @IsActive)
+
+	set @NewPersonID = SCOPE_IDENTITY();
+end
+
+declare @NewID int;
+
+exec SP_AddNewUser
+@UserName = 'Admin',
+@Password = '1234',
+@IsActive = 1,
+@NewPersonID = @NewID OUTPUT;
+
+select * from Users;
+ 
