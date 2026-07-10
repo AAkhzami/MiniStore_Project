@@ -127,8 +127,6 @@ return
 
 ------ Store Procedures
 
-select * from Users;
-
 create procedure SP_AddNewUser
 @UserName varchar(250),
 @Password varchar(300),
@@ -144,13 +142,6 @@ begin
 	set @NewUserID = SCOPE_IDENTITY();
 end
 
-declare @NewID int;
-
-exec SP_AddNewUser
-@UserName = 'Admin',
-@Password = '1234',
-@IsActive = 1,
-@NewUserID = @NewID OUTPUT;
 
 create procedure SP_UpdateUser
 @UserID int,
@@ -166,14 +157,3 @@ begin
 	IsActive = @IsActive
 	where UserID = @UserID;
 end
- 
-select * from Users;
-
-exec SP_UpdateUser
-@UserID = 1,
-@UserName = 'Admin',
-@Password = '1234',
-@IsActive = 0;
-
-select 1 from Users
-where UserName = 'Abdullrahman';
