@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37216.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniStore", "MiniStore.csproj", "{7450040E-1AC3-45E1-9659-FF710E24FE76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Layers", "Layers", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniStoreDB_DataAccess_Layer", "..\clsUsersData\MiniStoreDB_DataAccess_Layer.csproj", "{6A261E28-1635-41EB-B4D5-6905E5619564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniStoreDB_Business_Layer", "..\MiniStoreDB_Business_Layer\MiniStoreDB_Business_Layer.csproj", "{BCE8A711-A2A3-4D9B-A944-CBBBF6CB5ACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7450040E-1AC3-45E1-9659-FF710E24FE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7450040E-1AC3-45E1-9659-FF710E24FE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7450040E-1AC3-45E1-9659-FF710E24FE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7450040E-1AC3-45E1-9659-FF710E24FE76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A261E28-1635-41EB-B4D5-6905E5619564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A261E28-1635-41EB-B4D5-6905E5619564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A261E28-1635-41EB-B4D5-6905E5619564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A261E28-1635-41EB-B4D5-6905E5619564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE8A711-A2A3-4D9B-A944-CBBBF6CB5ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE8A711-A2A3-4D9B-A944-CBBBF6CB5ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE8A711-A2A3-4D9B-A944-CBBBF6CB5ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE8A711-A2A3-4D9B-A944-CBBBF6CB5ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A261E28-1635-41EB-B4D5-6905E5619564} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{BCE8A711-A2A3-4D9B-A944-CBBBF6CB5ACE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E3636AB-CDEF-40B9-8CEA-A6CA36459CDC}
+	EndGlobalSection
+EndGlobal

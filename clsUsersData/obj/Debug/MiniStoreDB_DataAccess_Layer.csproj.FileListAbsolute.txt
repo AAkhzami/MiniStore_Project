@@ -1,0 +1,6 @@
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\clsUsersData\bin\Debug\clsUsersData.dll
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\clsUsersData\bin\Debug\clsUsersData.pdb
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\clsUsersData\obj\Debug\MiniStoreDB_DataAccess_Layer.csproj.AssemblyReference.cache
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\clsUsersData\obj\Debug\MiniStoreDB_DataAccess_Layer.csproj.CoreCompileInputs.cache
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\clsUsersData\obj\Debug\clsUsersData.dll
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\clsUsersData\obj\Debug\clsUsersData.pdb
