@@ -31,3 +31,4 @@ D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.csproj.C
 D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.csproj.Up2Date
 D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.exe
 D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.pdb
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.frmMainForm.resources
