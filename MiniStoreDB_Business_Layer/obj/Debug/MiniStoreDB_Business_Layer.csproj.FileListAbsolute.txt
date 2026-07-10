@@ -7,3 +7,12 @@ C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStoreDB_Business_Layer\obj\Debug\MiniStor.A863CB82.Up2Date
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStoreDB_Business_Layer\obj\Debug\MiniStoreDB_Business_Layer.dll
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStoreDB_Business_Layer\obj\Debug\MiniStoreDB_Business_Layer.pdb
+D:\Programming\Projects\MiniStore_Project\MiniStoreDB_Business_Layer\bin\Debug\MiniStoreDB_Business_Layer.dll
+D:\Programming\Projects\MiniStore_Project\MiniStoreDB_Business_Layer\bin\Debug\MiniStoreDB_Business_Layer.pdb
+D:\Programming\Projects\MiniStore_Project\MiniStoreDB_Business_Layer\bin\Debug\clsUsersData.dll
+D:\Programming\Projects\MiniStore_Project\MiniStoreDB_Business_Layer\bin\Debug\clsUsersData.pdb
+D:\Programming\Projects\MiniStore_Project\MiniStoreDB_Business_Layer\obj\Debug\MiniStoreDB_Business_Layer.csproj.AssemblyReference.cache
+D:\Programming\Projects\MiniStore_Project\MiniStoreDB_Business_Layer\obj\Debug\MiniStoreDB_Business_Layer.csproj.CoreCompileInputs.cache
+D:\Programming\Projects\MiniStore_Project\MiniStoreDB_Business_Layer\obj\Debug\MiniStor.A863CB82.Up2Date
+D:\Programming\Projects\MiniStore_Project\MiniStoreDB_Business_Layer\obj\Debug\MiniStoreDB_Business_Layer.dll
+D:\Programming\Projects\MiniStore_Project\MiniStoreDB_Business_Layer\obj\Debug\MiniStoreDB_Business_Layer.pdb

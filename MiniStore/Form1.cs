@@ -103,6 +103,9 @@ namespace MiniStore
 
                 clsCurrentUser.CurrentUser = newUser;
                 clsCurrentUser.CurrentUser.Password = password;
+
+                pCreateNewUser.Visible = false;
+                pLogin.Visible = true;
             }
             else
             {
