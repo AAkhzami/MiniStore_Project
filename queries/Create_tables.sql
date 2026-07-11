@@ -77,6 +77,16 @@ create table OrderDetails
 	foreign key (ProductID) references Products(ProductID)
 );
 
+create table Settings
+(
+	SettingKey varchar(100) primary key,
+	SettingValue varchar(250) not null,
+	Description VARCHAR(500) NULL
+);
+insert into Settings
+(SettingKey,SettingValue,Description)
+values
+('LowStockAlertLimit','5','Minimum quantity of the product');
 
 create view v_CustomerOrders as
 select 

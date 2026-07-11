@@ -123,6 +123,20 @@ return
 );
 
 
+create Function dbo.GetLowStockProducts ()
+returns int
+as
+begin
+	declare @CountStock int
+
+	select @CountStock =  Count(*) from Products
+	where StockQuantity <= (
+		select	CAST(SettingValue as int)  
+		from Settings
+		where SettingKey = 'LowStockAlertLimit'
+	)
+	return @CountStock;
+end;
 
 
 ------ Store Procedures

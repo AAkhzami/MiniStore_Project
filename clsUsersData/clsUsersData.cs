@@ -30,22 +30,14 @@ namespace MiniStoreDB_DataAccess_Layer
                         {
                             isFound = true;
                             userid = (int)reader["UserID"];
-                            if (reader["UserName"] != DBNull.Value)
-                                username = (string)reader["UserName"];
-                            else
-                                username = null;
-                            if (reader["Password"] != DBNull.Value)
-                                password = (string)reader["Password"];
-                            else
-                                password = null;
+                            username = (string)reader["UserName"];
+                            password = (string)reader["Password"];
+
                             if (reader["CreatedAt"] != DBNull.Value)
                                 createdat = (DateTime)reader["CreatedAt"];
                             else
                                 createdat = DateTime.Now;
-                            if (reader["IsActive"] != DBNull.Value)
-                                isactive = (bool)reader["IsActive"];
-                            else
-                                isactive = false;
+                            isactive = (bool)reader["IsActive"];
 
                         }
                     }
