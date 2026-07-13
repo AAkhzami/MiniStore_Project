@@ -33,3 +33,4 @@ D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.pdb
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.frmMainForm.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.frmLogin.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Products.frmAddUpdateProducts.resources
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Category.frmNewCategory.resources

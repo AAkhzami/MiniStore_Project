@@ -39,7 +39,19 @@ namespace MiniStoreDB_Business_Layer
                 return null;
             }
         }
-
+        public static clsCategories Find(string Name)
+        {
+            int? CategoryID = null;
+            bool IsFound = clsCategoriesData.GetCategoriesInfoByName(Name, ref CategoryID);
+            if (IsFound)
+            {
+                return new clsCategories(CategoryID ?? 0, Name);
+            }
+            else
+            {
+                return null;
+            }
+        }
         private bool _AddNewCategories()
         {
             this.CategoryID = clsCategoriesData.AddNewCategories(this.Name);

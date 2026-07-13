@@ -235,6 +235,7 @@ namespace MiniStore
                     FilterColumn = "ProductID";
                     break;
             }
+
             if (FilterColumn == "ProductID" && CategoryFilter == "All Categories")
             {
                 _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, searchText);
@@ -279,10 +280,12 @@ namespace MiniStore
             lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
         }
 
-        private void btnAddNewProduct_Click(object sender, EventArgs e)
+        private async void btnAddNewProduct_Click(object sender, EventArgs e)
         {
             frmAddUpdateProducts frmAddUpdateProducts = new frmAddUpdateProducts();
             frmAddUpdateProducts.ShowDialog();
+            await LoadProductsDataForInventoryPage();
         }
+
     }
 }

@@ -1,4 +1,6 @@
-﻿using MiniStoreDB_Business_Layer;
+﻿using MiniStore.Category;
+using MiniStore.Global;
+using MiniStoreDB_Business_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +43,7 @@ namespace MiniStore.Products
                 pInActive.FillColor4 = Color.AliceBlue;
 
                 pActive.BorderColor = Color.Silver;
-                pActive.FillColor = Color.White;
+                pActive.FillColor  = Color.White;
                 pActive.FillColor2 = Color.White;
                 pActive.FillColor3 = Color.White;
                 pActive.FillColor4 = Color.White;
@@ -95,6 +97,56 @@ namespace MiniStore.Products
                 cbCategory.Items.Add(row["Name"].ToString());
             }
             cbCategory.SelectedIndex = 0;
+        }
+
+        private void btnSaveProduct_Click(object sender, EventArgs e)
+        {
+            if(!this.ValidateChildren())
+            {
+                MessageBox.Show("Please correct the errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string ProductName = txbProductName.Text.Trim();
+            string CategoryName = cbCategory.SelectedItem.ToString();
+            decimal Price = nudPrice.Value;
+            int StockQuantity = (int)nudEstStockQuantity.Value;
+
+            clsProducts p = new clsProducts();
+            p.Name = ProductName;
+            p.CategoryID = clsCategories.Find(CategoryName).CategoryID ?? -1;
+            p.Price = Price;
+            p.StockQuantity = StockQuantity;
+            p.IsActive = rbActive.Checked;
+            p.CreatedByUserID = clsCurrentUser.CurrentUser.UserID ?? -1;
+
+            if(p.Save())
+            {
+                MessageBox.Show("Product saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Failed to save product.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        void Frm_NewCategoryDataSaved(string NewCategory)
+        {
+            cbCategory.Items.Clear();
+            DataTable dt = clsCategories.GetAllCategories();
+            foreach (DataRow row in dt.Rows)
+            {
+                cbCategory.Items.Add(row["Name"].ToString());
+            }
+            cbCategory.SelectedIndex = cbCategory.Items.IndexOf(NewCategory);
+        }
+
+        private void btnNewCategory_Click(object sender, EventArgs e)
+        {
+            frmNewCategory frm = new frmNewCategory();
+            frm.DataSaved += Frm_NewCategoryDataSaved;
+            frm.ShowDialog();
         }
     }
 }

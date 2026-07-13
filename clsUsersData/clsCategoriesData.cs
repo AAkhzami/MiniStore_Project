@@ -37,6 +37,35 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return isFound;
         }
+        public static bool GetCategoriesInfoByName(string name, ref int? categoryid)
+        {
+            bool isFound = false;
+            string query = @"select * from Categories
+                            where Name = @Name";
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Name", name);
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+                            categoryid = (int)reader["CategoryID"];
+                            name = (string)reader["Name"];
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    isFound = false;
+                }
+            }
+            return isFound;
+        }
         public static int? AddNewCategories(string name)
         {
             int? recordId = null;
