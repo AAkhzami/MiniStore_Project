@@ -1,4 +1,5 @@
 ﻿using MiniStore.Global;
+using MiniStore.Products;
 using MiniStoreDB_Business_Layer;
 using System;
 using System.Collections.Generic;
@@ -280,7 +281,8 @@ namespace MiniStore
 
         private void btnAddNewProduct_Click(object sender, EventArgs e)
         {
-            
+            frmAddUpdateProducts frmAddUpdateProducts = new frmAddUpdateProducts();
+            frmAddUpdateProducts.ShowDialog();
         }
     }
 }

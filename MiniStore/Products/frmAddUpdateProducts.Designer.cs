@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,12 +52,14 @@
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnSaveProduct = new Guna.UI2.WinForms.Guna2Button();
             this.rbInActive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).BeginInit();
             this.pInActive.SuspendLayout();
             this.pActive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEstStockQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -131,6 +134,7 @@
             this.pInActive.Name = "pInActive";
             this.pInActive.Size = new System.Drawing.Size(231, 106);
             this.pInActive.TabIndex = 19;
+            this.pInActive.Click += new System.EventHandler(this.pInActive_Click);
             // 
             // pActive
             // 
@@ -149,6 +153,7 @@
             this.pActive.Name = "pActive";
             this.pActive.Size = new System.Drawing.Size(231, 106);
             this.pActive.TabIndex = 18;
+            this.pActive.Click += new System.EventHandler(this.pActive_Click);
             // 
             // nudEstStockQuantity
             // 
@@ -177,6 +182,7 @@
             this.nudPrice.BackColor = System.Drawing.Color.Transparent;
             this.nudPrice.BorderRadius = 9;
             this.nudPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudPrice.DecimalPlaces = 3;
             this.nudPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.nudPrice.Location = new System.Drawing.Point(172, 224);
             this.nudPrice.Name = "nudPrice";
@@ -252,6 +258,7 @@
             this.txbProductName.SelectedText = "";
             this.txbProductName.Size = new System.Drawing.Size(474, 48);
             this.txbProductName.TabIndex = 10;
+            this.txbProductName.Validating += new System.ComponentModel.CancelEventHandler(this.txbProductName_Validating);
             // 
             // label7
             // 
@@ -379,6 +386,11 @@
             this.rbInActive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rbInActive.Click += new System.EventHandler(this.rbInActive_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkRate = 1;
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmAddUpdateProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,6 +408,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Products";
+            this.Load += new System.EventHandler(this.frmAddUpdateProducts_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).EndInit();
@@ -405,6 +418,7 @@
             this.pActive.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEstStockQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,5 +448,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSaveProduct;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2CustomRadioButton rbInActive;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
