@@ -118,12 +118,12 @@ namespace MiniStore
             PageSetting(pageIndex);
         }
 
-        private void cbItemPerPage_Inventory_SelectedIndexChanged(object sender, EventArgs e)
+        private async void cbItemPerPage_Inventory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadProductsDataForInventoryPage();
+            await LoadProductsDataForInventoryPage();
         }
 
-        private void btnNextPageProducts_Click(object sender, EventArgs e)
+        private async void btnNextPageProducts_Click(object sender, EventArgs e)
         {
             int currentPage = int.Parse(lbl_Inventory_PageNumber.Text);
             int totalProducts = _totalProducts;
@@ -132,30 +132,30 @@ namespace MiniStore
                 ((currentPage * productPerPage) < totalProducts))
             {
                 lbl_Inventory_PageNumber.Text = (currentPage + 1).ToString();
-                LoadProductsDataForInventoryPage();
+                 await LoadProductsDataForInventoryPage();
             }
         }
 
-        private void btnPreviesPageProducts_Click(object sender, EventArgs e)
+        private async void btnPreviesPageProducts_Click(object sender, EventArgs e)
         {
             int currentPage = int.Parse(lbl_Inventory_PageNumber.Text);
             int totalProducts = clsProducts.GetAllProducts().Rows.Count;
             if (currentPage > 1)
             {
                 lbl_Inventory_PageNumber.Text = (currentPage - 1).ToString();
-                LoadProductsDataForInventoryPage();
+                await LoadProductsDataForInventoryPage();
             }
         }
 
-        private void PageSetting(int pageNumner)
+        private async Task PageSetting(int pageNumner)
         {
             switch(pageNumner)
             {
                 case 0:
-                    DashboardInfo();
+                    await DashboardInfo();
                     break;
                 case 1:
-                    InventoryPage();
+                    await InventoryPage();
                     break;
                 case 2:
                     break;
@@ -164,13 +164,15 @@ namespace MiniStore
             }
         }
 
-        private void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private async void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             txbSearch.Text = "";
-            LoadProductsDataForInventoryPage();
+            await LoadProductsDataForInventoryPage();
             if(cbSearchType.Text != "None")
             {
                 txbSearch.Visible = true;
+                txbSearch.Focus();
+
             }
             else
             {
@@ -179,7 +181,7 @@ namespace MiniStore
         }
         private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(cbSearchType.Text == "Products ID")
+            if(cbSearchType.Text == "Product ID")
             {
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 {
@@ -188,7 +190,7 @@ namespace MiniStore
             }
         }
 
-        private void txbSearch_TextChanged(object sender, EventArgs e)
+        private async void txbSearch_TextChanged(object sender, EventArgs e)
         {
             string searchText = txbSearch.Text.Trim();
             string FilterColumn = cbSearchType.Text;
@@ -196,7 +198,7 @@ namespace MiniStore
             if (string.IsNullOrEmpty(searchText))
             {
                 _dtGetAllProducts.DefaultView.RowFilter = "";
-                dgvInventoryProducts.DataSource = _dtGetAllProducts.DefaultView;
+                await LoadProductsDataForInventoryPage();
                 return;
             }
 
@@ -209,15 +211,16 @@ namespace MiniStore
                     FilterColumn = "ProductID";
                     break;
             }
-
+            _dtGetAllProducts = await clsProducts.GetReportOfProducts();
             if (FilterColumn == "ProductID")
             {
-                _dtGetAllProducts.DefaultView.RowFilter = string.Format($"[{FilterColumn}] = {searchText}");
+                _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, searchText);
             }
             else if(FilterColumn == "ProductName")
             {
-                _dtGetAllProducts.DefaultView.RowFilter = string.Format($"ProductName Like '{searchText}%'");
+                _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%'", FilterColumn, searchText);
             }
+
             dgvInventoryProducts.DataSource = _dtGetAllProducts.DefaultView;
             lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
 

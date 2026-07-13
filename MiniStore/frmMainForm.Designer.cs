@@ -1020,7 +1020,7 @@
             this.btnPreviesPageProducts.Name = "btnPreviesPageProducts";
             this.btnPreviesPageProducts.Size = new System.Drawing.Size(40, 40);
             this.btnPreviesPageProducts.TabIndex = 11;
-            this.btnPreviesPageProducts.Click += new System.EventHandler(this.btnPreviesPageProducts_Click);
+            this.btnPreviesPageProducts.Click += new System.EventHandler(btnPreviesPageProducts_Click);
             // 
             // lblCounterProductsPerPage
             // 
@@ -1133,7 +1133,7 @@
             this.cbSearchType.Size = new System.Drawing.Size(185, 36);
             this.cbSearchType.StartIndex = 0;
             this.cbSearchType.TabIndex = 2;
-            this.cbSearchType.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox2_SelectedIndexChanged);
+            this.cbSearchType.SelectedIndexChanged += new System.EventHandler(guna2ComboBox2_SelectedIndexChanged);
             // 
             // frmMainForm
             // 
