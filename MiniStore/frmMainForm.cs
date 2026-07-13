@@ -277,5 +277,10 @@ namespace MiniStore
             dgvInventoryProducts.DataSource = _dtGetAllProducts.DefaultView;
             lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
         }
+
+        private void btnAddNewProduct_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

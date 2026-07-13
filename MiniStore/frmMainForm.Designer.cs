@@ -866,6 +866,7 @@
             this.btnAddNewProduct.Size = new System.Drawing.Size(189, 54);
             this.btnAddNewProduct.TabIndex = 3;
             this.btnAddNewProduct.Text = "Add New Products";
+            this.btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
             // 
             // guna2ShadowPanel10
             // 
