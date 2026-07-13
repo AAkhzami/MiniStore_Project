@@ -105,6 +105,12 @@ namespace MiniStore
 
             lblUserName.Text = clsCurrentUser.CurrentUser.UserName;
             btnUserButtonName.Text = clsCurrentUser.CurrentUser.UserName.Substring(0, 2).ToUpper();
+
+            DataTable dt = clsCategories.GetAllCategories();
+            foreach(DataRow row in dt.Rows)
+            {
+                cbInventory_Categories.Items.Add(row["Name"].ToString());
+            }
         }
 
         private void frmMainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -166,24 +172,39 @@ namespace MiniStore
 
         private async void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txbSearch.Text = "";
+            txbInventorySearch.Text = "";
             if(cbSearchType.Text != "None")
             {
-                txbSearch.Visible = true;
-                txbSearch.Focus();
+                txbInventorySearch.Visible = true;
+                txbInventorySearch.Focus();
                 _dtGetAllProducts = await clsProducts.GetReportOfProducts();
                 dgvInventoryProducts.DataSource = _dtGetAllProducts;
                 dgvInventoryProducts.Sort(dgvInventoryProducts.Columns[0], ListSortDirection.Ascending);
+
+                btnNextPageProducts.Visible = false;
+                btnPreviesPageProducts.Visible = false;
+                lbl_Inventory_PageNumber.Visible = false;
+                lbl_Inventory_Text_For_Item_Per_Page.Visible = false;
+                cbItemPerPage_Inventory.Visible = false;
+
+                lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
             }
             else
             {
                 await LoadProductsDataForInventoryPage();
-                txbSearch.Visible = false;
+                btnNextPageProducts.Visible = false;
+                btnPreviesPageProducts.Visible = false;
+                lbl_Inventory_PageNumber.Visible = false;
+                lbl_Inventory_Text_For_Item_Per_Page.Visible = false;
+                cbItemPerPage_Inventory.Visible = false;
+                txbInventorySearch.Visible = false;
             }
         }
         private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(cbSearchType.Text == "Product ID")
+            lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
+
+            if (cbSearchType.Text == "Product ID")
             {
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 {
@@ -194,9 +215,9 @@ namespace MiniStore
 
         private async void txbSearch_TextChanged(object sender, EventArgs e)
         {
-            string searchText = txbSearch.Text.Trim();
+            string searchText = txbInventorySearch.Text.Trim();
             string FilterColumn = cbSearchType.Text;
-
+            string CategoryFilter = cbInventory_Categories.SelectedItem.ToString();
 
             if (string.IsNullOrEmpty(searchText))
             {
@@ -213,19 +234,48 @@ namespace MiniStore
                     FilterColumn = "ProductID";
                     break;
             }
-            if (FilterColumn == "ProductID")
+            if (FilterColumn == "ProductID" && CategoryFilter == "All Categories")
             {
                 _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, searchText);
             }
-            else if(FilterColumn == "ProductName")
+            else if(FilterColumn == "ProductName" && CategoryFilter == "All Categories")
             {
                 _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%'", FilterColumn, searchText);
+            }
+            else if (FilterColumn == "ProductID" && CategoryFilter != "All Categories")
+            {
+                _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] = {1} And [CategoryName] = '{2}'", FilterColumn, searchText, CategoryFilter);
+            }
+            else if (FilterColumn == "ProductName" && CategoryFilter != "All Categories")
+            {
+                _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%' And [CategoryName] = '{2}'", FilterColumn, searchText, CategoryFilter);
             }
 
             dgvInventoryProducts.DataSource = _dtGetAllProducts.DefaultView;
             lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
+                   
+        }
 
-            
+        private async void cbInventory_Categories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedCategory = cbInventory_Categories.SelectedItem.ToString();
+            txbInventorySearch.Text = "";
+
+            if (selectedCategory == "All Categories" && cbSearchType.Text == "None")
+            {
+                await LoadProductsDataForInventoryPage();
+            }
+            else if (selectedCategory == "All Categories" && cbSearchType.Text != "None")
+            {
+                _dtGetAllProducts.DefaultView.RowFilter = "";
+            }
+            else
+            {
+                _dtGetAllProducts.DefaultView.RowFilter = string.Format("[CategoryName] Like '{0}%'", selectedCategory);
+            }
+
+            dgvInventoryProducts.DataSource = _dtGetAllProducts.DefaultView;
+            lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
         }
     }
 }

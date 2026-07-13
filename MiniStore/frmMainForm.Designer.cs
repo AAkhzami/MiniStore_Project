@@ -86,11 +86,11 @@
             this.btnAddNewProduct = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel10 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.cbSearchType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txbSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbInventory_Categories = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txbInventorySearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel11 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.cbItemPerPage_Inventory = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_Inventory_Text_For_Item_Per_Page = new System.Windows.Forms.Label();
             this.lbl_Inventory_PageNumber = new System.Windows.Forms.Label();
             this.btnNextPageProducts = new Guna.UI2.WinForms.Guna2Button();
             this.btnPreviesPageProducts = new Guna.UI2.WinForms.Guna2Button();
@@ -871,8 +871,8 @@
             // 
             this.guna2ShadowPanel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel10.Controls.Add(this.cbSearchType);
-            this.guna2ShadowPanel10.Controls.Add(this.guna2ComboBox1);
-            this.guna2ShadowPanel10.Controls.Add(this.txbSearch);
+            this.guna2ShadowPanel10.Controls.Add(this.cbInventory_Categories);
+            this.guna2ShadowPanel10.Controls.Add(this.txbInventorySearch);
             this.guna2ShadowPanel10.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel10.Location = new System.Drawing.Point(20, 20);
             this.guna2ShadowPanel10.Margin = new System.Windows.Forms.Padding(20);
@@ -904,55 +904,56 @@
             this.cbSearchType.TabIndex = 2;
             this.cbSearchType.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox2_SelectedIndexChanged);
             // 
-            // guna2ComboBox1
+            // cbInventory_Categories
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 9;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.cbInventory_Categories.BackColor = System.Drawing.Color.Transparent;
+            this.cbInventory_Categories.BorderRadius = 9;
+            this.cbInventory_Categories.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbInventory_Categories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInventory_Categories.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbInventory_Categories.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbInventory_Categories.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.cbInventory_Categories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbInventory_Categories.ItemHeight = 30;
+            this.cbInventory_Categories.Items.AddRange(new object[] {
             "All Categories"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(621, 20);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(235, 36);
-            this.guna2ComboBox1.StartIndex = 0;
-            this.guna2ComboBox1.TabIndex = 1;
+            this.cbInventory_Categories.Location = new System.Drawing.Point(621, 20);
+            this.cbInventory_Categories.Name = "cbInventory_Categories";
+            this.cbInventory_Categories.Size = new System.Drawing.Size(235, 36);
+            this.cbInventory_Categories.StartIndex = 0;
+            this.cbInventory_Categories.TabIndex = 1;
+            this.cbInventory_Categories.SelectedIndexChanged += new System.EventHandler(this.cbInventory_Categories_SelectedIndexChanged);
             // 
-            // txbSearch
+            // txbInventorySearch
             // 
-            this.txbSearch.BorderRadius = 9;
-            this.txbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbSearch.DefaultText = "";
-            this.txbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.txbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbSearch.IconLeft = global::MiniStore.Properties.Resources.search;
-            this.txbSearch.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txbSearch.Location = new System.Drawing.Point(20, 20);
-            this.txbSearch.Margin = new System.Windows.Forms.Padding(20);
-            this.txbSearch.Name = "txbSearch";
-            this.txbSearch.PlaceholderText = "Search products by name or ID...";
-            this.txbSearch.SelectedText = "";
-            this.txbSearch.Size = new System.Drawing.Size(400, 36);
-            this.txbSearch.TabIndex = 0;
-            this.txbSearch.Visible = false;
-            this.txbSearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
-            this.txbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
+            this.txbInventorySearch.BorderRadius = 9;
+            this.txbInventorySearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbInventorySearch.DefaultText = "";
+            this.txbInventorySearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbInventorySearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbInventorySearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbInventorySearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbInventorySearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbInventorySearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.txbInventorySearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbInventorySearch.IconLeft = global::MiniStore.Properties.Resources.search;
+            this.txbInventorySearch.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txbInventorySearch.Location = new System.Drawing.Point(20, 20);
+            this.txbInventorySearch.Margin = new System.Windows.Forms.Padding(20);
+            this.txbInventorySearch.Name = "txbInventorySearch";
+            this.txbInventorySearch.PlaceholderText = "Search products by name or ID...";
+            this.txbInventorySearch.SelectedText = "";
+            this.txbInventorySearch.Size = new System.Drawing.Size(400, 36);
+            this.txbInventorySearch.TabIndex = 0;
+            this.txbInventorySearch.Visible = false;
+            this.txbInventorySearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
+            this.txbInventorySearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
             // 
             // guna2ShadowPanel11
             // 
             this.guna2ShadowPanel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel11.Controls.Add(this.cbItemPerPage_Inventory);
-            this.guna2ShadowPanel11.Controls.Add(this.label7);
+            this.guna2ShadowPanel11.Controls.Add(this.lbl_Inventory_Text_For_Item_Per_Page);
             this.guna2ShadowPanel11.Controls.Add(this.lbl_Inventory_PageNumber);
             this.guna2ShadowPanel11.Controls.Add(this.btnNextPageProducts);
             this.guna2ShadowPanel11.Controls.Add(this.btnPreviesPageProducts);
@@ -999,17 +1000,17 @@
             this.cbItemPerPage_Inventory.TabIndex = 15;
             this.cbItemPerPage_Inventory.SelectedIndexChanged += new System.EventHandler(this.cbItemPerPage_Inventory_SelectedIndexChanged);
             // 
-            // label7
+            // lbl_Inventory_Text_For_Item_Per_Page
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.label7.Location = new System.Drawing.Point(951, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 18);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Items per page :";
+            this.lbl_Inventory_Text_For_Item_Per_Page.AutoSize = true;
+            this.lbl_Inventory_Text_For_Item_Per_Page.BackColor = System.Drawing.Color.White;
+            this.lbl_Inventory_Text_For_Item_Per_Page.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Inventory_Text_For_Item_Per_Page.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lbl_Inventory_Text_For_Item_Per_Page.Location = new System.Drawing.Point(951, 25);
+            this.lbl_Inventory_Text_For_Item_Per_Page.Name = "lbl_Inventory_Text_For_Item_Per_Page";
+            this.lbl_Inventory_Text_For_Item_Per_Page.Size = new System.Drawing.Size(120, 18);
+            this.lbl_Inventory_Text_For_Item_Per_Page.TabIndex = 14;
+            this.lbl_Inventory_Text_For_Item_Per_Page.Text = "Items per page :";
             // 
             // lbl_Inventory_PageNumber
             // 
@@ -1258,8 +1259,8 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel5;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel10;
-        private Guna.UI2.WinForms.Guna2TextBox txbSearch;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txbInventorySearch;
+        private Guna.UI2.WinForms.Guna2ComboBox cbInventory_Categories;
         private Guna.UI2.WinForms.Guna2Button btnAddNewProduct;
         private Guna.UI2.WinForms.Guna2DataGridView dgvInventoryProducts;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel11;
@@ -1268,7 +1269,7 @@
         private Guna.UI2.WinForms.Guna2Button btnPreviesPageProducts;
         private System.Windows.Forms.Label lbl_Inventory_PageNumber;
         private Guna.UI2.WinForms.Guna2ComboBox cbItemPerPage_Inventory;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_Inventory_Text_For_Item_Per_Page;
         private Guna.UI2.WinForms.Guna2ComboBox cbSearchType;
     }
 }
