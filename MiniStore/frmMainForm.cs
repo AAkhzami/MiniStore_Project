@@ -15,8 +15,9 @@ namespace MiniStore
     public partial class frmMainForm : Form
     {
         frmLogin frmLogin = null;
-        int _NumberOfProductsDisplayed = 0;
         int _totalProducts = clsProducts.GetAllProducts().Rows.Count;
+        private static DataTable _dtGetAllProducts;
+
         public frmMainForm(frmLogin login)
         {
             InitializeComponent();
@@ -55,12 +56,12 @@ namespace MiniStore
         {
             int pageNumber = int.Parse(lbl_Inventory_PageNumber.Text),
                 ItemPerPage = int.Parse(cbItemPerPage_Inventory.Text);
-            DataTable dtGetAllProducts = await clsProducts.GetProductsInformationPerPage(pageNumber, ItemPerPage);
+            _dtGetAllProducts = await clsProducts.GetProductsInformationPerPage(pageNumber, ItemPerPage);
 
-            dgvInventoryProducts.DataSource = dtGetAllProducts;
+            dgvInventoryProducts.DataSource = _dtGetAllProducts;
             if (dgvInventoryProducts.Rows.Count > 0)
             {
-                dgvInventoryProducts.Columns[0].HeaderText = "Products ID";
+                dgvInventoryProducts.Columns[0].HeaderText = "Product ID";
                 dgvInventoryProducts.Columns[0].Width = 202;
                 
                 dgvInventoryProducts.Columns[1].HeaderText = "Product Name";
@@ -78,7 +79,9 @@ namespace MiniStore
                 dgvInventoryProducts.Columns[5].HeaderText = "Status";
                 dgvInventoryProducts.Columns[5].Width = 202;
             }
-            lblCounterProductsPerPage.Text = "Showing " + _NumberOfProductsDisplayed + " of " + _totalProducts.ToString() + " products";
+            uint NumberOfProductsDisplayed = (uint)(_totalProducts - (_totalProducts - (pageNumber * int.Parse(cbItemPerPage_Inventory.Text))));
+            NumberOfProductsDisplayed = (NumberOfProductsDisplayed > _totalProducts) ? (uint)_totalProducts : NumberOfProductsDisplayed;
+            lblCounterProductsPerPage.Text = "Showing " + (NumberOfProductsDisplayed) + " of " + _totalProducts.ToString() + " products";
         }
         private async Task InventoryPage()
         {
@@ -118,7 +121,6 @@ namespace MiniStore
         private void cbItemPerPage_Inventory_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadProductsDataForInventoryPage();
-
         }
 
         private void btnNextPageProducts_Click(object sender, EventArgs e)
@@ -132,8 +134,6 @@ namespace MiniStore
                 lbl_Inventory_PageNumber.Text = (currentPage + 1).ToString();
                 LoadProductsDataForInventoryPage();
             }
-            //if ((totalProducts-(currentPage * dgvInventoryProducts.Rows.Count)) > 0 )
-
         }
 
         private void btnPreviesPageProducts_Click(object sender, EventArgs e)
@@ -155,7 +155,6 @@ namespace MiniStore
                     DashboardInfo();
                     break;
                 case 1:
-                    _NumberOfProductsDisplayed = _totalProducts;
                     InventoryPage();
                     break;
                 case 2:
@@ -163,6 +162,66 @@ namespace MiniStore
                 case 3:
                     break;
             }
+        }
+
+        private void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txbSearch.Text = "";
+            LoadProductsDataForInventoryPage();
+            if(cbSearchType.Text != "None")
+            {
+                txbSearch.Visible = true;
+            }
+            else
+            {
+                txbSearch.Visible = false;
+            }
+        }
+        private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(cbSearchType.Text == "Products ID")
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void txbSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txbSearch.Text.Trim();
+            string FilterColumn = cbSearchType.Text;
+
+            if (string.IsNullOrEmpty(searchText))
+            {
+                _dtGetAllProducts.DefaultView.RowFilter = "";
+                dgvInventoryProducts.DataSource = _dtGetAllProducts.DefaultView;
+                return;
+            }
+
+            switch(FilterColumn)
+            {
+                case "Product Name":
+                    FilterColumn = "ProductName";
+                    break;
+                case "Product ID":
+                    FilterColumn = "ProductID";
+                    break;
+            }
+
+            if (FilterColumn == "ProductID")
+            {
+                _dtGetAllProducts.DefaultView.RowFilter = string.Format($"[{FilterColumn}] = {searchText}");
+            }
+            else if(FilterColumn == "ProductName")
+            {
+                _dtGetAllProducts.DefaultView.RowFilter = string.Format($"ProductName Like '{searchText}%'");
+            }
+            dgvInventoryProducts.DataSource = _dtGetAllProducts.DefaultView;
+            lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
+
+            
         }
     }
 }
