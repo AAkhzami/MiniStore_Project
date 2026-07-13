@@ -99,9 +99,9 @@ namespace MiniStore
 
             await LoadDataToTopSellingProducts();
         }
-        private void frmMainForm_Load(object sender, EventArgs e)
+        private async void frmMainForm_Load(object sender, EventArgs e)
         {
-            DashboardInfo();
+            await DashboardInfo();
 
             lblUserName.Text = clsCurrentUser.CurrentUser.UserName;
             btnUserButtonName.Text = clsCurrentUser.CurrentUser.UserName.Substring(0, 2).ToUpper();
@@ -167,15 +167,17 @@ namespace MiniStore
         private async void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             txbSearch.Text = "";
-            await LoadProductsDataForInventoryPage();
             if(cbSearchType.Text != "None")
             {
                 txbSearch.Visible = true;
                 txbSearch.Focus();
-
+                _dtGetAllProducts = await clsProducts.GetReportOfProducts();
+                dgvInventoryProducts.DataSource = _dtGetAllProducts;
+                dgvInventoryProducts.Sort(dgvInventoryProducts.Columns[0], ListSortDirection.Ascending);
             }
             else
             {
+                await LoadProductsDataForInventoryPage();
                 txbSearch.Visible = false;
             }
         }
@@ -195,10 +197,10 @@ namespace MiniStore
             string searchText = txbSearch.Text.Trim();
             string FilterColumn = cbSearchType.Text;
 
+
             if (string.IsNullOrEmpty(searchText))
             {
                 _dtGetAllProducts.DefaultView.RowFilter = "";
-                await LoadProductsDataForInventoryPage();
                 return;
             }
 
@@ -211,7 +213,6 @@ namespace MiniStore
                     FilterColumn = "ProductID";
                     break;
             }
-            _dtGetAllProducts = await clsProducts.GetReportOfProducts();
             if (FilterColumn == "ProductID")
             {
                 _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, searchText);
