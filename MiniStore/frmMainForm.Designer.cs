@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pSideMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,18 +47,11 @@
             this.btnSalesPOS = new Guna.UI2.WinForms.Guna2Button();
             this.btnInventory = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
+            this.tcMainScreen = new Guna.UI2.WinForms.Guna2TabControl();
             this.tpDashboard = new System.Windows.Forms.TabPage();
             this.guna2ShadowPanel9 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.cIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cSoldQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cRevenue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cRank = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTopSellingProducts = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -62,55 +59,76 @@
             this.lblTodaySales = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel5 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblTodayOrders = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblLowStock = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel6 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblCustomers = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel8 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblUserGreeting = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tpInventory = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.dgvInventoryProducts = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2ShadowPanel10 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2ShadowPanel11 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.tpSalesPOS = new System.Windows.Forms.TabPage();
             this.tpCustomers = new System.Windows.Forms.TabPage();
             this.tpUsers = new System.Windows.Forms.TabPage();
             this.tpUserInfo = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblCounterProductsPerPage = new System.Windows.Forms.Label();
+            this.lbl_Inventory_PageNumber = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbItemPerPage_Inventory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnAddNewProduct = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnNextPageProducts = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPreviesPageProducts = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pSideMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
-            this.guna2TabControl1.SuspendLayout();
+            this.tcMainScreen.SuspendLayout();
             this.tpDashboard.SuspendLayout();
             this.guna2ShadowPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTopSellingProducts)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2ShadowPanel2.SuspendLayout();
             this.guna2ShadowPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2ShadowPanel4.SuspendLayout();
             this.guna2ShadowPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.guna2ShadowPanel7.SuspendLayout();
             this.guna2ShadowPanel8.SuspendLayout();
+            this.tpInventory.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventoryProducts)).BeginInit();
+            this.guna2ShadowPanel10.SuspendLayout();
+            this.guna2ShadowPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pSideMenu
@@ -159,6 +177,7 @@
             this.btnUserButtonName.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnUserButtonName.Size = new System.Drawing.Size(64, 64);
             this.btnUserButtonName.TabIndex = 2;
+            this.btnUserButtonName.Tag = "4";
             this.btnUserButtonName.Text = "UN";
             // 
             // lblUserName
@@ -219,7 +238,9 @@
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(241, 54);
             this.btnUsers.TabIndex = 17;
+            this.btnUsers.Tag = "3";
             this.btnUsers.Text = "Users";
+            this.btnUsers.Click += new System.EventHandler(this.btnNextPage);
             // 
             // btnCustomers
             // 
@@ -239,7 +260,9 @@
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.Size = new System.Drawing.Size(241, 54);
             this.btnCustomers.TabIndex = 16;
+            this.btnCustomers.Tag = "3";
             this.btnCustomers.Text = "Customers";
+            this.btnCustomers.Click += new System.EventHandler(this.btnNextPage);
             // 
             // btnSalesPOS
             // 
@@ -259,7 +282,9 @@
             this.btnSalesPOS.Name = "btnSalesPOS";
             this.btnSalesPOS.Size = new System.Drawing.Size(241, 54);
             this.btnSalesPOS.TabIndex = 15;
+            this.btnSalesPOS.Tag = "2";
             this.btnSalesPOS.Text = "Sales/POS";
+            this.btnSalesPOS.Click += new System.EventHandler(this.btnNextPage);
             // 
             // btnInventory
             // 
@@ -279,7 +304,9 @@
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(241, 54);
             this.btnInventory.TabIndex = 14;
+            this.btnInventory.Tag = "1";
             this.btnInventory.Text = "Inventory";
+            this.btnInventory.Click += new System.EventHandler(this.btnNextPage);
             // 
             // btnDashboard
             // 
@@ -298,63 +325,55 @@
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(241, 54);
             this.btnDashboard.TabIndex = 13;
+            this.btnDashboard.Tag = "0";
             this.btnDashboard.Text = "Dashboard";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MiniStore.Properties.Resources.logo_2;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnNextPage);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.guna2TabControl1);
+            this.panel4.Controls.Add(this.tcMainScreen);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(261, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1332, 820);
             this.panel4.TabIndex = 2;
             // 
-            // guna2TabControl1
+            // tcMainScreen
             // 
-            this.guna2TabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.guna2TabControl1.Controls.Add(this.tpDashboard);
-            this.guna2TabControl1.Controls.Add(this.tpInventory);
-            this.guna2TabControl1.Controls.Add(this.tpSalesPOS);
-            this.guna2TabControl1.Controls.Add(this.tpCustomers);
-            this.guna2TabControl1.Controls.Add(this.tpUsers);
-            this.guna2TabControl1.Controls.Add(this.tpUserInfo);
-            this.guna2TabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2TabControl1.ItemSize = new System.Drawing.Size(180, 50);
-            this.guna2TabControl1.Location = new System.Drawing.Point(0, 0);
-            this.guna2TabControl1.Name = "guna2TabControl1";
-            this.guna2TabControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.guna2TabControl1.SelectedIndex = 0;
-            this.guna2TabControl1.Size = new System.Drawing.Size(1332, 820);
-            this.guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
-            this.guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.guna2TabControl1.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.guna2TabControl1.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2TabControl1.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.guna2TabControl1.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
-            this.guna2TabControl1.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.guna2TabControl1.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.guna2TabControl1.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
-            this.guna2TabControl1.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.guna2TabControl1.TabButtonImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2TabControl1.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
-            this.guna2TabControl1.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.guna2TabControl1.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.guna2TabControl1.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
-            this.guna2TabControl1.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.guna2TabControl1.TabButtonSize = new System.Drawing.Size(180, 50);
-            this.guna2TabControl1.TabIndex = 0;
-            this.guna2TabControl1.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.guna2TabControl1.TabMenuVisible = false;
+            this.tcMainScreen.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tcMainScreen.Controls.Add(this.tpDashboard);
+            this.tcMainScreen.Controls.Add(this.tpInventory);
+            this.tcMainScreen.Controls.Add(this.tpSalesPOS);
+            this.tcMainScreen.Controls.Add(this.tpCustomers);
+            this.tcMainScreen.Controls.Add(this.tpUsers);
+            this.tcMainScreen.Controls.Add(this.tpUserInfo);
+            this.tcMainScreen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcMainScreen.ItemSize = new System.Drawing.Size(180, 50);
+            this.tcMainScreen.Location = new System.Drawing.Point(0, 0);
+            this.tcMainScreen.Name = "tcMainScreen";
+            this.tcMainScreen.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tcMainScreen.SelectedIndex = 0;
+            this.tcMainScreen.Size = new System.Drawing.Size(1332, 820);
+            this.tcMainScreen.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
+            this.tcMainScreen.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.tcMainScreen.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tcMainScreen.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
+            this.tcMainScreen.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.tcMainScreen.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
+            this.tcMainScreen.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tcMainScreen.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tcMainScreen.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.tcMainScreen.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tcMainScreen.TabButtonImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tcMainScreen.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
+            this.tcMainScreen.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.tcMainScreen.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tcMainScreen.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
+            this.tcMainScreen.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.tcMainScreen.TabButtonSize = new System.Drawing.Size(180, 50);
+            this.tcMainScreen.TabIndex = 0;
+            this.tcMainScreen.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tcMainScreen.TabMenuVisible = false;
             // 
             // tpDashboard
             // 
@@ -364,17 +383,17 @@
             this.tpDashboard.Controls.Add(this.lblUserGreeting);
             this.tpDashboard.Controls.Add(this.label2);
             this.tpDashboard.Controls.Add(this.label1);
-            this.tpDashboard.Location = new System.Drawing.Point(5, 4);
+            this.tpDashboard.Location = new System.Drawing.Point(184, 4);
             this.tpDashboard.Name = "tpDashboard";
             this.tpDashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDashboard.Size = new System.Drawing.Size(1323, 812);
+            this.tpDashboard.Size = new System.Drawing.Size(1144, 812);
             this.tpDashboard.TabIndex = 0;
             this.tpDashboard.Text = "Dashboard";
             // 
             // guna2ShadowPanel9
             // 
             this.guna2ShadowPanel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel9.Controls.Add(this.guna2DataGridView1);
+            this.guna2ShadowPanel9.Controls.Add(this.dgvTopSellingProducts);
             this.guna2ShadowPanel9.Controls.Add(this.label12);
             this.guna2ShadowPanel9.Controls.Add(this.label11);
             this.guna2ShadowPanel9.FillColor = System.Drawing.Color.White;
@@ -385,87 +404,54 @@
             this.guna2ShadowPanel9.Size = new System.Drawing.Size(1252, 512);
             this.guna2ShadowPanel9.TabIndex = 5;
             // 
-            // guna2DataGridView1
+            // dgvTopSellingProducts
             // 
-            this.guna2DataGridView1.AllowUserToAddRows = false;
-            this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            this.guna2DataGridView1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.guna2DataGridView1.ColumnHeadersHeight = 25;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cIndex,
-            this.cProduct,
-            this.cCategory,
-            this.cSoldQty,
-            this.cRevenue,
-            this.cRank});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(30, 121);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(30);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.ReadOnly = true;
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1192, 361);
-            this.guna2DataGridView1.TabIndex = 3;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 25;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = true;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 8F);
-            // 
-            // cIndex
-            // 
-            this.cIndex.HeaderText = "#";
-            this.cIndex.Name = "cIndex";
-            this.cIndex.ReadOnly = true;
-            // 
-            // cProduct
-            // 
-            this.cProduct.HeaderText = "Product";
-            this.cProduct.Name = "cProduct";
-            this.cProduct.ReadOnly = true;
-            // 
-            // cCategory
-            // 
-            this.cCategory.HeaderText = "Category";
-            this.cCategory.Name = "cCategory";
-            this.cCategory.ReadOnly = true;
-            // 
-            // cSoldQty
-            // 
-            this.cSoldQty.HeaderText = "Sold Qty";
-            this.cSoldQty.Name = "cSoldQty";
-            this.cSoldQty.ReadOnly = true;
-            // 
-            // cRevenue
-            // 
-            this.cRevenue.HeaderText = "Revenue";
-            this.cRevenue.Name = "cRevenue";
-            this.cRevenue.ReadOnly = true;
-            // 
-            // cRank
-            // 
-            this.cRank.HeaderText = "Rank";
-            this.cRank.Name = "cRank";
-            this.cRank.ReadOnly = true;
+            this.dgvTopSellingProducts.AllowUserToAddRows = false;
+            this.dgvTopSellingProducts.AllowUserToDeleteRows = false;
+            this.dgvTopSellingProducts.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvTopSellingProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTopSellingProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTopSellingProducts.ColumnHeadersHeight = 25;
+            this.dgvTopSellingProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTopSellingProducts.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvTopSellingProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvTopSellingProducts.Location = new System.Drawing.Point(30, 121);
+            this.dgvTopSellingProducts.Margin = new System.Windows.Forms.Padding(30);
+            this.dgvTopSellingProducts.Name = "dgvTopSellingProducts";
+            this.dgvTopSellingProducts.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTopSellingProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvTopSellingProducts.RowHeadersVisible = false;
+            this.dgvTopSellingProducts.RowTemplate.Height = 40;
+            this.dgvTopSellingProducts.Size = new System.Drawing.Size(1192, 361);
+            this.dgvTopSellingProducts.TabIndex = 3;
+            this.dgvTopSellingProducts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvTopSellingProducts.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTopSellingProducts.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgvTopSellingProducts.ThemeStyle.ReadOnly = true;
+            this.dgvTopSellingProducts.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTopSellingProducts.ThemeStyle.RowsStyle.Height = 40;
             // 
             // label12
             // 
@@ -502,7 +488,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(41, 132);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(30);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1252, 282);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1073, 282);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // guna2ShadowPanel1
@@ -554,16 +540,6 @@
             this.guna2ShadowPanel5.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel5.TabIndex = 0;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MiniStore.Properties.Resources.money_bag;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // guna2ShadowPanel2
             // 
             this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
@@ -612,16 +588,6 @@
             this.guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel3.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel3.TabIndex = 0;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::MiniStore.Properties.Resources.order;
-            this.pictureBox3.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
             // 
             // guna2ShadowPanel4
             // 
@@ -672,16 +638,6 @@
             this.guna2ShadowPanel6.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel6.TabIndex = 0;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::MiniStore.Properties.Resources.warning;
-            this.pictureBox4.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
             // guna2ShadowPanel7
             // 
             this.guna2ShadowPanel7.BackColor = System.Drawing.Color.Transparent;
@@ -689,7 +645,7 @@
             this.guna2ShadowPanel7.Controls.Add(this.label10);
             this.guna2ShadowPanel7.Controls.Add(this.guna2ShadowPanel8);
             this.guna2ShadowPanel7.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel7.Location = new System.Drawing.Point(942, 3);
+            this.guna2ShadowPanel7.Location = new System.Drawing.Point(3, 144);
             this.guna2ShadowPanel7.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.guna2ShadowPanel7.Name = "guna2ShadowPanel7";
             this.guna2ShadowPanel7.Radius = 9;
@@ -731,16 +687,6 @@
             this.guna2ShadowPanel8.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel8.TabIndex = 0;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::MiniStore.Properties.Resources.group;
-            this.pictureBox5.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
             // lblUserGreeting
             // 
             this.lblUserGreeting.AutoSize = true;
@@ -780,19 +726,147 @@
             // tpInventory
             // 
             this.tpInventory.BackColor = System.Drawing.Color.White;
-            this.tpInventory.Location = new System.Drawing.Point(184, 4);
+            this.tpInventory.Controls.Add(this.panel5);
+            this.tpInventory.Controls.Add(this.label20);
+            this.tpInventory.Controls.Add(this.label21);
+            this.tpInventory.Location = new System.Drawing.Point(5, 4);
             this.tpInventory.Name = "tpInventory";
             this.tpInventory.Padding = new System.Windows.Forms.Padding(3);
-            this.tpInventory.Size = new System.Drawing.Size(1151, 812);
+            this.tpInventory.Size = new System.Drawing.Size(1323, 812);
             this.tpInventory.TabIndex = 1;
             this.tpInventory.Text = "Inventory";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.dgvInventoryProducts);
+            this.panel5.Controls.Add(this.btnAddNewProduct);
+            this.panel5.Controls.Add(this.guna2ShadowPanel10);
+            this.panel5.Controls.Add(this.guna2ShadowPanel11);
+            this.panel5.Location = new System.Drawing.Point(41, 139);
+            this.panel5.Margin = new System.Windows.Forms.Padding(30);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1256, 665);
+            this.panel5.TabIndex = 12;
+            // 
+            // dgvInventoryProducts
+            // 
+            this.dgvInventoryProducts.AllowUserToAddRows = false;
+            this.dgvInventoryProducts.AllowUserToDeleteRows = false;
+            this.dgvInventoryProducts.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dgvInventoryProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(90)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 11F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventoryProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvInventoryProducts.ColumnHeadersHeight = 45;
+            this.dgvInventoryProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 11F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInventoryProducts.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvInventoryProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvInventoryProducts.Location = new System.Drawing.Point(20, 119);
+            this.dgvInventoryProducts.Name = "dgvInventoryProducts";
+            this.dgvInventoryProducts.ReadOnly = true;
+            this.dgvInventoryProducts.RowHeadersVisible = false;
+            this.dgvInventoryProducts.Size = new System.Drawing.Size(1211, 457);
+            this.dgvInventoryProducts.TabIndex = 4;
+            this.dgvInventoryProducts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvInventoryProducts.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(90)))), ((int)(((byte)(243)))));
+            this.dgvInventoryProducts.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dgvInventoryProducts.ThemeStyle.HeaderStyle.Height = 45;
+            this.dgvInventoryProducts.ThemeStyle.ReadOnly = true;
+            this.dgvInventoryProducts.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 11F);
+            // 
+            // guna2ShadowPanel10
+            // 
+            this.guna2ShadowPanel10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel10.Controls.Add(this.guna2ComboBox1);
+            this.guna2ShadowPanel10.Controls.Add(this.guna2TextBox1);
+            this.guna2ShadowPanel10.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel10.Location = new System.Drawing.Point(20, 20);
+            this.guna2ShadowPanel10.Margin = new System.Windows.Forms.Padding(20);
+            this.guna2ShadowPanel10.Name = "guna2ShadowPanel10";
+            this.guna2ShadowPanel10.Radius = 9;
+            this.guna2ShadowPanel10.ShadowColor = System.Drawing.Color.Silver;
+            this.guna2ShadowPanel10.Size = new System.Drawing.Size(704, 76);
+            this.guna2ShadowPanel10.TabIndex = 0;
+            // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderRadius = 9;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Items.AddRange(new object[] {
+            "All Categories"});
+            this.guna2ComboBox1.Location = new System.Drawing.Point(443, 20);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(235, 36);
+            this.guna2ComboBox1.StartIndex = 0;
+            this.guna2ComboBox1.TabIndex = 1;
+            // 
+            // guna2ShadowPanel11
+            // 
+            this.guna2ShadowPanel11.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel11.Controls.Add(this.cbItemPerPage_Inventory);
+            this.guna2ShadowPanel11.Controls.Add(this.label7);
+            this.guna2ShadowPanel11.Controls.Add(this.lbl_Inventory_PageNumber);
+            this.guna2ShadowPanel11.Controls.Add(this.btnNextPageProducts);
+            this.guna2ShadowPanel11.Controls.Add(this.btnPreviesPageProducts);
+            this.guna2ShadowPanel11.Controls.Add(this.lblCounterProductsPerPage);
+            this.guna2ShadowPanel11.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel11.Location = new System.Drawing.Point(20, 588);
+            this.guna2ShadowPanel11.Margin = new System.Windows.Forms.Padding(20);
+            this.guna2ShadowPanel11.Name = "guna2ShadowPanel11";
+            this.guna2ShadowPanel11.Radius = 9;
+            this.guna2ShadowPanel11.ShadowColor = System.Drawing.Color.Silver;
+            this.guna2ShadowPanel11.Size = new System.Drawing.Size(1211, 69);
+            this.guna2ShadowPanel11.TabIndex = 2;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.White;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.label20.Location = new System.Drawing.Point(38, 84);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(230, 18);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Manage Your Products amd stock";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(33, 29);
+            this.label21.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(176, 45);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Inventory";
             // 
             // tpSalesPOS
             // 
             this.tpSalesPOS.BackColor = System.Drawing.Color.White;
             this.tpSalesPOS.Location = new System.Drawing.Point(184, 4);
             this.tpSalesPOS.Name = "tpSalesPOS";
-            this.tpSalesPOS.Size = new System.Drawing.Size(1151, 812);
+            this.tpSalesPOS.Size = new System.Drawing.Size(1144, 812);
             this.tpSalesPOS.TabIndex = 2;
             this.tpSalesPOS.Text = "SalesAndPOS";
             // 
@@ -801,7 +875,7 @@
             this.tpCustomers.BackColor = System.Drawing.Color.White;
             this.tpCustomers.Location = new System.Drawing.Point(184, 4);
             this.tpCustomers.Name = "tpCustomers";
-            this.tpCustomers.Size = new System.Drawing.Size(1151, 812);
+            this.tpCustomers.Size = new System.Drawing.Size(1144, 812);
             this.tpCustomers.TabIndex = 3;
             this.tpCustomers.Text = "Customers";
             // 
@@ -810,7 +884,7 @@
             this.tpUsers.BackColor = System.Drawing.Color.White;
             this.tpUsers.Location = new System.Drawing.Point(184, 4);
             this.tpUsers.Name = "tpUsers";
-            this.tpUsers.Size = new System.Drawing.Size(1151, 812);
+            this.tpUsers.Size = new System.Drawing.Size(1144, 812);
             this.tpUsers.TabIndex = 4;
             this.tpUsers.Text = "Users";
             // 
@@ -818,7 +892,7 @@
             // 
             this.tpUserInfo.Location = new System.Drawing.Point(184, 4);
             this.tpUserInfo.Name = "tpUserInfo";
-            this.tpUserInfo.Size = new System.Drawing.Size(1151, 812);
+            this.tpUserInfo.Size = new System.Drawing.Size(1144, 812);
             this.tpUserInfo.TabIndex = 5;
             this.tpUserInfo.Text = "UserInfo";
             this.tpUserInfo.UseVisualStyleBackColor = true;
@@ -843,6 +917,197 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // lblCounterProductsPerPage
+            // 
+            this.lblCounterProductsPerPage.AutoSize = true;
+            this.lblCounterProductsPerPage.BackColor = System.Drawing.Color.White;
+            this.lblCounterProductsPerPage.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCounterProductsPerPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lblCounterProductsPerPage.Location = new System.Drawing.Point(17, 25);
+            this.lblCounterProductsPerPage.Name = "lblCounterProductsPerPage";
+            this.lblCounterProductsPerPage.Size = new System.Drawing.Size(169, 18);
+            this.lblCounterProductsPerPage.TabIndex = 8;
+            this.lblCounterProductsPerPage.Text = "Showing N of N products";
+            // 
+            // lbl_Inventory_PageNumber
+            // 
+            this.lbl_Inventory_PageNumber.AutoSize = true;
+            this.lbl_Inventory_PageNumber.BackColor = System.Drawing.Color.White;
+            this.lbl_Inventory_PageNumber.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Inventory_PageNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lbl_Inventory_PageNumber.Location = new System.Drawing.Point(558, 22);
+            this.lbl_Inventory_PageNumber.Name = "lbl_Inventory_PageNumber";
+            this.lbl_Inventory_PageNumber.Size = new System.Drawing.Size(23, 25);
+            this.lbl_Inventory_PageNumber.TabIndex = 13;
+            this.lbl_Inventory_PageNumber.Text = "1";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.label7.Location = new System.Drawing.Point(951, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 18);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Items per page :";
+            // 
+            // cbItemPerPage_Inventory
+            // 
+            this.cbItemPerPage_Inventory.BackColor = System.Drawing.Color.Transparent;
+            this.cbItemPerPage_Inventory.BorderRadius = 9;
+            this.cbItemPerPage_Inventory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbItemPerPage_Inventory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbItemPerPage_Inventory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbItemPerPage_Inventory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbItemPerPage_Inventory.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.cbItemPerPage_Inventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbItemPerPage_Inventory.ItemHeight = 30;
+            this.cbItemPerPage_Inventory.Items.AddRange(new object[] {
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50"});
+            this.cbItemPerPage_Inventory.Location = new System.Drawing.Point(1076, 16);
+            this.cbItemPerPage_Inventory.Name = "cbItemPerPage_Inventory";
+            this.cbItemPerPage_Inventory.Size = new System.Drawing.Size(104, 36);
+            this.cbItemPerPage_Inventory.StartIndex = 0;
+            this.cbItemPerPage_Inventory.TabIndex = 15;
+            this.cbItemPerPage_Inventory.SelectedIndexChanged += new System.EventHandler(this.cbItemPerPage_Inventory_SelectedIndexChanged);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MiniStore.Properties.Resources.money_bag;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::MiniStore.Properties.Resources.order;
+            this.pictureBox3.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::MiniStore.Properties.Resources.warning;
+            this.pictureBox4.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::MiniStore.Properties.Resources.group;
+            this.pictureBox5.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // btnAddNewProduct
+            // 
+            this.btnAddNewProduct.BorderRadius = 9;
+            this.btnAddNewProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(90)))), ((int)(((byte)(243)))));
+            this.btnAddNewProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAddNewProduct.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewProduct.Image = global::MiniStore.Properties.Resources.add;
+            this.btnAddNewProduct.Location = new System.Drawing.Point(1042, 36);
+            this.btnAddNewProduct.Margin = new System.Windows.Forms.Padding(20);
+            this.btnAddNewProduct.Name = "btnAddNewProduct";
+            this.btnAddNewProduct.Size = new System.Drawing.Size(189, 54);
+            this.btnAddNewProduct.TabIndex = 3;
+            this.btnAddNewProduct.Text = "Add New Products";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderRadius = 9;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.IconLeft = global::MiniStore.Properties.Resources.search;
+            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.guna2TextBox1.Location = new System.Drawing.Point(20, 20);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(20);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PlaceholderText = "Search products by name or ID...";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(400, 36);
+            this.guna2TextBox1.TabIndex = 0;
+            // 
+            // btnNextPageProducts
+            // 
+            this.btnNextPageProducts.BorderRadius = 9;
+            this.btnNextPageProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNextPageProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNextPageProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNextPageProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNextPageProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNextPageProducts.ForeColor = System.Drawing.Color.White;
+            this.btnNextPageProducts.Image = global::MiniStore.Properties.Resources.right;
+            this.btnNextPageProducts.Location = new System.Drawing.Point(603, 14);
+            this.btnNextPageProducts.Name = "btnNextPageProducts";
+            this.btnNextPageProducts.Size = new System.Drawing.Size(40, 40);
+            this.btnNextPageProducts.TabIndex = 12;
+            this.btnNextPageProducts.Click += new System.EventHandler(this.btnNextPageProducts_Click);
+            // 
+            // btnPreviesPageProducts
+            // 
+            this.btnPreviesPageProducts.BorderRadius = 9;
+            this.btnPreviesPageProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPreviesPageProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPreviesPageProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPreviesPageProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPreviesPageProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPreviesPageProducts.ForeColor = System.Drawing.Color.White;
+            this.btnPreviesPageProducts.Image = global::MiniStore.Properties.Resources.left_small;
+            this.btnPreviesPageProducts.Location = new System.Drawing.Point(496, 14);
+            this.btnPreviesPageProducts.Name = "btnPreviesPageProducts";
+            this.btnPreviesPageProducts.Size = new System.Drawing.Size(40, 40);
+            this.btnPreviesPageProducts.TabIndex = 11;
+            this.btnPreviesPageProducts.Click += new System.EventHandler(this.btnPreviesPageProducts_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MiniStore.Properties.Resources.logo_2;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -862,31 +1127,38 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.guna2TabControl1.ResumeLayout(false);
+            this.tcMainScreen.ResumeLayout(false);
             this.tpDashboard.ResumeLayout(false);
             this.tpDashboard.PerformLayout();
             this.guna2ShadowPanel9.ResumeLayout(false);
             this.guna2ShadowPanel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTopSellingProducts)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             this.guna2ShadowPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.guna2ShadowPanel2.PerformLayout();
             this.guna2ShadowPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.guna2ShadowPanel4.ResumeLayout(false);
             this.guna2ShadowPanel4.PerformLayout();
             this.guna2ShadowPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.guna2ShadowPanel7.ResumeLayout(false);
             this.guna2ShadowPanel7.PerformLayout();
             this.guna2ShadowPanel8.ResumeLayout(false);
+            this.tpInventory.ResumeLayout(false);
+            this.tpInventory.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventoryProducts)).EndInit();
+            this.guna2ShadowPanel10.ResumeLayout(false);
+            this.guna2ShadowPanel11.ResumeLayout(false);
+            this.guna2ShadowPanel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -909,7 +1181,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
-        private Guna.UI2.WinForms.Guna2TabControl guna2TabControl1;
+        private Guna.UI2.WinForms.Guna2TabControl tcMainScreen;
         private System.Windows.Forms.TabPage tpDashboard;
         private System.Windows.Forms.TabPage tpInventory;
         private System.Windows.Forms.TabPage tpSalesPOS;
@@ -941,14 +1213,23 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel8;
         private System.Windows.Forms.PictureBox pictureBox5;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel9;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvTopSellingProducts;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cIndex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cCategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cSoldQty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cRevenue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cRank;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel5;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel10;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2Button btnAddNewProduct;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvInventoryProducts;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel11;
+        private System.Windows.Forms.Label lblCounterProductsPerPage;
+        private Guna.UI2.WinForms.Guna2Button btnNextPageProducts;
+        private Guna.UI2.WinForms.Guna2Button btnPreviesPageProducts;
+        private System.Windows.Forms.Label lbl_Inventory_PageNumber;
+        private Guna.UI2.WinForms.Guna2ComboBox cbItemPerPage_Inventory;
+        private System.Windows.Forms.Label label7;
     }
 }

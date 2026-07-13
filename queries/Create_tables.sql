@@ -99,3 +99,17 @@ o.CreatedByUserID
 from Customers c
 inner join Orders o on
 c.CustomerID = o.CustomerID;
+
+create view v_ProductsInfo as
+select 
+p.ProductID,
+p.Name as ProductName,
+p.CategoryID,
+c.Name as CategoryName,
+p.Price,
+p.StockQuantity,
+p.IsActive,
+p.CreatedByUserID
+from Products p
+inner join Categories c on
+c.CategoryID = p.CategoryID;

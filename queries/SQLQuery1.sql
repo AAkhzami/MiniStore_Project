@@ -115,8 +115,15 @@ as
 return
 (
 	select 
-	ProductID, Name, Price, StockQuantity, IsActive
-	from Products
+	p.ProductID,
+	p.Name,
+	c.Name as CategoryName,
+	p.Price,
+	p.StockQuantity,
+	p.IsActive
+	from Products p
+	inner join Categories c on
+	c.CategoryID = p.CategoryID 
 	Order by ProductID
 	offset (@pageNumber - 1) * @RowPerPage ROWS
 	Fetch next @RowPerPage ROWS Only
@@ -170,4 +177,19 @@ begin
 	Password = @Password,
 	IsActive = @IsActive
 	where UserID = @UserID;
+end
+
+create procedure SP_GETOrderInformationAtDate
+@Date date,
+@TodaySales decimal(10,3) OUTPUT,
+@TodayOrder int OUTPUT
+as
+begin
+	select
+		@TodaySales = SUM(TotalAmount),
+		@TodayOrder = COUNT(*)
+	from 
+	Orders
+	where OrderDate >= CAST(@Date as DATE)
+	and OrderDate < CAST(DATEADD(DAY,1,@Date) as DATE);
 end
