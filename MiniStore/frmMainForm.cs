@@ -235,6 +235,7 @@ namespace MiniStore
                     FilterColumn = "ProductID";
                     break;
             }
+
             if (FilterColumn == "ProductID" && CategoryFilter == "All Categories")
             {
                 _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, searchText);
@@ -283,6 +284,8 @@ namespace MiniStore
         {
             frmAddUpdateProducts frmAddUpdateProducts = new frmAddUpdateProducts();
             frmAddUpdateProducts.ShowDialog();
+
         }
+
     }
 }
