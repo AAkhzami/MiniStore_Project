@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.lblSubtitle = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pbLogo_Of_Page = new System.Windows.Forms.PictureBox();
             this.ctrlProductInfo1 = new MiniStore.Products.Control.ctrlProductInfo();
             this.nudAddQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -53,18 +53,6 @@
             this.panel1.Size = new System.Drawing.Size(472, 194);
             this.panel1.TabIndex = 15;
             // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.lblTitle.Location = new System.Drawing.Point(182, 113);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(108, 45);
-            this.lblTitle.TabIndex = 16;
-            this.lblTitle.Text = "Stock";
-            // 
             // lblSubtitle
             // 
             this.lblSubtitle.AutoSize = true;
@@ -76,6 +64,18 @@
             this.lblSubtitle.Size = new System.Drawing.Size(158, 18);
             this.lblSubtitle.TabIndex = 17;
             this.lblSubtitle.Text = "Restocking this product";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.lblTitle.Location = new System.Drawing.Point(182, 113);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(108, 45);
+            this.lblTitle.TabIndex = 16;
+            this.lblTitle.Text = "Stock";
             // 
             // pbLogo_Of_Page
             // 
@@ -178,7 +178,7 @@
             this.Name = "frmAddStock";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAddStock";
+            this.Text = "Add Stock";
             this.Load += new System.EventHandler(this.frmAddStock_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -112,6 +112,8 @@ namespace MiniStore
             {
                 cbInventory_Categories.Items.Add(row["Name"].ToString());
             }
+            
+            lblUserGreeting.Text = clsCurrentUser.CurrentUser.UserName;
         }
 
         private void frmMainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -358,6 +360,13 @@ namespace MiniStore
             frm.ShowDialog();
             await InventoryPage();
 
+        }
+
+        private void viewDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int productID = (int)dgvInventoryProducts.CurrentRow.Cells[0].Value;
+            frmProductDetails frm = new frmProductDetails(productID);
+            frm.ShowDialog();
         }
     }
 }

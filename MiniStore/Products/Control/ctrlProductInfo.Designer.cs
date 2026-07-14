@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.gbProductInfo = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.lable1 = new System.Windows.Forms.Label();
-            this.lblProductName = new System.Windows.Forms.Label();
-            this.lblCategory = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblStockQty = new System.Windows.Forms.Label();
-            this.lblIsActive = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblCreatedBy = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblCreatedBy = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblIsActive = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblStockQty = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblProductName = new System.Windows.Forms.Label();
+            this.lable1 = new System.Windows.Forms.Label();
             this.gbProductInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -85,150 +85,6 @@
             this.gbProductInfo.Size = new System.Drawing.Size(443, 426);
             this.gbProductInfo.TabIndex = 14;
             this.gbProductInfo.Text = "Product Information";
-            // 
-            // lable1
-            // 
-            this.lable1.AutoSize = true;
-            this.lable1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.lable1.Location = new System.Drawing.Point(27, 70);
-            this.lable1.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.lable1.Name = "lable1";
-            this.lable1.Size = new System.Drawing.Size(163, 29);
-            this.lable1.TabIndex = 17;
-            this.lable1.Text = "Product Name";
-            // 
-            // lblProductName
-            // 
-            this.lblProductName.AutoSize = true;
-            this.lblProductName.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblProductName.Location = new System.Drawing.Point(245, 70);
-            this.lblProductName.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(69, 29);
-            this.lblProductName.TabIndex = 18;
-            this.lblProductName.Text = "NULL";
-            // 
-            // lblCategory
-            // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblCategory.Location = new System.Drawing.Point(245, 124);
-            this.lblCategory.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(69, 29);
-            this.lblCategory.TabIndex = 20;
-            this.lblCategory.Text = "NULL";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label2.Location = new System.Drawing.Point(27, 124);
-            this.label2.Margin = new System.Windows.Forms.Padding(15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 29);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Category";
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblPrice.Location = new System.Drawing.Point(248, 183);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(98, 29);
-            this.lblPrice.TabIndex = 22;
-            this.lblPrice.Text = "00 OMR";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label4.Location = new System.Drawing.Point(27, 183);
-            this.label4.Margin = new System.Windows.Forms.Padding(15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 29);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Price";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label5.Location = new System.Drawing.Point(27, 242);
-            this.label5.Margin = new System.Windows.Forms.Padding(15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 29);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Stock Qty";
-            // 
-            // lblStockQty
-            // 
-            this.lblStockQty.AutoSize = true;
-            this.lblStockQty.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStockQty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblStockQty.Location = new System.Drawing.Point(248, 242);
-            this.lblStockQty.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.lblStockQty.Name = "lblStockQty";
-            this.lblStockQty.Size = new System.Drawing.Size(65, 29);
-            this.lblStockQty.TabIndex = 24;
-            this.lblStockQty.Text = "0000";
-            // 
-            // lblIsActive
-            // 
-            this.lblIsActive.AutoSize = true;
-            this.lblIsActive.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIsActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblIsActive.Location = new System.Drawing.Point(248, 301);
-            this.lblIsActive.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.lblIsActive.Name = "lblIsActive";
-            this.lblIsActive.Size = new System.Drawing.Size(69, 29);
-            this.lblIsActive.TabIndex = 26;
-            this.lblIsActive.Text = "NULL";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label8.Location = new System.Drawing.Point(27, 301);
-            this.label8.Margin = new System.Windows.Forms.Padding(15);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 29);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Is Active";
-            // 
-            // lblCreatedBy
-            // 
-            this.lblCreatedBy.AutoSize = true;
-            this.lblCreatedBy.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblCreatedBy.Location = new System.Drawing.Point(248, 360);
-            this.lblCreatedBy.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.lblCreatedBy.Name = "lblCreatedBy";
-            this.lblCreatedBy.Size = new System.Drawing.Size(69, 29);
-            this.lblCreatedBy.TabIndex = 28;
-            this.lblCreatedBy.Text = "NULL";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label10.Location = new System.Drawing.Point(27, 360);
-            this.label10.Margin = new System.Windows.Forms.Padding(15);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 29);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Created By";
             // 
             // pictureBox6
             // 
@@ -289,6 +145,150 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblCreatedBy
+            // 
+            this.lblCreatedBy.AutoSize = true;
+            this.lblCreatedBy.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.lblCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lblCreatedBy.Location = new System.Drawing.Point(248, 363);
+            this.lblCreatedBy.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblCreatedBy.Name = "lblCreatedBy";
+            this.lblCreatedBy.Size = new System.Drawing.Size(52, 22);
+            this.lblCreatedBy.TabIndex = 28;
+            this.lblCreatedBy.Text = "NULL";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.label10.Location = new System.Drawing.Point(27, 360);
+            this.label10.Margin = new System.Windows.Forms.Padding(15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(130, 29);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Created By";
+            // 
+            // lblIsActive
+            // 
+            this.lblIsActive.AutoSize = true;
+            this.lblIsActive.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.lblIsActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lblIsActive.Location = new System.Drawing.Point(248, 304);
+            this.lblIsActive.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblIsActive.Name = "lblIsActive";
+            this.lblIsActive.Size = new System.Drawing.Size(52, 22);
+            this.lblIsActive.TabIndex = 26;
+            this.lblIsActive.Text = "NULL";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.label8.Location = new System.Drawing.Point(27, 301);
+            this.label8.Margin = new System.Windows.Forms.Padding(15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 29);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Is Active";
+            // 
+            // lblStockQty
+            // 
+            this.lblStockQty.AutoSize = true;
+            this.lblStockQty.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.lblStockQty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lblStockQty.Location = new System.Drawing.Point(248, 245);
+            this.lblStockQty.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblStockQty.Name = "lblStockQty";
+            this.lblStockQty.Size = new System.Drawing.Size(50, 22);
+            this.lblStockQty.TabIndex = 24;
+            this.lblStockQty.Text = "0000";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.label5.Location = new System.Drawing.Point(27, 242);
+            this.label5.Margin = new System.Windows.Forms.Padding(15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 29);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Stock Qty";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lblPrice.Location = new System.Drawing.Point(248, 186);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(74, 22);
+            this.lblPrice.TabIndex = 22;
+            this.lblPrice.Text = "00 OMR";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.label4.Location = new System.Drawing.Point(27, 183);
+            this.label4.Margin = new System.Windows.Forms.Padding(15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 29);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Price";
+            // 
+            // lblCategory
+            // 
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.lblCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lblCategory.Location = new System.Drawing.Point(245, 127);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(52, 22);
+            this.lblCategory.TabIndex = 20;
+            this.lblCategory.Text = "NULL";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.label2.Location = new System.Drawing.Point(27, 124);
+            this.label2.Margin = new System.Windows.Forms.Padding(15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 29);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Category";
+            // 
+            // lblProductName
+            // 
+            this.lblProductName.AutoSize = true;
+            this.lblProductName.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.lblProductName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lblProductName.Location = new System.Drawing.Point(245, 73);
+            this.lblProductName.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblProductName.Name = "lblProductName";
+            this.lblProductName.Size = new System.Drawing.Size(52, 22);
+            this.lblProductName.TabIndex = 18;
+            this.lblProductName.Text = "NULL";
+            // 
+            // lable1
+            // 
+            this.lable1.AutoSize = true;
+            this.lable1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lable1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.lable1.Location = new System.Drawing.Point(27, 70);
+            this.lable1.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lable1.Name = "lable1";
+            this.lable1.Size = new System.Drawing.Size(163, 29);
+            this.lable1.TabIndex = 17;
+            this.lable1.Text = "Product Name";
             // 
             // ctrlProductInfo
             // 

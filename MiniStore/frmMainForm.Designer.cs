@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pSideMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,6 +48,7 @@
             this.btnSalesPOS = new Guna.UI2.WinForms.Guna2Button();
             this.btnInventory = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tcMainScreen = new Guna.UI2.WinForms.Guna2TabControl();
             this.tpDashboard = new System.Windows.Forms.TabPage();
@@ -60,18 +61,22 @@
             this.lblTodaySales = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel5 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblTodayOrders = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblLowStock = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel6 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblCustomers = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel8 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblUserGreeting = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -79,13 +84,22 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgvInventoryProducts = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cmsInventoryPage = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.editProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAtiveProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.disableDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddNewProduct = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel10 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.cbSearchType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbInventory_Categories = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txbInventorySearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel11 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.cbItemPerPage_Inventory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lbl_Inventory_Text_For_Item_Per_Page = new System.Windows.Forms.Label();
             this.lbl_Inventory_PageNumber = new System.Windows.Forms.Label();
+            this.btnNextPageProducts = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPreviesPageProducts = new Guna.UI2.WinForms.Guna2Button();
             this.lblCounterProductsPerPage = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -95,24 +109,13 @@
             this.tpUserInfo = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tsmAtiveProduct = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.editProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.disableDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAddNewProduct = new Guna.UI2.WinForms.Guna2Button();
-            this.txbInventorySearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnNextPageProducts = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPreviesPageProducts = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pSideMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.tcMainScreen.SuspendLayout();
             this.tpDashboard.SuspendLayout();
@@ -121,23 +124,23 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2ShadowPanel2.SuspendLayout();
             this.guna2ShadowPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2ShadowPanel4.SuspendLayout();
             this.guna2ShadowPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.guna2ShadowPanel7.SuspendLayout();
             this.guna2ShadowPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tpInventory.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventoryProducts)).BeginInit();
             this.cmsInventoryPage.SuspendLayout();
             this.guna2ShadowPanel10.SuspendLayout();
             this.guna2ShadowPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tpSalesPOS.SuspendLayout();
             this.SuspendLayout();
             // 
             // pSideMenu
@@ -338,6 +341,16 @@
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.Click += new System.EventHandler(this.btnNextPage);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MiniStore.Properties.Resources.logo_2;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.tcMainScreen);
@@ -418,39 +431,39 @@
             this.dgvTopSellingProducts.AllowUserToAddRows = false;
             this.dgvTopSellingProducts.AllowUserToDeleteRows = false;
             this.dgvTopSellingProducts.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvTopSellingProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTopSellingProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.dgvTopSellingProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTopSellingProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvTopSellingProducts.ColumnHeadersHeight = 25;
             this.dgvTopSellingProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTopSellingProducts.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTopSellingProducts.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvTopSellingProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTopSellingProducts.Location = new System.Drawing.Point(30, 121);
             this.dgvTopSellingProducts.Margin = new System.Windows.Forms.Padding(30);
             this.dgvTopSellingProducts.Name = "dgvTopSellingProducts";
             this.dgvTopSellingProducts.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTopSellingProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTopSellingProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvTopSellingProducts.RowHeadersVisible = false;
             this.dgvTopSellingProducts.RowTemplate.Height = 40;
             this.dgvTopSellingProducts.Size = new System.Drawing.Size(1192, 361);
@@ -549,6 +562,16 @@
             this.guna2ShadowPanel5.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel5.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MiniStore.Properties.Resources.money_bag;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // guna2ShadowPanel2
             // 
             this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
@@ -597,6 +620,16 @@
             this.guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel3.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel3.TabIndex = 0;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::MiniStore.Properties.Resources.order;
+            this.pictureBox3.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
             // guna2ShadowPanel4
             // 
@@ -647,6 +680,16 @@
             this.guna2ShadowPanel6.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel6.TabIndex = 0;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::MiniStore.Properties.Resources.warning;
+            this.pictureBox4.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
             // guna2ShadowPanel7
             // 
             this.guna2ShadowPanel7.BackColor = System.Drawing.Color.Transparent;
@@ -696,13 +739,23 @@
             this.guna2ShadowPanel8.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel8.TabIndex = 0;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::MiniStore.Properties.Resources.group;
+            this.pictureBox5.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
             // lblUserGreeting
             // 
             this.lblUserGreeting.AutoSize = true;
             this.lblUserGreeting.BackColor = System.Drawing.Color.White;
             this.lblUserGreeting.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserGreeting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblUserGreeting.Location = new System.Drawing.Point(146, 84);
+            this.lblUserGreeting.Location = new System.Drawing.Point(136, 84);
             this.lblUserGreeting.Name = "lblUserGreeting";
             this.lblUserGreeting.Size = new System.Drawing.Size(77, 18);
             this.lblUserGreeting.TabIndex = 2;
@@ -738,10 +791,10 @@
             this.tpInventory.Controls.Add(this.panel5);
             this.tpInventory.Controls.Add(this.label20);
             this.tpInventory.Controls.Add(this.label21);
-            this.tpInventory.Location = new System.Drawing.Point(5, 4);
+            this.tpInventory.Location = new System.Drawing.Point(184, 4);
             this.tpInventory.Name = "tpInventory";
             this.tpInventory.Padding = new System.Windows.Forms.Padding(3);
-            this.tpInventory.Size = new System.Drawing.Size(1323, 812);
+            this.tpInventory.Size = new System.Drawing.Size(1144, 812);
             this.tpInventory.TabIndex = 1;
             this.tpInventory.Text = "Inventory";
             // 
@@ -762,39 +815,39 @@
             this.dgvInventoryProducts.AllowUserToAddRows = false;
             this.dgvInventoryProducts.AllowUserToDeleteRows = false;
             this.dgvInventoryProducts.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dgvInventoryProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(90)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 11F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventoryProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dgvInventoryProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(90)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Tahoma", 11F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventoryProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvInventoryProducts.ColumnHeadersHeight = 45;
             this.dgvInventoryProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvInventoryProducts.ContextMenuStrip = this.cmsInventoryPage;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventoryProducts.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventoryProducts.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvInventoryProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvInventoryProducts.Location = new System.Drawing.Point(20, 119);
             this.dgvInventoryProducts.Name = "dgvInventoryProducts";
             this.dgvInventoryProducts.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventoryProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventoryProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvInventoryProducts.RowHeadersVisible = false;
             this.dgvInventoryProducts.RowTemplate.Height = 60;
             this.dgvInventoryProducts.Size = new System.Drawing.Size(1211, 457);
@@ -828,8 +881,69 @@
             this.cmsInventoryPage.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsInventoryPage.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsInventoryPage.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsInventoryPage.Size = new System.Drawing.Size(237, 196);
+            this.cmsInventoryPage.Size = new System.Drawing.Size(237, 174);
             this.cmsInventoryPage.Opening += new System.ComponentModel.CancelEventHandler(this.cmsInventoryPage_Opening);
+            // 
+            // editProductToolStripMenuItem
+            // 
+            this.editProductToolStripMenuItem.Image = global::MiniStore.Properties.Resources.edit;
+            this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
+            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.editProductToolStripMenuItem.Text = "Edit Product";
+            this.editProductToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.editProductToolStripMenuItem.Click += new System.EventHandler(this.editProductToolStripMenuItem_Click);
+            // 
+            // addStockToolStripMenuItem
+            // 
+            this.addStockToolStripMenuItem.Image = global::MiniStore.Properties.Resources.add_2;
+            this.addStockToolStripMenuItem.Name = "addStockToolStripMenuItem";
+            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.addStockToolStripMenuItem.Text = "Add Stock";
+            this.addStockToolStripMenuItem.Click += new System.EventHandler(this.addStockToolStripMenuItem_Click);
+            // 
+            // tsmAtiveProduct
+            // 
+            this.tsmAtiveProduct.Enabled = false;
+            this.tsmAtiveProduct.Name = "tsmAtiveProduct";
+            this.tsmAtiveProduct.Size = new System.Drawing.Size(236, 34);
+            this.tsmAtiveProduct.Text = "Active";
+            this.tsmAtiveProduct.Click += new System.EventHandler(this.tsmAtiveProduct_Click);
+            // 
+            // disableDeleteToolStripMenuItem
+            // 
+            this.disableDeleteToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.disableDeleteToolStripMenuItem.Image = global::MiniStore.Properties.Resources.trash;
+            this.disableDeleteToolStripMenuItem.Name = "disableDeleteToolStripMenuItem";
+            this.disableDeleteToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.disableDeleteToolStripMenuItem.Text = "Disable/Delete";
+            this.disableDeleteToolStripMenuItem.Click += new System.EventHandler(this.disableDeleteToolStripMenuItem_Click);
+            // 
+            // viewDetailsToolStripMenuItem
+            // 
+            this.viewDetailsToolStripMenuItem.Image = global::MiniStore.Properties.Resources.view;
+            this.viewDetailsToolStripMenuItem.Name = "viewDetailsToolStripMenuItem";
+            this.viewDetailsToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.viewDetailsToolStripMenuItem.Text = "View Details";
+            this.viewDetailsToolStripMenuItem.Click += new System.EventHandler(this.viewDetailsToolStripMenuItem_Click);
+            // 
+            // btnAddNewProduct
+            // 
+            this.btnAddNewProduct.BorderRadius = 9;
+            this.btnAddNewProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(90)))), ((int)(((byte)(243)))));
+            this.btnAddNewProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAddNewProduct.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewProduct.Image = global::MiniStore.Properties.Resources.add;
+            this.btnAddNewProduct.Location = new System.Drawing.Point(1042, 36);
+            this.btnAddNewProduct.Margin = new System.Windows.Forms.Padding(20);
+            this.btnAddNewProduct.Name = "btnAddNewProduct";
+            this.btnAddNewProduct.Size = new System.Drawing.Size(189, 54);
+            this.btnAddNewProduct.TabIndex = 3;
+            this.btnAddNewProduct.Text = "Add New Products";
+            this.btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
             // 
             // guna2ShadowPanel10
             // 
@@ -887,6 +1001,31 @@
             this.cbInventory_Categories.StartIndex = 0;
             this.cbInventory_Categories.TabIndex = 1;
             this.cbInventory_Categories.SelectedIndexChanged += new System.EventHandler(this.cbInventory_Categories_SelectedIndexChanged);
+            // 
+            // txbInventorySearch
+            // 
+            this.txbInventorySearch.BorderRadius = 9;
+            this.txbInventorySearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbInventorySearch.DefaultText = "";
+            this.txbInventorySearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbInventorySearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbInventorySearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbInventorySearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbInventorySearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbInventorySearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.txbInventorySearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbInventorySearch.IconLeft = global::MiniStore.Properties.Resources.search;
+            this.txbInventorySearch.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txbInventorySearch.Location = new System.Drawing.Point(20, 20);
+            this.txbInventorySearch.Margin = new System.Windows.Forms.Padding(20);
+            this.txbInventorySearch.Name = "txbInventorySearch";
+            this.txbInventorySearch.PlaceholderText = "Search products by name or ID...";
+            this.txbInventorySearch.SelectedText = "";
+            this.txbInventorySearch.Size = new System.Drawing.Size(400, 36);
+            this.txbInventorySearch.TabIndex = 0;
+            this.txbInventorySearch.Visible = false;
+            this.txbInventorySearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
+            this.txbInventorySearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
             // 
             // guna2ShadowPanel11
             // 
@@ -963,6 +1102,38 @@
             this.lbl_Inventory_PageNumber.TabIndex = 13;
             this.lbl_Inventory_PageNumber.Text = "1";
             // 
+            // btnNextPageProducts
+            // 
+            this.btnNextPageProducts.BorderRadius = 9;
+            this.btnNextPageProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNextPageProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNextPageProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNextPageProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNextPageProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNextPageProducts.ForeColor = System.Drawing.Color.White;
+            this.btnNextPageProducts.Image = global::MiniStore.Properties.Resources.right;
+            this.btnNextPageProducts.Location = new System.Drawing.Point(603, 14);
+            this.btnNextPageProducts.Name = "btnNextPageProducts";
+            this.btnNextPageProducts.Size = new System.Drawing.Size(40, 40);
+            this.btnNextPageProducts.TabIndex = 12;
+            this.btnNextPageProducts.Click += new System.EventHandler(this.btnNextPageProducts_Click);
+            // 
+            // btnPreviesPageProducts
+            // 
+            this.btnPreviesPageProducts.BorderRadius = 9;
+            this.btnPreviesPageProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPreviesPageProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPreviesPageProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPreviesPageProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPreviesPageProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPreviesPageProducts.ForeColor = System.Drawing.Color.White;
+            this.btnPreviesPageProducts.Image = global::MiniStore.Properties.Resources.left_small;
+            this.btnPreviesPageProducts.Location = new System.Drawing.Point(496, 14);
+            this.btnPreviesPageProducts.Name = "btnPreviesPageProducts";
+            this.btnPreviesPageProducts.Size = new System.Drawing.Size(40, 40);
+            this.btnPreviesPageProducts.TabIndex = 11;
+            this.btnPreviesPageProducts.Click += new System.EventHandler(this.btnPreviesPageProducts_Click);
+            // 
             // lblCounterProductsPerPage
             // 
             this.lblCounterProductsPerPage.AutoSize = true;
@@ -1001,35 +1172,37 @@
             // tpSalesPOS
             // 
             this.tpSalesPOS.BackColor = System.Drawing.Color.White;
-            this.tpSalesPOS.Location = new System.Drawing.Point(184, 4);
+            this.tpSalesPOS.Controls.Add(this.label4);
+            this.tpSalesPOS.Controls.Add(this.label5);
+            this.tpSalesPOS.Location = new System.Drawing.Point(5, 4);
             this.tpSalesPOS.Name = "tpSalesPOS";
-            this.tpSalesPOS.Size = new System.Drawing.Size(1144, 812);
+            this.tpSalesPOS.Size = new System.Drawing.Size(1323, 812);
             this.tpSalesPOS.TabIndex = 2;
             this.tpSalesPOS.Text = "SalesAndPOS";
             // 
             // tpCustomers
             // 
             this.tpCustomers.BackColor = System.Drawing.Color.White;
-            this.tpCustomers.Location = new System.Drawing.Point(184, 4);
+            this.tpCustomers.Location = new System.Drawing.Point(5, 4);
             this.tpCustomers.Name = "tpCustomers";
-            this.tpCustomers.Size = new System.Drawing.Size(1144, 812);
+            this.tpCustomers.Size = new System.Drawing.Size(1323, 812);
             this.tpCustomers.TabIndex = 3;
             this.tpCustomers.Text = "Customers";
             // 
             // tpUsers
             // 
             this.tpUsers.BackColor = System.Drawing.Color.White;
-            this.tpUsers.Location = new System.Drawing.Point(184, 4);
+            this.tpUsers.Location = new System.Drawing.Point(5, 4);
             this.tpUsers.Name = "tpUsers";
-            this.tpUsers.Size = new System.Drawing.Size(1144, 812);
+            this.tpUsers.Size = new System.Drawing.Size(1323, 812);
             this.tpUsers.TabIndex = 4;
             this.tpUsers.Text = "Users";
             // 
             // tpUserInfo
             // 
-            this.tpUserInfo.Location = new System.Drawing.Point(184, 4);
+            this.tpUserInfo.Location = new System.Drawing.Point(5, 4);
             this.tpUserInfo.Name = "tpUserInfo";
-            this.tpUserInfo.Size = new System.Drawing.Size(1144, 812);
+            this.tpUserInfo.Size = new System.Drawing.Size(1323, 812);
             this.tpUserInfo.TabIndex = 5;
             this.tpUserInfo.Text = "UserInfo";
             this.tpUserInfo.UseVisualStyleBackColor = true;
@@ -1054,172 +1227,28 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tsmAtiveProduct
+            // label4
             // 
-            this.tsmAtiveProduct.Enabled = false;
-            this.tsmAtiveProduct.Name = "tsmAtiveProduct";
-            this.tsmAtiveProduct.Size = new System.Drawing.Size(236, 34);
-            this.tsmAtiveProduct.Text = "Active";
-            this.tsmAtiveProduct.Click += new System.EventHandler(this.tsmAtiveProduct_Click);
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.label4.Location = new System.Drawing.Point(38, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(284, 18);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Create new invoice and process payments";
             // 
-            // pictureBox2
+            // label5
             // 
-            this.pictureBox2.Image = global::MiniStore.Properties.Resources.money_bag;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::MiniStore.Properties.Resources.order;
-            this.pictureBox3.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::MiniStore.Properties.Resources.warning;
-            this.pictureBox4.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::MiniStore.Properties.Resources.group;
-            this.pictureBox5.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // editProductToolStripMenuItem
-            // 
-            this.editProductToolStripMenuItem.Image = global::MiniStore.Properties.Resources.edit;
-            this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
-            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.editProductToolStripMenuItem.Text = "Edit Product";
-            this.editProductToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
-            this.editProductToolStripMenuItem.Click += new System.EventHandler(this.editProductToolStripMenuItem_Click);
-            // 
-            // addStockToolStripMenuItem
-            // 
-            this.addStockToolStripMenuItem.Image = global::MiniStore.Properties.Resources.add_2;
-            this.addStockToolStripMenuItem.Name = "addStockToolStripMenuItem";
-            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.addStockToolStripMenuItem.Text = "Add Stock";
-            this.addStockToolStripMenuItem.Click += new System.EventHandler(this.addStockToolStripMenuItem_Click);
-            // 
-            // disableDeleteToolStripMenuItem
-            // 
-            this.disableDeleteToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.disableDeleteToolStripMenuItem.Image = global::MiniStore.Properties.Resources.trash;
-            this.disableDeleteToolStripMenuItem.Name = "disableDeleteToolStripMenuItem";
-            this.disableDeleteToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.disableDeleteToolStripMenuItem.Text = "Disable/Delete";
-            this.disableDeleteToolStripMenuItem.Click += new System.EventHandler(this.disableDeleteToolStripMenuItem_Click);
-            // 
-            // viewDetailsToolStripMenuItem
-            // 
-            this.viewDetailsToolStripMenuItem.Image = global::MiniStore.Properties.Resources.view;
-            this.viewDetailsToolStripMenuItem.Name = "viewDetailsToolStripMenuItem";
-            this.viewDetailsToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.viewDetailsToolStripMenuItem.Text = "View Details";
-            // 
-            // btnAddNewProduct
-            // 
-            this.btnAddNewProduct.BorderRadius = 9;
-            this.btnAddNewProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(90)))), ((int)(((byte)(243)))));
-            this.btnAddNewProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAddNewProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewProduct.Image = global::MiniStore.Properties.Resources.add;
-            this.btnAddNewProduct.Location = new System.Drawing.Point(1042, 36);
-            this.btnAddNewProduct.Margin = new System.Windows.Forms.Padding(20);
-            this.btnAddNewProduct.Name = "btnAddNewProduct";
-            this.btnAddNewProduct.Size = new System.Drawing.Size(189, 54);
-            this.btnAddNewProduct.TabIndex = 3;
-            this.btnAddNewProduct.Text = "Add New Products";
-            this.btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
-            // 
-            // txbInventorySearch
-            // 
-            this.txbInventorySearch.BorderRadius = 9;
-            this.txbInventorySearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbInventorySearch.DefaultText = "";
-            this.txbInventorySearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbInventorySearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbInventorySearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbInventorySearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbInventorySearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbInventorySearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.txbInventorySearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbInventorySearch.IconLeft = global::MiniStore.Properties.Resources.search;
-            this.txbInventorySearch.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txbInventorySearch.Location = new System.Drawing.Point(20, 20);
-            this.txbInventorySearch.Margin = new System.Windows.Forms.Padding(20);
-            this.txbInventorySearch.Name = "txbInventorySearch";
-            this.txbInventorySearch.PlaceholderText = "Search products by name or ID...";
-            this.txbInventorySearch.SelectedText = "";
-            this.txbInventorySearch.Size = new System.Drawing.Size(400, 36);
-            this.txbInventorySearch.TabIndex = 0;
-            this.txbInventorySearch.Visible = false;
-            this.txbInventorySearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
-            this.txbInventorySearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
-            // 
-            // btnNextPageProducts
-            // 
-            this.btnNextPageProducts.BorderRadius = 9;
-            this.btnNextPageProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNextPageProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNextPageProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNextPageProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNextPageProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNextPageProducts.ForeColor = System.Drawing.Color.White;
-            this.btnNextPageProducts.Image = global::MiniStore.Properties.Resources.right;
-            this.btnNextPageProducts.Location = new System.Drawing.Point(603, 14);
-            this.btnNextPageProducts.Name = "btnNextPageProducts";
-            this.btnNextPageProducts.Size = new System.Drawing.Size(40, 40);
-            this.btnNextPageProducts.TabIndex = 12;
-            this.btnNextPageProducts.Click += new System.EventHandler(this.btnNextPageProducts_Click);
-            // 
-            // btnPreviesPageProducts
-            // 
-            this.btnPreviesPageProducts.BorderRadius = 9;
-            this.btnPreviesPageProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPreviesPageProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPreviesPageProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPreviesPageProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPreviesPageProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPreviesPageProducts.ForeColor = System.Drawing.Color.White;
-            this.btnPreviesPageProducts.Image = global::MiniStore.Properties.Resources.left_small;
-            this.btnPreviesPageProducts.Location = new System.Drawing.Point(496, 14);
-            this.btnPreviesPageProducts.Name = "btnPreviesPageProducts";
-            this.btnPreviesPageProducts.Size = new System.Drawing.Size(40, 40);
-            this.btnPreviesPageProducts.TabIndex = 11;
-            this.btnPreviesPageProducts.Click += new System.EventHandler(this.btnPreviesPageProducts_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MiniStore.Properties.Resources.logo_2;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(33, 29);
+            this.label5.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(209, 45);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Sales / POS";
             // 
             // frmMainForm
             // 
@@ -1240,6 +1269,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.tcMainScreen.ResumeLayout(false);
             this.tpDashboard.ResumeLayout(false);
@@ -1251,15 +1281,19 @@
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             this.guna2ShadowPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.guna2ShadowPanel2.PerformLayout();
             this.guna2ShadowPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.guna2ShadowPanel4.ResumeLayout(false);
             this.guna2ShadowPanel4.PerformLayout();
             this.guna2ShadowPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.guna2ShadowPanel7.ResumeLayout(false);
             this.guna2ShadowPanel7.PerformLayout();
             this.guna2ShadowPanel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tpInventory.ResumeLayout(false);
             this.tpInventory.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -1268,11 +1302,8 @@
             this.guna2ShadowPanel10.ResumeLayout(false);
             this.guna2ShadowPanel11.ResumeLayout(false);
             this.guna2ShadowPanel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tpSalesPOS.ResumeLayout(false);
+            this.tpSalesPOS.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1352,5 +1383,7 @@
         private System.Windows.Forms.ToolStripMenuItem disableDeleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmAtiveProduct;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
