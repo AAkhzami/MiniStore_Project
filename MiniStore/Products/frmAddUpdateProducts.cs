@@ -15,11 +15,21 @@ namespace MiniStore.Products
 {
     public partial class frmAddUpdateProducts : Form
     {
+        public enum enStatus { AddProduct, UpdateProduct }
+        enStatus _status = enStatus.AddProduct;
+        int _productID = -1;
+        clsProducts _ProductInfo;
         public frmAddUpdateProducts()
         {
             InitializeComponent();
+            _status = enStatus.AddProduct;
         }
-
+        public frmAddUpdateProducts(int ProductID)
+        {
+            InitializeComponent();
+            _productID = ProductID;
+            _status = enStatus.UpdateProduct;
+        }
         private void rbActive_Click(object sender, EventArgs e)
         {
             ChangingTheChoice();
@@ -43,7 +53,7 @@ namespace MiniStore.Products
                 pInActive.FillColor4 = Color.AliceBlue;
 
                 pActive.BorderColor = Color.Silver;
-                pActive.FillColor  = Color.White;
+                pActive.FillColor = Color.White;
                 pActive.FillColor2 = Color.White;
                 pActive.FillColor3 = Color.White;
                 pActive.FillColor4 = Color.White;
@@ -78,7 +88,7 @@ namespace MiniStore.Products
 
         private void txbProductName_Validating(object sender, CancelEventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txbProductName.Text))
+            if (string.IsNullOrWhiteSpace(txbProductName.Text))
             {
                 errorProvider1.SetError(txbProductName, "Product name is required.");
                 e.Cancel = true;
@@ -91,21 +101,42 @@ namespace MiniStore.Products
 
         private void frmAddUpdateProducts_Load(object sender, EventArgs e)
         {
+
             DataTable dt = clsCategories.GetAllCategories();
-            foreach(DataRow row in dt.Rows)
+            foreach (DataRow row in dt.Rows)
             {
                 cbCategory.Items.Add(row["Name"].ToString());
             }
             cbCategory.SelectedIndex = 0;
-        }
 
-        private void btnSaveProduct_Click(object sender, EventArgs e)
-        {
-            if(!this.ValidateChildren())
+            switch (_status)
             {
-                MessageBox.Show("Please correct the errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                case enStatus.AddProduct:
+                    this.Text = "Add Product";
+                    lblTitle.Text = "Add New Product";
+                    lblSubtitle.Text = "Enter the product details below to add it to your inventory.";
+                    txbProductName.Text = "";
+                    nudEstStockQuantity.Value = 0;
+                    nudPrice.Value = 0;
+                    rbActive.Checked = true;
+                    ChangingTheChoice();
+                    _ProductInfo = new clsProducts();
+                    break;
+                case enStatus.UpdateProduct:
+                    this.Text = "Update Product";
+                    lblTitle.Text = "Update Product";
+                    lblSubtitle.Text = "Enter the product details below to update.";
+                    _ProductInfo = clsProducts.Find(_productID);
+                    txbProductName.Text = _ProductInfo.Name.ToString();
+                    nudEstStockQuantity.Value = _ProductInfo.StockQuantity;
+                    nudPrice.Value = _ProductInfo.Price;
+                    rbActive.Checked = _ProductInfo.IsActive;
+                    ChangingTheChoice();
+                    break;
             }
+        }
+        private bool AddNewProduct()
+        {
 
             string ProductName = txbProductName.Text.Trim();
             string CategoryName = cbCategory.SelectedItem.ToString();
@@ -120,14 +151,60 @@ namespace MiniStore.Products
             p.IsActive = rbActive.Checked;
             p.CreatedByUserID = clsCurrentUser.CurrentUser.UserID ?? -1;
 
-            if(p.Save())
+            if (p.Save())
             {
-                MessageBox.Show("Product saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                _ProductInfo = p;
+                return true;
             }
             else
             {
-                MessageBox.Show("Failed to save product.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+        private bool UpdateProduct()
+        {
+
+            string ProductName = txbProductName.Text.Trim();
+            decimal Price = nudPrice.Value;
+            int StockQuantity = (int)nudEstStockQuantity.Value;
+
+
+            _ProductInfo.Name = ProductName;
+            _ProductInfo.Price = Price;
+            _ProductInfo.StockQuantity = StockQuantity;
+            _ProductInfo.IsActive = rbActive.Checked;
+
+            if (_ProductInfo.Save())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        private void btnSaveProduct_Click(object sender, EventArgs e)
+        {
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Please correct the errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            switch (_status)
+            {
+                case enStatus.AddProduct:
+                    if (AddNewProduct())
+                    {
+                        MessageBox.Show("Product saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to save product.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    break;
+                case enStatus.UpdateProduct:
+
             }
 
         }
@@ -148,5 +225,6 @@ namespace MiniStore.Products
             frm.DataSaved += Frm_NewCategoryDataSaved;
             frm.ShowDialog();
         }
+
     }
 }

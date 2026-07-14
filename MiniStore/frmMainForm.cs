@@ -282,10 +282,14 @@ namespace MiniStore
 
         private async void btnAddNewProduct_Click(object sender, EventArgs e)
         {
-            frmAddUpdateProducts frmAddUpdateProducts = new frmAddUpdateProducts();
-            frmAddUpdateProducts.ShowDialog();
-            await LoadProductsDataForInventoryPage();
+            frmAddUpdateProducts AddProduct = new frmAddUpdateProducts();
+            AddProduct.ShowDialog();
         }
 
+        private void editProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateProducts EditProduct = new frmAddUpdateProducts();
+            EditProduct.ShowDialog();
+        }
     }
 }

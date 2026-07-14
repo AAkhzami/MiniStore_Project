@@ -50,8 +50,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txbProductName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSubtitle = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pbLogo_Of_Page = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GroupBox1.SuspendLayout();
@@ -377,29 +377,29 @@
             this.txbProductName.TabIndex = 10;
             this.txbProductName.Validating += new System.ComponentModel.CancelEventHandler(this.txbProductName_Validating);
             // 
-            // label2
+            // lblSubtitle
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.label2.Location = new System.Drawing.Point(155, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(389, 18);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Enter the product details below to add it to your inventory.\r\n";
+            this.lblSubtitle.AutoSize = true;
+            this.lblSubtitle.BackColor = System.Drawing.Color.White;
+            this.lblSubtitle.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lblSubtitle.Location = new System.Drawing.Point(155, 92);
+            this.lblSubtitle.Name = "lblSubtitle";
+            this.lblSubtitle.Size = new System.Drawing.Size(389, 18);
+            this.lblSubtitle.TabIndex = 9;
+            this.lblSubtitle.Text = "Enter the product details below to add it to your inventory.\r\n";
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label1.Location = new System.Drawing.Point(150, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 45);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Add New Product";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.lblTitle.Location = new System.Drawing.Point(150, 37);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(300, 45);
+            this.lblTitle.TabIndex = 8;
+            this.lblTitle.Text = "Add New Product";
             // 
             // pbLogo_Of_Page
             // 
@@ -422,8 +422,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(566, 736);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSubtitle);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbLogo_Of_Page);
             this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -462,8 +462,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txbProductName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSubtitle;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pbLogo_Of_Page;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
