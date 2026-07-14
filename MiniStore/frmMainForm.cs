@@ -294,5 +294,25 @@ namespace MiniStore
             EditProduct.ShowDialog();
             await InventoryPage();
         }
+
+        private async void disableDeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int productID = (int)dgvInventoryProducts.CurrentRow.Cells[0].Value;
+            if(MessageBox.Show("Are you sure you want to disable this product? ","Confirm", MessageBoxButtons.YesNo,MessageBoxIcon.Information) == 
+                DialogResult.Yes)
+            {
+                if(clsProducts.DeleteProducts(productID))
+                {
+                    MessageBox.Show("Product disabled successfully", "successfully", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    await InventoryPage();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Product disabled failed", "Failed",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }                
+            }
+        }
     }
 }
