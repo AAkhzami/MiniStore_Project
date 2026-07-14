@@ -13,25 +13,24 @@ namespace MiniStore.Products.Control
 {
     public partial class ctrlProductInfo : UserControl
     {
-        int _productId = -1;
+        clsProducts _product;
         public ctrlProductInfo()
         {
             InitializeComponent();
         }
 
-        public void LoadData(int ProductID)
+        public void LoadData(clsProducts ProductInfo)
         {
-            _productId = ProductID;
-            clsProducts product = clsProducts.Find(_productId);
+            this._product = ProductInfo;
 
-            if (product != null)
+            if (_product != null)
             {
-                lblProductName.Text = product.Name;
-                lblCategory.Text = clsCategories.Find(product.CategoryID).Name;
-                lblPrice.Text = product.Price + " OMR";
-                lblStockQty.Text = product.StockQuantity.ToString();
-                lblIsActive.Text = product.IsActive.ToString();
-                lblCreatedBy.Text = clsUsers.Find(product.CreatedByUserID).UserName;
+                lblProductName.Text = _product.Name;
+                lblCategory.Text = clsCategories.Find(_product.CategoryID).Name;
+                lblPrice.Text = _product.Price + " OMR";
+                lblStockQty.Text = _product.StockQuantity.ToString();
+                lblIsActive.Text = _product.IsActive.ToString();
+                lblCreatedBy.Text = clsUsers.Find(_product.CreatedByUserID).UserName;
             }
             else
             {

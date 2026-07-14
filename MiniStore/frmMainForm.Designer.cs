@@ -828,7 +828,7 @@
             this.cmsInventoryPage.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsInventoryPage.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsInventoryPage.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsInventoryPage.Size = new System.Drawing.Size(237, 174);
+            this.cmsInventoryPage.Size = new System.Drawing.Size(237, 196);
             this.cmsInventoryPage.Opening += new System.ComponentModel.CancelEventHandler(this.cmsInventoryPage_Opening);
             // 
             // guna2ShadowPanel10
@@ -1117,6 +1117,7 @@
             this.addStockToolStripMenuItem.Name = "addStockToolStripMenuItem";
             this.addStockToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
             this.addStockToolStripMenuItem.Text = "Add Stock";
+            this.addStockToolStripMenuItem.Click += new System.EventHandler(this.addStockToolStripMenuItem_Click);
             // 
             // disableDeleteToolStripMenuItem
             // 

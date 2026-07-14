@@ -349,5 +349,15 @@ namespace MiniStore
                 }
             }
         }
+
+        private async void addStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int productID = (int)dgvInventoryProducts.CurrentRow.Cells[0].Value;
+
+            frmAddStock frm = new frmAddStock(productID);
+            frm.ShowDialog();
+            await InventoryPage();
+
+        }
     }
 }

@@ -33,11 +33,13 @@
             this.lblSubtitle = new System.Windows.Forms.Label();
             this.pbLogo_Of_Page = new System.Windows.Forms.PictureBox();
             this.ctrlProductInfo1 = new MiniStore.Products.Control.ctrlProductInfo();
-            this.nudEstStockQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.nudAddQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudEstStockQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAddQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,37 +96,80 @@
             this.ctrlProductInfo1.Size = new System.Drawing.Size(449, 432);
             this.ctrlProductInfo1.TabIndex = 16;
             // 
-            // nudEstStockQuantity
+            // nudAddQuantity
             // 
-            this.nudEstStockQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.nudEstStockQuantity.BorderRadius = 9;
-            this.nudEstStockQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudEstStockQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.nudEstStockQuantity.Location = new System.Drawing.Point(160, 640);
-            this.nudEstStockQuantity.Name = "nudEstStockQuantity";
-            this.nudEstStockQuantity.Size = new System.Drawing.Size(300, 47);
-            this.nudEstStockQuantity.TabIndex = 18;
+            this.nudAddQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.nudAddQuantity.BorderRadius = 9;
+            this.nudAddQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudAddQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.nudAddQuantity.Location = new System.Drawing.Point(160, 640);
+            this.nudAddQuantity.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudAddQuantity.Name = "nudAddQuantity";
+            this.nudAddQuantity.Size = new System.Drawing.Size(300, 47);
+            this.nudAddQuantity.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label2.Location = new System.Drawing.Point(24, 650);
+            this.label2.Location = new System.Drawing.Point(24, 649);
             this.label2.Margin = new System.Windows.Forms.Padding(15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 29);
+            this.label2.Size = new System.Drawing.Size(87, 29);
             this.label2.TabIndex = 20;
-            this.label2.Text = "New Stock";
+            this.label2.Text = "Add By";
+            // 
+            // btnSave
+            // 
+            this.btnSave.BorderRadius = 9;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(121)))), ((int)(((byte)(243)))));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(241, 693);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(219, 55);
+            this.btnSave.TabIndex = 24;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BorderColor = System.Drawing.Color.Silver;
+            this.btnCancel.BorderRadius = 9;
+            this.btnCancel.BorderThickness = 1;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.White;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.btnCancel.Location = new System.Drawing.Point(12, 693);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(219, 55);
+            this.btnCancel.TabIndex = 23;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmAddStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(472, 740);
+            this.ClientSize = new System.Drawing.Size(472, 752);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.nudEstStockQuantity);
+            this.Controls.Add(this.nudAddQuantity);
             this.Controls.Add(this.ctrlProductInfo1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -134,10 +179,11 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddStock";
+            this.Load += new System.EventHandler(this.frmAddStock_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudEstStockQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAddQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,7 +195,9 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pbLogo_Of_Page;
         private Control.ctrlProductInfo ctrlProductInfo1;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudEstStockQuantity;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudAddQuantity;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
+        private Guna.UI2.WinForms.Guna2Button btnCancel;
     }
 }
