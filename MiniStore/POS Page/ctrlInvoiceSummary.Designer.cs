@@ -34,23 +34,23 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblFinalTotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTax = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSubtotal = new System.Windows.Forms.Label();
             this.lblProductName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.nudCashPaid = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblChange = new System.Windows.Forms.Label();
             this.btnPay = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
@@ -60,7 +60,7 @@
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCashPaid)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,17 +70,17 @@
             this.guna2GroupBox1.Controls.Add(this.btnClose);
             this.guna2GroupBox1.Controls.Add(this.btnPay);
             this.guna2GroupBox1.Controls.Add(this.guna2CustomGradientPanel1);
-            this.guna2GroupBox1.Controls.Add(this.guna2NumericUpDown1);
+            this.guna2GroupBox1.Controls.Add(this.nudCashPaid);
             this.guna2GroupBox1.Controls.Add(this.label7);
             this.guna2GroupBox1.Controls.Add(this.pictureBox2);
             this.guna2GroupBox1.Controls.Add(this.label6);
             this.guna2GroupBox1.Controls.Add(this.panel5);
-            this.guna2GroupBox1.Controls.Add(this.label5);
+            this.guna2GroupBox1.Controls.Add(this.lblFinalTotal);
             this.guna2GroupBox1.Controls.Add(this.label4);
             this.guna2GroupBox1.Controls.Add(this.panel1);
-            this.guna2GroupBox1.Controls.Add(this.label3);
+            this.guna2GroupBox1.Controls.Add(this.lblTax);
             this.guna2GroupBox1.Controls.Add(this.label2);
-            this.guna2GroupBox1.Controls.Add(this.label1);
+            this.guna2GroupBox1.Controls.Add(this.lblSubtotal);
             this.guna2GroupBox1.Controls.Add(this.lblProductName);
             this.guna2GroupBox1.Controls.Add(this.pictureBox1);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.White;
@@ -139,20 +139,20 @@
             this.panel8.Size = new System.Drawing.Size(283, 1);
             this.panel8.TabIndex = 24;
             // 
-            // label5
+            // lblFinalTotal
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(87)))), ((int)(((byte)(221)))));
-            this.label5.Location = new System.Drawing.Point(250, 164);
-            this.label5.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(61, 20);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "00.00";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFinalTotal.AutoSize = true;
+            this.lblFinalTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblFinalTotal.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.lblFinalTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(87)))), ((int)(((byte)(221)))));
+            this.lblFinalTotal.Location = new System.Drawing.Point(250, 164);
+            this.lblFinalTotal.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblFinalTotal.Name = "lblFinalTotal";
+            this.lblFinalTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblFinalTotal.Size = new System.Drawing.Size(61, 20);
+            this.lblFinalTotal.TabIndex = 33;
+            this.lblFinalTotal.Text = "00.00";
+            this.lblFinalTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
@@ -204,20 +204,20 @@
             this.panel2.Size = new System.Drawing.Size(283, 1);
             this.panel2.TabIndex = 24;
             // 
-            // label3
+            // lblTax
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label3.Location = new System.Drawing.Point(258, 104);
-            this.label3.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(45, 18);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "00.00";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTax.AutoSize = true;
+            this.lblTax.BackColor = System.Drawing.Color.Transparent;
+            this.lblTax.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lblTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.lblTax.Location = new System.Drawing.Point(258, 104);
+            this.lblTax.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblTax.Name = "lblTax";
+            this.lblTax.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTax.Size = new System.Drawing.Size(45, 18);
+            this.lblTax.TabIndex = 30;
+            this.lblTax.Text = "00.00";
+            this.lblTax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
@@ -232,20 +232,20 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "Tax (5%)";
             // 
-            // label1
+            // lblSubtotal
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label1.Location = new System.Drawing.Point(258, 66);
-            this.label1.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(45, 18);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "00.00";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblSubtotal.AutoSize = true;
+            this.lblSubtotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubtotal.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.lblSubtotal.Location = new System.Drawing.Point(258, 66);
+            this.lblSubtotal.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblSubtotal.Name = "lblSubtotal";
+            this.lblSubtotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblSubtotal.Size = new System.Drawing.Size(45, 18);
+            this.lblSubtotal.TabIndex = 28;
+            this.lblSubtotal.Text = "00.00";
+            this.lblSubtotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblProductName
             // 
@@ -297,25 +297,25 @@
             this.label7.TabIndex = 37;
             this.label7.Text = "Cash Paid (OMR)";
             // 
-            // guna2NumericUpDown1
+            // nudCashPaid
             // 
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.BorderRadius = 9;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.DecimalPlaces = 3;
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(166, 259);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(148, 36);
-            this.guna2NumericUpDown1.TabIndex = 38;
-            this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(87)))), ((int)(((byte)(221)))));
+            this.nudCashPaid.BackColor = System.Drawing.Color.Transparent;
+            this.nudCashPaid.BorderRadius = 9;
+            this.nudCashPaid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudCashPaid.DecimalPlaces = 3;
+            this.nudCashPaid.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudCashPaid.Location = new System.Drawing.Point(166, 259);
+            this.nudCashPaid.Name = "nudCashPaid";
+            this.nudCashPaid.Size = new System.Drawing.Size(148, 36);
+            this.nudCashPaid.TabIndex = 38;
+            this.nudCashPaid.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(87)))), ((int)(((byte)(221)))));
             // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(155)))), ((int)(((byte)(80)))));
             this.guna2CustomGradientPanel1.BorderRadius = 9;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
-            this.guna2CustomGradientPanel1.Controls.Add(this.label9);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblChange);
             this.guna2CustomGradientPanel1.Controls.Add(this.label8);
             this.guna2CustomGradientPanel1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(155)))), ((int)(((byte)(80)))));
             this.guna2CustomGradientPanel1.CustomBorderThickness = new System.Windows.Forms.Padding(1);
@@ -343,20 +343,20 @@
             this.label8.Text = "Change (OMR)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label9
+            // lblChange
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("TechnicBold", 20F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(158)))), ((int)(((byte)(74)))));
-            this.label9.Location = new System.Drawing.Point(152, 35);
-            this.label9.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.label9.Name = "label9";
-            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label9.Size = new System.Drawing.Size(87, 29);
-            this.label9.TabIndex = 34;
-            this.label9.Text = "00.00";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblChange.AutoSize = true;
+            this.lblChange.BackColor = System.Drawing.Color.Transparent;
+            this.lblChange.Font = new System.Drawing.Font("TechnicBold", 20F, System.Drawing.FontStyle.Bold);
+            this.lblChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(158)))), ((int)(((byte)(74)))));
+            this.lblChange.Location = new System.Drawing.Point(152, 35);
+            this.lblChange.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblChange.Name = "lblChange";
+            this.lblChange.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblChange.Size = new System.Drawing.Size(87, 29);
+            this.lblChange.TabIndex = 34;
+            this.lblChange.Text = "00.00";
+            this.lblChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnPay
             // 
@@ -405,7 +405,7 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCashPaid)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -416,7 +416,7 @@
 
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudCashPaid;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
@@ -424,18 +424,18 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblFinalTotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTax;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.Label lblProductName;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblChange;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2Button btnPay;
