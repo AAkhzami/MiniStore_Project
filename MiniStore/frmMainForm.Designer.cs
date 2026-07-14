@@ -48,7 +48,6 @@
             this.btnSalesPOS = new Guna.UI2.WinForms.Guna2Button();
             this.btnInventory = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tcMainScreen = new Guna.UI2.WinForms.Guna2TabControl();
             this.tpDashboard = new System.Windows.Forms.TabPage();
@@ -61,22 +60,18 @@
             this.lblTodaySales = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel5 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblTodayOrders = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblLowStock = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel6 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2ShadowPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblCustomers = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel8 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblUserGreeting = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -84,21 +79,13 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgvInventoryProducts = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cmsInventoryPage = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.editProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.disableDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAddNewProduct = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel10 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.cbSearchType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbInventory_Categories = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txbInventorySearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel11 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.cbItemPerPage_Inventory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lbl_Inventory_Text_For_Item_Per_Page = new System.Windows.Forms.Label();
             this.lbl_Inventory_PageNumber = new System.Windows.Forms.Label();
-            this.btnNextPageProducts = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPreviesPageProducts = new Guna.UI2.WinForms.Guna2Button();
             this.lblCounterProductsPerPage = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -108,11 +95,24 @@
             this.tpUserInfo = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tsmAtiveProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.editProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.disableDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddNewProduct = new Guna.UI2.WinForms.Guna2Button();
+            this.txbInventorySearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnNextPageProducts = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPreviesPageProducts = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pSideMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.tcMainScreen.SuspendLayout();
             this.tpDashboard.SuspendLayout();
@@ -121,22 +121,23 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2ShadowPanel2.SuspendLayout();
             this.guna2ShadowPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2ShadowPanel4.SuspendLayout();
             this.guna2ShadowPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.guna2ShadowPanel7.SuspendLayout();
             this.guna2ShadowPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tpInventory.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventoryProducts)).BeginInit();
             this.cmsInventoryPage.SuspendLayout();
             this.guna2ShadowPanel10.SuspendLayout();
             this.guna2ShadowPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pSideMenu
@@ -336,16 +337,6 @@
             this.btnDashboard.Tag = "0";
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.Click += new System.EventHandler(this.btnNextPage);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MiniStore.Properties.Resources.logo_2;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // panel4
             // 
@@ -558,16 +549,6 @@
             this.guna2ShadowPanel5.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel5.TabIndex = 0;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MiniStore.Properties.Resources.money_bag;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // guna2ShadowPanel2
             // 
             this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
@@ -616,16 +597,6 @@
             this.guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel3.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel3.TabIndex = 0;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::MiniStore.Properties.Resources.order;
-            this.pictureBox3.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
             // 
             // guna2ShadowPanel4
             // 
@@ -676,16 +647,6 @@
             this.guna2ShadowPanel6.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel6.TabIndex = 0;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::MiniStore.Properties.Resources.warning;
-            this.pictureBox4.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
             // guna2ShadowPanel7
             // 
             this.guna2ShadowPanel7.BackColor = System.Drawing.Color.Transparent;
@@ -734,16 +695,6 @@
             this.guna2ShadowPanel8.ShadowColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel8.Size = new System.Drawing.Size(87, 88);
             this.guna2ShadowPanel8.TabIndex = 0;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::MiniStore.Properties.Resources.group;
-            this.pictureBox5.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
             // 
             // lblUserGreeting
             // 
@@ -864,6 +815,7 @@
             this.cmsInventoryPage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editProductToolStripMenuItem,
             this.addStockToolStripMenuItem,
+            this.tsmAtiveProduct,
             this.disableDeleteToolStripMenuItem,
             this.viewDetailsToolStripMenuItem});
             this.cmsInventoryPage.Name = "cmsInventoryPage";
@@ -876,58 +828,8 @@
             this.cmsInventoryPage.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsInventoryPage.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsInventoryPage.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsInventoryPage.Size = new System.Drawing.Size(237, 162);
-            // 
-            // editProductToolStripMenuItem
-            // 
-            this.editProductToolStripMenuItem.Image = global::MiniStore.Properties.Resources.edit;
-            this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
-            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.editProductToolStripMenuItem.Text = "Edit Product";
-            this.editProductToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
-            this.editProductToolStripMenuItem.Click += new System.EventHandler(this.editProductToolStripMenuItem_Click);
-            // 
-            // addStockToolStripMenuItem
-            // 
-            this.addStockToolStripMenuItem.Image = global::MiniStore.Properties.Resources.add_2;
-            this.addStockToolStripMenuItem.Name = "addStockToolStripMenuItem";
-            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.addStockToolStripMenuItem.Text = "Add Stock";
-            // 
-            // disableDeleteToolStripMenuItem
-            // 
-            this.disableDeleteToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.disableDeleteToolStripMenuItem.Image = global::MiniStore.Properties.Resources.trash;
-            this.disableDeleteToolStripMenuItem.Name = "disableDeleteToolStripMenuItem";
-            this.disableDeleteToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.disableDeleteToolStripMenuItem.Text = "Disable/Delete";
-            this.disableDeleteToolStripMenuItem.Click += new System.EventHandler(this.disableDeleteToolStripMenuItem_Click);
-            // 
-            // viewDetailsToolStripMenuItem
-            // 
-            this.viewDetailsToolStripMenuItem.Image = global::MiniStore.Properties.Resources.view;
-            this.viewDetailsToolStripMenuItem.Name = "viewDetailsToolStripMenuItem";
-            this.viewDetailsToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.viewDetailsToolStripMenuItem.Text = "View Details";
-            // 
-            // btnAddNewProduct
-            // 
-            this.btnAddNewProduct.BorderRadius = 9;
-            this.btnAddNewProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddNewProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddNewProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddNewProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(90)))), ((int)(((byte)(243)))));
-            this.btnAddNewProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAddNewProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewProduct.Image = global::MiniStore.Properties.Resources.add;
-            this.btnAddNewProduct.Location = new System.Drawing.Point(1042, 36);
-            this.btnAddNewProduct.Margin = new System.Windows.Forms.Padding(20);
-            this.btnAddNewProduct.Name = "btnAddNewProduct";
-            this.btnAddNewProduct.Size = new System.Drawing.Size(189, 54);
-            this.btnAddNewProduct.TabIndex = 3;
-            this.btnAddNewProduct.Text = "Add New Products";
-            this.btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
+            this.cmsInventoryPage.Size = new System.Drawing.Size(237, 174);
+            this.cmsInventoryPage.Opening += new System.ComponentModel.CancelEventHandler(this.cmsInventoryPage_Opening);
             // 
             // guna2ShadowPanel10
             // 
@@ -985,31 +887,6 @@
             this.cbInventory_Categories.StartIndex = 0;
             this.cbInventory_Categories.TabIndex = 1;
             this.cbInventory_Categories.SelectedIndexChanged += new System.EventHandler(this.cbInventory_Categories_SelectedIndexChanged);
-            // 
-            // txbInventorySearch
-            // 
-            this.txbInventorySearch.BorderRadius = 9;
-            this.txbInventorySearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbInventorySearch.DefaultText = "";
-            this.txbInventorySearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbInventorySearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbInventorySearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbInventorySearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbInventorySearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbInventorySearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.txbInventorySearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbInventorySearch.IconLeft = global::MiniStore.Properties.Resources.search;
-            this.txbInventorySearch.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txbInventorySearch.Location = new System.Drawing.Point(20, 20);
-            this.txbInventorySearch.Margin = new System.Windows.Forms.Padding(20);
-            this.txbInventorySearch.Name = "txbInventorySearch";
-            this.txbInventorySearch.PlaceholderText = "Search products by name or ID...";
-            this.txbInventorySearch.SelectedText = "";
-            this.txbInventorySearch.Size = new System.Drawing.Size(400, 36);
-            this.txbInventorySearch.TabIndex = 0;
-            this.txbInventorySearch.Visible = false;
-            this.txbInventorySearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
-            this.txbInventorySearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
             // 
             // guna2ShadowPanel11
             // 
@@ -1086,38 +963,6 @@
             this.lbl_Inventory_PageNumber.TabIndex = 13;
             this.lbl_Inventory_PageNumber.Text = "1";
             // 
-            // btnNextPageProducts
-            // 
-            this.btnNextPageProducts.BorderRadius = 9;
-            this.btnNextPageProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNextPageProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNextPageProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNextPageProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNextPageProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNextPageProducts.ForeColor = System.Drawing.Color.White;
-            this.btnNextPageProducts.Image = global::MiniStore.Properties.Resources.right;
-            this.btnNextPageProducts.Location = new System.Drawing.Point(603, 14);
-            this.btnNextPageProducts.Name = "btnNextPageProducts";
-            this.btnNextPageProducts.Size = new System.Drawing.Size(40, 40);
-            this.btnNextPageProducts.TabIndex = 12;
-            this.btnNextPageProducts.Click += new System.EventHandler(this.btnNextPageProducts_Click);
-            // 
-            // btnPreviesPageProducts
-            // 
-            this.btnPreviesPageProducts.BorderRadius = 9;
-            this.btnPreviesPageProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPreviesPageProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPreviesPageProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPreviesPageProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPreviesPageProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPreviesPageProducts.ForeColor = System.Drawing.Color.White;
-            this.btnPreviesPageProducts.Image = global::MiniStore.Properties.Resources.left_small;
-            this.btnPreviesPageProducts.Location = new System.Drawing.Point(496, 14);
-            this.btnPreviesPageProducts.Name = "btnPreviesPageProducts";
-            this.btnPreviesPageProducts.Size = new System.Drawing.Size(40, 40);
-            this.btnPreviesPageProducts.TabIndex = 11;
-            this.btnPreviesPageProducts.Click += new System.EventHandler(this.btnPreviesPageProducts_Click);
-            // 
             // lblCounterProductsPerPage
             // 
             this.lblCounterProductsPerPage.AutoSize = true;
@@ -1156,35 +1001,35 @@
             // tpSalesPOS
             // 
             this.tpSalesPOS.BackColor = System.Drawing.Color.White;
-            this.tpSalesPOS.Location = new System.Drawing.Point(5, 4);
+            this.tpSalesPOS.Location = new System.Drawing.Point(184, 4);
             this.tpSalesPOS.Name = "tpSalesPOS";
-            this.tpSalesPOS.Size = new System.Drawing.Size(1323, 812);
+            this.tpSalesPOS.Size = new System.Drawing.Size(1144, 812);
             this.tpSalesPOS.TabIndex = 2;
             this.tpSalesPOS.Text = "SalesAndPOS";
             // 
             // tpCustomers
             // 
             this.tpCustomers.BackColor = System.Drawing.Color.White;
-            this.tpCustomers.Location = new System.Drawing.Point(5, 4);
+            this.tpCustomers.Location = new System.Drawing.Point(184, 4);
             this.tpCustomers.Name = "tpCustomers";
-            this.tpCustomers.Size = new System.Drawing.Size(1323, 812);
+            this.tpCustomers.Size = new System.Drawing.Size(1144, 812);
             this.tpCustomers.TabIndex = 3;
             this.tpCustomers.Text = "Customers";
             // 
             // tpUsers
             // 
             this.tpUsers.BackColor = System.Drawing.Color.White;
-            this.tpUsers.Location = new System.Drawing.Point(5, 4);
+            this.tpUsers.Location = new System.Drawing.Point(184, 4);
             this.tpUsers.Name = "tpUsers";
-            this.tpUsers.Size = new System.Drawing.Size(1323, 812);
+            this.tpUsers.Size = new System.Drawing.Size(1144, 812);
             this.tpUsers.TabIndex = 4;
             this.tpUsers.Text = "Users";
             // 
             // tpUserInfo
             // 
-            this.tpUserInfo.Location = new System.Drawing.Point(5, 4);
+            this.tpUserInfo.Location = new System.Drawing.Point(184, 4);
             this.tpUserInfo.Name = "tpUserInfo";
-            this.tpUserInfo.Size = new System.Drawing.Size(1323, 812);
+            this.tpUserInfo.Size = new System.Drawing.Size(1144, 812);
             this.tpUserInfo.TabIndex = 5;
             this.tpUserInfo.Text = "UserInfo";
             this.tpUserInfo.UseVisualStyleBackColor = true;
@@ -1209,6 +1054,172 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // tsmAtiveProduct
+            // 
+            this.tsmAtiveProduct.Enabled = false;
+            this.tsmAtiveProduct.Name = "tsmAtiveProduct";
+            this.tsmAtiveProduct.Size = new System.Drawing.Size(236, 34);
+            this.tsmAtiveProduct.Text = "Active";
+            this.tsmAtiveProduct.Click += new System.EventHandler(this.tsmAtiveProduct_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MiniStore.Properties.Resources.money_bag;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::MiniStore.Properties.Resources.order;
+            this.pictureBox3.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::MiniStore.Properties.Resources.warning;
+            this.pictureBox4.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::MiniStore.Properties.Resources.group;
+            this.pictureBox5.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // editProductToolStripMenuItem
+            // 
+            this.editProductToolStripMenuItem.Image = global::MiniStore.Properties.Resources.edit;
+            this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
+            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.editProductToolStripMenuItem.Text = "Edit Product";
+            this.editProductToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.editProductToolStripMenuItem.Click += new System.EventHandler(this.editProductToolStripMenuItem_Click);
+            // 
+            // addStockToolStripMenuItem
+            // 
+            this.addStockToolStripMenuItem.Image = global::MiniStore.Properties.Resources.add_2;
+            this.addStockToolStripMenuItem.Name = "addStockToolStripMenuItem";
+            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.addStockToolStripMenuItem.Text = "Add Stock";
+            // 
+            // disableDeleteToolStripMenuItem
+            // 
+            this.disableDeleteToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.disableDeleteToolStripMenuItem.Image = global::MiniStore.Properties.Resources.trash;
+            this.disableDeleteToolStripMenuItem.Name = "disableDeleteToolStripMenuItem";
+            this.disableDeleteToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.disableDeleteToolStripMenuItem.Text = "Disable/Delete";
+            this.disableDeleteToolStripMenuItem.Click += new System.EventHandler(this.disableDeleteToolStripMenuItem_Click);
+            // 
+            // viewDetailsToolStripMenuItem
+            // 
+            this.viewDetailsToolStripMenuItem.Image = global::MiniStore.Properties.Resources.view;
+            this.viewDetailsToolStripMenuItem.Name = "viewDetailsToolStripMenuItem";
+            this.viewDetailsToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.viewDetailsToolStripMenuItem.Text = "View Details";
+            // 
+            // btnAddNewProduct
+            // 
+            this.btnAddNewProduct.BorderRadius = 9;
+            this.btnAddNewProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddNewProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddNewProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddNewProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(90)))), ((int)(((byte)(243)))));
+            this.btnAddNewProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAddNewProduct.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewProduct.Image = global::MiniStore.Properties.Resources.add;
+            this.btnAddNewProduct.Location = new System.Drawing.Point(1042, 36);
+            this.btnAddNewProduct.Margin = new System.Windows.Forms.Padding(20);
+            this.btnAddNewProduct.Name = "btnAddNewProduct";
+            this.btnAddNewProduct.Size = new System.Drawing.Size(189, 54);
+            this.btnAddNewProduct.TabIndex = 3;
+            this.btnAddNewProduct.Text = "Add New Products";
+            this.btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
+            // 
+            // txbInventorySearch
+            // 
+            this.txbInventorySearch.BorderRadius = 9;
+            this.txbInventorySearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbInventorySearch.DefaultText = "";
+            this.txbInventorySearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbInventorySearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbInventorySearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbInventorySearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbInventorySearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbInventorySearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.txbInventorySearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbInventorySearch.IconLeft = global::MiniStore.Properties.Resources.search;
+            this.txbInventorySearch.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txbInventorySearch.Location = new System.Drawing.Point(20, 20);
+            this.txbInventorySearch.Margin = new System.Windows.Forms.Padding(20);
+            this.txbInventorySearch.Name = "txbInventorySearch";
+            this.txbInventorySearch.PlaceholderText = "Search products by name or ID...";
+            this.txbInventorySearch.SelectedText = "";
+            this.txbInventorySearch.Size = new System.Drawing.Size(400, 36);
+            this.txbInventorySearch.TabIndex = 0;
+            this.txbInventorySearch.Visible = false;
+            this.txbInventorySearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
+            this.txbInventorySearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
+            // 
+            // btnNextPageProducts
+            // 
+            this.btnNextPageProducts.BorderRadius = 9;
+            this.btnNextPageProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNextPageProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNextPageProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNextPageProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNextPageProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNextPageProducts.ForeColor = System.Drawing.Color.White;
+            this.btnNextPageProducts.Image = global::MiniStore.Properties.Resources.right;
+            this.btnNextPageProducts.Location = new System.Drawing.Point(603, 14);
+            this.btnNextPageProducts.Name = "btnNextPageProducts";
+            this.btnNextPageProducts.Size = new System.Drawing.Size(40, 40);
+            this.btnNextPageProducts.TabIndex = 12;
+            this.btnNextPageProducts.Click += new System.EventHandler(this.btnNextPageProducts_Click);
+            // 
+            // btnPreviesPageProducts
+            // 
+            this.btnPreviesPageProducts.BorderRadius = 9;
+            this.btnPreviesPageProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPreviesPageProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPreviesPageProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPreviesPageProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPreviesPageProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPreviesPageProducts.ForeColor = System.Drawing.Color.White;
+            this.btnPreviesPageProducts.Image = global::MiniStore.Properties.Resources.left_small;
+            this.btnPreviesPageProducts.Location = new System.Drawing.Point(496, 14);
+            this.btnPreviesPageProducts.Name = "btnPreviesPageProducts";
+            this.btnPreviesPageProducts.Size = new System.Drawing.Size(40, 40);
+            this.btnPreviesPageProducts.TabIndex = 11;
+            this.btnPreviesPageProducts.Click += new System.EventHandler(this.btnPreviesPageProducts_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MiniStore.Properties.Resources.logo_2;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1228,7 +1239,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.tcMainScreen.ResumeLayout(false);
             this.tpDashboard.ResumeLayout(false);
@@ -1240,19 +1250,15 @@
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             this.guna2ShadowPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.guna2ShadowPanel2.PerformLayout();
             this.guna2ShadowPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.guna2ShadowPanel4.ResumeLayout(false);
             this.guna2ShadowPanel4.PerformLayout();
             this.guna2ShadowPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.guna2ShadowPanel7.ResumeLayout(false);
             this.guna2ShadowPanel7.PerformLayout();
             this.guna2ShadowPanel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tpInventory.ResumeLayout(false);
             this.tpInventory.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -1261,6 +1267,11 @@
             this.guna2ShadowPanel10.ResumeLayout(false);
             this.guna2ShadowPanel11.ResumeLayout(false);
             this.guna2ShadowPanel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1339,5 +1350,6 @@
         private System.Windows.Forms.ToolStripMenuItem addStockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem disableDeleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmAtiveProduct;
     }
 }

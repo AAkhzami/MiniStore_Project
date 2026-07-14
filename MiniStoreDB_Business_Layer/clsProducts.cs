@@ -97,7 +97,19 @@ namespace MiniStoreDB_Business_Layer
         {
             return clsProductsData.DeleteProductsByID(ProductID);
         }
-
+        public static bool ProductActivation(int ProductID)
+        {
+            clsProducts product = clsProducts.Find(ProductID);
+            product.IsActive = true;
+            if(product.Save())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public static DataTable GetAllProducts()
         {
             return clsProductsData.GetAllProducts();

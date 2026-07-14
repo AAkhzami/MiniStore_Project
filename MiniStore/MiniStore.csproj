@@ -71,6 +71,18 @@
       <DependentUpon>frmMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Global\clsCurrentUser.cs" />
+    <Compile Include="Products\Control\ctrlProductInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Products\Control\ctrlProductInfo.Designer.cs">
+      <DependentUpon>ctrlProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\frmAddStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\frmAddStock.Designer.cs">
+      <DependentUpon>frmAddStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Products\frmAddUpdateProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainForm.resx">
       <DependentUpon>frmMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\Control\ctrlProductInfo.resx">
+      <DependentUpon>ctrlProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\frmAddStock.resx">
+      <DependentUpon>frmAddStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Products\frmAddUpdateProducts.resx">
       <DependentUpon>frmAddUpdateProducts.cs</DependentUpon>
@@ -207,6 +225,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\price-tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -314,5 +314,40 @@ namespace MiniStore
                 }                
             }
         }
+
+        private void cmsInventoryPage_Opening(object sender, CancelEventArgs e)
+        {
+            int productID = (int)dgvInventoryProducts.CurrentRow.Cells[0].Value;
+            if(clsProducts.Find(productID).IsActive)
+            {
+                tsmAtiveProduct.Enabled = false;
+                disableDeleteToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                tsmAtiveProduct.Enabled = true;
+                disableDeleteToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        private async void tsmAtiveProduct_Click(object sender, EventArgs e)
+        {
+            int productID = (int)dgvInventoryProducts.CurrentRow.Cells[0].Value;
+            if(MessageBox.Show("Are you sure you want to activation this product? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) ==
+                DialogResult.Yes)
+            {
+                if (clsProducts.ProductActivation(productID))
+                {
+                    MessageBox.Show("The product has been successfully activated.", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    await InventoryPage();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Product activation failed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+        }
     }
 }
