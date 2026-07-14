@@ -118,8 +118,6 @@ namespace MiniStore.Products
                     txbProductName.Text = "";
                     nudEstStockQuantity.Value = 0;
                     nudPrice.Value = 0;
-                    rbActive.Checked = true;
-                    ChangingTheChoice();
                     _ProductInfo = new clsProducts();
                     break;
                 case enStatus.UpdateProduct:
@@ -130,7 +128,7 @@ namespace MiniStore.Products
                     txbProductName.Text = _ProductInfo.Name.ToString();
                     nudEstStockQuantity.Value = _ProductInfo.StockQuantity;
                     nudPrice.Value = _ProductInfo.Price;
-                    rbActive.Checked = _ProductInfo.IsActive;
+                    rbActive.Checked = !_ProductInfo.IsActive;
                     ChangingTheChoice();
                     break;
             }
@@ -204,6 +202,15 @@ namespace MiniStore.Products
                     }
                     break;
                 case enStatus.UpdateProduct:
+                    if (UpdateProduct())
+                    {
+                        MessageBox.Show("Product update successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to update product.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    break;
 
             }
 
@@ -226,5 +233,9 @@ namespace MiniStore.Products
             frm.ShowDialog();
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

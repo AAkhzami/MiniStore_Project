@@ -284,12 +284,15 @@ namespace MiniStore
         {
             frmAddUpdateProducts AddProduct = new frmAddUpdateProducts();
             AddProduct.ShowDialog();
+            await InventoryPage();
         }
 
-        private void editProductToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void editProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddUpdateProducts EditProduct = new frmAddUpdateProducts();
+            int productID = (int) dgvInventoryProducts.CurrentRow.Cells[0].Value;
+            frmAddUpdateProducts EditProduct = new frmAddUpdateProducts(productID);
             EditProduct.ShowDialog();
+            await InventoryPage();
         }
     }
 }

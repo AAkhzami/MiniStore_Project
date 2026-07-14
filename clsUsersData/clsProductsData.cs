@@ -97,7 +97,7 @@ namespace MiniStoreDB_DataAccess_Layer
                             StockQuantity = @StockQuantity,
                             IsActive = @IsActive,
                             CreatedByUserID = @CreatedByUserID
-                            ProductID = @ProductID";
+                            where ProductID = @ProductID";
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
