@@ -71,6 +71,12 @@
       <DependentUpon>frmMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Global\clsCurrentUser.cs" />
+    <Compile Include="POS Page\ctrlInvoiceSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="POS Page\ctrlInvoiceSummary.Designer.cs">
+      <DependentUpon>ctrlInvoiceSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Products\Control\ctrlProductInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainForm.resx">
       <DependentUpon>frmMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS Page\ctrlInvoiceSummary.resx">
+      <DependentUpon>ctrlInvoiceSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Products\Control\ctrlProductInfo.resx">
       <DependentUpon>ctrlProductInfo.cs</DependentUpon>
