@@ -58,10 +58,10 @@
     <Compile Include="Category\frmNewCategory.Designer.cs">
       <DependentUpon>frmNewCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customers\ctrlCustomerInfo.cs">
+    <Compile Include="Customers\Control\ctrlCustomerInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Customers\ctrlCustomerInfo.Designer.cs">
+    <Compile Include="Customers\Control\ctrlCustomerInfo.Designer.cs">
       <DependentUpon>ctrlCustomerInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
@@ -136,7 +136,7 @@
     <EmbeddedResource Include="Category\frmNewCategory.resx">
       <DependentUpon>frmNewCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customers\ctrlCustomerInfo.resx">
+    <EmbeddedResource Include="Customers\Control\ctrlCustomerInfo.resx">
       <DependentUpon>ctrlCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
@@ -312,6 +312,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-call.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
