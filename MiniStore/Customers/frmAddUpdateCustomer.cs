@@ -116,6 +116,10 @@ namespace MiniStore.Customers
                 MessageBox.Show("Customer details saved successfully!","Successfully",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 lblCustomerID.Text = customer.CustomerID.ToString();
                 btnSaveCustomer.Enabled = false;
+                txbCustomerName.Enabled = false;
+                txbPhoneNumber.Enabled = false;
+                rbActive.Enabled = false;
+                rbInActive.Enabled = false;
                 OnCustomerCreate?.Invoke(customer.CustomerID ?? -1);
                 return;
             }
