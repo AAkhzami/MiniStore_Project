@@ -191,8 +191,8 @@ namespace MiniStore.POS_Page
             {
                 clsOrderDetails detail = new clsOrderDetails();
                 detail.OrderID = orderid;
-                detail.ProductID = (int) row.Cells["[ProductID"].Value;
-                detail.Quantity = (int)row.Cells["Qtr"].Value;
+                detail.ProductID = (int) row.Cells["ProductID"].Value;
+                detail.Quantity = (int)row.Cells["Qty"].Value;
                 detail.PricePerUnit = (decimal)row.Cells["Price"].Value;
 
                 if(!detail.Save())
