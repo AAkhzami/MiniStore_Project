@@ -170,5 +170,28 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return rowsAffected;
         }
+        public static bool IsPhoneNumberExist(string phonenumber)
+        {
+            bool exist = false;
+            string query = @"select 1 from Customers where PhoneNumber = @PhoneNumber";
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PhoneNumber", phonenumber);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    exist = reader.HasRows;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+            return exist;
+        }
     }
 }

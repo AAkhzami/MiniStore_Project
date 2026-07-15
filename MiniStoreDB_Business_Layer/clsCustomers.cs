@@ -93,5 +93,9 @@ namespace MiniStoreDB_Business_Layer
         {
             return clsCustomersData.GetCustomersCount();
         }
+        public static bool IsPhoneNumberExist(string phonenumber)
+        {
+            return clsCustomersData.IsPhoneNumberExist(phonenumber);
+        }
     }
 }
