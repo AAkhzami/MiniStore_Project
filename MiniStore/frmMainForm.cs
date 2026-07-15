@@ -114,8 +114,20 @@ namespace MiniStore
             }
             
             lblUserGreeting.Text = clsCurrentUser.CurrentUser.UserName;
+            ctrlCart1.OnRecalc += ctrlCart1_OnRecalc;
         }
 
+        private void ctrlCart1_OnRecalc(decimal price)
+        {
+            if(price < 0)
+            {
+                ctrlInvoiceSummary1.ReducePrice(price);
+            }
+            else if (price > 0)
+            {
+                ctrlInvoiceSummary1.AddPrice(price);
+            }
+        }
         private void frmMainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             frmLogin.Close();
