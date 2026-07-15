@@ -67,7 +67,7 @@ as
 begin
 	declare @FinalPrice decimal(10,3);
 
-	set @FinalPrice = @Price * 1.15;
+	set @FinalPrice = @Price * 1.05;
 	RETURN @FinalPrice;
 end;
 
@@ -179,15 +179,42 @@ begin
 	where UserID = @UserID;
 end
 
-create procedure SP_GETOrderInformationAtDate
+--create procedure SP_GETOrderInformationAtDate
+--@Date date,
+--@TodaySales decimal(10,3) OUTPUT,
+--@TodayOrder int OUTPUT
+--as
+--begin
+--	select
+--		@TodaySales = SUM(TotalAmount),
+--		@TodayOrder = COUNT(*)
+--	from 
+--	Orders
+--	where OrderDate >= CAST(@Date as DATE)
+--	and OrderDate < CAST(DATEADD(DAY,1,@Date) as DATE);
+--end
+
+
+create procedure dbo.SP_GetTotalOrdersAtDate
 @Date date,
-@TodaySales decimal(10,3) OUTPUT,
-@TodayOrder int OUTPUT
+@TodayOrders int OutPut
 as
 begin
 	select
-		@TodaySales = SUM(TotalAmount),
-		@TodayOrder = COUNT(*)
+		@TodayOrders = COUNT(*)
+	from 
+	Orders
+	where OrderDate >= CAST(@Date as DATE)
+	and OrderDate < CAST(DATEADD(DAY,1,@Date) as DATE);
+end
+
+create procedure dbo.SP_GetTotalSalesAtDate
+@Date date,
+@TodaySales decimal(10,3) OutPut
+as
+begin
+	select
+		@TodaySales = SUM(TotalAmount)
 	from 
 	Orders
 	where OrderDate >= CAST(@Date as DATE)

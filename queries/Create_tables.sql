@@ -113,3 +113,8 @@ p.CreatedByUserID
 from Products p
 inner join Categories c on
 c.CategoryID = p.CategoryID;
+
+insert into Customers
+(CustomerName,PhoneNumber,CreatedByUserID)
+Values
+('Cash Customer (Walk-in)',null,1);
