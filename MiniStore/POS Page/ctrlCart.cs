@@ -152,6 +152,15 @@ namespace MiniStore.POS_Page
             }
             else
             {
+                int StockQuantity = clsProducts.Find((int)dgvCart.Rows[e.RowIndex].Cells["ProductID"].Value).StockQuantity;
+
+                if (!(StockQuantity > currentQty))
+                {
+                    MessageBox.Show($"The maximum quantity available for this product ({StockQuantity} pieces) has been reached.\nNo more than the current stock can be added.",
+                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 int newQty = currentQty + 1;
                 dgvCart.Rows[e.RowIndex].Cells["Qty"].Value = newQty;
                 dgvCart.Rows[e.RowIndex].Cells["SubTotal"].Value = price * newQty;

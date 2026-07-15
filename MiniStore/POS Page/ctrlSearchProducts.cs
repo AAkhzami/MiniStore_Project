@@ -30,6 +30,12 @@ namespace MiniStore.POS_Page
         
         private void btnInsertProduct_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrWhiteSpace(txbProductSearch.Text))
+            {
+                MessageBox.Show("It appears that you did not enter any value in the search box.", "Not allowed",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                txbProductSearch.Focus();
+                return;
+            }
             int productID = Convert.ToInt32(txbProductSearch.Text);
             clsProducts product = clsProducts.Find(productID);
             if(!product.IsActive || product.StockQuantity == 0)
