@@ -29,7 +29,6 @@ namespace MiniStoreDB_DataAccess_Layer
                         if (reader.Read())
                         {
                             isFound = true;
-                            userid = (int)reader["UserID"];
                             username = (string)reader["UserName"];
                             password = (string)reader["Password"];
 

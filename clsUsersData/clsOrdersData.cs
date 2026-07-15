@@ -27,7 +27,6 @@ namespace MiniStoreDB_DataAccess_Layer
                         if (reader.Read())
                         {
                             isFound = true;
-                            orderid = (int)reader["OrderID"];
                             customerid = (int)reader["CustomerID"];
                             orderdate = (DateTime)reader["OrderDate"];
                             totalamount = (decimal)reader["TotalAmount"];

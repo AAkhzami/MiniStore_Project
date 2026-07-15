@@ -27,7 +27,6 @@ namespace MiniStoreDB_DataAccess_Layer
                         if (reader.Read())
                         {
                             isFound = true;
-                            customerid = (int)reader["CustomerID"];
                             customername = (string)reader["CustomerName"];
                             phonenumber = (string)reader["PhoneNumber"];
                             createdbyuserid = (int)reader["CreatedByUserID"];
@@ -41,6 +40,39 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return isFound;
         }
+        public static bool GetCustomersInfoByPhoneNumber(string phonenumber, ref int customerid, ref string customername, ref int createdbyuserid)
+        {
+            bool isFound = false;
+            string query = @"select * from Customers
+            where PhoneNumber = @PhoneNumber";
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PhoneNumber", phonenumber);
+
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+                            customerid = (int)reader["CustomerID"];
+                            customername = (string)reader["CustomerName"];
+                            createdbyuserid = (int)reader["CreatedByUserID"];
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    isFound = false;
+                }
+            }
+            return isFound;
+        }
+
         public static int? AddNewCustomers(string customername, string phonenumber, int createdbyuserid)
         {
             int? recordId = null;

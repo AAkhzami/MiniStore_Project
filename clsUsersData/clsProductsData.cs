@@ -28,7 +28,6 @@ namespace MiniStoreDB_DataAccess_Layer
                         if (reader.Read())
                         {
                             isFound = true;
-                            productid = (int)reader["ProductID"];
                             if (reader["Name"] != DBNull.Value)
                                 name = (string)reader["Name"];
                             else

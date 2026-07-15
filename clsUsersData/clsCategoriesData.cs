@@ -25,7 +25,6 @@ namespace MiniStoreDB_DataAccess_Layer
                         if (reader.Read())
                         {
                             isFound = true;
-                            categoryid = (int)reader["CategoryID"];
                             name = (string)reader["Name"];
                         }
                     }
@@ -55,7 +54,6 @@ namespace MiniStoreDB_DataAccess_Layer
                         {
                             isFound = true;
                             categoryid = (int)reader["CategoryID"];
-                            name = (string)reader["Name"];
                         }
                     }
                 }
