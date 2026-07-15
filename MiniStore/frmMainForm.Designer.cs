@@ -91,8 +91,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tpSalesPOS = new System.Windows.Forms.TabPage();
-            this.ctrlInvoiceSummary1 = new MiniStore.POS_Page.ctrlInvoiceSummary();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tpCustomers = new System.Windows.Forms.TabPage();
@@ -100,7 +98,6 @@
             this.tpUserInfo = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.ctrlCart1 = new MiniStore.POS_Page.ctrlCart();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -114,6 +111,9 @@
             this.btnNextPageProducts = new Guna.UI2.WinForms.Guna2Button();
             this.btnPreviesPageProducts = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ctrlCart1 = new MiniStore.POS_Page.ctrlCart();
+            this.ctrlInvoiceSummary1 = new MiniStore.POS_Page.ctrlInvoiceSummary();
+            this.ctrlSearchProducts1 = new MiniStore.POS_Page.ctrlSearchProducts();
             this.pSideMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -398,10 +398,10 @@
             this.tpDashboard.Controls.Add(this.lblUserGreeting);
             this.tpDashboard.Controls.Add(this.label2);
             this.tpDashboard.Controls.Add(this.label1);
-            this.tpDashboard.Location = new System.Drawing.Point(5, 4);
+            this.tpDashboard.Location = new System.Drawing.Point(184, 4);
             this.tpDashboard.Name = "tpDashboard";
             this.tpDashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDashboard.Size = new System.Drawing.Size(1323, 812);
+            this.tpDashboard.Size = new System.Drawing.Size(1144, 812);
             this.tpDashboard.TabIndex = 0;
             this.tpDashboard.Text = "Dashboard";
             // 
@@ -503,7 +503,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(41, 132);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(30);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1252, 144);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1073, 144);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // guna2ShadowPanel1
@@ -660,7 +660,7 @@
             this.guna2ShadowPanel7.Controls.Add(this.label10);
             this.guna2ShadowPanel7.Controls.Add(this.guna2ShadowPanel8);
             this.guna2ShadowPanel7.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel7.Location = new System.Drawing.Point(942, 3);
+            this.guna2ShadowPanel7.Location = new System.Drawing.Point(3, 144);
             this.guna2ShadowPanel7.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.guna2ShadowPanel7.Name = "guna2ShadowPanel7";
             this.guna2ShadowPanel7.Radius = 9;
@@ -1015,31 +1015,16 @@
             // tpSalesPOS
             // 
             this.tpSalesPOS.BackColor = System.Drawing.Color.White;
+            this.tpSalesPOS.Controls.Add(this.ctrlSearchProducts1);
             this.tpSalesPOS.Controls.Add(this.ctrlCart1);
             this.tpSalesPOS.Controls.Add(this.ctrlInvoiceSummary1);
-            this.tpSalesPOS.Controls.Add(this.panel8);
             this.tpSalesPOS.Controls.Add(this.label4);
             this.tpSalesPOS.Controls.Add(this.label5);
-            this.tpSalesPOS.Location = new System.Drawing.Point(184, 4);
+            this.tpSalesPOS.Location = new System.Drawing.Point(5, 4);
             this.tpSalesPOS.Name = "tpSalesPOS";
-            this.tpSalesPOS.Size = new System.Drawing.Size(1144, 812);
+            this.tpSalesPOS.Size = new System.Drawing.Size(1323, 812);
             this.tpSalesPOS.TabIndex = 2;
             this.tpSalesPOS.Text = "SalesAndPOS";
-            // 
-            // ctrlInvoiceSummary1
-            // 
-            this.ctrlInvoiceSummary1.Location = new System.Drawing.Point(952, 232);
-            this.ctrlInvoiceSummary1.Name = "ctrlInvoiceSummary1";
-            this.ctrlInvoiceSummary1.Size = new System.Drawing.Size(349, 565);
-            this.ctrlInvoiceSummary1.TabIndex = 13;
-            // 
-            // panel8
-            // 
-            this.panel8.Location = new System.Drawing.Point(10, 112);
-            this.panel8.Margin = new System.Windows.Forms.Padding(10);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1298, 100);
-            this.panel8.TabIndex = 12;
             // 
             // label4
             // 
@@ -1110,13 +1095,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // ctrlCart1
-            // 
-            this.ctrlCart1.Location = new System.Drawing.Point(10, 232);
-            this.ctrlCart1.Name = "ctrlCart1";
-            this.ctrlCart1.Size = new System.Drawing.Size(929, 570);
-            this.ctrlCart1.TabIndex = 14;
             // 
             // pictureBox2
             // 
@@ -1278,6 +1256,27 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // ctrlCart1
+            // 
+            this.ctrlCart1.Location = new System.Drawing.Point(10, 232);
+            this.ctrlCart1.Name = "ctrlCart1";
+            this.ctrlCart1.Size = new System.Drawing.Size(929, 570);
+            this.ctrlCart1.TabIndex = 14;
+            // 
+            // ctrlInvoiceSummary1
+            // 
+            this.ctrlInvoiceSummary1.Location = new System.Drawing.Point(952, 232);
+            this.ctrlInvoiceSummary1.Name = "ctrlInvoiceSummary1";
+            this.ctrlInvoiceSummary1.Size = new System.Drawing.Size(349, 565);
+            this.ctrlInvoiceSummary1.TabIndex = 13;
+            // 
+            // ctrlSearchProducts1
+            // 
+            this.ctrlSearchProducts1.Location = new System.Drawing.Point(10, 112);
+            this.ctrlSearchProducts1.Name = "ctrlSearchProducts1";
+            this.ctrlSearchProducts1.Size = new System.Drawing.Size(1298, 100);
+            this.ctrlSearchProducts1.TabIndex = 0;
+            // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1413,8 +1412,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmAtiveProduct;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel8;
         private POS_Page.ctrlInvoiceSummary ctrlInvoiceSummary1;
         private POS_Page.ctrlCart ctrlCart1;
+        private POS_Page.ctrlSearchProducts ctrlSearchProducts1;
     }
 }

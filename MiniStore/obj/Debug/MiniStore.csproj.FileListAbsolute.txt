@@ -39,3 +39,4 @@ C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Products.frmProductDetails.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.POS_Page.ctrlInvoiceSummary.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.POS_Page.ctrlCart.resources
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.POS_Page.ctrlSearchProducts.resources
