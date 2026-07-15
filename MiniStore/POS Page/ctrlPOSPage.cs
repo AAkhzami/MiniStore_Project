@@ -13,11 +13,16 @@ namespace MiniStore.POS_Page
 {
     public partial class ctrlPOSPage : UserControl
     {
+        int _customerID = 1;
         public ctrlPOSPage()
         {
             InitializeComponent();
         }
-
+        public void GetCustomerID(int ID)
+        {
+            _customerID = ID;
+            ctrlInvoiceSummary1.customerId = _customerID;
+        }
         private void ctrlPOSPage_Load(object sender, EventArgs e)
         {
             ctrlCart1.OnRecalc += ctrlCart1_OnRecalc;
@@ -25,8 +30,7 @@ namespace MiniStore.POS_Page
             ctrlSearchProducts1.OnProductSelecte += ctrlCart1.AddCart;
             ctrlInvoiceSummary1.OnCancel += ctrlCart1.ResetTheCart;
             ctrlInvoiceSummary1.OnOrderCreate += ctrlCart1.InsertItemsOnDatabase;
-            ctrlInvoiceSummary1.customerId = (ctrlSearchProducts1.CustomerType == "Cash Customer(Walk-in)" ? 1 : -1);
-
+            ctrlSearchProducts1.OnCustomerSelecte += GetCustomerID;
         }
     
         private void ctrlCart1_OnRecalc(decimal price)

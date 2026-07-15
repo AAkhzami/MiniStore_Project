@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using MiniStore.Customers;
 using MiniStoreDB_Business_Layer;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,6 @@ namespace MiniStore.POS_Page
     public partial class ctrlSearchProducts : UserControl
     {
         
-        public string CustomerType = "Cash Customer(Walk-in)";
         public ctrlSearchProducts()
         {
             InitializeComponent();
@@ -24,6 +24,9 @@ namespace MiniStore.POS_Page
 
         public delegate void SelectProductEventHandler(int productID, string productName, decimal price);
         public event SelectProductEventHandler OnProductSelecte;
+
+        public delegate void SelectCustomerEventHandler(int customerID);
+        public event SelectCustomerEventHandler OnCustomerSelecte;
 
         private void ctrlSearchProducts_Load(object sender, EventArgs e)
         {
@@ -54,6 +57,34 @@ namespace MiniStore.POS_Page
             else
             {
                 MessageBox.Show("Product not found!", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void CustomerSelected(int customerID)
+        {
+            OnCustomerSelecte?.Invoke(customerID);
+        }
+
+        private void cbCustomerType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbCustomerType.Text == "Registered Customer")
+            {
+                frmCustomerInfo frm = new frmCustomerInfo();
+                frm.ShowDialog();
+                frm.OnCustomerSelect += CustomerSelected;
+                return;
+            }
+            else if (cbCustomerType.Text == "New Customer")
+            {
+                frmAddUpdateCustomer frm = new frmAddUpdateCustomer();
+                frm.ShowDialog();
+                frm.OnCustomerCreate += CustomerSelected;
+                return;
+            }
+            else
+            {
+                CustomerSelected(1);
+                return;
             }
         }
     }

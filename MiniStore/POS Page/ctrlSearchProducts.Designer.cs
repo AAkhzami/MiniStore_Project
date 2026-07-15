@@ -30,7 +30,7 @@
         {
             this.guna2ShadowPanel10 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnInsertProduct = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbCustomerType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lable1 = new System.Windows.Forms.Label();
             this.cbSearchType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txbProductSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -41,7 +41,7 @@
             // 
             this.guna2ShadowPanel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel10.Controls.Add(this.btnInsertProduct);
-            this.guna2ShadowPanel10.Controls.Add(this.guna2ComboBox1);
+            this.guna2ShadowPanel10.Controls.Add(this.cbCustomerType);
             this.guna2ShadowPanel10.Controls.Add(this.lable1);
             this.guna2ShadowPanel10.Controls.Add(this.cbSearchType);
             this.guna2ShadowPanel10.Controls.Add(this.txbProductSearch);
@@ -70,25 +70,27 @@
             this.btnInsertProduct.TabIndex = 20;
             this.btnInsertProduct.Click += new System.EventHandler(this.btnInsertProduct_Click);
             // 
-            // guna2ComboBox1
+            // cbCustomerType
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 9;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.cbCustomerType.BackColor = System.Drawing.Color.Transparent;
+            this.cbCustomerType.BorderRadius = 9;
+            this.cbCustomerType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbCustomerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCustomerType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCustomerType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCustomerType.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.cbCustomerType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbCustomerType.ItemHeight = 30;
+            this.cbCustomerType.Items.AddRange(new object[] {
             "Cash Customer (Walk-in)",
-            "Registered Customer"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(965, 42);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(294, 36);
-            this.guna2ComboBox1.StartIndex = 0;
-            this.guna2ComboBox1.TabIndex = 19;
+            "Registered Customer",
+            "New Customer"});
+            this.cbCustomerType.Location = new System.Drawing.Point(965, 42);
+            this.cbCustomerType.Name = "cbCustomerType";
+            this.cbCustomerType.Size = new System.Drawing.Size(294, 36);
+            this.cbCustomerType.StartIndex = 0;
+            this.cbCustomerType.TabIndex = 19;
+            this.cbCustomerType.SelectedIndexChanged += new System.EventHandler(this.cbCustomerType_SelectedIndexChanged);
             // 
             // lable1
             // 
@@ -163,7 +165,7 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel10;
         private Guna.UI2.WinForms.Guna2TextBox txbProductSearch;
         private Guna.UI2.WinForms.Guna2ComboBox cbSearchType;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbCustomerType;
         private System.Windows.Forms.Label lable1;
         private Guna.UI2.WinForms.Guna2Button btnInsertProduct;
     }

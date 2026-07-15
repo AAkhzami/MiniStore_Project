@@ -56,10 +56,19 @@ namespace MiniStore.Customers
                 }
             }
         }
-
+        private void GetNewCustomerInfo(int customerID)
+        {
+            ctrlCustomerInfo1.LoadData(customer);
+            txbSearchOnCustomer.Text = clsCustomers.Find(customerID).PhoneNumber;
+            btnSelect.Enabled = true;
+            txbSearchOnCustomer.Enabled = false;
+            btnSearch.Enabled = false;
+        }
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
-
+            frmAddUpdateCustomer frm = new frmAddUpdateCustomer();
+            frm.ShowDialog();
+            frm.OnCustomerCreate += GetNewCustomerInfo;
         }
     }
 }
