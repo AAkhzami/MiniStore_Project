@@ -23,6 +23,10 @@ namespace MiniStore.POS_Page
 
         public delegate void ResetEventHandler();
         public event ResetEventHandler OnCancel;
+
+        public delegate void OrderCreateEventHandler(int CustomerID, int OrderID);
+        public event OrderCreateEventHandler OnOrderCreate;
+
         public ctrlInvoiceSummary()
         {
             InitializeComponent();
@@ -110,18 +114,19 @@ namespace MiniStore.POS_Page
         
         private void btnPay_Click(object sender, EventArgs e)
         {
-            clsOrders orders = new clsOrders();
-            orders.CustomerID = customerId;
-            orders.OrderDate = DateTime.Now;
-            orders.TotalAmount = _finalPrice;
-            orders.CreatedByUserID = clsCurrentUser.CurrentUser.UserID ?? -1;
+            clsOrders order = new clsOrders();
+            order.CustomerID = customerId;
+            order.OrderDate = DateTime.Now;
+            order.TotalAmount = _finalPrice;
+            order.CreatedByUserID = clsCurrentUser.CurrentUser.UserID ?? -1;
 
-            if(orders.Save())
+            if(!order.Save())
             {
-
+                MessageBox.Show("Try again later!","Wrong",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
             }
 
-            
+            OnOrderCreate?.Invoke(customerId, order.OrderID ?? -1);
         }
     }
 }
