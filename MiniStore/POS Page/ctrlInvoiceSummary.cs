@@ -16,6 +16,9 @@ namespace MiniStore.POS_Page
         decimal _cashPaid = 0;
         decimal _tax = 0;
         decimal _finalPrice = 0;
+
+        public delegate void ResetEventHandler();
+        public event ResetEventHandler OnCancel;
         public ctrlInvoiceSummary()
         {
             InitializeComponent();
@@ -98,6 +101,7 @@ namespace MiniStore.POS_Page
             _finalPrice = 0;
             _Update();
             _ResetCashPaid();
+            OnCancel?.Invoke();
         }
     }
 }

@@ -65,9 +65,9 @@ namespace MiniStore.POS_Page
             btnDecrease.UseColumnTextForButtonValue = true;
             btnDecrease.Width = 100;
             btnDecrease.FlatStyle = FlatStyle.Flat;
-            btnDecrease.DefaultCellStyle.BackColor = Color.FromArgb(231, 76, 60);
-            btnDecrease.DefaultCellStyle.ForeColor = Color.White;
-            btnDecrease.DefaultCellStyle.SelectionBackColor = Color.FromArgb(192, 57, 43);
+            btnDecrease.DefaultCellStyle.BackColor = Color.White;
+            btnDecrease.DefaultCellStyle.ForeColor = Color.FromArgb(100, 112, 145);
+            //btnDecrease.DefaultCellStyle.SelectionBackColor = Color.FromArgb(192, 57, 43);
             btnDecrease.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvCart.Columns.Add(btnDecrease);
 
@@ -78,9 +78,9 @@ namespace MiniStore.POS_Page
             btnIncrease.UseColumnTextForButtonValue = true;
             btnIncrease.Width = 100;
             btnIncrease.FlatStyle = FlatStyle.Flat;
-            btnIncrease.DefaultCellStyle.BackColor = Color.FromArgb(46, 204, 113);
-            btnIncrease.DefaultCellStyle.ForeColor = Color.White;
-            btnIncrease.DefaultCellStyle.SelectionBackColor = Color.FromArgb(39, 174, 96);
+            btnIncrease.DefaultCellStyle.BackColor = Color.White;
+            btnIncrease.DefaultCellStyle.ForeColor = Color.FromArgb(100,112,145);
+            //btnIncrease.DefaultCellStyle.SelectionBackColor = Color.FromArgb(39, 174, 96);
             btnIncrease.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvCart.Columns.Add(btnIncrease);
         }
@@ -134,14 +134,14 @@ namespace MiniStore.POS_Page
                     int newQty = currentQty - 1;
                     dgvCart.Rows[e.RowIndex].Cells["Qty"].Value = newQty;
                     dgvCart.Rows[e.RowIndex].Cells["SubTotal"].Value = price * newQty;
-                    OnRecalc?.Invoke(price);
-
+                    
                 }
                 else
                 {
                     dgvCart.Rows.RemoveAt(e.RowIndex);
                 }
                 OnRecalc?.Invoke(-price);
+
             }
             else
             {
@@ -163,6 +163,10 @@ namespace MiniStore.POS_Page
 
                 OnRecalc?.Invoke(-subTotal);
             }
+        }
+        public void ResetTheCart()
+        {
+            dgvCart.Rows.Clear();
         }
     }
 

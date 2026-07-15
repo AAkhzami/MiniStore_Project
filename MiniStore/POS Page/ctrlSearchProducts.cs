@@ -19,8 +19,9 @@ namespace MiniStore.POS_Page
         {
             InitializeComponent();
         }
-        
-        
+
+        public delegate void SelectProductEventHandler(int productID, string productName, decimal price);
+        public event SelectProductEventHandler OnProductSelecte;
 
         private void ctrlSearchProducts_Load(object sender, EventArgs e)
         {
@@ -31,9 +32,16 @@ namespace MiniStore.POS_Page
         {
             int productID = Convert.ToInt32(txbProductSearch.Text);
             clsProducts product = clsProducts.Find(productID);
+            if(!product.IsActive || product.StockQuantity == 0)
+            {
+                MessageBox.Show("Product unavailable (inactive or out of stock)", "Unavailable", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+
             if (product != null)
             {
-                MessageBox.Show($"Product Name : {product.Name} -- Price : {product.Price} OMR");
+                //MessageBox.Show($"Product Name : {product.Name} -- Price : {product.Price} OMR");
+                OnProductSelecte?.Invoke(productID, product.Name, product.Price);
             }
             else
             {

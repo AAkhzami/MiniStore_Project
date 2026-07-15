@@ -184,6 +184,11 @@
             this.nudCashPaid.Enabled = false;
             this.nudCashPaid.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudCashPaid.Location = new System.Drawing.Point(166, 259);
+            this.nudCashPaid.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.nudCashPaid.Name = "nudCashPaid";
             this.nudCashPaid.Size = new System.Drawing.Size(148, 36);
             this.nudCashPaid.TabIndex = 38;

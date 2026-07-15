@@ -84,9 +84,9 @@
             this.guna2ComboBox1.Items.AddRange(new object[] {
             "Cash Customer (Walk-in)",
             "Registered Customer"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(1050, 42);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(965, 42);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(209, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(294, 36);
             this.guna2ComboBox1.StartIndex = 0;
             this.guna2ComboBox1.TabIndex = 19;
             // 
@@ -95,7 +95,7 @@
             this.lable1.AutoSize = true;
             this.lable1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lable1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.lable1.Location = new System.Drawing.Point(1046, 20);
+            this.lable1.Location = new System.Drawing.Point(965, 20);
             this.lable1.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
             this.lable1.Name = "lable1";
             this.lable1.Size = new System.Drawing.Size(77, 19);
