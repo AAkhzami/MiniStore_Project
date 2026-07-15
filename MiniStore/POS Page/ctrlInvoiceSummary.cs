@@ -19,7 +19,7 @@ namespace MiniStore.POS_Page
         decimal _tax = 0;
         decimal _finalPrice = 0;
 
-        public int customerId = -1;
+        public int customerId =1; // casual customer
 
         public delegate void ResetEventHandler();
         public event ResetEventHandler OnCancel;
@@ -111,7 +111,10 @@ namespace MiniStore.POS_Page
             _ResetCashPaid();
             OnCancel?.Invoke();
         }
-        
+        public void SetCustomerID(int customerID)
+        {
+            this.customerId = customerID;
+        }
         private void btnPay_Click(object sender, EventArgs e)
         {
             clsOrders order = new clsOrders();

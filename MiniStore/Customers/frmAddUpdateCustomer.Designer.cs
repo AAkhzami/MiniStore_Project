@@ -337,8 +337,14 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbLogo_Of_Page);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAddUpdateCustomer";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Customer";
+            this.Load += new System.EventHandler(this.frmAddUpdateCustomer_Load);
             this.Click += new System.EventHandler(this.frmAddUpdateCustomer_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);

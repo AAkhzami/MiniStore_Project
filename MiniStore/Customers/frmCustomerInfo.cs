@@ -33,8 +33,9 @@ namespace MiniStore.Customers
                 txbSearchOnCustomer.Focus();
                 return;
             }
-
-            OnCustomerSelect?.Invoke(customer.CustomerID ?? -1);
+            int customerID = customer.CustomerID ?? 1;
+            OnCustomerSelect?.Invoke(customerID);
+            this.Close();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -58,8 +59,9 @@ namespace MiniStore.Customers
         }
         private void GetNewCustomerInfo(int customerID)
         {
+            customer = clsCustomers.Find(customerID);
             ctrlCustomerInfo1.LoadData(customer);
-            txbSearchOnCustomer.Text = clsCustomers.Find(customerID).PhoneNumber;
+            txbSearchOnCustomer.Text = customer.PhoneNumber;
             btnSelect.Enabled = true;
             txbSearchOnCustomer.Enabled = false;
             btnSearch.Enabled = false;
@@ -67,8 +69,21 @@ namespace MiniStore.Customers
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
             frmAddUpdateCustomer frm = new frmAddUpdateCustomer();
-            frm.ShowDialog();
             frm.OnCustomerCreate += GetNewCustomerInfo;
+            frm.ShowDialog();
+        }
+
+        private void frmCustomerInfo_Load(object sender, EventArgs e)
+        {
+            txbSearchOnCustomer.Focus();
+        }
+
+        private void txbSearchOnCustomer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

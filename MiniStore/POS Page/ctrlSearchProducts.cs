@@ -32,7 +32,12 @@ namespace MiniStore.POS_Page
         {
 
         }
-        
+        public void Reset(int id)
+        {
+            cbCustomerType.TabIndex = 0;
+            txbProductSearch.Text = "";
+            cbSearchType.TabIndex = 0;
+        }
         private void btnInsertProduct_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrWhiteSpace(txbProductSearch.Text))
@@ -43,15 +48,14 @@ namespace MiniStore.POS_Page
             }
             int productID = Convert.ToInt32(txbProductSearch.Text);
             clsProducts product = clsProducts.Find(productID);
-            if(!product.IsActive || product.StockQuantity == 0)
-            {
-                MessageBox.Show("Product unavailable (inactive or out of stock)", "Unavailable", MessageBoxButtons.OK,MessageBoxIcon.Error);
-                return;
-            }
 
             if (product != null)
             {
-                //MessageBox.Show($"Product Name : {product.Name} -- Price : {product.Price} OMR");
+                if (!product.IsActive || product.StockQuantity == 0)
+                {
+                    MessageBox.Show("Product unavailable (inactive or out of stock)", "Unavailable", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 OnProductSelecte?.Invoke(productID, product.Name, product.Price);
             }
             else
@@ -70,15 +74,15 @@ namespace MiniStore.POS_Page
             if(cbCustomerType.Text == "Registered Customer")
             {
                 frmCustomerInfo frm = new frmCustomerInfo();
-                frm.ShowDialog();
                 frm.OnCustomerSelect += CustomerSelected;
+                frm.ShowDialog();
                 return;
             }
             else if (cbCustomerType.Text == "New Customer")
             {
                 frmAddUpdateCustomer frm = new frmAddUpdateCustomer();
-                frm.ShowDialog();
                 frm.OnCustomerCreate += CustomerSelected;
+                frm.ShowDialog();
                 return;
             }
             else

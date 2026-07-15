@@ -84,6 +84,7 @@
             this.txbSearchOnCustomer.SelectedText = "";
             this.txbSearchOnCustomer.Size = new System.Drawing.Size(348, 48);
             this.txbSearchOnCustomer.TabIndex = 33;
+            this.txbSearchOnCustomer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearchOnCustomer_KeyPress);
             // 
             // btnAddNewCustomer
             // 
@@ -192,6 +193,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Info";
+            this.Load += new System.EventHandler(this.frmCustomerInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

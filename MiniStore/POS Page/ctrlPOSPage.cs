@@ -18,11 +18,11 @@ namespace MiniStore.POS_Page
         {
             InitializeComponent();
         }
-        public void GetCustomerID(int ID)
-        {
-            _customerID = ID;
-            ctrlInvoiceSummary1.customerId = _customerID;
-        }
+        //public void GetCustomerID(int ID)
+        //{
+        //    _customerID = ID;
+        //    ctrlInvoiceSummary1.customerId = _customerID;
+        //}
         private void ctrlPOSPage_Load(object sender, EventArgs e)
         {
             ctrlCart1.OnRecalc += ctrlCart1_OnRecalc;
@@ -30,9 +30,9 @@ namespace MiniStore.POS_Page
             ctrlSearchProducts1.OnProductSelecte += ctrlCart1.AddCart;
             ctrlInvoiceSummary1.OnCancel += ctrlCart1.ResetTheCart;
             ctrlInvoiceSummary1.OnOrderCreate += ctrlCart1.InsertItemsOnDatabase;
-            ctrlSearchProducts1.OnCustomerSelecte += GetCustomerID;
-        }
-    
+            ctrlSearchProducts1.OnCustomerSelecte += ctrlInvoiceSummary1.SetCustomerID;
+            ctrlInvoiceSummary1.OnOrderCreate += ctrlSearchProducts1.Reset;
+        }    
         private void ctrlCart1_OnRecalc(decimal price)
         {
             ctrlInvoiceSummary1.AddPrice(price);

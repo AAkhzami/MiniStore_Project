@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using MiniStore.Global;
 using MiniStoreDB_Business_Layer;
 using System;
 using System.Collections.Generic;
@@ -29,12 +30,12 @@ namespace MiniStore.Customers
             if (string.IsNullOrWhiteSpace(txbCustomerName.Text))
             {
                 errorProvider1.SetError(txbCustomerName, "This field must not be empty");
-                e.Cancel = false;
+                e.Cancel = true;
             }
             else
             {
                 errorProvider1.SetError(txbCustomerName, "");
-                e.Cancel = true;
+                e.Cancel = false;
             }
         }
 
@@ -43,17 +44,17 @@ namespace MiniStore.Customers
             if (string.IsNullOrWhiteSpace(txbPhoneNumber.Text))
             {
                 errorProvider1.SetError(txbPhoneNumber, "This field must not be empty");
-                e.Cancel = false;
+                e.Cancel = true;
             }
-            else if (txbPhoneNumber.Text.Length > 8 && txbPhoneNumber.Text.Length < 8)
+            else if (txbPhoneNumber.Text.Length != 8)
             {
                 errorProvider1.SetError(txbPhoneNumber, "The phone number must consist of 8 numbers");
-                e.Cancel = false;
+                e.Cancel = true;
             }
             else
             {
                 errorProvider1.SetError(txbPhoneNumber, "");
-                e.Cancel = true;
+                e.Cancel = false;
             }
         }
         void ChangingTheChoice()
@@ -112,26 +113,28 @@ namespace MiniStore.Customers
                 return;
             }
 
+            if (clsCustomers.IsPhoneNumberExist(txbPhoneNumber.Text))
+            {
+                errorProvider1.SetError(txbPhoneNumber, "This phone number exist allread!");
+                return;
+            }
             clsCustomers customer = new clsCustomers();
             customer.CustomerName = txbCustomerName.Text;
             customer.PhoneNumber = txbPhoneNumber.Text;
-            customer.IsActive = rbActive.Checked;   
+            customer.IsActive = rbActive.Checked;
+            customer.CreatedByUserID = clsCurrentUser.CurrentUser.UserID ?? -1;
+
             if(customer.Save())
             {
                 MessageBox.Show("Customer details saved successfully!","Successfully",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 lblCustomerID.Text = customer.CustomerID.ToString();
+
                 btnSaveCustomer.Enabled = false;
-                txbCustomerName.Enabled = false;
-                txbPhoneNumber.Enabled = false;
-                rbActive.Enabled = false;
-                rbInActive.Enabled = false;
                 OnCustomerCreate?.Invoke(customer.CustomerID ?? -1);
-                return;
             }
             else
             {
                 MessageBox.Show("Customer details saved failed! try again","Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                return;
             }
         }
 
@@ -143,6 +146,11 @@ namespace MiniStore.Customers
                 e.Handled = true;
             }
             
+        }
+
+        private void frmAddUpdateCustomer_Load(object sender, EventArgs e)
+        {
+            txbCustomerName.Focus();
         }
     }
 }

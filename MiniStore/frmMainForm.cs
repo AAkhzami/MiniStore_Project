@@ -18,8 +18,7 @@ namespace MiniStore
     public partial class frmMainForm : Form
     {
         frmLogin frmLogin = null;
-        //int _totalProducts = clsProducts.GetAllProducts().Rows.Count;
-        //private static DataTable _dtGetAllProducts;
+
 
         public frmMainForm(frmLogin login)
         {
