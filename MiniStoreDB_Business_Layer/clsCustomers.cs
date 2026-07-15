@@ -50,7 +50,22 @@ namespace MiniStoreDB_Business_Layer
                 return null;
             }
         }
-
+        public static clsCustomers Find(string PhoneNumber)
+        {
+            int CustomerID = -1;
+            string CustomerName = null;
+            int CreatedByUserID = 0;
+            bool isActive = true;
+            bool IsFound = clsCustomersData.GetCustomersInfoByPhoneNumber(PhoneNumber,ref CustomerID, ref CustomerName, ref CreatedByUserID, ref isActive);
+            if (IsFound)
+            {
+                return new clsCustomers(CustomerID, CustomerName, PhoneNumber, CreatedByUserID, isActive);
+            }
+            else
+            {
+                return null;
+            }
+        }
         private bool _AddNewCustomers()
         {
             this.CustomerID = clsCustomersData.AddNewCustomers(this.CustomerName, this.PhoneNumber, this.CreatedByUserID, this.IsActive);

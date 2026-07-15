@@ -27,9 +27,9 @@ namespace MiniStore.Customers
             lblIsActive.Text = "NULL";
             lblCreatedBy.Text = "NULL";
         }
-        public void LoadData(int customerID)
+        public void LoadData(clsCustomers customer)
         {
-            _Customer = clsCustomers.Find(customerID);
+            _Customer = customer;
             if( _Customer != null )
             {
                 lblCustomerID.Text = _Customer.CustomerID.ToString();

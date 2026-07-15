@@ -75,14 +75,14 @@
             this.gbProductInfo.ForeColor = System.Drawing.Color.White;
             this.gbProductInfo.Location = new System.Drawing.Point(3, 3);
             this.gbProductInfo.Name = "gbProductInfo";
-            this.gbProductInfo.Size = new System.Drawing.Size(465, 370);
+            this.gbProductInfo.Size = new System.Drawing.Size(745, 370);
             this.gbProductInfo.TabIndex = 15;
             this.gbProductInfo.Text = "Customer Information";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::MiniStore.Properties.Resources.user_31;
-            this.pictureBox6.Location = new System.Drawing.Point(220, 301);
+            this.pictureBox6.Location = new System.Drawing.Point(226, 301);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(28, 28);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,7 +92,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::MiniStore.Properties.Resources.check;
-            this.pictureBox5.Location = new System.Drawing.Point(220, 242);
+            this.pictureBox5.Location = new System.Drawing.Point(226, 242);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(28, 28);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,7 +102,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::MiniStore.Properties.Resources.phone_call;
-            this.pictureBox3.Location = new System.Drawing.Point(220, 183);
+            this.pictureBox3.Location = new System.Drawing.Point(226, 183);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(28, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,7 +112,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::MiniStore.Properties.Resources.user_3;
-            this.pictureBox2.Location = new System.Drawing.Point(220, 124);
+            this.pictureBox2.Location = new System.Drawing.Point(226, 124);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +122,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MiniStore.Properties.Resources.price_tag;
-            this.pictureBox1.Location = new System.Drawing.Point(220, 70);
+            this.pictureBox1.Location = new System.Drawing.Point(226, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +134,7 @@
             this.lblCreatedBy.AutoSize = true;
             this.lblCreatedBy.Font = new System.Drawing.Font("Tahoma", 13F);
             this.lblCreatedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblCreatedBy.Location = new System.Drawing.Point(270, 304);
+            this.lblCreatedBy.Location = new System.Drawing.Point(357, 304);
             this.lblCreatedBy.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
             this.lblCreatedBy.Name = "lblCreatedBy";
             this.lblCreatedBy.Size = new System.Drawing.Size(52, 22);
@@ -158,7 +158,7 @@
             this.lblIsActive.AutoSize = true;
             this.lblIsActive.Font = new System.Drawing.Font("Tahoma", 13F);
             this.lblIsActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblIsActive.Location = new System.Drawing.Point(270, 245);
+            this.lblIsActive.Location = new System.Drawing.Point(357, 245);
             this.lblIsActive.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
             this.lblIsActive.Name = "lblIsActive";
             this.lblIsActive.Size = new System.Drawing.Size(52, 22);
@@ -182,7 +182,7 @@
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Tahoma", 13F);
             this.lblPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblPhoneNumber.Location = new System.Drawing.Point(270, 186);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(357, 186);
             this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(52, 22);
@@ -206,7 +206,7 @@
             this.lblCustomerName.AutoSize = true;
             this.lblCustomerName.Font = new System.Drawing.Font("Tahoma", 13F);
             this.lblCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblCustomerName.Location = new System.Drawing.Point(267, 127);
+            this.lblCustomerName.Location = new System.Drawing.Point(354, 127);
             this.lblCustomerName.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(52, 22);
@@ -230,7 +230,7 @@
             this.lblCustomerID.AutoSize = true;
             this.lblCustomerID.Font = new System.Drawing.Font("Tahoma", 13F);
             this.lblCustomerID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblCustomerID.Location = new System.Drawing.Point(267, 73);
+            this.lblCustomerID.Location = new System.Drawing.Point(354, 73);
             this.lblCustomerID.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
             this.lblCustomerID.Name = "lblCustomerID";
             this.lblCustomerID.Size = new System.Drawing.Size(52, 22);
@@ -256,7 +256,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.gbProductInfo);
             this.Name = "ctrlCustomerInfo";
-            this.Size = new System.Drawing.Size(471, 376);
+            this.Size = new System.Drawing.Size(751, 376);
             this.gbProductInfo.ResumeLayout(false);
             this.gbProductInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
