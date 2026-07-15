@@ -24,7 +24,7 @@ namespace MiniStore.POS_Page
         public delegate void ResetEventHandler();
         public event ResetEventHandler OnCancel;
 
-        public delegate void OrderCreateEventHandler(int CustomerID, int OrderID);
+        public delegate void OrderCreateEventHandler(int OrderID);
         public event OrderCreateEventHandler OnOrderCreate;
 
         public ctrlInvoiceSummary()
@@ -126,7 +126,7 @@ namespace MiniStore.POS_Page
                 return;
             }
 
-            OnOrderCreate?.Invoke(customerId, order.OrderID ?? -1);
+            OnOrderCreate?.Invoke(order.OrderID ?? -1);
         }
     }
 }

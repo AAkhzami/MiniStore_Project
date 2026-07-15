@@ -184,6 +184,24 @@ namespace MiniStore.POS_Page
         {
             dgvCart.Rows.Clear();
         }
+
+        public void InsertItemsOnDatabase(int orderid)
+        {
+            foreach(DataGridViewRow row in dgvCart.Rows)
+            {
+                clsOrderDetails detail = new clsOrderDetails();
+                detail.OrderID = orderid;
+                detail.ProductID = (int) row.Cells["[ProductID"].Value;
+                detail.Quantity = (int)row.Cells["Qtr"].Value;
+                detail.PricePerUnit = (decimal)row.Cells["Price"].Value;
+
+                if(!detail.Save())
+                {
+                    MessageBox.Show("Something wrong try again later!", "Warning", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+        }
     }
 
 }

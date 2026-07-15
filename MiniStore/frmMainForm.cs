@@ -118,6 +118,7 @@ namespace MiniStore
 
             ctrlSearchProducts1.OnProductSelecte += ctrlCart1.AddCart;
             ctrlInvoiceSummary1.OnCancel += ctrlCart1.ResetTheCart;
+            ctrlInvoiceSummary1.OnOrderCreate += ctrlCart1.InsertItemsOnDatabase;
         }
 
         private void ctrlCart1_OnRecalc(decimal price)
@@ -385,5 +386,8 @@ namespace MiniStore
             frmProductDetails frm = new frmProductDetails(productID);
             frm.ShowDialog();
         }
+
+
+
     }
 }
