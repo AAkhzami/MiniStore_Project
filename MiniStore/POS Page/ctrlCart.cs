@@ -100,7 +100,14 @@ namespace MiniStore.POS_Page
                 if (row.Cells["ProductID"].Value != null && (int)row.Cells["ProductID"].Value == ProductID)
                 {
                     int currentQty = (int)row.Cells["Qty"].Value;
+                    int StockQuantity = clsProducts.Find(ProductID).StockQuantity;
                     // Increase Qty
+                    if (!(StockQuantity > currentQty))
+                    {
+                        MessageBox.Show($"The maximum quantity available for this product ({StockQuantity} pieces) has been reached.\nNo more than the current stock can be added.",
+                            "Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        return;
+                    }
                     row.Cells["Qty"].Value = currentQty + 1;
 
                     //Calc the SubTotal
