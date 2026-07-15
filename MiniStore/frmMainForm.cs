@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -93,11 +94,8 @@ namespace MiniStore
         {
             lblCustomers.Text = clsCustomers.GetCustomersCount().ToString();
             lblLowStock.Text = clsProducts.GetLowStockProductsCount().ToString();
-            int totalOrders = 0;
-            decimal totalSales = 0;
-            clsOrders.GetOrdersInformationAtDate(DateTime.Now, ref totalOrders, ref totalSales);
-            lblTodayOrders.Text = totalOrders.ToString();
-            lblTodaySales.Text = totalSales.ToString() + " OMR";
+            lblTodayOrders.Text = clsOrders.GetTotalOrders(DateTime.Now).ToString();
+            lblTodaySales.Text = "~" + clsOrders.GetTotalSales(DateTime.Now).ToString() + " OMR";
 
             await LoadDataToTopSellingProducts();
         }

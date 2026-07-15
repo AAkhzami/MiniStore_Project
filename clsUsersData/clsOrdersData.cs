@@ -154,36 +154,62 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return dt;
         }
-        public static void GetOrdersInformationAtDate(DateTime date, ref int totalOrders, ref decimal totalAmount)
+
+        public static int GetTotalOrdersAtDate(DateTime date)
         {
-            string query = @"SP_AddNewUser";
+            int Count = 0;
+            string query = @"SP_GetTotalOrdersAtDate";
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             {
-                command.Parameters.AddWithValue("@OrderDate", date.Date);
-                SqlParameter totalOrdersParam = new SqlParameter("@TotalOrders", SqlDbType.Int)
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Date", date);
+                SqlParameter outputIdParam = new SqlParameter("@TodayOrders", SqlDbType.Int)
                 {
                     Direction = ParameterDirection.Output
                 };
-                SqlParameter totalAmountParam = new SqlParameter("@TotalAmount", SqlDbType.Decimal)
-                {
-                    Direction = ParameterDirection.Output,
-                    Precision = 10,
-                    Scale = 2
-                };
+                command.Parameters.Add(outputIdParam);
+
                 try
                 {
                     connection.Open();
                     command.ExecuteNonQuery();
-                    totalOrders = (int)(totalOrdersParam.Value ?? 0);
-                    totalAmount = (decimal)(totalAmountParam.Value ?? 0);
+                    Count = (int)command.Parameters["@TodayOrders"].Value;
                 }
                 catch (Exception ex)
                 {
-                    totalOrders = 0;
-                    totalAmount = 0;
+                    Count = 0;
                 }
             }
+            return Count;
+        }
+        public static decimal GetTotalSalesAtDate(DateTime date)
+        {
+            decimal Sales = 0;
+            string query = @"SP_GetTotalSalesAtDate";
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Date", date);
+                SqlParameter outputIdParam = new SqlParameter("@TodaySales", SqlDbType.Decimal)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                command.Parameters.Add(outputIdParam);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    Sales = (decimal)command.Parameters["@TodaySales"].Value;
+                }
+                catch (Exception ex)
+                {
+                    Sales = 0;
+                }
+            }
+            return Sales;
         }
     }
 }

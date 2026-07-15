@@ -92,10 +92,14 @@ namespace MiniStoreDB_Business_Layer
         {
             return clsOrdersData.GetAllOrders();
         }
-        public static void GetOrdersInformationAtDate(DateTime date, ref int totalOrders, ref decimal totalAmount)
-        {
-            clsOrdersData.GetOrdersInformationAtDate(date, ref totalOrders, ref totalAmount);
-        }
 
+        public static int GetTotalOrders(DateTime date)
+        {
+            return clsOrdersData.GetTotalOrdersAtDate(date);
+        }
+        public static decimal GetTotalSales(DateTime date)
+        {
+            return clsOrdersData.GetTotalSalesAtDate(date);
+        }
     }
 }

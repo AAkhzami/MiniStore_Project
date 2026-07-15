@@ -3,24 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\pos page\\ctrlcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:pos page\\ctrlcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BCE8A711-A2A3-4D9B-A944-CBBBF6CB5ACE}|..\\MiniStoreDB_Business_Layer\\MiniStoreDB_Business_Layer.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministoredb_business_layer\\clsorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A261E28-1635-41EB-B4D5-6905E5619564}|..\\clsUsersData\\MiniStoreDB_DataAccess_Layer.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\clsusersdata\\clsordersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +24,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,58 +32,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ctrlCart.cs",
-              "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\POS Page\\ctrlCart.cs",
-              "RelativeDocumentMoniker": "POS Page\\ctrlCart.cs",
-              "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\POS Page\\ctrlCart.cs",
-              "RelativeToolTip": "POS Page\\ctrlCart.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAnwMMAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T13:04:13.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ctrlInvoiceSummary.cs",
-              "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\POS Page\\ctrlInvoiceSummary.cs",
-              "RelativeDocumentMoniker": "POS Page\\ctrlInvoiceSummary.cs",
-              "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\POS Page\\ctrlInvoiceSummary.cs",
-              "RelativeToolTip": "POS Page\\ctrlInvoiceSummary.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAkwIAAAAAMAAAAAAAAAA==",
+              "Title": "clsOrdersData.cs",
+              "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\clsUsersData\\clsOrdersData.cs",
+              "RelativeDocumentMoniker": "..\\clsUsersData\\clsOrdersData.cs",
+              "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\clsUsersData\\clsOrdersData.cs",
+              "RelativeToolTip": "..\\clsUsersData\\clsOrdersData.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAMwNQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T12:32:25.684Z",
+              "WhenOpened": "2026-07-15T13:14:12.27Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ctrlInvoiceSummary.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\POS Page\\ctrlInvoiceSummary.cs",
-              "RelativeDocumentMoniker": "POS Page\\ctrlInvoiceSummary.cs",
-              "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\POS Page\\ctrlInvoiceSummary.cs [Design]",
-              "RelativeToolTip": "POS Page\\ctrlInvoiceSummary.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "clsOrders.cs",
+              "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStoreDB_Business_Layer\\clsOrders.cs",
+              "RelativeDocumentMoniker": "..\\MiniStoreDB_Business_Layer\\clsOrders.cs",
+              "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStoreDB_Business_Layer\\clsOrders.cs",
+              "RelativeToolTip": "..\\MiniStoreDB_Business_Layer\\clsOrders.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAlwGYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T12:31:40.227Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-07-15T13:11:02.135Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "frmMainForm.cs",
               "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\frmMainForm.cs",
               "RelativeDocumentMoniker": "frmMainForm.cs",
               "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\frmMainForm.cs",
               "RelativeToolTip": "frmMainForm.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAWwLoAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAnwGEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-14T14:50:18.232Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "frmMainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\frmMainForm.cs",
               "RelativeDocumentMoniker": "frmMainForm.cs",
