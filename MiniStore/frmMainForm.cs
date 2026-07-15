@@ -18,8 +18,8 @@ namespace MiniStore
     public partial class frmMainForm : Form
     {
         frmLogin frmLogin = null;
-        int _totalProducts = clsProducts.GetAllProducts().Rows.Count;
-        private static DataTable _dtGetAllProducts;
+        //int _totalProducts = clsProducts.GetAllProducts().Rows.Count;
+        //private static DataTable _dtGetAllProducts;
 
         public frmMainForm(frmLogin login)
         {
@@ -55,41 +55,7 @@ namespace MiniStore
                 dgvTopSellingProducts.Columns[5].Width = 160;
             }
         }
-        private async Task LoadProductsDataForInventoryPage()
-        {
-            int pageNumber = int.Parse(lbl_Inventory_PageNumber.Text),
-                ItemPerPage = int.Parse(cbItemPerPage_Inventory.Text);
-            _dtGetAllProducts = await clsProducts.GetProductsInformationPerPage(pageNumber, ItemPerPage);
 
-            dgvInventoryProducts.DataSource = _dtGetAllProducts;
-            if (dgvInventoryProducts.Rows.Count > 0)
-            {
-                dgvInventoryProducts.Columns[0].HeaderText = "Product ID";
-                dgvInventoryProducts.Columns[0].Width = 202;
-                
-                dgvInventoryProducts.Columns[1].HeaderText = "Product Name";
-                dgvInventoryProducts.Columns[1].Width = 202;
-
-                dgvInventoryProducts.Columns[2].HeaderText = "Category";
-                dgvInventoryProducts.Columns[2].Width = 201;
-                
-                dgvInventoryProducts.Columns[3].HeaderText = "Price (OMR)";
-                dgvInventoryProducts.Columns[3].Width = 202;
-                
-                dgvInventoryProducts.Columns[4].HeaderText = "Stock Qty";
-                dgvInventoryProducts.Columns[4].Width = 202;
-
-                dgvInventoryProducts.Columns[5].HeaderText = "Status";
-                dgvInventoryProducts.Columns[5].Width = 202;
-            }
-            uint NumberOfProductsDisplayed = (uint)(_totalProducts - (_totalProducts - (pageNumber * int.Parse(cbItemPerPage_Inventory.Text))));
-            NumberOfProductsDisplayed = (NumberOfProductsDisplayed > _totalProducts) ? (uint)_totalProducts : NumberOfProductsDisplayed;
-            lblCounterProductsPerPage.Text = "Showing " + (NumberOfProductsDisplayed) + " of " + _totalProducts.ToString() + " products";
-        }
-        private async Task InventoryPage()
-        {
-            await LoadProductsDataForInventoryPage();
-        }
         private async Task DashboardInfo()
         {
             lblCustomers.Text = clsCustomers.GetCustomersCount().ToString();
@@ -104,35 +70,12 @@ namespace MiniStore
             await DashboardInfo();
 
             lblUserName.Text = clsCurrentUser.CurrentUser.UserName;
-            btnUserButtonName.Text = clsCurrentUser.CurrentUser.UserName.Substring(0, 2).ToUpper();
-
-            DataTable dt = clsCategories.GetAllCategories();
-            foreach(DataRow row in dt.Rows)
-            {
-                cbInventory_Categories.Items.Add(row["Name"].ToString());
-            }
-            
+            btnUserButtonName.Text = clsCurrentUser.CurrentUser.UserName.Substring(0, 2).ToUpper();            
             lblUserGreeting.Text = clsCurrentUser.CurrentUser.UserName;
-            ctrlCart1.OnRecalc += ctrlCart1_OnRecalc;
 
-            ctrlSearchProducts1.OnProductSelecte += ctrlCart1.AddCart;
-            ctrlInvoiceSummary1.OnCancel += ctrlCart1.ResetTheCart;
-            ctrlInvoiceSummary1.OnOrderCreate += ctrlCart1.InsertItemsOnDatabase;
         }
 
-        private void ctrlCart1_OnRecalc(decimal price)
-        {
-            ctrlInvoiceSummary1.AddPrice(price);
 
-            //if (price < 0)
-            //{
-            //    ctrlInvoiceSummary1.ReducePrice(price);
-            //}
-            //else if (price > 0)
-            //{
-            //    ctrlInvoiceSummary1.AddPrice(price);
-            //}
-        }
         private void frmMainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             frmLogin.Close();
@@ -143,36 +86,7 @@ namespace MiniStore
             tcMainScreen.SelectedIndex = pageIndex;
             PageSetting(pageIndex);
         }
-
-        private async void cbItemPerPage_Inventory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            await LoadProductsDataForInventoryPage();
-        }
-
-        private async void btnNextPageProducts_Click(object sender, EventArgs e)
-        {
-            int currentPage = int.Parse(lbl_Inventory_PageNumber.Text);
-            int totalProducts = _totalProducts;
-            int productPerPage = int.Parse(cbItemPerPage_Inventory.Text);
-            if (dgvInventoryProducts.Rows.Count == productPerPage && 
-                ((currentPage * productPerPage) < totalProducts))
-            {
-                lbl_Inventory_PageNumber.Text = (currentPage + 1).ToString();
-                 await LoadProductsDataForInventoryPage();
-            }
-        }
-
-        private async void btnPreviesPageProducts_Click(object sender, EventArgs e)
-        {
-            int currentPage = int.Parse(lbl_Inventory_PageNumber.Text);
-            int totalProducts = clsProducts.GetAllProducts().Rows.Count;
-            if (currentPage > 1)
-            {
-                lbl_Inventory_PageNumber.Text = (currentPage - 1).ToString();
-                await LoadProductsDataForInventoryPage();
-            }
-        }
-
+        
         private async Task PageSetting(int pageNumner)
         {
             switch(pageNumner)
@@ -181,218 +95,14 @@ namespace MiniStore
                     await DashboardInfo();
                     break;
                 case 1:
-                    await InventoryPage();
+                    //ctrl_InventoryPage1
                     break;
                 case 2:
-                    SalesPage();
+                    //SalesPage();
                     break;
                 case 3:
                     break;
             }
-        }
-
-        private async void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txbInventorySearch.Text = "";
-            if(cbSearchType.Text != "None")
-            {
-                txbInventorySearch.Visible = true;
-                txbInventorySearch.Focus();
-                _dtGetAllProducts = await clsProducts.GetReportOfProducts();
-                dgvInventoryProducts.DataSource = _dtGetAllProducts;
-                dgvInventoryProducts.Sort(dgvInventoryProducts.Columns[0], ListSortDirection.Ascending);
-
-                btnNextPageProducts.Visible = false;
-                btnPreviesPageProducts.Visible = false;
-                lbl_Inventory_PageNumber.Visible = false;
-                lbl_Inventory_Text_For_Item_Per_Page.Visible = false;
-                cbItemPerPage_Inventory.Visible = false;
-
-                lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
-            }
-            else
-            {
-                await LoadProductsDataForInventoryPage();
-                btnNextPageProducts.Visible = false;
-                btnPreviesPageProducts.Visible = false;
-                lbl_Inventory_PageNumber.Visible = false;
-                lbl_Inventory_Text_For_Item_Per_Page.Visible = false;
-                cbItemPerPage_Inventory.Visible = false;
-                txbInventorySearch.Visible = false;
-            }
-        }
-        private void txbSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
-
-            if (cbSearchType.Text == "Product ID")
-            {
-                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private async void txbSearch_TextChanged(object sender, EventArgs e)
-        {
-            string searchText = txbInventorySearch.Text.Trim();
-            string FilterColumn = cbSearchType.Text;
-            string CategoryFilter = cbInventory_Categories.SelectedItem.ToString();
-
-            if (string.IsNullOrEmpty(searchText))
-            {
-                _dtGetAllProducts.DefaultView.RowFilter = "";
-                return;
-            }
-
-            switch(FilterColumn)
-            {
-                case "Product Name":
-                    FilterColumn = "ProductName";
-                    break;
-                case "Product ID":
-                    FilterColumn = "ProductID";
-                    break;
-            }
-
-            if (FilterColumn == "ProductID" && CategoryFilter == "All Categories")
-            {
-                _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, searchText);
-            }
-            else if(FilterColumn == "ProductName" && CategoryFilter == "All Categories")
-            {
-                _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%'", FilterColumn, searchText);
-            }
-            else if (FilterColumn == "ProductID" && CategoryFilter != "All Categories")
-            {
-                _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] = {1} And [CategoryName] = '{2}'", FilterColumn, searchText, CategoryFilter);
-            }
-            else if (FilterColumn == "ProductName" && CategoryFilter != "All Categories")
-            {
-                _dtGetAllProducts.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%' And [CategoryName] = '{2}'", FilterColumn, searchText, CategoryFilter);
-            }
-
-            dgvInventoryProducts.DataSource = _dtGetAllProducts.DefaultView;
-            lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
-                   
-        }
-
-        private async void cbInventory_Categories_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedCategory = cbInventory_Categories.SelectedItem.ToString();
-            txbInventorySearch.Text = "";
-
-            if (selectedCategory == "All Categories" && cbSearchType.Text == "None")
-            {
-                await LoadProductsDataForInventoryPage();
-            }
-            else if (selectedCategory == "All Categories" && cbSearchType.Text != "None")
-            {
-                _dtGetAllProducts.DefaultView.RowFilter = "";
-            }
-            else
-            {
-                _dtGetAllProducts.DefaultView.RowFilter = string.Format("[CategoryName] Like '{0}%'", selectedCategory);
-            }
-
-            dgvInventoryProducts.DataSource = _dtGetAllProducts.DefaultView;
-            lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
-        }
-
-        private async void btnAddNewProduct_Click(object sender, EventArgs e)
-        {
-            frmAddUpdateProducts AddProduct = new frmAddUpdateProducts();
-            AddProduct.ShowDialog();
-            await InventoryPage();
-        }
-
-        private async void editProductToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int productID = (int) dgvInventoryProducts.CurrentRow.Cells[0].Value;
-            frmAddUpdateProducts EditProduct = new frmAddUpdateProducts(productID);
-            EditProduct.ShowDialog();
-            await InventoryPage();
-        }
-
-        private async void disableDeleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int productID = (int)dgvInventoryProducts.CurrentRow.Cells[0].Value;
-            if(MessageBox.Show("Are you sure you want to disable this product? ","Confirm", MessageBoxButtons.YesNo,MessageBoxIcon.Information) == 
-                DialogResult.Yes)
-            {
-                if(clsProducts.DeleteProducts(productID))
-                {
-                    MessageBox.Show("Product disabled successfully", "successfully", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    await InventoryPage();
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("Product disabled failed", "Failed",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }                
-            }
-        }
-
-        private void cmsInventoryPage_Opening(object sender, CancelEventArgs e)
-        {
-            int productID = (int)dgvInventoryProducts.CurrentRow.Cells[0].Value;
-            if(clsProducts.Find(productID).IsActive)
-            {
-                tsmAtiveProduct.Enabled = false;
-                disableDeleteToolStripMenuItem.Enabled = true;
-            }
-            else
-            {
-                tsmAtiveProduct.Enabled = true;
-                disableDeleteToolStripMenuItem.Enabled = false;
-            }
-        }
-
-        private async void tsmAtiveProduct_Click(object sender, EventArgs e)
-        {
-            int productID = (int)dgvInventoryProducts.CurrentRow.Cells[0].Value;
-            if(MessageBox.Show("Are you sure you want to activation this product? ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) ==
-                DialogResult.Yes)
-            {
-                if (clsProducts.ProductActivation(productID))
-                {
-                    MessageBox.Show("The product has been successfully activated.", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    await InventoryPage();
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("Product activation failed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-        }
-
-        private async void addStockToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int productID = (int)dgvInventoryProducts.CurrentRow.Cells[0].Value;
-
-            frmAddStock frm = new frmAddStock(productID);
-            frm.ShowDialog();
-            await InventoryPage();
-
-        }
-
-        private void viewDetailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            int productID = (int)dgvInventoryProducts.CurrentRow.Cells[0].Value;
-            frmProductDetails frm = new frmProductDetails(productID);
-            frm.ShowDialog();
-        }
-
-
-        // ----------------- Sales/POS
-        void SalesPage()
-        {            
-            ctrlInvoiceSummary1.customerId = (ctrlSearchProducts1.CustomerType == "Cash Customer(Walk-in)" ? 1 : -1);
-        }
-
+        }    
     }
 }
