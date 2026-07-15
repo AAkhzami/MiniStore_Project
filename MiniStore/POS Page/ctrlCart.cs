@@ -201,6 +201,8 @@ namespace MiniStore.POS_Page
                     return;
                 }
             }
+
+            ResetTheCart();
         }
     }
 

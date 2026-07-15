@@ -126,6 +126,12 @@ namespace MiniStore.POS_Page
                 return;
             }
 
+            _subtotalPrice = 0;
+            _cashPaid = 0;
+            _tax = 0;
+            _finalPrice = 0;
+            _Update();
+            _ResetCashPaid();
             OnOrderCreate?.Invoke(order.OrderID ?? -1);
         }
     }
