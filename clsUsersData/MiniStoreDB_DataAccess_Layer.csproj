@@ -44,6 +44,7 @@
     <Compile Include="clsCategoriesData.cs" />
     <Compile Include="clsCustomersData.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
+    <Compile Include="clsOrderDetailsData.cs" />
     <Compile Include="clsOrdersData.cs" />
     <Compile Include="clsProductsData.cs" />
     <Compile Include="clsUsersData.cs" />

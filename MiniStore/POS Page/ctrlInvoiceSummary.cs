@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MiniStore.Global;
+using MiniStoreDB_Business_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,8 @@ namespace MiniStore.POS_Page
         decimal _cashPaid = 0;
         decimal _tax = 0;
         decimal _finalPrice = 0;
+
+        public int customerId = -1;
 
         public delegate void ResetEventHandler();
         public event ResetEventHandler OnCancel;
@@ -102,6 +106,22 @@ namespace MiniStore.POS_Page
             _Update();
             _ResetCashPaid();
             OnCancel?.Invoke();
+        }
+        
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            clsOrders orders = new clsOrders();
+            orders.CustomerID = customerId;
+            orders.OrderDate = DateTime.Now;
+            orders.TotalAmount = _finalPrice;
+            orders.CreatedByUserID = clsCurrentUser.CurrentUser.UserID ?? -1;
+
+            if(orders.Save())
+            {
+
+            }
+
+            
         }
     }
 }

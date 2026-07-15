@@ -126,6 +126,7 @@
             this.btnPay.Size = new System.Drawing.Size(300, 55);
             this.btnPay.TabIndex = 41;
             this.btnPay.Text = "Pay";
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // guna2CustomGradientPanel1
             // 
@@ -151,7 +152,7 @@
             this.lblChange.BackColor = System.Drawing.Color.Transparent;
             this.lblChange.Font = new System.Drawing.Font("TechnicBold", 20F, System.Drawing.FontStyle.Bold);
             this.lblChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(158)))), ((int)(((byte)(74)))));
-            this.lblChange.Location = new System.Drawing.Point(152, 35);
+            this.lblChange.Location = new System.Drawing.Point(113, 35);
             this.lblChange.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
             this.lblChange.Name = "lblChange";
             this.lblChange.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -273,7 +274,7 @@
             this.lblFinalTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblFinalTotal.Font = new System.Drawing.Font("TechnicBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.lblFinalTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(87)))), ((int)(((byte)(221)))));
-            this.lblFinalTotal.Location = new System.Drawing.Point(250, 164);
+            this.lblFinalTotal.Location = new System.Drawing.Point(188, 164);
             this.lblFinalTotal.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
             this.lblFinalTotal.Name = "lblFinalTotal";
             this.lblFinalTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -338,7 +339,7 @@
             this.lblTax.BackColor = System.Drawing.Color.Transparent;
             this.lblTax.Font = new System.Drawing.Font("Tahoma", 11F);
             this.lblTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.lblTax.Location = new System.Drawing.Point(258, 104);
+            this.lblTax.Location = new System.Drawing.Point(196, 104);
             this.lblTax.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
             this.lblTax.Name = "lblTax";
             this.lblTax.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -366,7 +367,7 @@
             this.lblSubtotal.BackColor = System.Drawing.Color.Transparent;
             this.lblSubtotal.Font = new System.Drawing.Font("Tahoma", 11F);
             this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.lblSubtotal.Location = new System.Drawing.Point(258, 66);
+            this.lblSubtotal.Location = new System.Drawing.Point(196, 66);
             this.lblSubtotal.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
