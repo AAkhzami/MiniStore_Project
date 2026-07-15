@@ -133,6 +133,7 @@
             this.txbPhoneNumber.SelectedText = "";
             this.txbPhoneNumber.Size = new System.Drawing.Size(474, 48);
             this.txbPhoneNumber.TabIndex = 25;
+            this.txbPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPhoneNumber_KeyPress);
             this.txbPhoneNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txbPhoneNumber_Validating);
             // 
             // lblCustomerID

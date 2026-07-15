@@ -28,7 +28,7 @@ namespace MiniStore.Customers
         {
             if (string.IsNullOrWhiteSpace(txbCustomerName.Text))
             {
-                errorProvider1.SetError(txbCustomerName, "");
+                errorProvider1.SetError(txbCustomerName, "This field must not be empty");
                 e.Cancel = false;
             }
             else
@@ -42,7 +42,12 @@ namespace MiniStore.Customers
         {
             if (string.IsNullOrWhiteSpace(txbPhoneNumber.Text))
             {
-                errorProvider1.SetError(txbPhoneNumber, "");
+                errorProvider1.SetError(txbPhoneNumber, "This field must not be empty");
+                e.Cancel = false;
+            }
+            else if (txbPhoneNumber.Text.Length > 8 && txbPhoneNumber.Text.Length < 8)
+            {
+                errorProvider1.SetError(txbPhoneNumber, "The phone number must consist of 8 numbers");
                 e.Cancel = false;
             }
             else
@@ -128,6 +133,16 @@ namespace MiniStore.Customers
                 MessageBox.Show("Customer details saved failed! try again","Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void txbPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            
         }
     }
 }
