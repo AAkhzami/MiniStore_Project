@@ -12,29 +12,92 @@ namespace MiniStore.POS_Page
 {
     public partial class ctrlInvoiceSummary : UserControl
     {
-        decimal totalPrice = 0;
+        decimal _subtotalPrice = 0;
+        decimal _cashPaid = 0;
+        decimal _tax = 0;
+        decimal _finalPrice = 0;
         public ctrlInvoiceSummary()
         {
             InitializeComponent();
         }
         public void AddPrice(decimal price)
         {
-            totalPrice += price;
+            _subtotalPrice += price;
+            _Update();
         }
         public void ReducePrice(decimal price)
         {
-            if(totalPrice - price > 0)
+            if(_subtotalPrice - price >= 0)
             {
-                totalPrice -= price;
+                _subtotalPrice -= price;
+                _Update();
             }
             else
             {
-                totalPrice = 0;
+                _subtotalPrice = 0;
+                nudCashPaid.Value = 0;
             }    
         }
-        public void UpdateTotal()
+        private void _Update()
         {
-            lblSubtotal.Text = totalPrice.ToString();
+            _UpdateSubTotal();
+            _UpdateTaxPrice(_subtotalPrice);
+            _UpdateFinalTotal();
+        }
+        private void _UpdateSubTotal()
+        {
+            lblSubtotal.Text = _subtotalPrice.ToString();
+            nudCashPaid.Enabled = _subtotalPrice > 0;        
+            if(_subtotalPrice == 0)
+            {
+                lblSubtotal.Text = "00.00";
+            }
+        }
+        private void _UpdateTaxPrice(decimal subtital)
+        {
+            _tax = (decimal)((double)subtital * 0.05);
+            lblTax.Text = _tax.ToString();
+            if(_tax ==  0)
+            {
+                lblTax.Text = "00.00";
+            }
+        }
+        private void _UpdateFinalTotal()
+        {
+            _finalPrice = _subtotalPrice + _tax;
+            lblFinalTotal.Text = _finalPrice.ToString();
+            if( _subtotalPrice == 0)
+            {
+                lblFinalTotal.Text = "00.00";
+            }
+        }
+        private void _ResetCashPaid()
+        {
+            lblChange.Text = "00.00";
+            nudCashPaid.Value = 0;
+        }
+
+        private void nudCashPaid_ValueChanged(object sender, EventArgs e)
+        {
+            _cashPaid = nudCashPaid.Value;
+            if (_cashPaid > 0)
+            {
+                lblChange.Text = (_cashPaid - _finalPrice).ToString();
+            }
+            else
+            {
+                lblChange.Text = "00.00";
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            _subtotalPrice = 0;
+            _cashPaid = 0;
+            _tax = 0;
+            _finalPrice = 0;
+            _Update();
+            _ResetCashPaid();
         }
     }
 }

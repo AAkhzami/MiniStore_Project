@@ -29,7 +29,15 @@
         private void InitializeComponent()
         {
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPay = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lblChange = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.nudCashPaid = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -44,24 +52,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.lblProductName = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.nudCashPaid = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblChange = new System.Windows.Forms.Label();
-            this.btnPay = new Guna.UI2.WinForms.Guna2Button();
-            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCashPaid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCashPaid)).BeginInit();
-            this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -83,7 +83,8 @@
             this.guna2GroupBox1.Controls.Add(this.lblSubtotal);
             this.guna2GroupBox1.Controls.Add(this.lblProductName);
             this.guna2GroupBox1.Controls.Add(this.pictureBox1);
-            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.IndianRed;
+            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0);
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(3, 3);
@@ -93,16 +94,138 @@
             this.guna2GroupBox1.Text = "Invoice Summary";
             this.guna2GroupBox1.TextOffset = new System.Drawing.Point(35, 5);
             // 
-            // pictureBox1
+            // btnClose
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::MiniStore.Properties.Resources.order;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnClose.BorderRadius = 9;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.OrangeRed;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(14, 489);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(300, 55);
+            this.btnClose.TabIndex = 42;
+            this.btnClose.Text = "Cancel Invoice";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnPay
+            // 
+            this.btnPay.BorderRadius = 9;
+            this.btnPay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(158)))), ((int)(((byte)(74)))));
+            this.btnPay.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Location = new System.Drawing.Point(14, 428);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(300, 55);
+            this.btnPay.TabIndex = 41;
+            this.btnPay.Text = "Pay";
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(155)))), ((int)(((byte)(80)))));
+            this.guna2CustomGradientPanel1.BorderRadius = 9;
+            this.guna2CustomGradientPanel1.BorderThickness = 1;
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblChange);
+            this.guna2CustomGradientPanel1.Controls.Add(this.label8);
+            this.guna2CustomGradientPanel1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(155)))), ((int)(((byte)(80)))));
+            this.guna2CustomGradientPanel1.CustomBorderThickness = new System.Windows.Forms.Padding(1);
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(250)))), ((int)(((byte)(243)))));
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(250)))), ((int)(((byte)(243)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(250)))), ((int)(((byte)(243)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(250)))), ((int)(((byte)(243)))));
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(14, 312);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(300, 96);
+            this.guna2CustomGradientPanel1.TabIndex = 40;
+            // 
+            // lblChange
+            // 
+            this.lblChange.AutoSize = true;
+            this.lblChange.BackColor = System.Drawing.Color.Transparent;
+            this.lblChange.Font = new System.Drawing.Font("TechnicBold", 20F, System.Drawing.FontStyle.Bold);
+            this.lblChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(158)))), ((int)(((byte)(74)))));
+            this.lblChange.Location = new System.Drawing.Point(152, 35);
+            this.lblChange.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblChange.Name = "lblChange";
+            this.lblChange.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblChange.Size = new System.Drawing.Size(87, 29);
+            this.lblChange.TabIndex = 34;
+            this.lblChange.Text = "00.00";
+            this.lblChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(158)))), ((int)(((byte)(74)))));
+            this.label8.Location = new System.Drawing.Point(12, 12);
+            this.label8.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label8.Size = new System.Drawing.Size(106, 18);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "Change (OMR)";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // nudCashPaid
+            // 
+            this.nudCashPaid.BackColor = System.Drawing.Color.Transparent;
+            this.nudCashPaid.BorderRadius = 9;
+            this.nudCashPaid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudCashPaid.DecimalPlaces = 3;
+            this.nudCashPaid.Enabled = false;
+            this.nudCashPaid.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudCashPaid.Location = new System.Drawing.Point(166, 259);
+            this.nudCashPaid.Name = "nudCashPaid";
+            this.nudCashPaid.Size = new System.Drawing.Size(148, 36);
+            this.nudCashPaid.TabIndex = 38;
+            this.nudCashPaid.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(87)))), ((int)(((byte)(221)))));
+            this.nudCashPaid.ValueChanged += new System.EventHandler(this.nudCashPaid_ValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.label7.Location = new System.Drawing.Point(28, 268);
+            this.label7.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 18);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Cash Paid (OMR)";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::MiniStore.Properties.Resources.order;
+            this.pictureBox2.Location = new System.Drawing.Point(14, 224);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(87)))), ((int)(((byte)(221)))));
+            this.label6.Location = new System.Drawing.Point(54, 229);
+            this.label6.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 18);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Payment";
             // 
             // panel5
             // 
@@ -260,135 +383,16 @@
             this.lblProductName.TabIndex = 27;
             this.lblProductName.Text = "Subtotal (OMR)";
             // 
-            // label6
+            // pictureBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(87)))), ((int)(((byte)(221)))));
-            this.label6.Location = new System.Drawing.Point(54, 229);
-            this.label6.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Payment";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::MiniStore.Properties.Resources.order;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 224);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.label7.Location = new System.Drawing.Point(28, 268);
-            this.label7.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 18);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Cash Paid (OMR)";
-            // 
-            // nudCashPaid
-            // 
-            this.nudCashPaid.BackColor = System.Drawing.Color.Transparent;
-            this.nudCashPaid.BorderRadius = 9;
-            this.nudCashPaid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudCashPaid.DecimalPlaces = 3;
-            this.nudCashPaid.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudCashPaid.Location = new System.Drawing.Point(166, 259);
-            this.nudCashPaid.Name = "nudCashPaid";
-            this.nudCashPaid.Size = new System.Drawing.Size(148, 36);
-            this.nudCashPaid.TabIndex = 38;
-            this.nudCashPaid.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(87)))), ((int)(((byte)(221)))));
-            // 
-            // guna2CustomGradientPanel1
-            // 
-            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(155)))), ((int)(((byte)(80)))));
-            this.guna2CustomGradientPanel1.BorderRadius = 9;
-            this.guna2CustomGradientPanel1.BorderThickness = 1;
-            this.guna2CustomGradientPanel1.Controls.Add(this.lblChange);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label8);
-            this.guna2CustomGradientPanel1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(155)))), ((int)(((byte)(80)))));
-            this.guna2CustomGradientPanel1.CustomBorderThickness = new System.Windows.Forms.Padding(1);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(250)))), ((int)(((byte)(243)))));
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(250)))), ((int)(((byte)(243)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(250)))), ((int)(((byte)(243)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(250)))), ((int)(((byte)(243)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(14, 312);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(300, 96);
-            this.guna2CustomGradientPanel1.TabIndex = 40;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(158)))), ((int)(((byte)(74)))));
-            this.label8.Location = new System.Drawing.Point(12, 12);
-            this.label8.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.label8.Name = "label8";
-            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label8.Size = new System.Drawing.Size(106, 18);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Change (OMR)";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblChange
-            // 
-            this.lblChange.AutoSize = true;
-            this.lblChange.BackColor = System.Drawing.Color.Transparent;
-            this.lblChange.Font = new System.Drawing.Font("TechnicBold", 20F, System.Drawing.FontStyle.Bold);
-            this.lblChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(158)))), ((int)(((byte)(74)))));
-            this.lblChange.Location = new System.Drawing.Point(152, 35);
-            this.lblChange.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.lblChange.Name = "lblChange";
-            this.lblChange.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblChange.Size = new System.Drawing.Size(87, 29);
-            this.lblChange.TabIndex = 34;
-            this.lblChange.Text = "00.00";
-            this.lblChange.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnPay
-            // 
-            this.btnPay.BorderRadius = 9;
-            this.btnPay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(158)))), ((int)(((byte)(74)))));
-            this.btnPay.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Location = new System.Drawing.Point(14, 428);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(300, 55);
-            this.btnPay.TabIndex = 41;
-            this.btnPay.Text = "Pay";
-            // 
-            // btnClose
-            // 
-            this.btnClose.BorderRadius = 9;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.OrangeRed;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(14, 489);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(300, 55);
-            this.btnClose.TabIndex = 42;
-            this.btnClose.Text = "Cancel Invoice";
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::MiniStore.Properties.Resources.order;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // ctrlInvoiceSummary
             // 
@@ -399,15 +403,15 @@
             this.Size = new System.Drawing.Size(349, 565);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCashPaid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCashPaid)).EndInit();
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
