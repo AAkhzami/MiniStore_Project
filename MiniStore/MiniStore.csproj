@@ -58,6 +58,12 @@
     <Compile Include="Category\frmNewCategory.Designer.cs">
       <DependentUpon>frmNewCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customers\ctrlCustomerInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\ctrlCustomerInfo.Designer.cs">
+      <DependentUpon>ctrlCustomerInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Category\frmNewCategory.resx">
       <DependentUpon>frmNewCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\ctrlCustomerInfo.resx">
+      <DependentUpon>ctrlCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

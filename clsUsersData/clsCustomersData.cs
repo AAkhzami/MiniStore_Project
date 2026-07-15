@@ -8,7 +8,7 @@ namespace MiniStoreDB_DataAccess_Layer
     public class clsCustomersData
 
     {
-        public static bool GetCustomersInfoByID(int customerid, ref string customername, ref string phonenumber, ref int createdbyuserid)
+        public static bool GetCustomersInfoByID(int customerid, ref string customername, ref string phonenumber, ref int createdbyuserid, ref bool isActive)
         {
             bool isFound = false;
             string query = @"select * from Customers
@@ -30,6 +30,7 @@ namespace MiniStoreDB_DataAccess_Layer
                             customername = (string)reader["CustomerName"];
                             phonenumber = (string)reader["PhoneNumber"];
                             createdbyuserid = (int)reader["CreatedByUserID"];
+                            isActive = (bool)reader["IsActive"];
                         }
                     }
                 }
@@ -40,7 +41,7 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return isFound;
         }
-        public static bool GetCustomersInfoByPhoneNumber(string phonenumber, ref int customerid, ref string customername, ref int createdbyuserid)
+        public static bool GetCustomersInfoByPhoneNumber(string phonenumber, ref int customerid, ref string customername, ref int createdbyuserid, ref bool isActive)
         {
             bool isFound = false;
             string query = @"select * from Customers
@@ -62,6 +63,8 @@ namespace MiniStoreDB_DataAccess_Layer
                             customerid = (int)reader["CustomerID"];
                             customername = (string)reader["CustomerName"];
                             createdbyuserid = (int)reader["CreatedByUserID"];
+                            isActive = (bool)reader["IsActive"];
+
                         }
                     }
                 }
@@ -73,12 +76,12 @@ namespace MiniStoreDB_DataAccess_Layer
             return isFound;
         }
 
-        public static int? AddNewCustomers(string customername, string phonenumber, int createdbyuserid)
+        public static int? AddNewCustomers(string customername, string phonenumber, int createdbyuserid, bool isActive)
         {
             int? recordId = null;
             string query = @"Insert into Customers
-                        (CustomerName,PhoneNumber,CreatedByUserID)
-                        Values (@CustomerName,@PhoneNumber,@CreatedByUserID)
+                        (CustomerName,PhoneNumber,CreatedByUserID, IsActive)
+                        Values (@CustomerName,@PhoneNumber,@CreatedByUserID,@IsActive)
                         select SCOPE_IDENTITY()";
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
@@ -86,6 +89,7 @@ namespace MiniStoreDB_DataAccess_Layer
                 command.Parameters.AddWithValue("@CustomerName", customername);
                 command.Parameters.AddWithValue("@PhoneNumber", phonenumber);
                 command.Parameters.AddWithValue("@CreatedByUserID", createdbyuserid);
+                command.Parameters.AddWithValue("@IsActive", isActive);
 
                 try
                 {
@@ -104,15 +108,15 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return recordId;
         }
-        public static bool UpdateCustomersInfoByID(int? customerid, string customername, string phonenumber, int createdbyuserid)
+        public static bool UpdateCustomersInfoByID(int? customerid, string customername, string phonenumber, bool isActive)
         {
             int rowsAffected = 0;
             string query = @"UPDATE Customers
                             Set 
                             CustomerName = @CustomerName,
                             PhoneNumber = @PhoneNumber,
-                            CreatedByUserID = @CreatedByUserID
-                            CustomerID = @CustomerID";
+                            IsActive = @IsActive
+                            where CustomerID = @CustomerID";
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
@@ -120,7 +124,7 @@ namespace MiniStoreDB_DataAccess_Layer
                 command.Parameters.AddWithValue("@CustomerID", customerid);
                 command.Parameters.AddWithValue("@CustomerName", customername);
                 command.Parameters.AddWithValue("@PhoneNumber", phonenumber);
-                command.Parameters.AddWithValue("@CreatedByUserID", createdbyuserid);
+                command.Parameters.AddWithValue("@IsActive", isActive);
 
                 try
                 {

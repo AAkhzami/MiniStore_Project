@@ -13,6 +13,7 @@ namespace MiniStoreDB_Business_Layer
         public string CustomerName { get; set; }
         public string PhoneNumber { get; set; }
         public int CreatedByUserID { get; set; }
+        public bool IsActive { get; set; }
 
         public clsCustomers()
         {
@@ -20,14 +21,16 @@ namespace MiniStoreDB_Business_Layer
             this.CustomerName = null;
             this.PhoneNumber = null;
             this.CreatedByUserID = 0;
+            this.IsActive = true;
             Mode = enMode.AddNew;
         }
-        private clsCustomers(int customerid, string customername, string phonenumber, int createdbyuserid)
+        private clsCustomers(int customerid, string customername, string phonenumber, int createdbyuserid, bool isActive)
         {
             this.CustomerID = customerid;
             this.CustomerName = customername;
             this.PhoneNumber = phonenumber;
             this.CreatedByUserID = createdbyuserid;
+            this.IsActive = isActive;
             Mode = enMode.Update;
         }
 
@@ -36,11 +39,11 @@ namespace MiniStoreDB_Business_Layer
             string CustomerName = null;
             string PhoneNumber = null;
             int CreatedByUserID = 0;
-
-            bool IsFound = clsCustomersData.GetCustomersInfoByID(CustomerID, ref CustomerName, ref PhoneNumber, ref CreatedByUserID);
+            bool isActive = true;
+            bool IsFound = clsCustomersData.GetCustomersInfoByID(CustomerID, ref CustomerName, ref PhoneNumber, ref CreatedByUserID, ref isActive);
             if (IsFound)
             {
-                return new clsCustomers(CustomerID, CustomerName, PhoneNumber, CreatedByUserID);
+                return new clsCustomers(CustomerID, CustomerName, PhoneNumber, CreatedByUserID, isActive);
             }
             else
             {
@@ -50,13 +53,13 @@ namespace MiniStoreDB_Business_Layer
 
         private bool _AddNewCustomers()
         {
-            this.CustomerID = clsCustomersData.AddNewCustomers(this.CustomerName, this.PhoneNumber, this.CreatedByUserID);
+            this.CustomerID = clsCustomersData.AddNewCustomers(this.CustomerName, this.PhoneNumber, this.CreatedByUserID, this.IsActive);
             return (this.CustomerID != null);
         }
 
         private bool _UpdateCustomers()
         {
-            return clsCustomersData.UpdateCustomersInfoByID(this.CustomerID ?? -1, this.CustomerName, this.PhoneNumber, this.CreatedByUserID);
+            return clsCustomersData.UpdateCustomersInfoByID(this.CustomerID ?? -1, this.CustomerName, this.PhoneNumber, this.IsActive);
         }
 
         public bool Save()
