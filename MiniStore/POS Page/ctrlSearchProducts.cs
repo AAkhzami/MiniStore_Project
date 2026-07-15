@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +15,8 @@ namespace MiniStore.POS_Page
 {
     public partial class ctrlSearchProducts : UserControl
     {
-
+        
+        public string CustomerType = "Cash Customer(Walk-in)";
         public ctrlSearchProducts()
         {
             InitializeComponent();

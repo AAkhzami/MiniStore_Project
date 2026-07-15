@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -185,6 +186,7 @@ namespace MiniStore
                     await InventoryPage();
                     break;
                 case 2:
+                    SalesPage();
                     break;
                 case 3:
                     break;
@@ -388,6 +390,11 @@ namespace MiniStore
         }
 
 
+        // ----------------- Sales/POS
+        void SalesPage()
+        {            
+            ctrlInvoiceSummary1.customerId = (ctrlSearchProducts1.CustomerType == "Cash Customer(Walk-in)" ? 1 : -1);
+        }
 
     }
 }
