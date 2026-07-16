@@ -36,7 +36,6 @@ namespace MiniStore.POS_Page
         {
             cbCustomerType.TabIndex = 0;
             txbProductSearch.Text = "";
-            cbSearchType.TabIndex = 0;
         }
         private void btnInsertProduct_Click(object sender, EventArgs e)
         {
@@ -89,6 +88,14 @@ namespace MiniStore.POS_Page
             {
                 CustomerSelected(1);
                 return;
+            }
+        }
+
+        private void txbProductSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

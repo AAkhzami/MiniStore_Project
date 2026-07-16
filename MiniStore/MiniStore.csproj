@@ -64,6 +64,24 @@
     <Compile Include="Customers\Control\ctrlCustomerInfo.Designer.cs">
       <DependentUpon>ctrlCustomerInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customers\Control\Page\ctrlCustomersPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\Control\Page\ctrlCustomersPage.Designer.cs">
+      <DependentUpon>ctrlCustomersPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Control\Page\ctrlSearchOnCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\Control\Page\ctrlSearchOnCustomer.Designer.cs">
+      <DependentUpon>ctrlSearchOnCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Control\Page\ctrlTableOfCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\Control\Page\ctrlTableOfCustomers.Designer.cs">
+      <DependentUpon>ctrlTableOfCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customers\frmAddUpdateCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +168,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\Control\ctrlCustomerInfo.resx">
       <DependentUpon>ctrlCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\Control\Page\ctrlCustomersPage.resx">
+      <DependentUpon>ctrlCustomersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\Control\Page\ctrlSearchOnCustomer.resx">
+      <DependentUpon>ctrlSearchOnCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\Control\Page\ctrlTableOfCustomers.resx">
+      <DependentUpon>ctrlTableOfCustomers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\frmAddUpdateCustomer.resx">
       <DependentUpon>frmAddUpdateCustomer.cs</DependentUpon>
@@ -337,5 +364,6 @@
   <ItemGroup>
     <None Include="Resources\user-32.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

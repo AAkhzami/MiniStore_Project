@@ -1,0 +1,84 @@
+﻿using MiniStoreDB_Business_Layer;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MiniStore.Customers.Control.Page
+{
+    public partial class ctrlTableOfCustomers : UserControl
+    {
+        private static DataTable _dtCustomers;
+        public enum enSearchType { CustomerID = 1, CustomerName = 2, CustomerPhone =3}
+        enSearchType _SearchType = enSearchType.CustomerID;
+        public ctrlTableOfCustomers()
+        {
+            InitializeComponent();
+        }
+        public void LoadData()
+        {
+            _dtCustomers = clsCustomers.GetAllCustomers();
+            dgvTableCustomers.DataSource = _dtCustomers;
+            if(_dtCustomers.Rows.Count > 0)
+            {
+                dgvTableCustomers.Columns[0].HeaderText = "Customer ID";
+                dgvTableCustomers.Columns[0].Width = 319;
+
+                dgvTableCustomers.Columns[1].HeaderText = "Full Name";
+                dgvTableCustomers.Columns[1].Width = 320;
+
+                dgvTableCustomers.Columns[2].HeaderText = "Phone Number";
+                dgvTableCustomers.Columns[2].Width = 319;
+
+                dgvTableCustomers.Columns[3].HeaderText = "Is Active";
+                dgvTableCustomers.Columns[3].Width = 291;
+            }
+
+            lblCustomersCounter.Text = $"Showing {_dtCustomers.Rows.Count} customers";
+        }
+        public void SearchBy(string Text, byte searchType = 1)
+        {
+            _SearchType = (enSearchType)searchType;
+            string FilterColumn = "";
+            if(string.IsNullOrWhiteSpace(Text))
+            {
+                _dtCustomers.DefaultView.RowFilter = "";
+                return;
+            }
+
+            switch(_SearchType)
+            {
+                case enSearchType.CustomerID:
+                    FilterColumn = "CustomerID";
+                    break;
+                case enSearchType.CustomerName:
+                    FilterColumn = "CustomerName";
+                    break;
+                case enSearchType.CustomerPhone:
+                    FilterColumn = "PhoneNumber";
+                    break;
+            }
+
+            if (FilterColumn == "ProductID")
+            {
+                _dtCustomers.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, Text);
+            }
+            else if (FilterColumn == "CustomerName")
+            {
+                _dtCustomers.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%'", FilterColumn, Text);
+            }
+            else if (FilterColumn == "PhoneNumber")
+            {
+                _dtCustomers.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%'", FilterColumn, Text);
+            }
+
+            dgvTableCustomers.DataSource = _dtCustomers.DefaultView;
+            dgvTableCustomers.Text = "Showing Products : " + dgvTableCustomers.Rows.Count.ToString();
+        }
+    }
+}

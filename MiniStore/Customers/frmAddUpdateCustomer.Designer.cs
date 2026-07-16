@@ -123,7 +123,7 @@
             this.txbPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbPhoneNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txbPhoneNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.txbPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbPhoneNumber.Location = new System.Drawing.Point(36, 226);
             this.txbPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -132,7 +132,7 @@
             this.txbPhoneNumber.PlaceholderText = "Enter Phone Number";
             this.txbPhoneNumber.SelectedText = "";
             this.txbPhoneNumber.Size = new System.Drawing.Size(474, 48);
-            this.txbPhoneNumber.TabIndex = 25;
+            this.txbPhoneNumber.TabIndex = 2;
             this.txbPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPhoneNumber_KeyPress);
             this.txbPhoneNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txbPhoneNumber_Validating);
             // 
@@ -311,7 +311,7 @@
             this.txbCustomerName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbCustomerName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbCustomerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbCustomerName.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txbCustomerName.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.txbCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbCustomerName.Location = new System.Drawing.Point(36, 138);
             this.txbCustomerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -320,7 +320,7 @@
             this.txbCustomerName.PlaceholderText = "Enter customer name";
             this.txbCustomerName.SelectedText = "";
             this.txbCustomerName.Size = new System.Drawing.Size(474, 48);
-            this.txbCustomerName.TabIndex = 10;
+            this.txbCustomerName.TabIndex = 1;
             this.txbCustomerName.Validating += new System.ComponentModel.CancelEventHandler(this.txbCustomerName_Validating);
             // 
             // errorProvider1

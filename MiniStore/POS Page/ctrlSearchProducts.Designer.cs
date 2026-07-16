@@ -32,7 +32,6 @@
             this.btnInsertProduct = new Guna.UI2.WinForms.Guna2Button();
             this.cbCustomerType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lable1 = new System.Windows.Forms.Label();
-            this.cbSearchType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txbProductSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel10.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +42,6 @@
             this.guna2ShadowPanel10.Controls.Add(this.btnInsertProduct);
             this.guna2ShadowPanel10.Controls.Add(this.cbCustomerType);
             this.guna2ShadowPanel10.Controls.Add(this.lable1);
-            this.guna2ShadowPanel10.Controls.Add(this.cbSearchType);
             this.guna2ShadowPanel10.Controls.Add(this.txbProductSearch);
             this.guna2ShadowPanel10.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel10.Location = new System.Drawing.Point(1, 1);
@@ -104,26 +102,6 @@
             this.lable1.TabIndex = 18;
             this.lable1.Text = "Customer";
             // 
-            // cbSearchType
-            // 
-            this.cbSearchType.BackColor = System.Drawing.Color.Transparent;
-            this.cbSearchType.BorderRadius = 9;
-            this.cbSearchType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbSearchType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSearchType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSearchType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSearchType.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.cbSearchType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbSearchType.ItemHeight = 30;
-            this.cbSearchType.Items.AddRange(new object[] {
-            "Product Name",
-            "Product ID"});
-            this.cbSearchType.Location = new System.Drawing.Point(667, 42);
-            this.cbSearchType.Name = "cbSearchType";
-            this.cbSearchType.Size = new System.Drawing.Size(185, 36);
-            this.cbSearchType.StartIndex = 0;
-            this.cbSearchType.TabIndex = 2;
-            // 
             // txbProductSearch
             // 
             this.txbProductSearch.BorderRadius = 9;
@@ -145,6 +123,7 @@
             this.txbProductSearch.SelectedText = "";
             this.txbProductSearch.Size = new System.Drawing.Size(558, 58);
             this.txbProductSearch.TabIndex = 0;
+            this.txbProductSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbProductSearch_KeyPress);
             // 
             // ctrlSearchProducts
             // 
@@ -164,7 +143,6 @@
 
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel10;
         private Guna.UI2.WinForms.Guna2TextBox txbProductSearch;
-        private Guna.UI2.WinForms.Guna2ComboBox cbSearchType;
         private Guna.UI2.WinForms.Guna2ComboBox cbCustomerType;
         private System.Windows.Forms.Label lable1;
         private Guna.UI2.WinForms.Guna2Button btnInsertProduct;

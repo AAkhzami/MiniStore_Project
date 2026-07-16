@@ -45,7 +45,8 @@ create table Customers
 	CustomerID int primary key Identity(1,1),
 	CustomerName varchar(100),
 	PhoneNumber varchar(50),
-	CreatedByUserID int
+	CreatedByUserID int,
+	IsActive bit default 1
 
 	constraint fk_Customer_User
 	foreign key (CreatedByUserID) references Users(UserID)

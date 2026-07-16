@@ -75,7 +75,7 @@
             this.txbSearchOnCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbSearchOnCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbSearchOnCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbSearchOnCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txbSearchOnCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.txbSearchOnCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbSearchOnCustomer.IconLeft = global::MiniStore.Properties.Resources.search;
             this.txbSearchOnCustomer.Location = new System.Drawing.Point(21, 245);
