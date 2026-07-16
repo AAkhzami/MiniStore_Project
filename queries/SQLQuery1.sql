@@ -110,7 +110,7 @@ select
 	where od.OrderID = @OrderID
 );
 
-Create Function GetCustomerStatistcs
+create Function GetCustomerStatistics
 (@CustomerID int)
 Returns Table
 as
@@ -120,7 +120,8 @@ return
 	count(vco.CustomerName) as OrdersCount,
 	TotalSpent = Sum(vco.TotalAmount),
 	ProductsPurchased = SUM(od.Quantity),
-	LastPusrchase = Datediff(Day,MAX(vco.OrderDate),GETDATE())
+	LastPurchase = Datediff(Day,MAX(vco.OrderDate),GETDATE()),
+	LastPurchaseDate = MAX(vco.OrderDate)
 	from v_CustomerOrders vco 
 	inner join OrderDetails od on
 	vco.OrderID = od.OrderID

@@ -115,5 +115,16 @@ namespace MiniStoreDB_Business_Layer
         {
             return clsCustomersData.IsPhoneNumberExist(phonenumber);
         }
+        public static bool GetCustomerStatistics(int CustomerID, ref int OrderCount, ref decimal TotalSpent, ref int ProductsPurchased, ref int LastPurchase, ref DateTime LastPusrchaseDate)
+        {
+            if (clsCustomersData.GetCustomerStatistics(CustomerID, ref OrderCount, ref TotalSpent, ref ProductsPurchased, ref LastPurchase, ref LastPusrchaseDate))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

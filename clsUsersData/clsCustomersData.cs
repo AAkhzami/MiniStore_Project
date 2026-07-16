@@ -229,5 +229,58 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return exist;
         }
+        public static bool GetCustomerStatistics(int CustomerID, ref int OrderCount, ref decimal TotalSpent, ref int ProductsPurchased, ref int LastPurchase, ref DateTime LastPusrchaseDate)
+        {
+            bool isFound = false;
+            string query = @"SELECT * FROM [dbo].[GetCustomerStatistics] (@CustomerID)";
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@CustomerID", CustomerID);
+
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+
+                            if (reader["OrdersCount"] != System.DBNull.Value)
+                                OrderCount = (int)reader["OrdersCount"];
+                            else
+                                OrderCount = 0;
+
+                            if(reader["TotalSpent"] != System.DBNull.Value)
+                                TotalSpent = (decimal)reader["TotalSpent"];
+                            else
+                                TotalSpent = 0;
+
+                            if(reader["ProductsPurchased"] != System.DBNull.Value)
+                                ProductsPurchased = (int)reader["ProductsPurchased"];
+                            else
+                                ProductsPurchased= 0;
+
+                            if (reader["LastPurchase"] != System.DBNull.Value)
+                                LastPurchase = (int)reader["LastPurchase"];
+                            else
+                                LastPurchase = 0;
+
+                            if (reader["LastPurchaseDate"] != System.DBNull.Value)
+                                LastPusrchaseDate = (DateTime)reader["LastPusrchaseDate"];
+                            else
+                                LastPusrchaseDate = DateTime.Now;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    isFound = false;
+                }
+            }
+            return isFound;
+        }
     }
 }
