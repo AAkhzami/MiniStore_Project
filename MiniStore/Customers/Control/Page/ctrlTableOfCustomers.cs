@@ -110,7 +110,8 @@ namespace MiniStore.Customers.Control.Page
         private void customerInfoStripMenuItem1_Click(object sender, EventArgs e)
         {
             int CustomerID = (int)dgvTableCustomers.CurrentRow.Cells[0].Value;
-
+            frmCustomerStatistics frm = new frmCustomerStatistics(CustomerID);
+            frm.ShowDialog();
         }
     }
 }

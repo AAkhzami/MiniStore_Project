@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbProductInfo = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.gbCustomerStatistics = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.lblLastPurchaseDate = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblLastPurchase = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblProductsPurchased = new System.Windows.Forms.Label();
@@ -37,14 +39,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblOrdersCount = new System.Windows.Forms.Label();
             this.lable1 = new System.Windows.Forms.Label();
-            this.lblLastPurchaseDate = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gbProductInfo.SuspendLayout();
+            this.gbCustomerStatistics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -52,33 +52,59 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // gbProductInfo
+            // gbCustomerStatistics
             // 
-            this.gbProductInfo.BackColor = System.Drawing.Color.Transparent;
-            this.gbProductInfo.BorderRadius = 9;
-            this.gbProductInfo.Controls.Add(this.pictureBox4);
-            this.gbProductInfo.Controls.Add(this.lblLastPurchaseDate);
-            this.gbProductInfo.Controls.Add(this.label3);
-            this.gbProductInfo.Controls.Add(this.pictureBox5);
-            this.gbProductInfo.Controls.Add(this.pictureBox3);
-            this.gbProductInfo.Controls.Add(this.pictureBox2);
-            this.gbProductInfo.Controls.Add(this.pictureBox1);
-            this.gbProductInfo.Controls.Add(this.lblLastPurchase);
-            this.gbProductInfo.Controls.Add(this.label8);
-            this.gbProductInfo.Controls.Add(this.lblProductsPurchased);
-            this.gbProductInfo.Controls.Add(this.label4);
-            this.gbProductInfo.Controls.Add(this.lblTotalSpent);
-            this.gbProductInfo.Controls.Add(this.label2);
-            this.gbProductInfo.Controls.Add(this.lblOrdersCount);
-            this.gbProductInfo.Controls.Add(this.lable1);
-            this.gbProductInfo.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(121)))), ((int)(((byte)(243)))));
-            this.gbProductInfo.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.gbProductInfo.ForeColor = System.Drawing.Color.White;
-            this.gbProductInfo.Location = new System.Drawing.Point(3, 3);
-            this.gbProductInfo.Name = "gbProductInfo";
-            this.gbProductInfo.Size = new System.Drawing.Size(745, 359);
-            this.gbProductInfo.TabIndex = 16;
-            this.gbProductInfo.Text = "Customer Information";
+            this.gbCustomerStatistics.BackColor = System.Drawing.Color.Transparent;
+            this.gbCustomerStatistics.BorderRadius = 9;
+            this.gbCustomerStatistics.Controls.Add(this.pictureBox4);
+            this.gbCustomerStatistics.Controls.Add(this.lblLastPurchaseDate);
+            this.gbCustomerStatistics.Controls.Add(this.label3);
+            this.gbCustomerStatistics.Controls.Add(this.pictureBox5);
+            this.gbCustomerStatistics.Controls.Add(this.pictureBox3);
+            this.gbCustomerStatistics.Controls.Add(this.pictureBox2);
+            this.gbCustomerStatistics.Controls.Add(this.pictureBox1);
+            this.gbCustomerStatistics.Controls.Add(this.lblLastPurchase);
+            this.gbCustomerStatistics.Controls.Add(this.label8);
+            this.gbCustomerStatistics.Controls.Add(this.lblProductsPurchased);
+            this.gbCustomerStatistics.Controls.Add(this.label4);
+            this.gbCustomerStatistics.Controls.Add(this.lblTotalSpent);
+            this.gbCustomerStatistics.Controls.Add(this.label2);
+            this.gbCustomerStatistics.Controls.Add(this.lblOrdersCount);
+            this.gbCustomerStatistics.Controls.Add(this.lable1);
+            this.gbCustomerStatistics.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(121)))), ((int)(((byte)(243)))));
+            this.gbCustomerStatistics.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.gbCustomerStatistics.ForeColor = System.Drawing.Color.White;
+            this.gbCustomerStatistics.Location = new System.Drawing.Point(3, 3);
+            this.gbCustomerStatistics.Name = "gbCustomerStatistics";
+            this.gbCustomerStatistics.Size = new System.Drawing.Size(745, 359);
+            this.gbCustomerStatistics.TabIndex = 16;
+            this.gbCustomerStatistics.Text = "Customer Statistics";
+            // 
+            // lblLastPurchaseDate
+            // 
+            this.lblLastPurchaseDate.AutoSize = true;
+            this.lblLastPurchaseDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblLastPurchaseDate.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.lblLastPurchaseDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lblLastPurchaseDate.Location = new System.Drawing.Point(585, 304);
+            this.lblLastPurchaseDate.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblLastPurchaseDate.Name = "lblLastPurchaseDate";
+            this.lblLastPurchaseDate.Size = new System.Drawing.Size(110, 22);
+            this.lblLastPurchaseDate.TabIndex = 35;
+            this.lblLastPurchaseDate.Text = "dd/mm/yyyy";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.label3.Location = new System.Drawing.Point(27, 301);
+            this.label3.Margin = new System.Windows.Forms.Padding(15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(219, 29);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Last Purchase Date";
             // 
             // lblLastPurchase
             // 
@@ -185,32 +211,6 @@
             this.lable1.Text = "Orders Count";
             this.lable1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblLastPurchaseDate
-            // 
-            this.lblLastPurchaseDate.AutoSize = true;
-            this.lblLastPurchaseDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblLastPurchaseDate.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.lblLastPurchaseDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblLastPurchaseDate.Location = new System.Drawing.Point(585, 304);
-            this.lblLastPurchaseDate.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.lblLastPurchaseDate.Name = "lblLastPurchaseDate";
-            this.lblLastPurchaseDate.Size = new System.Drawing.Size(110, 22);
-            this.lblLastPurchaseDate.TabIndex = 35;
-            this.lblLastPurchaseDate.Text = "dd/mm/yyyy";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label3.Location = new System.Drawing.Point(27, 301);
-            this.label3.Margin = new System.Windows.Forms.Padding(15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(219, 29);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Last Purchase Date";
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
@@ -271,11 +271,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.gbProductInfo);
+            this.Controls.Add(this.gbCustomerStatistics);
             this.Name = "ctrlCustomerStatistics";
             this.Size = new System.Drawing.Size(751, 365);
-            this.gbProductInfo.ResumeLayout(false);
-            this.gbProductInfo.PerformLayout();
+            this.gbCustomerStatistics.ResumeLayout(false);
+            this.gbCustomerStatistics.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -287,7 +287,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2GroupBox gbProductInfo;
+        private Guna.UI2.WinForms.Guna2GroupBox gbCustomerStatistics;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;

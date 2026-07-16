@@ -28,8 +28,23 @@ namespace MiniStore.Customers
                 lblOrdersCount.Text = OrderCount.ToString();
                 lblTotalSpent.Text = TotalSpent.ToString();
                 lblProductsPurchased.Text = ProductsPurchased.ToString();
-                lblLastPurchase.Text = LastPurchase.ToString();
-                lblLastPurchaseDate.Text = LastPusrchaseDate.ToString("dd/MM/yyyy");
+                if(ProductsPurchased != 0)
+                {
+                    if (LastPurchase == 0)
+                    {
+                        lblLastPurchase.Text = "Today";
+                    }
+                    else
+                    {
+                        lblLastPurchase.Text = LastPurchase.ToString() + "Day(s)";
+                    }
+                    lblLastPurchaseDate.Text = LastPusrchaseDate.ToString("dd/MM/yyyy");
+                }
+                else
+                {
+                    lblLastPurchase.Text = "Nothing";
+                    lblLastPurchaseDate.Text = "Nothing";
+                }
             }
             else
             {

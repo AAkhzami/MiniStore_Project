@@ -48,3 +48,5 @@ C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Customers.Control.Page.ctrlCustomersPage.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Customers.Control.Page.ctrlSearchOnCustomer.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Customers.Control.Page.ctrlTableOfCustomers.resources
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Customers.ctrlCustomerStatistics.resources
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Customers.frmCustomerStatistics.resources

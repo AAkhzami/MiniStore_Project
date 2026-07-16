@@ -268,10 +268,13 @@ namespace MiniStoreDB_DataAccess_Layer
                             else
                                 LastPurchase = 0;
 
+                            
                             if (reader["LastPurchaseDate"] != System.DBNull.Value)
-                                LastPusrchaseDate = (DateTime)reader["LastPusrchaseDate"];
+                                LastPusrchaseDate = (DateTime)reader["LastPurchaseDate"];
                             else
                                 LastPusrchaseDate = DateTime.Now;
+
+                            isFound = true;
                         }
                     }
                 }
