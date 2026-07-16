@@ -34,7 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvOrders = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label20 = new System.Windows.Forms.Label();
+            this.cmsOrders = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.showBillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
+            this.cmsOrders.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvOrders
@@ -55,6 +58,7 @@
             this.dgvOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOrders.ColumnHeadersHeight = 45;
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvOrders.ContextMenuStrip = this.cmsOrders;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,6 +103,31 @@
             this.label20.TabIndex = 15;
             this.label20.Text = "Orders :";
             // 
+            // cmsOrders
+            // 
+            this.cmsOrders.BackColor = System.Drawing.Color.White;
+            this.cmsOrders.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsOrders.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showBillToolStripMenuItem});
+            this.cmsOrders.Name = "cmsOrders";
+            this.cmsOrders.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.cmsOrders.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsOrders.RenderStyle.ColorTable = null;
+            this.cmsOrders.RenderStyle.RoundedEdges = true;
+            this.cmsOrders.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsOrders.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmsOrders.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsOrders.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsOrders.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsOrders.Size = new System.Drawing.Size(162, 34);
+            // 
+            // showBillToolStripMenuItem
+            // 
+            this.showBillToolStripMenuItem.Image = global::MiniStore.Properties.Resources.receipt;
+            this.showBillToolStripMenuItem.Name = "showBillToolStripMenuItem";
+            this.showBillToolStripMenuItem.Size = new System.Drawing.Size(161, 30);
+            this.showBillToolStripMenuItem.Text = "Show Bill";
+            // 
             // ctrlOrdersDetailTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +138,7 @@
             this.Name = "ctrlOrdersDetailTable";
             this.Size = new System.Drawing.Size(731, 747);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
+            this.cmsOrders.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +148,7 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvOrders;
         private System.Windows.Forms.Label label20;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsOrders;
+        private System.Windows.Forms.ToolStripMenuItem showBillToolStripMenuItem;
     }
 }

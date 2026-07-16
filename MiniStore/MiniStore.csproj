@@ -403,5 +403,8 @@
   <ItemGroup>
     <None Include="Resources\calendar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
