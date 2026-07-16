@@ -125,6 +125,12 @@
     <Compile Include="Inventory Page\ctrl_InventoryPage.Designer.cs">
       <DependentUpon>ctrl_InventoryPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Orders\Control\ctrlOrdersDetailTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Orders\Control\ctrlOrdersDetailTable.Designer.cs">
+      <DependentUpon>ctrlOrdersDetailTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="POS Page\ctrlCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory Page\ctrl_InventoryPage.resx">
       <DependentUpon>ctrl_InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\Control\ctrlOrdersDetailTable.resx">
+      <DependentUpon>ctrlOrdersDetailTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS Page\ctrlCart.resx">
       <DependentUpon>ctrlCart.cs</DependentUpon>
