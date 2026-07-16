@@ -82,6 +82,12 @@
     <Compile Include="Customers\Control\Page\ctrlTableOfCustomers.Designer.cs">
       <DependentUpon>ctrlTableOfCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customers\Control\ctrlCustomerStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\Control\ctrlCustomerStatistics.Designer.cs">
+      <DependentUpon>ctrlCustomerStatistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customers\frmAddUpdateCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\Control\ctrlCustomerInfo.resx">
       <DependentUpon>ctrlCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\Control\ctrlCustomerStatistics.resx">
+      <DependentUpon>ctrlCustomerStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\Control\Page\ctrlCustomersPage.resx">
       <DependentUpon>ctrlCustomersPage.cs</DependentUpon>

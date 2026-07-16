@@ -82,6 +82,7 @@ begin
 end
 
 ------ Scalar Functions
+
 create Function dbo.FinalPrice(@Price decimal(10,3))
 Returns decimal(10,3)
 as
@@ -107,6 +108,23 @@ select
 	inner join Products p on
 	p.ProductID = od.ProductID
 	where od.OrderID = @OrderID
+);
+
+Create Function GetCustomerStatistcs
+(@CustomerID int)
+Returns Table
+as
+return
+(
+	select 
+	count(vco.CustomerName) as OrdersCount,
+	TotalSpent = Sum(vco.TotalAmount),
+	ProductsPurchased = SUM(od.Quantity),
+	LastPusrchase = Datediff(Day,MAX(vco.OrderDate),GETDATE())
+	from v_CustomerOrders vco 
+	inner join OrderDetails od on
+	vco.OrderID = od.OrderID
+	where vco.CustomerID = @CustomerID
 );
 
 create Function dbo.GetReportOfProducts()
