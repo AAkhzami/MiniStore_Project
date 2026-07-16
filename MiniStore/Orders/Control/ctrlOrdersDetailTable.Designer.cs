@@ -119,14 +119,15 @@
             this.cmsOrders.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsOrders.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsOrders.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsOrders.Size = new System.Drawing.Size(162, 34);
+            this.cmsOrders.Size = new System.Drawing.Size(181, 56);
             // 
             // showBillToolStripMenuItem
             // 
             this.showBillToolStripMenuItem.Image = global::MiniStore.Properties.Resources.receipt;
             this.showBillToolStripMenuItem.Name = "showBillToolStripMenuItem";
-            this.showBillToolStripMenuItem.Size = new System.Drawing.Size(161, 30);
+            this.showBillToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.showBillToolStripMenuItem.Text = "Show Bill";
+            this.showBillToolStripMenuItem.Click += new System.EventHandler(this.showBillToolStripMenuItem_Click);
             // 
             // ctrlOrdersDetailTable
             // 

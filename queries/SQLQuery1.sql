@@ -143,6 +143,28 @@ return
 	group by do.OrderID, o.CreatedByUserID,o.CustomerID,o.OrderDate
 	having o.CustomerID = @CustomerID
 )
+
+create Function GetBillInfo
+(@OrderID int)
+Returns Table
+as
+return
+(
+	select 
+	o.OrderID,
+	p.Name,
+	od.Quantity,
+	od.PricePerUnit,
+	o.TotalAmount
+	from 
+	Orders o
+	inner join OrderDetails od on
+	o.OrderID = od.OrderID 
+	inner join Products p on
+	od.ProductID = p.ProductID
+	where o.OrderID = @OrderID
+)
+
 create Function dbo.GetReportOfProducts()
 Returns Table
 as

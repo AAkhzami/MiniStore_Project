@@ -51,3 +51,4 @@ C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Customers.ctrlCustomerStatistics.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Customers.frmCustomerStatistics.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Orders.Control.ctrlOrdersDetailTable.resources
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Orders.frmShowOrder.resources

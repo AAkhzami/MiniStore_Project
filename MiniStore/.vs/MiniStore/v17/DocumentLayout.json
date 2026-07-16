@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\orders\\frmshoworder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:orders\\frmshoworder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\orders\\frmshoworder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:orders\\frmshoworder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\orders\\control\\ctrlordersdetailtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:orders\\control\\ctrlordersdetailtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\orders\\control\\ctrlordersdetailtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:orders\\control\\ctrlordersdetailtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +42,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ctrlOrdersDetailTable.cs",
+              "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\Orders\\Control\\ctrlOrdersDetailTable.cs",
+              "RelativeDocumentMoniker": "Orders\\Control\\ctrlOrdersDetailTable.cs",
+              "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\Orders\\Control\\ctrlOrdersDetailTable.cs",
+              "RelativeToolTip": "Orders\\Control\\ctrlOrdersDetailTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-16T21:26:48.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmShowOrder.cs",
+              "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\Orders\\frmShowOrder.cs",
+              "RelativeDocumentMoniker": "Orders\\frmShowOrder.cs",
+              "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\Orders\\frmShowOrder.cs",
+              "RelativeToolTip": "Orders\\frmShowOrder.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAMwCMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-16T20:56:21.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmShowOrder.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\Orders\\frmShowOrder.cs",
+              "RelativeDocumentMoniker": "Orders\\frmShowOrder.cs",
+              "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\Orders\\frmShowOrder.cs [Design]",
+              "RelativeToolTip": "Orders\\frmShowOrder.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-16T20:47:01.207Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ctrlOrdersDetailTable.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\Orders\\Control\\ctrlOrdersDetailTable.cs",
               "RelativeDocumentMoniker": "Orders\\Control\\ctrlOrdersDetailTable.cs",
@@ -42,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "frmMainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\frmMainForm.cs",
               "RelativeDocumentMoniker": "frmMainForm.cs",
@@ -54,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "frmMainForm.cs",
               "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\frmMainForm.cs",
               "RelativeDocumentMoniker": "frmMainForm.cs",

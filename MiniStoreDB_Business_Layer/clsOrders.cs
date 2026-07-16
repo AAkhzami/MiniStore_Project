@@ -101,5 +101,9 @@ namespace MiniStoreDB_Business_Layer
         {
             return clsOrdersData.GetTotalSalesAtDate(date);
         }
+        public static DataTable GetBillInfo(int orderID)
+        {
+            return clsOrdersData.GetBillInfo(orderID);
+        }
     }
 }

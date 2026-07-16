@@ -210,6 +210,33 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return Sales;
         }
-        
+        public static DataTable GetBillInfo(int orderID)
+        {
+            DataTable dt = new DataTable();
+            string query = @"select * from GetBillInfo (@OrderID);";
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@OrderID", orderID);
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            dt.Load(reader);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+            return dt;
+        }
+
+
     }
 }

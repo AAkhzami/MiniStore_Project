@@ -13,12 +13,14 @@ namespace MiniStore.Orders.Control
 {
     public partial class ctrlOrdersDetailTable : UserControl
     {
+        int _customerID = -1;
         public ctrlOrdersDetailTable()
         {
             InitializeComponent();
         }
         public void DataLoad(int customerID)
         {
+            _customerID = customerID;
             DataTable dt = clsOrderDetails.GetOrdersDetailForCustomer(customerID);
             dgvOrders.DataSource = dt;
             if(dgvOrders.Rows.Count > 0 )
@@ -38,6 +40,13 @@ namespace MiniStore.Orders.Control
                 dgvOrders.Columns[0].HeaderText = "Created By";
                 dgvOrders.Columns[0].Width = 100;
             }
+        }
+
+        private void showBillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int OrderID = (int)dgvOrders.CurrentRow.Cells[0].Value;
+            frmShowOrder frm = new frmShowOrder(clsOrders.Find(OrderID), clsCustomers.Find(_customerID));
+            frm.Show();
         }
     }
 }
