@@ -159,5 +159,33 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return dt;
         }
+        public static DataTable GetOrdersDetailForCustomer(int customerID)
+        {
+            DataTable dt = new DataTable();
+            string query = @"SELECT * FROM [dbo].[GetOrdersDetailForCustomer] (@CustomerID)";
+
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@CustomerID", customerID);
+
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            dt.Load(reader);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+            return dt;
+        }
     }
 }

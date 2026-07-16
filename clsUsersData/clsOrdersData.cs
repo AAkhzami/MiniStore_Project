@@ -210,5 +210,6 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return Sales;
         }
+        
     }
 }

@@ -127,7 +127,22 @@ return
 	vco.OrderID = od.OrderID
 	where vco.CustomerID = @CustomerID
 );
-
+create Function GetOrdersDetailForCustomer
+(@CustomerID int)
+Returns Table
+as
+return
+(
+	select do.OrderID,
+	Sum(do.Quantity) as TotalProducts,
+	Sum(o.TotalAmount) as TotalSales,
+	o.OrderDate,
+	o.CreatedByUserID
+	from OrderDetails do
+	inner join Orders o on do.OrderID = o.OrderID
+	group by do.OrderID, o.CreatedByUserID,o.CustomerID,o.OrderDate
+	having o.CustomerID = @CustomerID
+)
 create Function dbo.GetReportOfProducts()
 Returns Table
 as

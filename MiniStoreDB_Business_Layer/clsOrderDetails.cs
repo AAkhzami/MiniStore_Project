@@ -92,6 +92,10 @@ namespace MiniStoreDB_Business_Layer
         {
             return clsOrderDetailsData.GetAllOrderDetails();
         }
+        public static DataTable GetOrdersDetailForCustomer(int customerID)
+        {
+            return clsOrderDetailsData.GetOrdersDetailForCustomer(customerID);
+        }
 
     }
 }
