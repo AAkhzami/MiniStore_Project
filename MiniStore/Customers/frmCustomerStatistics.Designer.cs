@@ -30,7 +30,7 @@
         {
             this.ctrlCustomerInfo1 = new MiniStore.Customers.ctrlCustomerInfo();
             this.ctrlCustomerStatistics1 = new MiniStore.Customers.ctrlCustomerStatistics();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ctrlOrdersDetailTable1 = new MiniStore.Orders.Control.ctrlOrdersDetailTable();
             this.SuspendLayout();
             // 
             // ctrlCustomerInfo1
@@ -49,12 +49,13 @@
             this.ctrlCustomerStatistics1.Size = new System.Drawing.Size(751, 365);
             this.ctrlCustomerStatistics1.TabIndex = 0;
             // 
-            // panel1
+            // ctrlOrdersDetailTable1
             // 
-            this.panel1.Location = new System.Drawing.Point(787, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(731, 747);
-            this.panel1.TabIndex = 2;
+            this.ctrlOrdersDetailTable1.BackColor = System.Drawing.Color.Transparent;
+            this.ctrlOrdersDetailTable1.Location = new System.Drawing.Point(787, 12);
+            this.ctrlOrdersDetailTable1.Name = "ctrlOrdersDetailTable1";
+            this.ctrlOrdersDetailTable1.Size = new System.Drawing.Size(731, 747);
+            this.ctrlOrdersDetailTable1.TabIndex = 2;
             // 
             // frmCustomerStatistics
             // 
@@ -62,7 +63,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1530, 827);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ctrlOrdersDetailTable1);
             this.Controls.Add(this.ctrlCustomerInfo1);
             this.Controls.Add(this.ctrlCustomerStatistics1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -81,6 +82,6 @@
 
         private ctrlCustomerStatistics ctrlCustomerStatistics1;
         private ctrlCustomerInfo ctrlCustomerInfo1;
-        private System.Windows.Forms.Panel panel1;
+        private Orders.Control.ctrlOrdersDetailTable ctrlOrdersDetailTable1;
     }
 }
