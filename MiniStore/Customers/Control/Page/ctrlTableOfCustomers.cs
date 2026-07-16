@@ -27,16 +27,13 @@ namespace MiniStore.Customers.Control.Page
             if(_dtCustomers.Rows.Count > 0)
             {
                 dgvTableCustomers.Columns[0].HeaderText = "Customer ID";
-                dgvTableCustomers.Columns[0].Width = 319;
+                dgvTableCustomers.Columns[0].Width = 416;
 
                 dgvTableCustomers.Columns[1].HeaderText = "Full Name";
-                dgvTableCustomers.Columns[1].Width = 320;
+                dgvTableCustomers.Columns[1].Width = 417;
 
                 dgvTableCustomers.Columns[2].HeaderText = "Phone Number";
-                dgvTableCustomers.Columns[2].Width = 319;
-
-                dgvTableCustomers.Columns[3].HeaderText = "Is Active";
-                dgvTableCustomers.Columns[3].Width = 291;
+                dgvTableCustomers.Columns[2].Width = 416;
             }
 
             lblCustomersCounter.Text = $"Showing {_dtCustomers.Rows.Count} customers";
@@ -84,6 +81,36 @@ namespace MiniStore.Customers.Control.Page
         private void ctrlTableOfCustomers_Load(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void editCustToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int CustomerID = (int)dgvTableCustomers.CurrentRow.Cells[0].Value;
+            frmAddUpdateCustomer frm = new frmAddUpdateCustomer(clsCustomers.Find(CustomerID));
+            frm.ShowDialog();
+            ctrlTableOfCustomers_Load(null,null);
+        }
+
+        private void deleteCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int CustomerID = (int)dgvTableCustomers.CurrentRow.Cells[0].Value;
+            if(clsCustomers.DeleteCustomers(CustomerID))
+            {
+                MessageBox.Show("Customer Delete Successfully!","Successfully",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                ctrlTableOfCustomers_Load(null, null);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Customer Delete Failed!","Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void customerInfoStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int CustomerID = (int)dgvTableCustomers.CurrentRow.Cells[0].Value;
+
         }
     }
 }

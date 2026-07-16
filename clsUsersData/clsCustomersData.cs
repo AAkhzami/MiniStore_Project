@@ -163,7 +163,7 @@ namespace MiniStoreDB_DataAccess_Layer
         public static DataTable GetAllCustomers()
         {
             DataTable dt = new DataTable();
-            string query = @"select * FROM Customers";
+            string query = @"select * FROM Customers where IsActive = 1";
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
@@ -209,7 +209,7 @@ namespace MiniStoreDB_DataAccess_Layer
         public static bool IsPhoneNumberExist(string phonenumber)
         {
             bool exist = false;
-            string query = @"select 1 from Customers where PhoneNumber = @PhoneNumber";
+            string query = @"select 1 from Customers where PhoneNumber = @PhoneNumber and IsActive = 1";
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {

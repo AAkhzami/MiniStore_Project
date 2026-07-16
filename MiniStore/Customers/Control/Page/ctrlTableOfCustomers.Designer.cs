@@ -34,7 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTableCustomers = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblCustomersCounter = new System.Windows.Forms.Label();
+            this.cmsCustomer = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.editCustToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerInfoStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTableCustomers)).BeginInit();
+            this.cmsCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvTableCustomers
@@ -54,6 +59,7 @@
             this.dgvTableCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTableCustomers.ColumnHeadersHeight = 45;
             this.dgvTableCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvTableCustomers.ContextMenuStrip = this.cmsCustomer;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,6 +104,51 @@
             this.lblCustomersCounter.TabIndex = 20;
             this.lblCustomersCounter.Text = "Showing N customers";
             // 
+            // cmsCustomer
+            // 
+            this.cmsCustomer.BackColor = System.Drawing.Color.White;
+            this.cmsCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsCustomer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customerInfoStripMenuItem1,
+            this.editCustToolStripMenuItem,
+            this.deleteCustomerToolStripMenuItem});
+            this.cmsCustomer.Name = "cmsCustomer";
+            this.cmsCustomer.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.cmsCustomer.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsCustomer.RenderStyle.ColorTable = null;
+            this.cmsCustomer.RenderStyle.RoundedEdges = true;
+            this.cmsCustomer.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsCustomer.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmsCustomer.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsCustomer.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsCustomer.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsCustomer.Size = new System.Drawing.Size(229, 116);
+            // 
+            // editCustToolStripMenuItem
+            // 
+            this.editCustToolStripMenuItem.Image = global::MiniStore.Properties.Resources.edit;
+            this.editCustToolStripMenuItem.Name = "editCustToolStripMenuItem";
+            this.editCustToolStripMenuItem.Size = new System.Drawing.Size(228, 30);
+            this.editCustToolStripMenuItem.Text = "Edit Customer";
+            this.editCustToolStripMenuItem.Click += new System.EventHandler(this.editCustToolStripMenuItem_Click);
+            // 
+            // deleteCustomerToolStripMenuItem
+            // 
+            this.deleteCustomerToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.deleteCustomerToolStripMenuItem.Image = global::MiniStore.Properties.Resources.trash;
+            this.deleteCustomerToolStripMenuItem.Name = "deleteCustomerToolStripMenuItem";
+            this.deleteCustomerToolStripMenuItem.Size = new System.Drawing.Size(228, 30);
+            this.deleteCustomerToolStripMenuItem.Text = "Delete Customer";
+            this.deleteCustomerToolStripMenuItem.Click += new System.EventHandler(this.deleteCustomerToolStripMenuItem_Click);
+            // 
+            // customerInfoStripMenuItem1
+            // 
+            this.customerInfoStripMenuItem1.Image = global::MiniStore.Properties.Resources.user_31;
+            this.customerInfoStripMenuItem1.Name = "customerInfoStripMenuItem1";
+            this.customerInfoStripMenuItem1.Size = new System.Drawing.Size(228, 30);
+            this.customerInfoStripMenuItem1.Text = "Customer Info";
+            this.customerInfoStripMenuItem1.Click += new System.EventHandler(this.customerInfoStripMenuItem1_Click);
+            // 
             // ctrlTableOfCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +160,7 @@
             this.Size = new System.Drawing.Size(1255, 548);
             this.Load += new System.EventHandler(this.ctrlTableOfCustomers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTableCustomers)).EndInit();
+            this.cmsCustomer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +170,9 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvTableCustomers;
         private System.Windows.Forms.Label lblCustomersCounter;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsCustomer;
+        private System.Windows.Forms.ToolStripMenuItem editCustToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteCustomerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customerInfoStripMenuItem1;
     }
 }

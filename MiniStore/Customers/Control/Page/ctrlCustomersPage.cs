@@ -21,6 +21,7 @@ namespace MiniStore.Customers.Control.Page
         {
             ctrlSearchOnCustomer1.FocusOnTextSearch();
             ctrlSearchOnCustomer1.OnSearch += ctrlTableOfCustomers1.SearchBy;
+            ctrlSearchOnCustomer1.OnCustomerCreate += ctrlTableOfCustomers1.LoadData;
         }
     }
 }

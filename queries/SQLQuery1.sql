@@ -60,6 +60,27 @@ begin
 	i.ProductID = d.ProductID;
 end;
 
+
+create trigger trg_InsteadOfDelete on Customers
+instead of delete
+as
+begin
+	Update Customers 
+	set IsActive = 0
+	from Customers c inner join deleted d on
+	c.CustomerID = d.CustomerID
+end
+
+Create trigger trg_InsteadOfDelete on Customers
+instead of delete
+as
+begin
+	Update Customers 
+	set IsActive = 0
+	from Customers c inner join deleted d on
+	c.CustomerID = d.CustomerID
+end
+
 ------ Scalar Functions
 create Function dbo.FinalPrice(@Price decimal(10,3))
 Returns decimal(10,3)

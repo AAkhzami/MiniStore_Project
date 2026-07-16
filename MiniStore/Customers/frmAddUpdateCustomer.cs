@@ -18,7 +18,18 @@ namespace MiniStore.Customers
         public frmAddUpdateCustomer()
         {
             InitializeComponent();
+            _status = enStatus.Add;
         }
+        public frmAddUpdateCustomer(clsCustomers customer)
+        {
+            InitializeComponent();
+            _status = enStatus.Update;
+            _customer = customer;
+        }
+        clsCustomers _customer;
+        public enum enStatus { Add, Update };
+        private enStatus _status = enStatus.Add;
+
         public delegate void CustomerCreatedEventHandler(int customerID);
         public event CustomerCreatedEventHandler OnCustomerCreate;
         private void btnCancel_Click(object sender, EventArgs e)
@@ -57,53 +68,7 @@ namespace MiniStore.Customers
                 e.Cancel = false;
             }
         }
-        void ChangingTheChoice()
-        {
-            if (rbActive.Checked)
-            {
-                rbActive.Checked = false;
-                rbInActive.Checked = true;
-
-                pInActive.BorderColor = Color.DodgerBlue;
-                pInActive.FillColor = Color.AliceBlue;
-                pInActive.FillColor2 = Color.AliceBlue;
-                pInActive.FillColor3 = Color.AliceBlue;
-                pInActive.FillColor4 = Color.AliceBlue;
-
-                pActive.BorderColor = Color.Silver;
-                pActive.FillColor = Color.White;
-                pActive.FillColor2 = Color.White;
-                pActive.FillColor3 = Color.White;
-                pActive.FillColor4 = Color.White;
-            }
-            else
-            {
-                rbActive.Checked = true;
-                rbInActive.Checked = false;
-
-                pInActive.BorderColor = Color.Silver;
-                pInActive.FillColor = Color.White;
-                pInActive.FillColor2 = Color.White;
-                pInActive.FillColor3 = Color.White;
-                pInActive.FillColor4 = Color.White;
-
-                pActive.BorderColor = Color.DodgerBlue;
-                pActive.FillColor = Color.AliceBlue;
-                pActive.FillColor2 = Color.AliceBlue;
-                pActive.FillColor3 = Color.AliceBlue;
-                pActive.FillColor4 = Color.AliceBlue;
-            }
-        }
-
-        private void frmAddUpdateCustomer_Click(object sender, EventArgs e)
-        {
-            ChangingTheChoice();
-        }
-
-        private void pInActive_Click(object sender, EventArgs e)
-        {
-            ChangingTheChoice();
-        }
+        
 
         private void btnSaveCustomer_Click(object sender, EventArgs e)
         {
@@ -121,7 +86,7 @@ namespace MiniStore.Customers
             clsCustomers customer = new clsCustomers();
             customer.CustomerName = txbCustomerName.Text;
             customer.PhoneNumber = txbPhoneNumber.Text;
-            customer.IsActive = rbActive.Checked;
+            customer.IsActive = true;
             customer.CreatedByUserID = clsCurrentUser.CurrentUser.UserID ?? -1;
 
             if(customer.Save())
@@ -151,6 +116,21 @@ namespace MiniStore.Customers
         private void frmAddUpdateCustomer_Load(object sender, EventArgs e)
         {
             txbCustomerName.Focus();
+            switch (_status)
+            {
+                case enStatus.Add:
+                    this.Text = "Add New Customer";
+                    lblTitle.Text = "Add New Customer";
+                    break;
+                case enStatus.Update:
+                    this.Text = "Update Customer";
+                    lblTitle.Text = "Update Customer";
+                    lblCustomerID.Text = _customer.CustomerID.ToString();
+                    txbCustomerName.Text = _customer.CustomerName;
+                    txbPhoneNumber.Text = _customer.PhoneNumber;
+
+                    break;
+            }
         }
     }
 }

@@ -38,20 +38,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSaveCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pInActive = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rbInActive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.pActive = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.rbActive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txbCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
-            this.pInActive.SuspendLayout();
-            this.pActive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,9 +79,6 @@
             this.guna2GroupBox1.Controls.Add(this.label2);
             this.guna2GroupBox1.Controls.Add(this.btnSaveCustomer);
             this.guna2GroupBox1.Controls.Add(this.btnCancel);
-            this.guna2GroupBox1.Controls.Add(this.label7);
-            this.guna2GroupBox1.Controls.Add(this.pInActive);
-            this.guna2GroupBox1.Controls.Add(this.pActive);
             this.guna2GroupBox1.Controls.Add(this.label3);
             this.guna2GroupBox1.Controls.Add(this.txbCustomerName);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(121)))), ((int)(((byte)(243)))));
@@ -126,7 +114,7 @@
             this.txbPhoneNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.txbPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbPhoneNumber.Location = new System.Drawing.Point(36, 226);
-            this.txbPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txbPhoneNumber.MaxLength = 9;
             this.txbPhoneNumber.Name = "txbPhoneNumber";
             this.txbPhoneNumber.PlaceholderText = "Enter Phone Number";
@@ -194,102 +182,6 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label7.Location = new System.Drawing.Point(33, 307);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Status";
-            // 
-            // pInActive
-            // 
-            this.pInActive.BorderColor = System.Drawing.Color.Silver;
-            this.pInActive.BorderRadius = 9;
-            this.pInActive.BorderThickness = 2;
-            this.pInActive.Controls.Add(this.label1);
-            this.pInActive.Controls.Add(this.rbInActive);
-            this.pInActive.Location = new System.Drawing.Point(279, 329);
-            this.pInActive.Name = "pInActive";
-            this.pInActive.Size = new System.Drawing.Size(231, 106);
-            this.pInActive.TabIndex = 19;
-            this.pInActive.Click += new System.EventHandler(this.pInActive_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label1.Location = new System.Drawing.Point(61, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 17);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Inactive Customer";
-            // 
-            // rbInActive
-            // 
-            this.rbInActive.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbInActive.CheckedState.BorderThickness = 5;
-            this.rbInActive.CheckedState.FillColor = System.Drawing.Color.White;
-            this.rbInActive.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbInActive.Location = new System.Drawing.Point(14, 35);
-            this.rbInActive.Name = "rbInActive";
-            this.rbInActive.Size = new System.Drawing.Size(29, 36);
-            this.rbInActive.TabIndex = 38;
-            this.rbInActive.Text = "guna2CustomRadioButton2";
-            this.rbInActive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbInActive.UncheckedState.BorderThickness = 2;
-            this.rbInActive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbInActive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // pActive
-            // 
-            this.pActive.BackColor = System.Drawing.Color.Transparent;
-            this.pActive.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.pActive.BorderRadius = 9;
-            this.pActive.BorderThickness = 2;
-            this.pActive.Controls.Add(this.rbActive);
-            this.pActive.Controls.Add(this.label8);
-            this.pActive.FillColor = System.Drawing.Color.AliceBlue;
-            this.pActive.FillColor2 = System.Drawing.Color.AliceBlue;
-            this.pActive.FillColor3 = System.Drawing.Color.AliceBlue;
-            this.pActive.FillColor4 = System.Drawing.Color.AliceBlue;
-            this.pActive.Location = new System.Drawing.Point(36, 329);
-            this.pActive.Name = "pActive";
-            this.pActive.Size = new System.Drawing.Size(231, 106);
-            this.pActive.TabIndex = 18;
-            // 
-            // rbActive
-            // 
-            this.rbActive.Checked = true;
-            this.rbActive.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbActive.CheckedState.BorderThickness = 5;
-            this.rbActive.CheckedState.FillColor = System.Drawing.Color.White;
-            this.rbActive.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbActive.Location = new System.Drawing.Point(14, 35);
-            this.rbActive.Name = "rbActive";
-            this.rbActive.Size = new System.Drawing.Size(29, 36);
-            this.rbActive.TabIndex = 35;
-            this.rbActive.Text = "guna2CustomRadioButton1";
-            this.rbActive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbActive.UncheckedState.BorderThickness = 2;
-            this.rbActive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbActive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label8.Location = new System.Drawing.Point(65, 45);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 17);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Active Customer";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -314,7 +206,7 @@
             this.txbCustomerName.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.txbCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbCustomerName.Location = new System.Drawing.Point(36, 138);
-            this.txbCustomerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbCustomerName.Margin = new System.Windows.Forms.Padding(4);
             this.txbCustomerName.MaxLength = 100;
             this.txbCustomerName.Name = "txbCustomerName";
             this.txbCustomerName.PlaceholderText = "Enter customer name";
@@ -345,14 +237,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Customer";
             this.Load += new System.EventHandler(this.frmAddUpdateCustomer_Load);
-            this.Click += new System.EventHandler(this.frmAddUpdateCustomer_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            this.pInActive.ResumeLayout(false);
-            this.pInActive.PerformLayout();
-            this.pActive.ResumeLayout(false);
-            this.pActive.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -367,13 +254,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnSaveCustomer;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel pInActive;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton rbInActive;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel pActive;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton rbActive;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txbCustomerName;
         private System.Windows.Forms.Label label5;

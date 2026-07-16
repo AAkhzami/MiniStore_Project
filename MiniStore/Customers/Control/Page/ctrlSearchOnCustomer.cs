@@ -22,6 +22,9 @@ namespace MiniStore.Customers.Control.Page
         public delegate void SearchingChangeEventHandler(string SearchText, byte SearchType);
         public SearchingChangeEventHandler OnSearch;
 
+        public delegate void CustomerCreateEventHandler();
+        public CustomerCreateEventHandler OnCustomerCreate;
+
         private void cbSearchType_SelectedIndexChanged(object sender, EventArgs e)
         {
             string searchType = cbSearchType.SelectedItem.ToString();
@@ -70,7 +73,7 @@ namespace MiniStore.Customers.Control.Page
         {
             txbCustomerSearch.Text = "";
             cbSearchType.StartIndex = 0;
-            OnSearch?.Invoke(txbCustomerSearch.Text, 2);
+            OnCustomerCreate?.Invoke();
         }
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {

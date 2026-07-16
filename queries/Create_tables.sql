@@ -91,6 +91,7 @@ values
 
 create view v_CustomerOrders as
 select 
+c.CustomerID,
 c.CustomerName,
 c.PhoneNumber,
 o.OrderID,
