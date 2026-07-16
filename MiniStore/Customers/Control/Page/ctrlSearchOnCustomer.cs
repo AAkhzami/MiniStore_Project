@@ -18,6 +18,9 @@ namespace MiniStore.Customers.Control.Page
         {
             InitializeComponent();
         }
+        
+        public delegate void SearchingChangeEventHandler(string SearchText, byte SearchType);
+        public SearchingChangeEventHandler OnSearch;
 
         private void cbSearchType_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -35,7 +38,23 @@ namespace MiniStore.Customers.Control.Page
                     break;
             }
         }
-
+        private byte GetSearchAsNumber(string searchType)
+        {
+            byte SearchType = 2;
+            switch (searchType)
+            {
+                case "Customer ID":
+                    SearchType = 1;
+                    break;
+                case "Customer Name":
+                    SearchType = 2;
+                    break;
+                case "Customer Phone Number":
+                    SearchType = 3;
+                    break;
+            }
+            return SearchType;
+        }
         private void txbCustomerSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(cbSearchType.Text != "Customer Name")
@@ -45,16 +64,38 @@ namespace MiniStore.Customers.Control.Page
                     e.Handled = true;
                 }
             }
+;
         }
-
+        public void Reset(int id)
+        {
+            txbCustomerSearch.Text = "";
+            cbSearchType.StartIndex = 0;
+            OnSearch?.Invoke(txbCustomerSearch.Text, 2);
+        }
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
             frmAddUpdateCustomer frm = new frmAddUpdateCustomer();
+            frm.OnCustomerCreate += Reset;
             frm.ShowDialog();
         }
         public void FocusOnTextSearch()
         {
             txbCustomerSearch.Focus();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string SearchText = txbCustomerSearch.Text;
+            byte SearchType = GetSearchAsNumber(cbSearchType.Text);
+
+            OnSearch?.Invoke(SearchText, SearchType);
+        }
+
+        private void txbCustomerSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txbCustomerSearch.Text;
+            byte SearchType = GetSearchAsNumber(cbSearchType.Text);
+            OnSearch?.Invoke(searchText, SearchType);
         }
     }
 }

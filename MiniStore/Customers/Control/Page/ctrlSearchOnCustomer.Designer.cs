@@ -83,6 +83,7 @@
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(56, 56);
             this.btnSearch.TabIndex = 20;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cbSearchType
             // 
@@ -127,6 +128,7 @@
             this.txbCustomerSearch.SelectedText = "";
             this.txbCustomerSearch.Size = new System.Drawing.Size(558, 58);
             this.txbCustomerSearch.TabIndex = 0;
+            this.txbCustomerSearch.TextChanged += new System.EventHandler(this.txbCustomerSearch_TextChanged);
             this.txbCustomerSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbCustomerSearch_KeyPress);
             // 
             // ctrlSearchOnCustomer

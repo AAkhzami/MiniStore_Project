@@ -30,8 +30,8 @@
         {
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.ctrlTableOfCustomers1 = new MiniStore.Customers.Control.Page.ctrlTableOfCustomers();
             this.ctrlSearchOnCustomer1 = new MiniStore.Customers.Control.Page.ctrlSearchOnCustomer();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label4
@@ -57,25 +57,28 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Customers";
             // 
+            // ctrlTableOfCustomers1
+            // 
+            this.ctrlTableOfCustomers1.BackColor = System.Drawing.Color.Transparent;
+            this.ctrlTableOfCustomers1.Location = new System.Drawing.Point(43, 222);
+            this.ctrlTableOfCustomers1.Name = "ctrlTableOfCustomers1";
+            this.ctrlTableOfCustomers1.Size = new System.Drawing.Size(1255, 548);
+            this.ctrlTableOfCustomers1.TabIndex = 21;
+            // 
             // ctrlSearchOnCustomer1
             // 
+            this.ctrlSearchOnCustomer1.BackColor = System.Drawing.Color.Transparent;
             this.ctrlSearchOnCustomer1.Location = new System.Drawing.Point(39, 116);
             this.ctrlSearchOnCustomer1.Name = "ctrlSearchOnCustomer1";
             this.ctrlSearchOnCustomer1.Size = new System.Drawing.Size(1259, 100);
             this.ctrlSearchOnCustomer1.TabIndex = 20;
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(43, 235);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1255, 548);
-            this.panel1.TabIndex = 21;
-            // 
             // ctrlCustomersPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.ctrlTableOfCustomers1);
             this.Controls.Add(this.ctrlSearchOnCustomer1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -92,6 +95,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private ctrlSearchOnCustomer ctrlSearchOnCustomer1;
-        private System.Windows.Forms.Panel panel1;
+        private ctrlTableOfCustomers ctrlTableOfCustomers1;
     }
 }

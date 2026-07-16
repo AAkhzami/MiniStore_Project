@@ -139,6 +139,8 @@ namespace MiniStore.Inventory_Page
             if (string.IsNullOrEmpty(searchText))
             {
                 _dtGetAllProducts.DefaultView.RowFilter = "";
+                dgvInventoryProducts.DataSource = _dtGetAllProducts.DefaultView;
+                lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
                 return;
             }
 

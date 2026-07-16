@@ -102,10 +102,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.lblCustomersCounter);
             this.Controls.Add(this.dgvTableCustomers);
             this.Name = "ctrlTableOfCustomers";
             this.Size = new System.Drawing.Size(1255, 548);
+            this.Load += new System.EventHandler(this.ctrlTableOfCustomers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTableCustomers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

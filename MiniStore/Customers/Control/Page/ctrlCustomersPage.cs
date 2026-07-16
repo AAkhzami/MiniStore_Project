@@ -20,6 +20,7 @@ namespace MiniStore.Customers.Control.Page
         private void ctrlCustomersPage_Load(object sender, EventArgs e)
         {
             ctrlSearchOnCustomer1.FocusOnTextSearch();
+            ctrlSearchOnCustomer1.OnSearch += ctrlTableOfCustomers1.SearchBy;
         }
     }
 }

@@ -64,7 +64,7 @@ namespace MiniStore.Customers.Control.Page
                     break;
             }
 
-            if (FilterColumn == "ProductID")
+            if (FilterColumn == "CustomerID")
             {
                 _dtCustomers.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, Text);
             }
@@ -79,6 +79,11 @@ namespace MiniStore.Customers.Control.Page
 
             dgvTableCustomers.DataSource = _dtCustomers.DefaultView;
             dgvTableCustomers.Text = "Showing Products : " + dgvTableCustomers.Rows.Count.ToString();
+        }
+
+        private void ctrlTableOfCustomers_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
