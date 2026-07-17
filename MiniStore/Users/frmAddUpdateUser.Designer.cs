@@ -34,7 +34,7 @@
             this.txbFullName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblUserD = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSaveCustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSaveUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txbUserName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -62,7 +62,7 @@
             this.guna2GroupBox1.Controls.Add(this.txbFullName);
             this.guna2GroupBox1.Controls.Add(this.lblUserD);
             this.guna2GroupBox1.Controls.Add(this.label2);
-            this.guna2GroupBox1.Controls.Add(this.btnSaveCustomer);
+            this.guna2GroupBox1.Controls.Add(this.btnSaveUser);
             this.guna2GroupBox1.Controls.Add(this.btnCancel);
             this.guna2GroupBox1.Controls.Add(this.label3);
             this.guna2GroupBox1.Controls.Add(this.txbUserName);
@@ -130,22 +130,22 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "User ID :";
             // 
-            // btnSaveCustomer
+            // btnSaveUser
             // 
-            this.btnSaveCustomer.BorderRadius = 9;
-            this.btnSaveCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSaveCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSaveCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSaveCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSaveCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(121)))), ((int)(((byte)(243)))));
-            this.btnSaveCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSaveCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnSaveCustomer.Location = new System.Drawing.Point(279, 484);
-            this.btnSaveCustomer.Name = "btnSaveCustomer";
-            this.btnSaveCustomer.Size = new System.Drawing.Size(231, 55);
-            this.btnSaveCustomer.TabIndex = 22;
-            this.btnSaveCustomer.Text = "Save";
-            this.btnSaveCustomer.Click += new System.EventHandler(this.btnSaveCustomer_Click);
+            this.btnSaveUser.BorderRadius = 9;
+            this.btnSaveUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaveUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSaveUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(121)))), ((int)(((byte)(243)))));
+            this.btnSaveUser.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSaveUser.ForeColor = System.Drawing.Color.White;
+            this.btnSaveUser.Location = new System.Drawing.Point(279, 484);
+            this.btnSaveUser.Name = "btnSaveUser";
+            this.btnSaveUser.Size = new System.Drawing.Size(231, 55);
+            this.btnSaveUser.TabIndex = 22;
+            this.btnSaveUser.Text = "Save";
+            this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
             // 
             // btnCancel
             // 
@@ -307,6 +307,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New User";
+            this.Load += new System.EventHandler(this.frmAddUpdateUser_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).EndInit();
@@ -323,7 +324,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txbFullName;
         private System.Windows.Forms.Label lblUserD;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button btnSaveCustomer;
+        private Guna.UI2.WinForms.Guna2Button btnSaveUser;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txbUserName;

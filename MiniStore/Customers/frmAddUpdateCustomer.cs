@@ -78,16 +78,28 @@ namespace MiniStore.Customers
                 return;
             }
 
-            if (clsCustomers.IsPhoneNumberExist(txbPhoneNumber.Text))
+            if (clsCustomers.IsPhoneNumberExist(txbPhoneNumber.Text) && (txbPhoneNumber.Text.Trim() != _customer.PhoneNumber))
             {
                 errorProvider1.SetError(txbPhoneNumber, "This phone number exist allread!");
                 return;
             }
+
             clsCustomers customer = new clsCustomers();
+            switch (_status)
+            {
+                case enStatus.Add:
+                    customer.CreatedByUserID = clsCurrentUser.CurrentUser.UserID ?? -1;
+                    break;
+                case enStatus.Update:
+                    customer = _customer;
+
+                    break;
+            }
+
             customer.CustomerName = txbCustomerName.Text;
             customer.PhoneNumber = txbPhoneNumber.Text;
             customer.IsActive = true;
-            customer.CreatedByUserID = clsCurrentUser.CurrentUser.UserID ?? -1;
+
 
             if(customer.Save())
             {
