@@ -32,7 +32,7 @@ namespace MiniStore.POS_Page
         {
 
         }
-        public void Reset(int id)
+        public void Reset(int id, int x)
         {
             cbCustomerType.TabIndex = 0;
             txbProductSearch.Text = "";

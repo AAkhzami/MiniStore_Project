@@ -77,15 +77,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tpInventory = new System.Windows.Forms.TabPage();
+            this.ctrl_InventoryPage1 = new MiniStore.Inventory_Page.ctrl_InventoryPage();
             this.tpSalesPOS = new System.Windows.Forms.TabPage();
+            this.ctrlPOSPage1 = new MiniStore.POS_Page.ctrlPOSPage();
             this.tpCustomers = new System.Windows.Forms.TabPage();
+            this.ctrlCustomersPage1 = new MiniStore.Customers.Control.Page.ctrlCustomersPage();
             this.tpUsers = new System.Windows.Forms.TabPage();
             this.tpUserInfo = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.ctrl_InventoryPage1 = new MiniStore.Inventory_Page.ctrl_InventoryPage();
-            this.ctrlPOSPage1 = new MiniStore.POS_Page.ctrlPOSPage();
-            this.ctrlCustomersPage1 = new MiniStore.Customers.Control.Page.ctrlCustomersPage();
             this.pSideMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -376,10 +376,10 @@
             this.tpDashboard.Controls.Add(this.lblUserGreeting);
             this.tpDashboard.Controls.Add(this.label2);
             this.tpDashboard.Controls.Add(this.label1);
-            this.tpDashboard.Location = new System.Drawing.Point(5, 4);
+            this.tpDashboard.Location = new System.Drawing.Point(184, 4);
             this.tpDashboard.Name = "tpDashboard";
             this.tpDashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDashboard.Size = new System.Drawing.Size(1323, 812);
+            this.tpDashboard.Size = new System.Drawing.Size(1144, 812);
             this.tpDashboard.TabIndex = 0;
             this.tpDashboard.Text = "Dashboard";
             // 
@@ -766,40 +766,64 @@
             this.tpInventory.TabIndex = 1;
             this.tpInventory.Text = "Inventory";
             // 
+            // ctrl_InventoryPage1
+            // 
+            this.ctrl_InventoryPage1.BackColor = System.Drawing.Color.Transparent;
+            this.ctrl_InventoryPage1.Location = new System.Drawing.Point(0, 1);
+            this.ctrl_InventoryPage1.Name = "ctrl_InventoryPage1";
+            this.ctrl_InventoryPage1.Size = new System.Drawing.Size(1323, 812);
+            this.ctrl_InventoryPage1.TabIndex = 0;
+            // 
             // tpSalesPOS
             // 
             this.tpSalesPOS.BackColor = System.Drawing.Color.White;
             this.tpSalesPOS.Controls.Add(this.ctrlPOSPage1);
-            this.tpSalesPOS.Location = new System.Drawing.Point(184, 4);
+            this.tpSalesPOS.Location = new System.Drawing.Point(5, 4);
             this.tpSalesPOS.Name = "tpSalesPOS";
-            this.tpSalesPOS.Size = new System.Drawing.Size(1144, 812);
+            this.tpSalesPOS.Size = new System.Drawing.Size(1323, 812);
             this.tpSalesPOS.TabIndex = 2;
             this.tpSalesPOS.Text = "SalesAndPOS";
+            // 
+            // ctrlPOSPage1
+            // 
+            this.ctrlPOSPage1.BackColor = System.Drawing.Color.Transparent;
+            this.ctrlPOSPage1.Location = new System.Drawing.Point(0, 1);
+            this.ctrlPOSPage1.Name = "ctrlPOSPage1";
+            this.ctrlPOSPage1.Size = new System.Drawing.Size(1323, 812);
+            this.ctrlPOSPage1.TabIndex = 0;
             // 
             // tpCustomers
             // 
             this.tpCustomers.BackColor = System.Drawing.Color.White;
             this.tpCustomers.Controls.Add(this.ctrlCustomersPage1);
-            this.tpCustomers.Location = new System.Drawing.Point(184, 4);
+            this.tpCustomers.Location = new System.Drawing.Point(5, 4);
             this.tpCustomers.Name = "tpCustomers";
-            this.tpCustomers.Size = new System.Drawing.Size(1144, 812);
+            this.tpCustomers.Size = new System.Drawing.Size(1323, 812);
             this.tpCustomers.TabIndex = 3;
             this.tpCustomers.Text = "Customers";
+            // 
+            // ctrlCustomersPage1
+            // 
+            this.ctrlCustomersPage1.BackColor = System.Drawing.Color.Transparent;
+            this.ctrlCustomersPage1.Location = new System.Drawing.Point(0, 0);
+            this.ctrlCustomersPage1.Name = "ctrlCustomersPage1";
+            this.ctrlCustomersPage1.Size = new System.Drawing.Size(1323, 812);
+            this.ctrlCustomersPage1.TabIndex = 0;
             // 
             // tpUsers
             // 
             this.tpUsers.BackColor = System.Drawing.Color.White;
-            this.tpUsers.Location = new System.Drawing.Point(184, 4);
+            this.tpUsers.Location = new System.Drawing.Point(5, 4);
             this.tpUsers.Name = "tpUsers";
-            this.tpUsers.Size = new System.Drawing.Size(1144, 812);
+            this.tpUsers.Size = new System.Drawing.Size(1323, 812);
             this.tpUsers.TabIndex = 4;
             this.tpUsers.Text = "Users";
             // 
             // tpUserInfo
             // 
-            this.tpUserInfo.Location = new System.Drawing.Point(184, 4);
+            this.tpUserInfo.Location = new System.Drawing.Point(5, 4);
             this.tpUserInfo.Name = "tpUserInfo";
-            this.tpUserInfo.Size = new System.Drawing.Size(1144, 812);
+            this.tpUserInfo.Size = new System.Drawing.Size(1323, 812);
             this.tpUserInfo.TabIndex = 5;
             this.tpUserInfo.Text = "UserInfo";
             this.tpUserInfo.UseVisualStyleBackColor = true;
@@ -823,30 +847,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // ctrl_InventoryPage1
-            // 
-            this.ctrl_InventoryPage1.BackColor = System.Drawing.Color.Transparent;
-            this.ctrl_InventoryPage1.Location = new System.Drawing.Point(0, 1);
-            this.ctrl_InventoryPage1.Name = "ctrl_InventoryPage1";
-            this.ctrl_InventoryPage1.Size = new System.Drawing.Size(1323, 812);
-            this.ctrl_InventoryPage1.TabIndex = 0;
-            // 
-            // ctrlPOSPage1
-            // 
-            this.ctrlPOSPage1.BackColor = System.Drawing.Color.Transparent;
-            this.ctrlPOSPage1.Location = new System.Drawing.Point(0, 1);
-            this.ctrlPOSPage1.Name = "ctrlPOSPage1";
-            this.ctrlPOSPage1.Size = new System.Drawing.Size(1323, 812);
-            this.ctrlPOSPage1.TabIndex = 0;
-            // 
-            // ctrlCustomersPage1
-            // 
-            this.ctrlCustomersPage1.BackColor = System.Drawing.Color.Transparent;
-            this.ctrlCustomersPage1.Location = new System.Drawing.Point(0, 0);
-            this.ctrlCustomersPage1.Name = "ctrlCustomersPage1";
-            this.ctrlCustomersPage1.Size = new System.Drawing.Size(1323, 812);
-            this.ctrlCustomersPage1.TabIndex = 0;
             // 
             // frmMainForm
             // 

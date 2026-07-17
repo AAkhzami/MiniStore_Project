@@ -1,4 +1,5 @@
-﻿using MiniStoreDB_Business_Layer;
+﻿using MiniStore.Orders;
+using MiniStoreDB_Business_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -185,7 +186,7 @@ namespace MiniStore.POS_Page
             dgvCart.Rows.Clear();
         }
 
-        public void InsertItemsOnDatabase(int orderid)
+        public void InsertItemsOnDatabase(int orderid, int customerID)
         {
             foreach(DataGridViewRow row in dgvCart.Rows)
             {
@@ -200,7 +201,12 @@ namespace MiniStore.POS_Page
                     MessageBox.Show("Something wrong try again later!", "Warning", MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     return;
                 }
+                else
+                {
+                }
             }
+            frmShowOrder frm = new frmShowOrder(clsOrders.Find(orderid),clsCustomers.Find(customerID));
+            frm.ShowDialog();
 
             ResetTheCart();
         }
