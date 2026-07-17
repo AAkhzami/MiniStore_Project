@@ -10,7 +10,7 @@ namespace MiniStoreDB_DataAccess_Layer
 {
     public class clsUsersData
     {
-        public static bool GetUsersInfoByID(int userid, ref string username, ref string password, ref DateTime createdat, ref bool isactive)
+        public static bool GetUsersInfoByID(int userid, ref string username, ref string fullName, ref string password, ref DateTime createdat, ref bool isactive)
         {
             bool isFound = false;
             string query = @"select * from Users
@@ -30,6 +30,7 @@ namespace MiniStoreDB_DataAccess_Layer
                         {
                             isFound = true;
                             username = (string)reader["UserName"];
+                            fullName = (string)reader["FullName"];
                             password = (string)reader["Password"];
 
                             if (reader["CreatedAt"] != DBNull.Value)
@@ -48,7 +49,7 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return isFound;
         }
-        public static int? AddNewUsers(string username, string password, bool isactive)
+        public static int? AddNewUsers(string username, string fullName, string password, bool isactive)
         {
             int? recordId = null;
             string query = @"SP_AddNewUser";
@@ -57,6 +58,7 @@ namespace MiniStoreDB_DataAccess_Layer
             {
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@UserName", username);
+                command.Parameters.AddWithValue("@FullName", fullName);
                 command.Parameters.AddWithValue("@Password", password);
                 command.Parameters.AddWithValue("@IsActive", isactive);
                 SqlParameter outputIdParam = new SqlParameter("@NewUserID", SqlDbType.Int)
@@ -78,7 +80,7 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return recordId;
         }
-        public static bool UpdateUsersInfoByID(int userid, string username, string password, DateTime createdat, bool isactive)
+        public static bool UpdateUsersInfoByID(int userid, string username, string fullName, string password, DateTime createdat, bool isactive)
         {
             int rowsAffected = 0;
             string query = "SP_UpdateUser";
@@ -89,6 +91,7 @@ namespace MiniStoreDB_DataAccess_Layer
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@UserID", userid);
                 command.Parameters.AddWithValue("@UserName", username);
+                command.Parameters.AddWithValue("@FullName", fullName);
                 command.Parameters.AddWithValue("@Password", password);
                 command.Parameters.AddWithValue("@IsActive", isactive);
 

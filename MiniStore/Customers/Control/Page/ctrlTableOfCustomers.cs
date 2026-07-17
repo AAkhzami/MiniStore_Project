@@ -45,6 +45,7 @@ namespace MiniStore.Customers.Control.Page
             if(string.IsNullOrWhiteSpace(Text))
             {
                 _dtCustomers.DefaultView.RowFilter = "";
+                dgvTableCustomers.DataSource = _dtCustomers;
                 return;
             }
 
@@ -65,11 +66,7 @@ namespace MiniStore.Customers.Control.Page
             {
                 _dtCustomers.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, Text);
             }
-            else if (FilterColumn == "CustomerName")
-            {
-                _dtCustomers.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%'", FilterColumn, Text);
-            }
-            else if (FilterColumn == "PhoneNumber")
+            else if (FilterColumn == "CustomerName" || FilterColumn == "PhoneNumber")
             {
                 _dtCustomers.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%'", FilterColumn, Text);
             }

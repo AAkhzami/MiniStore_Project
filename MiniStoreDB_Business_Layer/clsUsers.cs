@@ -14,6 +14,7 @@ namespace MiniStoreDB_Business_Layer
         public enMode Mode = enMode.AddNew;
         public int? UserID { get; set; }
         public string UserName { get; set; }
+        public string FullName { get; set; }
         public string Password { get; set; }
         public DateTime CreatedAt { get; set; }
         public bool IsActive { get; set; }
@@ -22,15 +23,17 @@ namespace MiniStoreDB_Business_Layer
         {
             this.UserID = 0;
             this.UserName = null;
+            this.FullName = null;
             this.Password = null;
             this.CreatedAt = DateTime.Now;
             this.IsActive = false;
             Mode = enMode.AddNew;
         }
-        private clsUsers(int userid, string username, string password, DateTime createdat, bool isactive)
+        private clsUsers(int userid, string username, string fullName, string password, DateTime createdat, bool isactive)
         {
             this.UserID = userid;
             this.UserName = username;
+            this.FullName = fullName;
             this.Password = password;
             this.CreatedAt = createdat;
             this.IsActive = isactive;
@@ -39,15 +42,14 @@ namespace MiniStoreDB_Business_Layer
 
         public static clsUsers Find(int UserID)
         {
-            string UserName = null;
-            string Password = null;
+            string UserName = null, fullName = null, Password = null;
             DateTime CreatedAt = DateTime.Now;
             bool IsActive = false;
 
-            bool IsFound = clsUsersData.GetUsersInfoByID(UserID, ref UserName, ref Password, ref CreatedAt, ref IsActive);
+            bool IsFound = clsUsersData.GetUsersInfoByID(UserID, ref UserName,ref fullName, ref Password, ref CreatedAt, ref IsActive);
             if (IsFound)
             {
-                return new clsUsers(UserID, UserName, Password, CreatedAt, IsActive);
+                return new clsUsers(UserID, UserName, fullName, Password, CreatedAt, IsActive);
             }
             else
             {
@@ -57,13 +59,13 @@ namespace MiniStoreDB_Business_Layer
 
         private bool _AddNewUsers()
         {
-            this.UserID = clsUsersData.AddNewUsers(this.UserName, this.Password, this.IsActive);
+            this.UserID = clsUsersData.AddNewUsers(this.UserName, this.FullName, this.Password, this.IsActive);
             return (this.UserID != null);
         }
 
         private bool _UpdateUsers()
         {
-            return clsUsersData.UpdateUsersInfoByID(this.UserID ?? -1, this.UserName, this.Password, this.CreatedAt, this.IsActive);
+            return clsUsersData.UpdateUsersInfoByID(this.UserID ?? -1, this.UserName, this.FullName, this.Password, this.CreatedAt, this.IsActive);
         }
 
         public bool Save()

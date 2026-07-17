@@ -227,15 +227,16 @@ end;
 
 create procedure SP_AddNewUser
 @UserName varchar(250),
+@FullName varchar(250),
 @Password varchar(300),
 @IsActive bit,
 @NewUserID int OUTPUT
 as
 begin
 	insert into Users
-	(UserName, Password, IsActive)
+	(UserName, FullName, Password, IsActive)
 	values
-	(@UserName, @Password, @IsActive)
+	(@UserName,@FullName, @Password, @IsActive)
 
 	set @NewUserID = SCOPE_IDENTITY();
 end
@@ -244,6 +245,7 @@ end
 create procedure SP_UpdateUser
 @UserID int,
 @UserName varchar(250),
+@FullName varchar(250),
 @Password varchar(300),
 @IsActive bit
 as
@@ -251,6 +253,7 @@ begin
 	update Users
 	set 
 	UserName = @UserName,
+	FullName = @FullName,
 	Password = @Password,
 	IsActive = @IsActive
 	where UserID = @UserID;

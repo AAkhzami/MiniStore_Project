@@ -33,11 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTableCustomers = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.lblCustomersCounter = new System.Windows.Forms.Label();
             this.cmsCustomer = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.customerInfoStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editCustToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerInfoStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblCustomersCounter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTableCustomers)).BeginInit();
             this.cmsCustomer.SuspendLayout();
             this.SuspendLayout();
@@ -92,18 +92,6 @@
             this.dgvTableCustomers.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvTableCustomers.ThemeStyle.RowsStyle.Height = 60;
             // 
-            // lblCustomersCounter
-            // 
-            this.lblCustomersCounter.AutoSize = true;
-            this.lblCustomersCounter.BackColor = System.Drawing.Color.Transparent;
-            this.lblCustomersCounter.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.lblCustomersCounter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.lblCustomersCounter.Location = new System.Drawing.Point(3, 510);
-            this.lblCustomersCounter.Name = "lblCustomersCounter";
-            this.lblCustomersCounter.Size = new System.Drawing.Size(181, 22);
-            this.lblCustomersCounter.TabIndex = 20;
-            this.lblCustomersCounter.Text = "Showing N customers";
-            // 
             // cmsCustomer
             // 
             this.cmsCustomer.BackColor = System.Drawing.Color.White;
@@ -122,7 +110,15 @@
             this.cmsCustomer.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsCustomer.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsCustomer.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsCustomer.Size = new System.Drawing.Size(229, 116);
+            this.cmsCustomer.Size = new System.Drawing.Size(229, 94);
+            // 
+            // customerInfoStripMenuItem1
+            // 
+            this.customerInfoStripMenuItem1.Image = global::MiniStore.Properties.Resources.user_31;
+            this.customerInfoStripMenuItem1.Name = "customerInfoStripMenuItem1";
+            this.customerInfoStripMenuItem1.Size = new System.Drawing.Size(228, 30);
+            this.customerInfoStripMenuItem1.Text = "Customer Info";
+            this.customerInfoStripMenuItem1.Click += new System.EventHandler(this.customerInfoStripMenuItem1_Click);
             // 
             // editCustToolStripMenuItem
             // 
@@ -141,13 +137,17 @@
             this.deleteCustomerToolStripMenuItem.Text = "Delete Customer";
             this.deleteCustomerToolStripMenuItem.Click += new System.EventHandler(this.deleteCustomerToolStripMenuItem_Click);
             // 
-            // customerInfoStripMenuItem1
+            // lblCustomersCounter
             // 
-            this.customerInfoStripMenuItem1.Image = global::MiniStore.Properties.Resources.user_31;
-            this.customerInfoStripMenuItem1.Name = "customerInfoStripMenuItem1";
-            this.customerInfoStripMenuItem1.Size = new System.Drawing.Size(228, 30);
-            this.customerInfoStripMenuItem1.Text = "Customer Info";
-            this.customerInfoStripMenuItem1.Click += new System.EventHandler(this.customerInfoStripMenuItem1_Click);
+            this.lblCustomersCounter.AutoSize = true;
+            this.lblCustomersCounter.BackColor = System.Drawing.Color.Transparent;
+            this.lblCustomersCounter.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.lblCustomersCounter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.lblCustomersCounter.Location = new System.Drawing.Point(3, 510);
+            this.lblCustomersCounter.Name = "lblCustomersCounter";
+            this.lblCustomersCounter.Size = new System.Drawing.Size(181, 22);
+            this.lblCustomersCounter.TabIndex = 20;
+            this.lblCustomersCounter.Text = "Showing N customers";
             // 
             // ctrlTableOfCustomers
             // 

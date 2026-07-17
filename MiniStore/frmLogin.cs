@@ -67,9 +67,9 @@ namespace MiniStore
         {
             string username = txtNewUserName.Text.Trim();
             string password = txtNewPassword.Text.Trim();
+            string fullName = txbFullName.Text.Trim();  
             string confirmPassword = txtConfirmPassword.Text.Trim();
-
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword) || string.IsNullOrWhiteSpace(fullName))
             {
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -89,11 +89,11 @@ namespace MiniStore
 
             clsUsers newUser = new clsUsers();
             newUser.UserName = username;
-
+            newUser.FullName = fullName;
             string hashedPassword = ComputeHash(password);
             newUser.Password = hashedPassword;
             
-            newUser.IsActive = true;
+            newUser.IsActive = false;
 
             if (newUser.Save())
             {

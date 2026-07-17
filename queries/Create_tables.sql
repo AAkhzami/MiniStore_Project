@@ -3,10 +3,11 @@ create Database MiniStoreDB;
 create table Users
 (
 	UserID int Primary key identity(1,1),
-	UserName varchar(250),
-	Password varchar(300),
-	CreatedAt datetime default GETDATE(),
-	IsActive bit
+	UserName varchar(250) not null,
+	FullName varchar(250) not null,
+	Password varchar(300) not null,
+	CreatedAt datetime default GETDATE() not null,
+	IsActive bit not null
 );
 
 create table Categories
@@ -17,12 +18,12 @@ create table Categories
 create table Products
 (
 	ProductID int Primary Key identity(1,1),
-	Name varchar(250),
+	Name varchar(250) null,
 	CategoryID int not null,
 	Price decimal(10,3) not null,
 	StockQuantity int not null,
 	IsActive bit not null default 1,
-    CreatedByUserID int 
+    CreatedByUserID int null
 	
 	Constraint fk_Product_Category
 	foreign key (CategoryID) references Categories(CategoryID),
@@ -33,7 +34,7 @@ create table InventoryLogs
 (
 	LogID int primary key identity(1,1),
 	ProductID int not null,
-	OldStock int,
+	OldStock int ,
 	NewStock int,
 	ChangeDate datetime default GETDATE()
 
