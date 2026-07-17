@@ -60,7 +60,7 @@ namespace MiniStore
             lblCustomers.Text = clsCustomers.GetCustomersCount().ToString();
             lblLowStock.Text = clsProducts.GetLowStockProductsCount().ToString();
             lblTodayOrders.Text = clsOrders.GetTotalOrders(DateTime.Now).ToString();
-            lblTodaySales.Text = "~" + clsOrders.GetTotalSales(DateTime.Now).ToString() + " OMR";
+            lblTodaySales.Text = "OMR ~" + clsOrders.GetTotalSales(DateTime.Now).ToString();
 
             await LoadDataToTopSellingProducts();
         }
@@ -79,11 +79,11 @@ namespace MiniStore
         {
             frmLogin.Close();
         }
-        private void btnNextPage(object sender, EventArgs e)
+        private async void btnNextPage(object sender, EventArgs e)
         {
             int pageIndex = Convert.ToInt32(((Guna.UI2.WinForms.Guna2Button)sender).Tag);
             tcMainScreen.SelectedIndex = pageIndex;
-            PageSetting(pageIndex);
+            await PageSetting(pageIndex);
         }
         
         private async Task PageSetting(int pageNumner)

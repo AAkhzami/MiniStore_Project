@@ -117,7 +117,7 @@ as
 return
 (
 	select 
-	count(vco.CustomerName) as OrdersCount,
+	COUNT(DISTINCT vco.OrderID) as OrdersCount,
 	TotalSpent = Sum(vco.TotalAmount),
 	ProductsPurchased = SUM(od.Quantity),
 	LastPurchase = Datediff(Day,MAX(vco.OrderDate),GETDATE()),
@@ -133,15 +133,15 @@ Returns Table
 as
 return
 (
-	select do.OrderID,
-	Sum(do.Quantity) as TotalProducts,
-	Sum(o.TotalAmount) as TotalSales,
+	select od.OrderID,
+	Sum(od.Quantity) as TotalProducts,
+	o.TotalAmount,
 	o.OrderDate,
 	o.CreatedByUserID
-	from OrderDetails do
-	inner join Orders o on do.OrderID = o.OrderID
-	group by do.OrderID, o.CreatedByUserID,o.CustomerID,o.OrderDate
-	having o.CustomerID = @CustomerID
+	from OrderDetails od
+	inner join Orders o on od.OrderID = o.OrderID
+	where o.CustomerID = @CustomerID
+	group by od.OrderID, o.CreatedByUserID,o.CustomerID,o.OrderDate,o.TotalAmount
 )
 
 create Function GetBillInfo
