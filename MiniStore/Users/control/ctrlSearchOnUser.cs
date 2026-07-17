@@ -21,7 +21,9 @@ namespace MiniStore.Users.control
         public SearchingChangeEventHandler OnSearch;
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
-
+            frmAddUpdateUser frm = new frmAddUpdateUser();
+            frm.ShowDialog();
+            OnSearch?.Invoke("","");
         }
 
         private void txbCustomerSearch_KeyPress(object sender, KeyPressEventArgs e)

@@ -49,11 +49,11 @@ namespace MiniStore.Users.control
                 return;
             }
 
-            if(searchText == "UserID")
+            if(searchType == "UserID")
             {
                 _dtUsers.DefaultView.RowFilter = string.Format("[{0}] = {1}",searchType,searchText);
             }
-            else if (searchText == "FullName" || searchText == "UserName")
+            else if (searchType == "FullName" || searchType == "UserName")
             {
                 _dtUsers.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%'", searchType, searchText);
             }

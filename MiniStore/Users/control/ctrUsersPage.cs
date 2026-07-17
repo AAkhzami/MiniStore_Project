@@ -16,5 +16,10 @@ namespace MiniStore.Users.control
         {
             InitializeComponent();
         }
+
+        private void ctrUsersPage_Load(object sender, EventArgs e)
+        {
+            ctrlSearchOnUser1.OnSearch += ctrlListUsers1.SearchOnUser;
+        }
     }
 }
