@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -120,7 +121,7 @@ namespace MiniStore.Users
             }
             user.UserName = txbUserName.Text.Trim();
             user.FullName = txbFullName.Text.Trim();
-            user.Password = txbPassword.Text.Trim();
+            user.Password = _ComputeHash(txbPassword.Text.Trim());
             user.IsActive = true;
             
 
@@ -154,6 +155,20 @@ namespace MiniStore.Users
                     txbFullName.Text = _user.FullName;                    
                     break;
             }
+        }
+
+        private string _ComputeHash(string input)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
+                return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

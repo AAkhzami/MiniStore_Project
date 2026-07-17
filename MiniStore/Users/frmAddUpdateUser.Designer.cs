@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txbConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txbFullName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblUserD = new System.Windows.Forms.Label();
@@ -40,10 +44,6 @@
             this.txbUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pbLogo_Of_Page = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txbPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txbConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).BeginInit();
@@ -74,6 +74,74 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(542, 557);
             this.guna2GroupBox1.TabIndex = 45;
             this.guna2GroupBox1.Text = "User Info";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.label4.Location = new System.Drawing.Point(33, 387);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 17);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Confirm Password";
+            // 
+            // txbConfirmPassword
+            // 
+            this.txbConfirmPassword.BorderRadius = 9;
+            this.txbConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbConfirmPassword.DefaultText = "";
+            this.txbConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbConfirmPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.txbConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbConfirmPassword.Location = new System.Drawing.Point(36, 408);
+            this.txbConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txbConfirmPassword.MaxLength = 250;
+            this.txbConfirmPassword.Name = "txbConfirmPassword";
+            this.txbConfirmPassword.PasswordChar = '*';
+            this.txbConfirmPassword.PlaceholderText = "Enter Password Again";
+            this.txbConfirmPassword.SelectedText = "";
+            this.txbConfirmPassword.Size = new System.Drawing.Size(474, 48);
+            this.txbConfirmPassword.TabIndex = 4;
+            this.txbConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txbConfirmPassword_Validating);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.label1.Location = new System.Drawing.Point(34, 296);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Password";
+            // 
+            // txbPassword
+            // 
+            this.txbPassword.BorderRadius = 9;
+            this.txbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbPassword.DefaultText = "";
+            this.txbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.txbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbPassword.Location = new System.Drawing.Point(37, 317);
+            this.txbPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txbPassword.MaxLength = 250;
+            this.txbPassword.Name = "txbPassword";
+            this.txbPassword.PasswordChar = '*';
+            this.txbPassword.PlaceholderText = "Enter Password";
+            this.txbPassword.SelectedText = "";
+            this.txbPassword.Size = new System.Drawing.Size(474, 48);
+            this.txbPassword.TabIndex = 3;
+            this.txbPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txbPassword_Validating);
             // 
             // label5
             // 
@@ -164,6 +232,7 @@
             this.btnCancel.Size = new System.Drawing.Size(231, 55);
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label3
             // 
@@ -220,72 +289,6 @@
             this.pbLogo_Of_Page.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogo_Of_Page.TabIndex = 43;
             this.pbLogo_Of_Page.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label1.Location = new System.Drawing.Point(34, 296);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 17);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Password";
-            // 
-            // txbPassword
-            // 
-            this.txbPassword.BorderRadius = 9;
-            this.txbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbPassword.DefaultText = "";
-            this.txbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
-            this.txbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbPassword.Location = new System.Drawing.Point(37, 317);
-            this.txbPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.txbPassword.MaxLength = 250;
-            this.txbPassword.Name = "txbPassword";
-            this.txbPassword.PlaceholderText = "Enter Password";
-            this.txbPassword.SelectedText = "";
-            this.txbPassword.Size = new System.Drawing.Size(474, 48);
-            this.txbPassword.TabIndex = 27;
-            this.txbPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txbPassword_Validating);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label4.Location = new System.Drawing.Point(33, 387);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 17);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Confirm Password";
-            // 
-            // txbConfirmPassword
-            // 
-            this.txbConfirmPassword.BorderRadius = 9;
-            this.txbConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbConfirmPassword.DefaultText = "";
-            this.txbConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbConfirmPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
-            this.txbConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbConfirmPassword.Location = new System.Drawing.Point(36, 408);
-            this.txbConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.txbConfirmPassword.MaxLength = 250;
-            this.txbConfirmPassword.Name = "txbConfirmPassword";
-            this.txbConfirmPassword.PlaceholderText = "Enter Password Again";
-            this.txbConfirmPassword.SelectedText = "";
-            this.txbConfirmPassword.Size = new System.Drawing.Size(474, 48);
-            this.txbConfirmPassword.TabIndex = 29;
-            this.txbConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txbConfirmPassword_Validating);
             // 
             // errorProvider1
             // 
