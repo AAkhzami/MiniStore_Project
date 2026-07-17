@@ -77,6 +77,11 @@ namespace MiniStore.Users
                 errorProvider1.SetError(txbPassword, "This field must not be empty!");
                 e.Cancel = true;
             }
+            else if (txbConfirmPassword.Text != txbPassword.Text)
+            {
+                errorProvider1.SetError(txbPassword, "Password does not match!");
+                e.Cancel = true;
+            }
             else
             {
                 errorProvider1.SetError(txbPassword, "");
