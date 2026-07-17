@@ -155,7 +155,7 @@ return
 	p.Name,
 	od.Quantity,
 	od.PricePerUnit,
-	o.TotalAmount
+	TotalAmount = (od.Quantity * od.PricePerUnit)
 	from 
 	Orders o
 	inner join OrderDetails od on

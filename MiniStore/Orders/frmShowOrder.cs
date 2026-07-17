@@ -25,7 +25,7 @@ namespace MiniStore.Orders
         {
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("=====================================================================");
+            sb.AppendLine("========================================================");
             sb.AppendLine("\nMini Store");
             sb.AppendLine("\nDate : " + _order.OrderDate.ToString("mm/dd/yyyy"));
             if(_customer.CustomerID != 1)
@@ -33,56 +33,22 @@ namespace MiniStore.Orders
                 sb.AppendLine("\nFriend Name : " + _customer.CustomerName);
                 sb.AppendLine("\nPhone       : " + _customer.PhoneNumber);
             }
-            sb.AppendLine("\n=====================================================================");
-
-            txbBill_Info.Text = sb.ToString();
-
-            int x = 40;
-            int y = 180;
-
-            Font headerFont = new Font("Arial", 12, FontStyle.Bold);
-            Font normalFont = new Font("Arial", 10);
-
-            Graphics g = txbBill_Info.CreateGraphics();
-            g.DrawString("Product", headerFont, Brushes.Black, x, y);
-            g.DrawString("Qty", headerFont, Brushes.Black, x + 220, y);
-            g.DrawString("Price", headerFont, Brushes.Black, x + 320, y);
-            g.DrawString("Total", headerFont, Brushes.Black, x + 450, y);
-
-            y += 25;
-            g.DrawLine(Pens.Black, x, y, x + 550, y);
-            y += 10;
+            sb.AppendLine("\n========================================================");
 
             DataTable dt = clsOrders.GetBillInfo(_order.OrderID ?? -1);
-            foreach (DataRow item in dt.Rows)
+            foreach(DataRow item in dt.Rows )
             {
-                g.DrawString(item["Name"].ToString(), normalFont, Brushes.Black, x, y);
-                g.DrawString(item["Quantity"].ToString(),
-                             normalFont,
-                             Brushes.Black,
-                             x + 230,
-                             y);
+                sb.AppendLine($"Name           : {item["Name"]}");
+                sb.AppendLine($"Quantity       : {item["Quantity"]}");
 
-                g.DrawString(((decimal)item["PricePerUnit"]).ToString("N2"),
-                             normalFont,
-                             Brushes.Black,
-                             x + 320,
-                             y);
+                sb.AppendLine($"Price Per unit : {((decimal)item["PricePerUnit"]):N2} OMR ");
 
-                g.DrawString(((decimal)item["TotalAmount"]).ToString("N2"),
-                             normalFont,
-                             Brushes.Black,
-                             x + 450,
-                             y);
-
-                y += 25;
+                sb.AppendLine($"Total Amount   : {((decimal)item["TotalAmount"]):N2} OMR ");
+                sb.AppendLine("--------------------------------------------------------");
             }
-            g.DrawString($"Total : {_order.TotalAmount:N2} OMR",
-                 headerFont,
-                 Brushes.Black,
-                 x + 320,
-                 y);
+            sb.AppendLine($"Total          : {_order.TotalAmount:N2} OMR");
 
+            txbBill_Info.Text = sb.ToString();
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
