@@ -14,7 +14,7 @@ namespace MiniStore.Users
 {
     public partial class frmAddUpdateUser : Form
     {
-        public enum enStatus { New, Update}
+        public enum enStatus { New, Update, UpdateWithPassword}
         enStatus _status = enStatus.New;
 
         clsUsers _user;
@@ -118,10 +118,13 @@ namespace MiniStore.Users
                 case enStatus.Update:
                     user = _user;                    
                     break;
+                case enStatus.UpdateWithPassword:
+                    user = _user;
+                    user.Password = _ComputeHash(txbPassword.Text.Trim());
+                    break;
             }
             user.UserName = txbUserName.Text.Trim();
             user.FullName = txbFullName.Text.Trim();
-            user.Password = _ComputeHash(txbPassword.Text.Trim());
             user.IsActive = true;
             
 
@@ -141,7 +144,11 @@ namespace MiniStore.Users
 
         private void frmAddUpdateUser_Load(object sender, EventArgs e)
         {
-            switch(_status)
+            lblConfirmPassword.Text = "Confirm Password";
+            txbPassword.PlaceholderText = "Enter Password";
+            txbConfirmPassword.PlaceholderText = "Enter Password Again";
+
+            switch (_status)
             {
                 case enStatus.New:
                     this.Text = "New User";
@@ -152,7 +159,19 @@ namespace MiniStore.Users
                     lblTitle.Text = "Update User";
                     lblUserD.Text = _user.UserID.ToString();
                     txbUserName.Text = _user.UserName;
-                    txbFullName.Text = _user.FullName;                    
+                    txbFullName.Text = _user.FullName;
+                    txbPassword.Visible = false;
+                    txbConfirmPassword.Visible = false;
+                    break;
+                case enStatus.UpdateWithPassword:
+                    this.Text = "Edit User";
+                    lblTitle.Text = "Update User";
+                    lblUserD.Text = _user.UserID.ToString();
+                    txbUserName.Text = _user.UserName;
+                    txbFullName.Text = _user.FullName;
+                    txbPassword.PlaceholderText = "Enter the Current Password";
+                    txbConfirmPassword.PlaceholderText = "Enter the New Password";
+                    lblConfirmPassword.Text = "New Password";
                     break;
             }
         }

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.txbConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txbPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -54,7 +54,7 @@
             // 
             this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox1.BorderRadius = 9;
-            this.guna2GroupBox1.Controls.Add(this.label4);
+            this.guna2GroupBox1.Controls.Add(this.lblConfirmPassword);
             this.guna2GroupBox1.Controls.Add(this.txbConfirmPassword);
             this.guna2GroupBox1.Controls.Add(this.label1);
             this.guna2GroupBox1.Controls.Add(this.txbPassword);
@@ -75,16 +75,16 @@
             this.guna2GroupBox1.TabIndex = 45;
             this.guna2GroupBox1.Text = "User Info";
             // 
-            // label4
+            // lblConfirmPassword
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label4.Location = new System.Drawing.Point(33, 387);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 17);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Confirm Password";
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.lblConfirmPassword.Location = new System.Drawing.Point(33, 387);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(118, 17);
+            this.lblConfirmPassword.TabIndex = 30;
+            this.lblConfirmPassword.Text = "Confirm Password";
             // 
             // txbConfirmPassword
             // 
@@ -333,7 +333,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txbUserName;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pbLogo_Of_Page;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblConfirmPassword;
         private Guna.UI2.WinForms.Guna2TextBox txbConfirmPassword;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txbPassword;
