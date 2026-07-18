@@ -26,7 +26,7 @@ namespace MiniStore.Users.control
                 lblUserID.Text = _user.UserID.ToString();
                 lblUserName.Text = _user.UserName;
                 lblFullName.Text = _user.FullName;
-                lblCreatedAt.Text = _user.CreatedAt.ToString("dd/MM/YYYY");
+                lblCreatedAt.Text = _user.CreatedAt.ToString("dd/MM/yyyy");
                 lblIsActive.Text = _user.IsActive.ToString();
             }
             else
