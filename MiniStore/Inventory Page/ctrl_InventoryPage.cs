@@ -100,7 +100,8 @@ namespace MiniStore.Inventory_Page
                 txbInventorySearch.Focus();
                 _dtGetAllProducts = await clsProducts.GetReportOfProducts();
                 dgvInventoryProducts.DataSource = _dtGetAllProducts;
-                dgvInventoryProducts.Sort(dgvInventoryProducts.Columns[0], ListSortDirection.Ascending);
+
+
 
                 btnNextPageProducts.Visible = false;
                 btnPreviesPageProducts.Visible = false;
@@ -108,11 +109,27 @@ namespace MiniStore.Inventory_Page
                 lbl_Inventory_Text_For_Item_Per_Page.Visible = false;
                 cbItemPerPage_Inventory.Visible = false;
 
+                if (cbInventory_Categories.Text != "All Categories")
+                {
+                    cbInventory_Categories_SelectedIndexChanged(null, null);
+                }
+                else
+                {
+                    dgvInventoryProducts.Sort(dgvInventoryProducts.Columns[0], ListSortDirection.Ascending);
+                }
+
                 lblCounterProductsPerPage.Text = "Showing Products : " + dgvInventoryProducts.Rows.Count.ToString();
             }
             else
             {
-                await LoadProductsDataForInventoryPage();
+                if(cbInventory_Categories.Text != "All Categories")
+                {
+                    cbInventory_Categories_SelectedIndexChanged(null, null);
+                }
+                else
+                {
+                    await LoadProductsDataForInventoryPage();
+                }
                 btnNextPageProducts.Visible = false;
                 btnPreviesPageProducts.Visible = false;
                 lbl_Inventory_PageNumber.Visible = false;
