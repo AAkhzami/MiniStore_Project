@@ -89,7 +89,7 @@ namespace MiniStore.Users.control
             int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
             frmAddUpdateUser frm = new frmAddUpdateUser(clsUsers.Find(userID),frmAddUpdateUser.enStatus.Update);
             frm.ShowDialog();
-            ctrlListUsers_Load(null, null);
+            LoadData();
         }
 
         private void changePasswordToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace MiniStore.Users.control
             int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
             frmAddUpdateUser frm = new frmAddUpdateUser(clsUsers.Find(userID), frmAddUpdateUser.enStatus.UpdateWithPassword);
             frm.ShowDialog();
-            ctrlListUsers_Load(null, null);
+            LoadData();
         }
 
         private void toggleActiveStatusToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,7 +114,7 @@ namespace MiniStore.Users.control
                 MessageBox.Show("User status change failed!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            ctrlListUsers_Load(null, null);
+            LoadData();
         }
 
         private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace MiniStore.Users.control
                     MessageBox.Show("User deleted failed!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                ctrlListUsers_Load(null, null);
+                LoadData();
             }
         }
     }
