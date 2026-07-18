@@ -199,6 +199,12 @@
     <Compile Include="Users\control\ctrlSearchOnUser.Designer.cs">
       <DependentUpon>ctrlSearchOnUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users\control\ctrlUserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\control\ctrlUserInfo.Designer.cs">
+      <DependentUpon>ctrlUserInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\control\ctrUsersPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -287,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users\control\ctrlSearchOnUser.resx">
       <DependentUpon>ctrlSearchOnUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\control\ctrlUserInfo.resx">
+      <DependentUpon>ctrlUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\control\ctrUsersPage.resx">
       <DependentUpon>ctrUsersPage.cs</DependentUpon>
