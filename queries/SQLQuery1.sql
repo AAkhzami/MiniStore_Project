@@ -81,6 +81,16 @@ begin
 	c.CustomerID = d.CustomerID
 end
 
+create trigger trg_UserDelete on Users
+instead of Delete
+as
+begin
+	update u
+	set u.IsDeleted = 1
+	from Users u inner join deleted d on
+	u.UserID = d.UserID
+end
+
 ------ Scalar Functions
 
 create Function dbo.FinalPrice(@Price decimal(10,3))
