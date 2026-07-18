@@ -106,6 +106,7 @@ namespace MiniStore.Users
             }
 
             clsUsers user = new clsUsers();
+
             switch(_status)
             {
                 case enStatus.New:
@@ -120,9 +121,16 @@ namespace MiniStore.Users
                     break;
                 case enStatus.UpdateWithPassword:
                     user = _user;
+                    string PasswordHashing = _ComputeHash(txbPassword.Text.Trim());
+                    if (PasswordHashing != user.Password)
+                    {
+                        MessageBox.Show("The password is not correct!", "Not Allowed",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        return;
+                    }
                     user.Password = _ComputeHash(txbPassword.Text.Trim());
                     break;
             }
+
             user.UserName = txbUserName.Text.Trim();
             user.FullName = txbFullName.Text.Trim();
             user.IsActive = true;
