@@ -14,7 +14,7 @@ namespace MiniStoreDB_DataAccess_Layer
         {
             bool isFound = false;
             string query = @"select * from Users
-                            where UserID = @UserID";
+                            where UserID = @UserID and IsDeleted = 0";
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
@@ -110,7 +110,7 @@ namespace MiniStoreDB_DataAccess_Layer
         public static bool DeleteUsersByID(int userid)
         {
             int rowsAffected = 0;
-            string query = @"DELETE FROM Users where UserID = @UserID";
+            string query = @"DELETE FROM Users where UserID = @UserID and IsDeleted = 0;";
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
