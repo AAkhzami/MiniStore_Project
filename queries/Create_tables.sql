@@ -121,4 +121,4 @@ c.CategoryID = p.CategoryID;
 insert into Customers
 (CustomerName,PhoneNumber,CreatedByUserID)
 Values
-('Cash Customer (Walk-in)',null,1);
+('Cash Customer (Walk-in)','00000000',1);
