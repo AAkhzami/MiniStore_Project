@@ -15,7 +15,7 @@ namespace MiniStore.Global
             _pathFile = pathFile;
         }
 
-        public bool DownloadInvoiceAsWordFile(string invoiceText)
+        public bool DownloadInvoiceAsWordFile(string invoiceText, string fileName = "invoice")
         {
             Word.Application wordApp = new Word.Application();
             try
@@ -27,7 +27,7 @@ namespace MiniStore.Global
                 Word.Paragraph paragraph = doc.Paragraphs.Add();
                 paragraph.Range.Text = invoiceText;
 
-                string pathfile = _pathFile + "\\";
+                string pathfile = _pathFile + "\\" + fileName;
                 doc.SaveAs2(pathfile);
                 doc.Close();
                 return true;

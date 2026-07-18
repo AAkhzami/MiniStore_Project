@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.pbLogo_Of_Page = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txbBill_Info = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).BeginInit();
+            this.btnDownload = new Guna.UI2.WinForms.Guna2Button();
+            this.pbLogo_Of_Page = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,16 +49,6 @@
             this.label1.Size = new System.Drawing.Size(286, 45);
             this.label1.TabIndex = 17;
             this.label1.Text = "Bill Informations";
-            // 
-            // pbLogo_Of_Page
-            // 
-            this.pbLogo_Of_Page.Image = global::MiniStore.Properties.Resources.receipt;
-            this.pbLogo_Of_Page.Location = new System.Drawing.Point(263, 44);
-            this.pbLogo_Of_Page.Name = "pbLogo_Of_Page";
-            this.pbLogo_Of_Page.Size = new System.Drawing.Size(85, 85);
-            this.pbLogo_Of_Page.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogo_Of_Page.TabIndex = 18;
-            this.pbLogo_Of_Page.TabStop = false;
             // 
             // guna2GroupBox1
             // 
@@ -111,10 +102,39 @@
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
             this.btnCancel.Location = new System.Drawing.Point(12, 753);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(598, 55);
+            this.btnCancel.Size = new System.Drawing.Size(478, 55);
             this.btnCancel.TabIndex = 23;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnDownload
+            // 
+            this.btnDownload.BorderColor = System.Drawing.Color.Silver;
+            this.btnDownload.BorderRadius = 9;
+            this.btnDownload.BorderThickness = 1;
+            this.btnDownload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDownload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDownload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDownload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDownload.FillColor = System.Drawing.Color.OliveDrab;
+            this.btnDownload.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnDownload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.btnDownload.Image = global::MiniStore.Properties.Resources.downloads;
+            this.btnDownload.Location = new System.Drawing.Point(496, 753);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(114, 55);
+            this.btnDownload.TabIndex = 24;
+            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
+            // 
+            // pbLogo_Of_Page
+            // 
+            this.pbLogo_Of_Page.Image = global::MiniStore.Properties.Resources.receipt;
+            this.pbLogo_Of_Page.Location = new System.Drawing.Point(263, 44);
+            this.pbLogo_Of_Page.Name = "pbLogo_Of_Page";
+            this.pbLogo_Of_Page.Size = new System.Drawing.Size(85, 85);
+            this.pbLogo_Of_Page.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogo_Of_Page.TabIndex = 18;
+            this.pbLogo_Of_Page.TabStop = false;
             // 
             // frmShowOrder
             // 
@@ -122,6 +142,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(622, 820);
+            this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.pbLogo_Of_Page);
@@ -135,8 +156,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Show Order";
             this.Load += new System.EventHandler(this.frmShowOrder_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +170,6 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2TextBox txbBill_Info;
+        private Guna.UI2.WinForms.Guna2Button btnDownload;
     }
 }

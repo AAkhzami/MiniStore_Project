@@ -1,4 +1,5 @@
-﻿using MiniStoreDB_Business_Layer;
+﻿using MiniStore.Global;
+using MiniStoreDB_Business_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace MiniStore.Orders
     {
         clsOrders _order ;
         clsCustomers _customer;
+
+        string _invoice = "";
         public frmShowOrder(clsOrders order, clsCustomers customerInfo)
         {
             InitializeComponent();
@@ -49,6 +52,7 @@ namespace MiniStore.Orders
             sb.AppendLine($"Total          : {_order.TotalAmount:N2} OMR");
 
             txbBill_Info.Text = sb.ToString();
+            _invoice = sb.ToString();
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -65,6 +69,22 @@ namespace MiniStore.Orders
             {
                 MessageBox.Show("No Data To Show!","Inform",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 this.Close();
+                return;
+            }
+        }
+
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+            string currentPath = AppContext.BaseDirectory;
+            clsInvoice invoice = new clsInvoice(currentPath);
+            if (invoice.DownloadInvoiceAsWordFile(_invoice))
+            {
+                MessageBox.Show($"The bill was saved successfully as a Word document in {currentPath}","Successfully",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                MessageBox.Show($"The bill was saved Failed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
