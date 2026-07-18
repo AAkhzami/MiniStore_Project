@@ -85,7 +85,7 @@ namespace MiniStore
         {
             frmLogin.Close();
         }
-        private async void btnNextPage(object sender, EventArgs e)
+        private void btnNextPage(object sender, EventArgs e)
         {
             int pageIndex = Convert.ToInt32(((Guna.UI2.WinForms.Guna2Button)sender).Tag);
             ChangePage(pageIndex);
