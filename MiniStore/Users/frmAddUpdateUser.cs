@@ -106,29 +106,42 @@ namespace MiniStore.Users
             }
 
             clsUsers user = new clsUsers();
-
-            switch(_status)
+            string PasswordHashing = "";
+            switch (_status)
             {
                 case enStatus.New:
+                {
                     if (clsUsers.IsUserNameExist(txbUserName.Text))
                     {
                         errorProvider1.SetError(txbUserName, "This username exists! Choose another one!");
                         return;
                     }
+
+                    PasswordHashing = _ComputeHash(txbPassword.Text.Trim());
+                    user.Password = _ComputeHash(txbPassword.Text.Trim());
+
                     break;
+                }
                 case enStatus.Update:
-                    user = _user;                    
-                    break;
-                case enStatus.UpdateWithPassword:
+                {
                     user = _user;
-                    string PasswordHashing = _ComputeHash(txbPassword.Text.Trim());
+                    break;
+                }
+                case enStatus.UpdateWithPassword:
+                {
+                    user = _user;
+
+                    PasswordHashing = _ComputeHash(txbPassword.Text.Trim());
+
                     if (PasswordHashing != user.Password)
                     {
-                        MessageBox.Show("The password is not correct!", "Not Allowed",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("The password is not correct!", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
+
                     user.Password = _ComputeHash(txbPassword.Text.Trim());
                     break;
+                }
             }
 
             user.UserName = txbUserName.Text.Trim();

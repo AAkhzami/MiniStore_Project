@@ -23,6 +23,8 @@ namespace MiniStore.Users.control
 
         private void ctrlListUsers_Load(object sender, EventArgs e)
         {
+            _dtGetAllUsers = clsUsers.GetAllUsers();
+            _dtUsers = _dtGetAllUsers.DefaultView.ToTable(false, "UserID", "FullName", "UserName", "IsActive");
             dgvUsers.DataSource = _dtUsers;
             if(_dtUsers.Rows.Count > 0 )
             {
