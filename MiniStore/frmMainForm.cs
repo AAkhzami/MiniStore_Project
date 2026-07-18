@@ -54,7 +54,12 @@ namespace MiniStore
                 dgvTopSellingProducts.Columns[5].Width = 160;
             }
         }
-
+        private void CurrentUserDataChange()
+        {
+            lblUserName.Text = clsCurrentUser.CurrentUser.UserName;
+            btnUserButtonName.Text = clsCurrentUser.CurrentUser.UserName.Substring(0, 2).ToUpper();
+            lblUserGreeting.Text = clsCurrentUser.CurrentUser.UserName;
+        }
         private async Task DashboardInfo()
         {
             lblCustomers.Text = clsCustomers.GetCustomersCount().ToString();
@@ -71,7 +76,8 @@ namespace MiniStore
             lblUserName.Text = clsCurrentUser.CurrentUser.UserName;
             btnUserButtonName.Text = clsCurrentUser.CurrentUser.UserName.Substring(0, 2).ToUpper();            
             lblUserGreeting.Text = clsCurrentUser.CurrentUser.UserName;
-
+            ctrlCurrentUserPage1.LoadData(clsCurrentUser.CurrentUser.UserID ?? -1);
+            ctrlCurrentUserPage1.OnUserDataChange += CurrentUserDataChange;
         }
 
 

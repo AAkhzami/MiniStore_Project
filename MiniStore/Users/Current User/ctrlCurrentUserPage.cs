@@ -22,7 +22,7 @@ namespace MiniStore.Users.Current_User
         public delegate void UserEditEventHandler();
         public event UserEditEventHandler OnUserDataChange;
 
-        void LoadData(int UserID)
+        public void LoadData(int UserID)
         {
             clsCurrentUser.CurrentUser = clsUsers.Find(UserID);
             ctrlUserInfo1.LoadData(clsCurrentUser.CurrentUser);
