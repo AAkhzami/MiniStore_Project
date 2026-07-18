@@ -185,7 +185,28 @@ namespace MiniStore.POS_Page
         {
             dgvCart.Rows.Clear();
         }
+        public void RemoveItem(int productID)
+        {
+            int rowIndex = -1;
+            decimal subTotal = 0;
 
+            for (int i = 0; i < dgvCart.Rows.Count; i++)
+            {
+                if (dgvCart.Rows[i].IsNewRow) continue;
+                if ((int)dgvCart.Rows[i].Cells["ProductID"].Value == productID)
+                {
+                    rowIndex = i;
+                    subTotal = Convert.ToDecimal(dgvCart.Rows[rowIndex].Cells["SubTotal"].Value);
+                    break;
+                }
+            }
+
+            if(rowIndex != -1)
+            {
+                dgvCart.Rows.RemoveAt(rowIndex);
+                OnRecalc?.Invoke(-subTotal);
+            }
+        }
         public void InsertItemsOnDatabase(int orderid, int customerID)
         {
             foreach(DataGridViewRow row in dgvCart.Rows)

@@ -20,6 +20,9 @@ namespace MiniStore.Inventory_Page
         }
         private static DataTable _dtGetAllProducts;
         int _totalProducts = clsProducts.GetAllProducts().Rows.Count;
+
+        public delegate void ProductDeactivatedEventHandler(int productID);
+        public event ProductDeactivatedEventHandler OnProductDeactivated;
         private async void ctrl_InventoryPage_Load(object sender, EventArgs e)
         {
             DataTable dt = clsCategories.GetAllCategories();
@@ -219,6 +222,7 @@ namespace MiniStore.Inventory_Page
                 {
                     MessageBox.Show("Product disabled successfully", "successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ctrl_InventoryPage_Load(null, null);
+                    OnProductDeactivated?.Invoke(productID);
                     return;
                 }
                 else

@@ -78,6 +78,7 @@ namespace MiniStore
             lblUserGreeting.Text = clsCurrentUser.CurrentUser.UserName;
             ctrlCurrentUserPage1.LoadData(clsCurrentUser.CurrentUser.UserID ?? -1);
             ctrlCurrentUserPage1.OnUserDataChange += CurrentUserDataChange;
+            ctrl_InventoryPage1.OnProductDeactivated += ctrlPOSPage1.RemoveProductFromCart;
         }
 
 

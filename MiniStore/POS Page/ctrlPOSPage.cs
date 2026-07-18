@@ -13,16 +13,14 @@ namespace MiniStore.POS_Page
 {
     public partial class ctrlPOSPage : UserControl
     {
-        int _customerID = 1;
         public ctrlPOSPage()
         {
             InitializeComponent();
         }
-        //public void GetCustomerID(int ID)
-        //{
-        //    _customerID = ID;
-        //    ctrlInvoiceSummary1.customerId = _customerID;
-        //}
+        public void RemoveProductFromCart(int productID)
+        {
+            ctrlCart1.RemoveItem(productID);
+        }
         private void ctrlPOSPage_Load(object sender, EventArgs e)
         {
             ctrlCart1.OnRecalc += ctrlCart1_OnRecalc;
