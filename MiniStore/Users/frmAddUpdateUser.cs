@@ -155,6 +155,8 @@ namespace MiniStore.Users
             lblConfirmPassword.Text = "Confirm Password";
             txbPassword.PlaceholderText = "Enter Password";
             txbConfirmPassword.PlaceholderText = "Enter Password Again";
+            lblConfirmPassword.Visible = true;
+            lblPassword.Visible = true;
 
             switch (_status)
             {
@@ -170,6 +172,8 @@ namespace MiniStore.Users
                     txbFullName.Text = _user.FullName;
                     txbPassword.Visible = false;
                     txbConfirmPassword.Visible = false;
+                    lblConfirmPassword.Visible = false;
+                    lblPassword.Visible = false;
                     break;
                 case enStatus.UpdateWithPassword:
                     this.Text = "Edit User";
@@ -180,6 +184,7 @@ namespace MiniStore.Users
                     txbPassword.PlaceholderText = "Enter the Current Password";
                     txbConfirmPassword.PlaceholderText = "Enter the New Password";
                     lblConfirmPassword.Text = "New Password";
+
                     break;
             }
         }

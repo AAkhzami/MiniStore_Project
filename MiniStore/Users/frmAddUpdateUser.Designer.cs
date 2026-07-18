@@ -32,7 +32,7 @@
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.txbConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.txbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txbFullName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -43,11 +43,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txbUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.pbLogo_Of_Page = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pbLogo_Of_Page = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -56,7 +56,7 @@
             this.guna2GroupBox1.BorderRadius = 9;
             this.guna2GroupBox1.Controls.Add(this.lblConfirmPassword);
             this.guna2GroupBox1.Controls.Add(this.txbConfirmPassword);
-            this.guna2GroupBox1.Controls.Add(this.label1);
+            this.guna2GroupBox1.Controls.Add(this.lblPassword);
             this.guna2GroupBox1.Controls.Add(this.txbPassword);
             this.guna2GroupBox1.Controls.Add(this.label5);
             this.guna2GroupBox1.Controls.Add(this.txbFullName);
@@ -109,16 +109,16 @@
             this.txbConfirmPassword.TabIndex = 4;
             this.txbConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txbConfirmPassword_Validating);
             // 
-            // label1
+            // lblPassword
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.label1.Location = new System.Drawing.Point(34, 296);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 17);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Password";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.lblPassword.Location = new System.Drawing.Point(34, 296);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(66, 17);
+            this.lblPassword.TabIndex = 28;
+            this.lblPassword.Text = "Password";
             // 
             // txbPassword
             // 
@@ -279,6 +279,10 @@
             this.lblTitle.TabIndex = 44;
             this.lblTitle.Text = "Add New User";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // pbLogo_Of_Page
             // 
             this.pbLogo_Of_Page.Image = global::MiniStore.Properties.Resources.user_32;
@@ -289,10 +293,6 @@
             this.pbLogo_Of_Page.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogo_Of_Page.TabIndex = 43;
             this.pbLogo_Of_Page.TabStop = false;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddUpdateUser
             // 
@@ -313,8 +313,8 @@
             this.Load += new System.EventHandler(this.frmAddUpdateUser_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,7 +335,7 @@
         private System.Windows.Forms.PictureBox pbLogo_Of_Page;
         private System.Windows.Forms.Label lblConfirmPassword;
         private Guna.UI2.WinForms.Guna2TextBox txbConfirmPassword;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPassword;
         private Guna.UI2.WinForms.Guna2TextBox txbPassword;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
