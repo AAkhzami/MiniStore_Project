@@ -123,13 +123,14 @@ namespace MiniStore
             string hashedPassword = ComputeHash(password);
 
             int userID = clsUsers.IsValidUser(txtUserName.Text.Trim(), hashedPassword);
+
             if (userID > 0)
             {
                 clsUsers currentUser = clsUsers.Find(userID);
 
                 if (currentUser.IsActive == false)
                 {
-                    MessageBox.Show("This user account is inactive. Please contact the administrator.", "Account Inactive", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("This user account is inactive. Please contact with the administrator.", "Account Inactive", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 //MessageBox.Show($"Login successful. UserName: {currentUser.UserName} and Password: {password}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -158,6 +159,15 @@ namespace MiniStore
             {
                 byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
                 return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+            }
+        }
+
+        private void txtNewUserName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+                return;
             }
         }
     }
