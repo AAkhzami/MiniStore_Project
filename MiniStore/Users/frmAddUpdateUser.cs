@@ -65,6 +65,10 @@ namespace MiniStore.Users
 
         private void txbPassword_Validating(object sender, CancelEventArgs e)
         {
+            if (!txbPassword.Visible)
+            {
+                return;
+            }
             if (string.IsNullOrWhiteSpace(txbPassword.Text))
             {
                 errorProvider1.SetError(txbPassword, "This field must not be empty!");
@@ -79,6 +83,11 @@ namespace MiniStore.Users
 
         private void txbConfirmPassword_Validating(object sender, CancelEventArgs e)
         {
+            if (!txbConfirmPassword.Visible)
+            {
+                return;
+            }
+
             if (string.IsNullOrWhiteSpace(txbConfirmPassword.Text))
             {
                 errorProvider1.SetError(txbPassword, "This field must not be empty!");
