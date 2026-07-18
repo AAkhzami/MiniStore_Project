@@ -26,7 +26,7 @@ namespace MiniStore.Customers
             if(clsCustomers.GetCustomerStatistics(CustomerID,ref OrderCount, ref TotalSpent, ref ProductsPurchased, ref LastPurchase, ref LastPusrchaseDate))
             {
                 lblOrdersCount.Text = OrderCount.ToString();
-                lblTotalSpent.Text = TotalSpent.ToString();
+                lblTotalSpent.Text = $"{TotalSpent:N3} OMR";
                 lblProductsPurchased.Text = ProductsPurchased.ToString();
                 if(ProductsPurchased != 0)
                 {
