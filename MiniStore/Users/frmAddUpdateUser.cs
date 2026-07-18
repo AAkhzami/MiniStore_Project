@@ -215,5 +215,14 @@ namespace MiniStore.Users
         {
             this.Close();
         }
+
+        private void txbUserName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

@@ -248,6 +248,7 @@
             // txbUserName
             // 
             this.txbUserName.BorderRadius = 9;
+            this.txbUserName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txbUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbUserName.DefaultText = "";
             this.txbUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -265,6 +266,7 @@
             this.txbUserName.SelectedText = "";
             this.txbUserName.Size = new System.Drawing.Size(474, 48);
             this.txbUserName.TabIndex = 1;
+            this.txbUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUserName_KeyPress);
             this.txbUserName.Validating += new System.ComponentModel.CancelEventHandler(this.txbUserName_Validating);
             // 
             // lblTitle
