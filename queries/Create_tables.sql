@@ -7,7 +7,8 @@ create table Users
 	FullName varchar(250) not null,
 	Password varchar(300) not null,
 	CreatedAt datetime default GETDATE() not null,
-	IsActive bit not null
+	IsActive bit not null,
+	IsDeleted bit default 0
 );
 
 create table Categories
