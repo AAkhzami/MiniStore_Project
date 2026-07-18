@@ -93,7 +93,7 @@ namespace MiniStore.Users
                 errorProvider1.SetError(txbPassword, "This field must not be empty!");
                 e.Cancel = true;
             }
-            else if (txbConfirmPassword.Text != txbPassword.Text)
+            else if ((txbConfirmPassword.Text != txbPassword.Text) && _status == enStatus.New)
             {
                 errorProvider1.SetError(txbPassword, "Password does not match!");
                 e.Cancel = true;
@@ -148,7 +148,7 @@ namespace MiniStore.Users
                         return;
                     }
 
-                    user.Password = _ComputeHash(txbPassword.Text.Trim());
+                    user.Password = _ComputeHash(txbConfirmPassword.Text.Trim());
                     break;
                 }
             }
@@ -160,13 +160,13 @@ namespace MiniStore.Users
 
             if (user.Save())
             {
-                MessageBox.Show("User Created Successfully!", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("User data saved Successfully!", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblUserD.Text = user.UserID.ToString();
                 btnSaveUser.Enabled = false;
             }
             else
             {
-                MessageBox.Show("User Created Failed!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("User data saved Failed!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             OnUserCreate?.Invoke(user.UserID ?? -1);
