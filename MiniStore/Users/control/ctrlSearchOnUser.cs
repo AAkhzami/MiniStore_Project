@@ -22,6 +22,7 @@ namespace MiniStore.Users.control
 
         public delegate void OnUserCreateEventHandler();
         public OnUserCreateEventHandler OnUserCreate;
+        
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
             frmAddUpdateUser frm = new frmAddUpdateUser();

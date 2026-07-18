@@ -43,7 +43,24 @@ namespace MiniStore.Users.control
         }
         public void LoadData()
         {
-            ctrlListUsers_Load(null, null);
+            _dtGetAllUsers = clsUsers.GetAllUsers();
+            _dtUsers = _dtGetAllUsers.DefaultView.ToTable(false, "UserID", "FullName", "UserName", "IsActive");
+            dgvUsers.DataSource = _dtUsers;
+            if (_dtUsers.Rows.Count > 0)
+            {
+                dgvUsers.Columns[0].HeaderText = "User ID";
+                dgvUsers.Columns[0].Width = 316;
+
+                dgvUsers.Columns[1].HeaderText = "Full Name";
+                dgvUsers.Columns[1].Width = 317;
+
+                dgvUsers.Columns[0].HeaderText = "User Name";
+                dgvUsers.Columns[0].Width = 316;
+
+                dgvUsers.Columns[0].HeaderText = "Is Active";
+                dgvUsers.Columns[0].Width = 300;
+            }
+            lblUsersCounter.Text = $"Showing {dgvUsers.Rows.Count} Users";
         }
         public void SearchOnUser(string searchType, string searchText)
         {            
