@@ -18,6 +18,10 @@ namespace MiniStore.Users.Current_User
         {
             InitializeComponent();
         }
+
+        public delegate void UserEditEventHandler();
+        public event UserEditEventHandler OnUserDataChange;
+
         void LoadData(int UserID)
         {
             clsCurrentUser.CurrentUser = clsUsers.Find(UserID);
@@ -29,6 +33,7 @@ namespace MiniStore.Users.Current_User
             frmAddUpdateUser frm = new frmAddUpdateUser(clsCurrentUser.CurrentUser, frmAddUpdateUser.enStatus.Update);
             frm.OnUserCreate += LoadData;
             frm.ShowDialog();
+            OnUserDataChange?.Invoke();
         }
 
         private void btnChangePassword_Click(object sender, EventArgs e)
@@ -36,6 +41,7 @@ namespace MiniStore.Users.Current_User
             frmAddUpdateUser frm = new frmAddUpdateUser(clsCurrentUser.CurrentUser, frmAddUpdateUser.enStatus.UpdateWithPassword);
             frm.OnUserCreate += LoadData;
             frm.ShowDialog();
+            OnUserDataChange?.Invoke();
         }
     }
 }
