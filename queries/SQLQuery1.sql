@@ -126,15 +126,23 @@ Returns Table
 as
 return
 (
+	with cte_Orders as
+	(
+		select
+		OrderID,SUM(Quantity) as TotalQuantities
+		from OrderDetails
+		group by OrderID
+	)
+
 	select 
-	COUNT(DISTINCT vco.OrderID) as OrdersCount,
+	count(vco.CustomerName) as OrdersCount,
 	TotalSpent = Sum(vco.TotalAmount),
-	ProductsPurchased = SUM(od.Quantity),
+	ProductsPurchased = SUM(od.TotalQuantities),
 	LastPurchase = Datediff(Day,MAX(vco.OrderDate),GETDATE()),
 	LastPurchaseDate = MAX(vco.OrderDate)
 	from v_CustomerOrders vco 
-	inner join OrderDetails od on
-	vco.OrderID = od.OrderID
+	inner join cte_Orders od on
+	od.OrderID =vco.OrderID
 	where vco.CustomerID = @CustomerID
 );
 create Function GetOrdersDetailForCustomer
@@ -266,7 +274,7 @@ begin
 	FullName = @FullName,
 	Password = @Password,
 	IsActive = @IsActive
-	where UserID = @UserID;
+	where UserID = @UserID and IsDeleted = 0;
 end
 
 --create procedure SP_GETOrderInformationAtDate
