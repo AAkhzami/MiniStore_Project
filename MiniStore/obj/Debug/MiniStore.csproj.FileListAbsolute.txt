@@ -57,3 +57,4 @@ C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Users.control.ctrlSearchOnUser.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Users.frmAddUpdateUser.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Users.control.ctrlUserInfo.resources
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Users.Current_User.ctrlCurrentUserPage.resources

@@ -211,6 +211,12 @@
     <Compile Include="Users\control\ctrUsersPage.Designer.cs">
       <DependentUpon>ctrUsersPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users\Current User\ctrlCurrentUserPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\Current User\ctrlCurrentUserPage.Designer.cs">
+      <DependentUpon>ctrlCurrentUserPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\frmAddUpdateUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users\control\ctrUsersPage.resx">
       <DependentUpon>ctrUsersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Current User\ctrlCurrentUserPage.resx">
+      <DependentUpon>ctrlCurrentUserPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddUpdateUser.resx">
       <DependentUpon>frmAddUpdateUser.cs</DependentUpon>
