@@ -21,6 +21,7 @@ namespace MiniStore.POS_Page
 
         public int customerId =1; // casual customer
 
+
         public delegate void ResetEventHandler();
         public event ResetEventHandler OnCancel;
 
@@ -117,25 +118,28 @@ namespace MiniStore.POS_Page
         }
         private void btnPay_Click(object sender, EventArgs e)
         {
-            clsOrders order = new clsOrders();
-            order.CustomerID = customerId;
-            order.OrderDate = DateTime.Now;
-            order.TotalAmount = _finalPrice;
-            order.CreatedByUserID = clsCurrentUser.CurrentUser.UserID ?? -1;
-
-            if(!order.Save())
+            if (_finalPrice > 0)
             {
-                MessageBox.Show("Try again later!","Wrong",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                return;
-            }
+                clsOrders order = new clsOrders();
+                order.CustomerID = customerId;
+                order.OrderDate = DateTime.Now;
+                order.TotalAmount = _finalPrice;
+                order.CreatedByUserID = clsCurrentUser.CurrentUser.UserID ?? -1;
 
-            _subtotalPrice = 0;
-            _cashPaid = 0;
-            _tax = 0;
-            _finalPrice = 0;
-            _Update();
-            _ResetCashPaid();
-            OnOrderCreate?.Invoke((order.OrderID ?? -1), customerId);
+                if (!order.Save())
+                {
+                    MessageBox.Show("Try again later!", "Wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                _subtotalPrice = 0;
+                _cashPaid = 0;
+                _tax = 0;
+                _finalPrice = 0;
+                _Update();
+                _ResetCashPaid();
+                OnOrderCreate?.Invoke((order.OrderID ?? -1), customerId);
+            }
         }
     }
 }
