@@ -23,7 +23,6 @@ namespace MiniStore.Users.control
 
         private void ctrlListUsers_Load(object sender, EventArgs e)
         {
-            _dtGetAllUsers = clsUsers.GetAllUsers();
             _dtUsers = _dtGetAllUsers.DefaultView.ToTable(false, "UserID", "FullName", "UserName", "IsActive");
             dgvUsers.DataSource = _dtUsers;
             if(_dtUsers.Rows.Count > 0 )
@@ -41,6 +40,10 @@ namespace MiniStore.Users.control
                 dgvUsers.Columns[0].Width = 300;
             }
             lblUsersCounter.Text = $"Showing {dgvUsers.Rows.Count} Users";
+        }
+        public void LoadData()
+        {
+            ctrlListUsers_Load(null, null);
         }
         public void SearchOnUser(string searchType, string searchText)
         {            

@@ -19,11 +19,14 @@ namespace MiniStore.Users.control
 
         public delegate void SearchingChangeEventHandler(string SearchType, string SearchText);
         public SearchingChangeEventHandler OnSearch;
+
+        public delegate void OnUserCreateEventHandler();
+        public OnUserCreateEventHandler OnUserCreate;
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
             frmAddUpdateUser frm = new frmAddUpdateUser();
             frm.ShowDialog();
-            OnSearch?.Invoke("","");
+            OnUserCreate?.Invoke();
         }
 
         private void txbCustomerSearch_KeyPress(object sender, KeyPressEventArgs e)
