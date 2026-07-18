@@ -61,5 +61,11 @@ namespace MiniStore.Users.control
             dgvUsers.DataSource = _dtUsers;
             lblUsersCounter.Text = $"Showing {dgvUsers.Rows.Count} Users";
         }
+
+        private void editUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+            frmAddUpdateUser frm = new frmAddUpdateUser(clsUsers.Find(userID));
+        }
     }
 }

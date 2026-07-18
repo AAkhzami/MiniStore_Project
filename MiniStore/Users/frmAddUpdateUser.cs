@@ -26,11 +26,11 @@ namespace MiniStore.Users
             InitializeComponent();
             _status = enStatus.New;
         }
-        public frmAddUpdateUser(clsUsers user)
+        public frmAddUpdateUser(clsUsers user, enStatus status = enStatus.Update)
         {
             InitializeComponent();
             _user = user;
-            _status = enStatus.Update;
+            _status = status;
         }
 
 
