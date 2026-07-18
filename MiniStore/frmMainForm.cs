@@ -82,8 +82,7 @@ namespace MiniStore
         private async void btnNextPage(object sender, EventArgs e)
         {
             int pageIndex = Convert.ToInt32(((Guna.UI2.WinForms.Guna2Button)sender).Tag);
-            tcMainScreen.SelectedIndex = pageIndex;
-            await PageSetting(pageIndex);
+            ChangePage(pageIndex);
         }
         
         private async Task PageSetting(int pageNumner)
@@ -102,6 +101,27 @@ namespace MiniStore
                 case 3:
                     break;
             }
-        }    
+        }
+
+        private async void ChangePage(int pagenumber)
+        {
+            tcMainScreen.SelectedIndex = pagenumber;
+            await PageSetting(pagenumber);
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            ChangePage((int)panel3.Tag);
+        }
+
+        private void lblUserName_Click(object sender, EventArgs e)
+        {
+            ChangePage((int)lblUserName.Tag);
+        }
+
+        private void btnUserButtonName_Click(object sender, EventArgs e)
+        {
+            ChangePage((int)btnUserButtonName.Tag);
+        }
     }
 }
