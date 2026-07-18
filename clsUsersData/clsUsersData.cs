@@ -132,7 +132,7 @@ namespace MiniStoreDB_DataAccess_Layer
         public static DataTable GetAllUsers()
         {
             DataTable dt = new DataTable();
-            string query = @"select * FROM Users";
+            string query = @"select * FROM Users where IsDeleted = 0;";
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
@@ -157,7 +157,7 @@ namespace MiniStoreDB_DataAccess_Layer
         public static int IsValidUser(string username, string password)
         {
             int? userID = null;
-            string query = @"select UserID from Users where UserName = @UserName and Password = @Password";
+            string query = @"select UserID from Users where UserName = @UserName and Password = @Password and IsDeleted = 0";
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
