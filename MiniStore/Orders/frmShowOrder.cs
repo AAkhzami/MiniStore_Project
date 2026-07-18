@@ -25,7 +25,7 @@ namespace MiniStore.Orders
         {
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("========================================================");
+            sb.AppendLine("======================================================");
             sb.AppendLine("\nMini Store");
             sb.AppendLine("\nDate : " + _order.OrderDate.ToString("mm/dd/yyyy"));
             if(_customer.CustomerID != 1)
@@ -33,7 +33,7 @@ namespace MiniStore.Orders
                 sb.AppendLine("\nFriend Name : " + _customer.CustomerName);
                 sb.AppendLine("\nPhone       : " + _customer.PhoneNumber);
             }
-            sb.AppendLine("\n========================================================");
+            sb.AppendLine("\n======================================================");
 
             DataTable dt = clsOrders.GetBillInfo(_order.OrderID ?? -1);
             foreach(DataRow item in dt.Rows )
@@ -44,7 +44,7 @@ namespace MiniStore.Orders
                 sb.AppendLine($"Price Per unit : {((decimal)item["PricePerUnit"]):N2} OMR ");
 
                 sb.AppendLine($"Total Amount   : {((decimal)item["TotalAmount"]):N2} OMR ");
-                sb.AppendLine("--------------------------------------------------------");
+                sb.AppendLine("------------------------------------------------------");
             }
             sb.AppendLine($"Total          : {_order.TotalAmount:N2} OMR");
 

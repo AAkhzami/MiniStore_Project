@@ -75,6 +75,7 @@
             // 
             // txbBill_Info
             // 
+            this.txbBill_Info.AutoScroll = true;
             this.txbBill_Info.BorderRadius = 9;
             this.txbBill_Info.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbBill_Info.DefaultText = "";
@@ -82,7 +83,6 @@
             this.txbBill_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txbBill_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbBill_Info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbBill_Info.Enabled = false;
             this.txbBill_Info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbBill_Info.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.txbBill_Info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -91,6 +91,7 @@
             this.txbBill_Info.Multiline = true;
             this.txbBill_Info.Name = "txbBill_Info";
             this.txbBill_Info.PlaceholderText = "";
+            this.txbBill_Info.ReadOnly = true;
             this.txbBill_Info.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txbBill_Info.SelectedText = "";
             this.txbBill_Info.Size = new System.Drawing.Size(590, 495);

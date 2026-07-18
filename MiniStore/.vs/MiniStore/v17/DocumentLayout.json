@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\orders\\frmshoworder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:orders\\frmshoworder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\orders\\frmshoworder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:orders\\frmshoworder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:pos page\\ctrlinvoicesummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|solutionrelative:frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7450040E-1AC3-45E1-9659-FF710E24FE76}|MiniStore.csproj|c:\\users\\abdullrahman\\desktop\\programing\\database courses\\projects-c21\\ministore project\\ministore\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,20 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ctrlInvoiceSummary.cs",
               "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\POS Page\\ctrlInvoiceSummary.cs",
               "RelativeDocumentMoniker": "POS Page\\ctrlInvoiceSummary.cs",
               "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\POS Page\\ctrlInvoiceSummary.cs",
               "RelativeToolTip": "POS Page\\ctrlInvoiceSummary.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAiwI0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAI0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-18T16:34:14.156Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ctrlInvoiceSummary.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\POS Page\\ctrlInvoiceSummary.cs",
               "RelativeDocumentMoniker": "POS Page\\ctrlInvoiceSummary.cs",
@@ -67,20 +67,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "frmShowOrder.cs",
               "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\Orders\\frmShowOrder.cs",
               "RelativeDocumentMoniker": "Orders\\frmShowOrder.cs",
               "ToolTip": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\Orders\\frmShowOrder.cs",
               "RelativeToolTip": "Orders\\frmShowOrder.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAADwvzsAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwCsAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-18T16:32:47.249Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "frmShowOrder.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\Orders\\frmShowOrder.cs",
               "RelativeDocumentMoniker": "Orders\\frmShowOrder.cs",
@@ -92,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frmMainForm.cs",
               "DocumentMoniker": "C:\\Users\\Abdullrahman\\Desktop\\Programing\\Database Courses\\Projects-C21\\MiniStore Project\\MiniStore\\frmMainForm.cs",
               "RelativeDocumentMoniker": "frmMainForm.cs",
