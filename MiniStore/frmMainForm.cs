@@ -117,17 +117,17 @@ namespace MiniStore
 
         private void panel3_Click(object sender, EventArgs e)
         {
-            ChangePage((int)panel3.Tag);
+            ChangePage(Convert.ToInt32(panel3.Tag));
         }
 
         private void lblUserName_Click(object sender, EventArgs e)
         {
-            ChangePage((int)lblUserName.Tag);
+            ChangePage(Convert.ToInt32(lblUserName.Tag));
         }
 
         private void btnUserButtonName_Click(object sender, EventArgs e)
         {
-            ChangePage((int)btnUserButtonName.Tag);
+            ChangePage(Convert.ToInt32(btnUserButtonName.Tag));
         }
     }
 }
