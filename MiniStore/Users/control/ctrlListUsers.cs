@@ -65,7 +65,55 @@ namespace MiniStore.Users.control
         private void editUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
-            frmAddUpdateUser frm = new frmAddUpdateUser(clsUsers.Find(userID));
+            frmAddUpdateUser frm = new frmAddUpdateUser(clsUsers.Find(userID),frmAddUpdateUser.enStatus.Update);
+            frm.ShowDialog();
+            ctrlListUsers_Load(null, null);
+        }
+
+        private void changePasswordToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+            frmAddUpdateUser frm = new frmAddUpdateUser(clsUsers.Find(userID), frmAddUpdateUser.enStatus.UpdateWithPassword);
+            frm.ShowDialog();
+            ctrlListUsers_Load(null, null);
+        }
+
+        private void toggleActiveStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+            clsUsers user = clsUsers.Find(userID);
+            user.IsActive = !user.IsActive;
+            if(user.Save())
+            {
+                MessageBox.Show("User status change successfully!","Successfully",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("User status change failed!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            ctrlListUsers_Load(null, null);
+        }
+
+        private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
+            if (
+               MessageBox.Show("Are you sure that you want to delete?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+               == DialogResult.Yes
+               )
+            {
+                if (clsUsers.DeleteUsers(userID))
+                {
+                    MessageBox.Show("User deleted successfully!", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("User deleted failed!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                ctrlListUsers_Load(null, null);
+            }
         }
     }
 }
