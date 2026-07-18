@@ -179,7 +179,7 @@ namespace MiniStoreDB_DataAccess_Layer
         public static bool IsUserNameExist(string username)
         {
             bool exist = false;
-            string query = @"select 1 from Users where UserName = @UserName";
+            string query = @"select 1 from Users where UserName = @UserName and IsDeleted = 0;";
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
             {
