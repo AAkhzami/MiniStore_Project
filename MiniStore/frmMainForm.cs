@@ -18,7 +18,7 @@ namespace MiniStore
     public partial class frmMainForm : Form
     {
         frmLogin frmLogin = null;
-
+        bool isLoggingOut = false;
 
         public frmMainForm(frmLogin login)
         {
@@ -84,7 +84,10 @@ namespace MiniStore
 
         private void frmMainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frmLogin.Close();
+            if(!isLoggingOut)
+            {
+                frmLogin.Close();
+            }
         }
         private void btnNextPage(object sender, EventArgs e)
         {
@@ -129,6 +132,13 @@ namespace MiniStore
         private void btnUserButtonName_Click(object sender, EventArgs e)
         {
             ChangePage(Convert.ToInt32(btnUserButtonName.Tag));
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            isLoggingOut = true;
+            frmLogin.Show();
+            this.Close();
         }
     }
 }

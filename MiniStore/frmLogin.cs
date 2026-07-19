@@ -133,8 +133,7 @@ namespace MiniStore
                     MessageBox.Show("This user account is inactive. Please contact with the administrator.", "Account Inactive", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                //MessageBox.Show($"Login successful. UserName: {currentUser.UserName} and Password: {password}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
+
                 clsCurrentUser.CurrentUser = currentUser;
                 clsCurrentUser.CurrentUser.Password = password;
 
@@ -167,6 +166,16 @@ namespace MiniStore
             if (e.KeyChar == ' ')
             {
                 e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                btnLogin_Click(null, null);
                 return;
             }
         }

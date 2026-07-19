@@ -182,6 +182,7 @@
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(429, 48);
             this.txtPassword.TabIndex = 25;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // label4
             // 
