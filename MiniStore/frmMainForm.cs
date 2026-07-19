@@ -102,13 +102,8 @@ namespace MiniStore
                 case 0:
                     await DashboardInfo();
                     break;
-                case 1:
-                    //ctrl_InventoryPage1
-                    break;
-                case 2:
-                    //SalesPage();
-                    break;
                 case 3:
+                    ctrlCustomersPage1.LoadData();
                     break;
             }
         }

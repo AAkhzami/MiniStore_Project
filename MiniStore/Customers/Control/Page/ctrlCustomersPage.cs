@@ -23,5 +23,9 @@ namespace MiniStore.Customers.Control.Page
             ctrlSearchOnCustomer1.OnSearch += ctrlTableOfCustomers1.SearchBy;
             ctrlSearchOnCustomer1.OnCustomerCreate += ctrlTableOfCustomers1.LoadData;
         }
+        public void LoadData()
+        {
+            ctrlTableOfCustomers1.LoadData();
+        }
     }
 }
