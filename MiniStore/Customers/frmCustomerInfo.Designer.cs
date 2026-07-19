@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomerInfo));
             this.ctrlCustomerInfo1 = new MiniStore.Customers.ctrlCustomerInfo();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.txbSearchOnCustomer = new Guna.UI2.WinForms.Guna2TextBox();
@@ -79,6 +80,7 @@
             this.txbSearchOnCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbSearchOnCustomer.IconLeft = global::MiniStore.Properties.Resources.search;
             this.txbSearchOnCustomer.Location = new System.Drawing.Point(21, 245);
+            this.txbSearchOnCustomer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbSearchOnCustomer.Name = "txbSearchOnCustomer";
             this.txbSearchOnCustomer.PlaceholderText = "Search using Phone Number";
             this.txbSearchOnCustomer.SelectedText = "";
@@ -187,6 +189,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbLogo_Of_Page);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCustomerInfo";

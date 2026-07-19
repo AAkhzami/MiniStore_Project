@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUpdateCustomer));
             this.lblTitle = new System.Windows.Forms.Label();
             this.pbLogo_Of_Page = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -230,6 +231,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbLogo_Of_Page);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddUpdateCustomer";

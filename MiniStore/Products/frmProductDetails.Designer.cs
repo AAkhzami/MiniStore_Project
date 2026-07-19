@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductDetails));
             this.lblSubtitle = new System.Windows.Forms.Label();
             this.pbLogo_Of_Page = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.ctrlProductInfo1 = new MiniStore.Products.Control.ctrlProductInfo();
-            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +73,18 @@
             this.panel1.Size = new System.Drawing.Size(480, 194);
             this.panel1.TabIndex = 27;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
+            this.lblTitle.Location = new System.Drawing.Point(63, 113);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(346, 45);
+            this.lblTitle.TabIndex = 16;
+            this.lblTitle.Text = "Product Information";
+            // 
             // btnCancel
             // 
             this.btnCancel.BorderColor = System.Drawing.Color.Silver;
@@ -99,18 +112,6 @@
             this.ctrlProductInfo1.Size = new System.Drawing.Size(449, 432);
             this.ctrlProductInfo1.TabIndex = 28;
             // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(29)))), ((int)(((byte)(63)))));
-            this.lblTitle.Location = new System.Drawing.Point(63, 113);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(346, 45);
-            this.lblTitle.TabIndex = 16;
-            this.lblTitle.Text = "Product Information";
-            // 
             // frmProductDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +122,7 @@
             this.Controls.Add(this.ctrlProductInfo1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmProductDetails";

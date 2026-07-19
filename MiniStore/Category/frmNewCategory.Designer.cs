@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewCategory));
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnSaveCategory = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txbCategoryName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pbLogo_Of_Page = new System.Windows.Forms.PictureBox();
-            this.btnSaveCategory = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Of_Page)).BeginInit();
@@ -59,6 +60,41 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(542, 268);
             this.guna2GroupBox1.TabIndex = 13;
             this.guna2GroupBox1.Text = "Product Info";
+            // 
+            // btnSaveCategory
+            // 
+            this.btnSaveCategory.BorderRadius = 9;
+            this.btnSaveCategory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveCategory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveCategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaveCategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSaveCategory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(121)))), ((int)(((byte)(243)))));
+            this.btnSaveCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSaveCategory.ForeColor = System.Drawing.Color.White;
+            this.btnSaveCategory.Location = new System.Drawing.Point(277, 195);
+            this.btnSaveCategory.Name = "btnSaveCategory";
+            this.btnSaveCategory.Size = new System.Drawing.Size(231, 55);
+            this.btnSaveCategory.TabIndex = 24;
+            this.btnSaveCategory.Text = "Save Category";
+            this.btnSaveCategory.Click += new System.EventHandler(this.btnSaveCategory_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BorderColor = System.Drawing.Color.Silver;
+            this.btnCancel.BorderRadius = 9;
+            this.btnCancel.BorderThickness = 1;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.White;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
+            this.btnCancel.Location = new System.Drawing.Point(34, 195);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(231, 55);
+            this.btnCancel.TabIndex = 23;
+            this.btnCancel.Text = "Cancel";
             // 
             // label3
             // 
@@ -127,41 +163,6 @@
             this.pbLogo_Of_Page.TabIndex = 14;
             this.pbLogo_Of_Page.TabStop = false;
             // 
-            // btnSaveCategory
-            // 
-            this.btnSaveCategory.BorderRadius = 9;
-            this.btnSaveCategory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSaveCategory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSaveCategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSaveCategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSaveCategory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(121)))), ((int)(((byte)(243)))));
-            this.btnSaveCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSaveCategory.ForeColor = System.Drawing.Color.White;
-            this.btnSaveCategory.Location = new System.Drawing.Point(277, 195);
-            this.btnSaveCategory.Name = "btnSaveCategory";
-            this.btnSaveCategory.Size = new System.Drawing.Size(231, 55);
-            this.btnSaveCategory.TabIndex = 24;
-            this.btnSaveCategory.Text = "Save Category";
-            this.btnSaveCategory.Click += new System.EventHandler(this.btnSaveCategory_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BorderColor = System.Drawing.Color.Silver;
-            this.btnCancel.BorderRadius = 9;
-            this.btnCancel.BorderThickness = 1;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.Color.White;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(115)))), ((int)(((byte)(138)))));
-            this.btnCancel.Location = new System.Drawing.Point(34, 195);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(231, 55);
-            this.btnCancel.TabIndex = 23;
-            this.btnCancel.Text = "Cancel";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.BlinkRate = 1;
@@ -178,6 +179,7 @@
             this.Controls.Add(this.pbLogo_Of_Page);
             this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmNewCategory";

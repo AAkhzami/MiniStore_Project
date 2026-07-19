@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomerStatistics));
             this.ctrlCustomerInfo1 = new MiniStore.Customers.ctrlCustomerInfo();
             this.ctrlCustomerStatistics1 = new MiniStore.Customers.ctrlCustomerStatistics();
             this.ctrlOrdersDetailTable1 = new MiniStore.Orders.Control.ctrlOrdersDetailTable();
@@ -67,6 +68,7 @@
             this.Controls.Add(this.ctrlCustomerInfo1);
             this.Controls.Add(this.ctrlCustomerStatistics1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCustomerStatistics";
