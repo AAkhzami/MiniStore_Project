@@ -97,6 +97,12 @@ namespace MiniStore.POS_Page
             {
                 e.Handled = true;
             }
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                btnInsertProduct_Click(null, null);
+                return;
+            }
         }
     }
 }
