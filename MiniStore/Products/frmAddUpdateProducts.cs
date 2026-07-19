@@ -103,6 +103,7 @@ namespace MiniStore.Products
         {
 
             DataTable dt = clsCategories.GetAllCategories();
+
             foreach (DataRow row in dt.Rows)
             {
                 cbCategory.Items.Add(row["Name"].ToString());
@@ -132,6 +133,9 @@ namespace MiniStore.Products
                     ChangingTheChoice();
                     break;
             }
+
+            txbProductName.Focus();
+
         }
         private bool AddNewProduct()
         {

@@ -375,7 +375,7 @@
             this.txbProductName.PlaceholderText = "Enter product name";
             this.txbProductName.SelectedText = "";
             this.txbProductName.Size = new System.Drawing.Size(474, 48);
-            this.txbProductName.TabIndex = 10;
+            this.txbProductName.TabIndex = 1;
             this.txbProductName.Validating += new System.ComponentModel.CancelEventHandler(this.txbProductName_Validating);
             // 
             // lblSubtitle
