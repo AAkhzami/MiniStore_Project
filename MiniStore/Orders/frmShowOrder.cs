@@ -24,7 +24,7 @@ namespace MiniStore.Orders
             _order = order;
             _customer = customerInfo;
         }
-        public void LoadData()
+        public async Task LoadData()
         {
 
             StringBuilder sb = new StringBuilder();
@@ -38,7 +38,7 @@ namespace MiniStore.Orders
             }
             sb.AppendLine("\n======================================================");
 
-            DataTable dt = clsOrders.GetBillInfo(_order.OrderID ?? -1);
+            DataTable dt = await clsOrders.GetBillInfo(_order.OrderID ?? -1);
             foreach(DataRow item in dt.Rows )
             {
                 sb.AppendLine($"Name           : {item["Name"]}");

@@ -18,14 +18,14 @@ namespace MiniStore.Users.control
             InitializeComponent();
         }
 
-        private static DataTable _dtGetAllUsers = clsUsers.GetAllUsers();
-        DataTable _dtUsers = _dtGetAllUsers.DefaultView.ToTable(false, "UserID","FullName","UserName","IsActive");
 
-        private void ctrlListUsers_Load(object sender, EventArgs e)
+        private async void ctrlListUsers_Load(object sender, EventArgs e)
         {
-            _dtUsers = _dtGetAllUsers.DefaultView.ToTable(false, "UserID", "FullName", "UserName", "IsActive");
-            dgvUsers.DataSource = _dtUsers;
-            if(_dtUsers.Rows.Count > 0 )
+            DataTable dtGetAllUsers = await clsUsers.GetAllUsers();
+            DataTable dtUsers = dtGetAllUsers.DefaultView.ToTable(false, "UserID", "FullName", "UserName", "IsActive");
+
+            dgvUsers.DataSource = dtUsers;
+            if(dtUsers.Rows.Count > 0 )
             {
                 dgvUsers.Columns[0].HeaderText = "User ID";
                 dgvUsers.Columns[0].Width = 316;
@@ -41,12 +41,13 @@ namespace MiniStore.Users.control
             }
             lblUsersCounter.Text = $"Showing {dgvUsers.Rows.Count} Users";
         }
-        public void LoadData()
+        private async Task _LoadData()
         {
-            _dtGetAllUsers = clsUsers.GetAllUsers();
-            _dtUsers = _dtGetAllUsers.DefaultView.ToTable(false, "UserID", "FullName", "UserName", "IsActive");
-            dgvUsers.DataSource = _dtUsers;
-            if (_dtUsers.Rows.Count > 0)
+            DataTable dtGetAllUsers = await clsUsers.GetAllUsers();
+            DataTable dtUsers = dtGetAllUsers.DefaultView.ToTable(false, "UserID", "FullName", "UserName", "IsActive");
+
+            dgvUsers.DataSource = dtUsers;
+            if (dtUsers.Rows.Count > 0)
             {
                 dgvUsers.Columns[0].HeaderText = "User ID";
                 dgvUsers.Columns[0].Width = 316;
@@ -62,45 +63,52 @@ namespace MiniStore.Users.control
             }
             lblUsersCounter.Text = $"Showing {dgvUsers.Rows.Count} Users";
         }
-        public void SearchOnUser(string searchType, string searchText)
-        {            
+        public async void LoadData()
+        {
+            await _LoadData();
+        }
+        public async void SearchOnUser(string searchType, string searchText)
+        {
+            DataTable dtGetAllUsers = await clsUsers.GetAllUsers();
+            DataTable dtUsers = dtGetAllUsers.DefaultView.ToTable(false, "UserID", "FullName", "UserName", "IsActive");
+
             if (string.IsNullOrWhiteSpace(searchText))
             {
-                _dtUsers.DefaultView.RowFilter = "";
-                dgvUsers.DataSource = _dtUsers;
+                dtUsers.DefaultView.RowFilter = "";
+                dgvUsers.DataSource = dtUsers;
                 return;
             }
 
             if(searchType == "UserID")
             {
-                _dtUsers.DefaultView.RowFilter = string.Format("[{0}] = {1}",searchType,searchText);
+                dtUsers.DefaultView.RowFilter = string.Format("[{0}] = {1}",searchType,searchText);
             }
             else if (searchType == "FullName" || searchType == "UserName")
             {
-                _dtUsers.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%'", searchType, searchText);
+                dtUsers.DefaultView.RowFilter = string.Format("[{0}] Like '{1}%'", searchType, searchText);
             }
 
-            dgvUsers.DataSource = _dtUsers;
+            dgvUsers.DataSource = dtUsers;
             lblUsersCounter.Text = $"Showing {dgvUsers.Rows.Count} Users";
         }
 
-        private void editUserToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void editUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
             frmAddUpdateUser frm = new frmAddUpdateUser(clsUsers.Find(userID),frmAddUpdateUser.enStatus.Update);
             frm.ShowDialog();
-            LoadData();
+            await _LoadData();
         }
 
-        private void changePasswordToolStripMenuItem1_Click(object sender, EventArgs e)
+        private async void changePasswordToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
             frmAddUpdateUser frm = new frmAddUpdateUser(clsUsers.Find(userID), frmAddUpdateUser.enStatus.UpdateWithPassword);
             frm.ShowDialog();
-            LoadData();
+            await _LoadData();
         }
 
-        private void toggleActiveStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void toggleActiveStatusToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
             clsUsers user = clsUsers.Find(userID);
@@ -114,10 +122,10 @@ namespace MiniStore.Users.control
                 MessageBox.Show("User status change failed!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            LoadData();
+            await _LoadData();
         }
 
-        private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int userID = (int)dgvUsers.CurrentRow.Cells[0].Value;
             if (
@@ -134,7 +142,7 @@ namespace MiniStore.Users.control
                     MessageBox.Show("User deleted failed!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                LoadData();
+                await _LoadData();
             }
         }
     }

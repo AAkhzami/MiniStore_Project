@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 namespace MiniStoreDB_Business_Layer
 {
     public class clsOrders
@@ -88,9 +89,9 @@ namespace MiniStoreDB_Business_Layer
             return clsOrdersData.DeleteOrdersByID(OrderID);
         }
 
-        public static DataTable GetAllOrders()
+        public static async Task<DataTable> GetAllOrders()
         {
-            return clsOrdersData.GetAllOrders();
+            return await clsOrdersData.GetAllOrders();
         }
 
         public static int GetTotalOrders(DateTime date)
@@ -101,9 +102,9 @@ namespace MiniStoreDB_Business_Layer
         {
             return clsOrdersData.GetTotalSalesAtDate(date);
         }
-        public static DataTable GetBillInfo(int orderID)
+        public static async Task<DataTable> GetBillInfo(int orderID)
         {
-            return clsOrdersData.GetBillInfo(orderID);
+            return await clsOrdersData.GetBillInfo(orderID);
         }
     }
 }

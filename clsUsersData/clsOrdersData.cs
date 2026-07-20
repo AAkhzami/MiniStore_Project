@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 
 namespace MiniStoreDB_DataAccess_Layer
 {
@@ -128,7 +129,7 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return rowsAffected > 0;
         }
-        public static DataTable GetAllOrders()
+        public static async Task<DataTable> GetAllOrders()
         {
             DataTable dt = new DataTable();
             string query = @"select * FROM Orders";
@@ -139,7 +140,7 @@ namespace MiniStoreDB_DataAccess_Layer
                 try
                 {
                     connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
                     {
                         if (reader.HasRows)
                         {
@@ -210,7 +211,7 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return Sales;
         }
-        public static DataTable GetBillInfo(int orderID)
+        public static async Task<DataTable> GetBillInfo(int orderID)
         {
             DataTable dt = new DataTable();
             string query = @"select * from GetBillInfo (@OrderID);";
@@ -222,7 +223,7 @@ namespace MiniStoreDB_DataAccess_Layer
                 try
                 {
                     connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
                     {
                         if (reader.HasRows)
                         {
