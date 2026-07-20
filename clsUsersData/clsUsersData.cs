@@ -129,7 +129,7 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return rowsAffected > 0;
         }
-        public static DataTable GetAllUsers()
+        public static async Task<DataTable> GetAllUsers()
         {
             DataTable dt = new DataTable();
             string query = @"select * FROM Users where IsDeleted = 0;";
@@ -140,7 +140,7 @@ namespace MiniStoreDB_DataAccess_Layer
                 try
                 {
                     connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
                     {
                         if (reader.HasRows)
                         {

@@ -93,9 +93,9 @@ namespace MiniStoreDB_Business_Layer
             return clsUsersData.DeleteUsersByID(UserID);
         }
 
-        public static DataTable GetAllUsers()
+        public static async Task<DataTable> GetAllUsers()
         {
-            return clsUsersData.GetAllUsers();
+            return await clsUsersData.GetAllUsers();
         }
 
         public static int IsValidUser(string username, string password)
