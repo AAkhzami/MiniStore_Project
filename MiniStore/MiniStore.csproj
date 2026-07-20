@@ -120,6 +120,7 @@
     </Compile>
     <Compile Include="Global\clsCurrentUser.cs" />
     <Compile Include="Global\clsInvoice.cs" />
+    <Compile Include="Global\clsRegistry.cs" />
     <Compile Include="Inventory Page\ctrl_InventoryPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
