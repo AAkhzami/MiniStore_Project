@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using MiniStoreDB_Business_Layer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,12 @@ namespace MiniStore.Global
     {
         static string _keyPath = @"HKEY_CURRENT_USER\SOFTWARE\MiniStore";
 
-        public static bool WriteToRegistry(string userID, string password)
+        public static bool WriteToRegistry(string userName, string password)
         {
             try
             {
 
-                Registry.SetValue(_keyPath, "userID", userID, RegistryValueKind.String);
+                Registry.SetValue(_keyPath, "userName", userName, RegistryValueKind.String);
                 Registry.SetValue(_keyPath, "password", password, RegistryValueKind.String);
                 return true;
             }
@@ -33,9 +34,9 @@ namespace MiniStore.Global
             {
                 using (RegistryKey BaseKey = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64))
                 {
-                    using (RegistryKey key = BaseKey.OpenSubKey(@"SOFTWARE\Code_Generator", true))
+                    using (RegistryKey key = BaseKey.OpenSubKey(@"\SOFTWARE\MiniStore", true))
                     {
-                        key.DeleteValue("userID");
+                        key.DeleteValue("userName");
                         key.DeleteValue("password");
                         return true;
                     }
@@ -47,13 +48,14 @@ namespace MiniStore.Global
         }
         public static bool LoadDataFromRegistry()
         {
-            string userID = Registry.GetValue(_keyPath, "userID", null) as string;
+            string userName = Registry.GetValue(_keyPath, "userName", null) as string;
             string password = Registry.GetValue(_keyPath, "password", null) as string;
 
-            if (userID != null && password != null)
+            if (userName != null && password != null)
             {
-                clsCurrentUser.CurrentUser.UserName = userID;
-                clsCurrentUser.CurrentUser.Password = ComputeHash(password);
+                string HashingPassword = ComputeHash(password);
+                clsUsers user = clsUsers.Find(clsUsers.IsValidUser(userName, HashingPassword));
+                clsCurrentUser.CurrentUser = user;
                 return true;
             }
             else
