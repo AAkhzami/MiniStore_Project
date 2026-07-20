@@ -31,7 +31,19 @@ namespace MiniStore
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            string UserName = "";
+            string Password = "";
+            if(clsRegistry.LoadDataFromRegistry(ref UserName, ref Password))
+            {
+                txbUserName.Text = UserName;
+                txbPassword.Text = Password;
+                cbRememberMe.Checked = true;
+            }
+            else
+            {
+                txbUserName.Focus();
+                cbRememberMe.Checked = false;
+            }
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -60,7 +72,7 @@ namespace MiniStore
         {
             pCreateNewUser.Visible = false;
             pLogin.Visible = true;
-            txtUserName.Focus();
+            txbUserName.Focus();
         }
 
         private void btnCreateUser_Click(object sender, EventArgs e)
@@ -98,8 +110,8 @@ namespace MiniStore
             if (newUser.Save())
             {
                 MessageBox.Show("User created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtUserName.Text = username;
-                txtPassword.Text = password;
+                txbUserName.Text = username;
+                txbPassword.Text = password;
 
                 clsCurrentUser.CurrentUser = newUser;
                 clsCurrentUser.CurrentUser.Password = password;
@@ -119,10 +131,11 @@ namespace MiniStore
             {
                 MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return;
             }
-            string password = txtPassword.Text.Trim();
+            string password = txbPassword.Text.Trim();
+            string username = txbUserName.Text.Trim();
             string hashedPassword = ComputeHash(password);
 
-            int userID = clsUsers.IsValidUser(txtUserName.Text.Trim(), hashedPassword);
+            int userID = clsUsers.IsValidUser(username, hashedPassword);
 
             if (userID > 0)
             {
@@ -137,6 +150,14 @@ namespace MiniStore
                 clsCurrentUser.CurrentUser = currentUser;
                 clsCurrentUser.CurrentUser.Password = password;
 
+                if(cbRememberMe.Checked)
+                {
+                    clsRegistry.WriteToRegistry(username, password);
+                }
+                else
+                {
+                    clsRegistry.DeleteDataFromWRegisty();
+                }
                 frmMainForm mainForm = new frmMainForm(this);
                 mainForm.Show();
                 this.Hide();

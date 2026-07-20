@@ -28,7 +28,7 @@ namespace MiniStore.Global
             }
 
         }
-        public static bool _DeleteDataFromWRegisty()
+        public static bool DeleteDataFromWRegisty()
         {
             try
             {
@@ -46,29 +46,20 @@ namespace MiniStore.Global
             { return false; }
             catch (Exception) { return false; }
         }
-        public static bool LoadDataFromRegistry()
+        public static bool LoadDataFromRegistry(ref string UserName, ref string Password)
         {
             string userName = Registry.GetValue(_keyPath, "userName", null) as string;
             string password = Registry.GetValue(_keyPath, "password", null) as string;
 
             if (userName != null && password != null)
             {
-                string HashingPassword = ComputeHash(password);
-                clsUsers user = clsUsers.Find(clsUsers.IsValidUser(userName, HashingPassword));
-                clsCurrentUser.CurrentUser = user;
+                UserName = userName;
+                Password = password;
                 return true;
             }
             else
             {
                 return false;
-            }
-        }
-        static string ComputeHash(string input)
-        {
-            using (var sha256 = SHA256.Create())
-            {
-                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
-                return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
             }
         }
 
