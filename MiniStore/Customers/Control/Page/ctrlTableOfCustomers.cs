@@ -110,5 +110,12 @@ namespace MiniStore.Customers.Control.Page
             frmCustomerStatistics frm = new frmCustomerStatistics(CustomerID);
             frm.ShowDialog();
         }
+
+        private void copyPhoneNumberToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int CustomerID = (int)dgvTableCustomers.CurrentRow.Cells[0].Value;
+            string phoneNumber = dgvTableCustomers.Rows[CustomerID].Cells[2].Value.ToString();
+            Clipboard.SetText(phoneNumber);
+        }
     }
 }

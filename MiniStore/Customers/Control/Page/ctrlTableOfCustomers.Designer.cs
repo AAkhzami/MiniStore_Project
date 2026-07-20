@@ -38,6 +38,7 @@
             this.editCustToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblCustomersCounter = new System.Windows.Forms.Label();
+            this.copyPhoneNumberToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTableCustomers)).BeginInit();
             this.cmsCustomer.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +99,7 @@
             this.cmsCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsCustomer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.customerInfoStripMenuItem1,
+            this.copyPhoneNumberToolStripMenuItem1,
             this.editCustToolStripMenuItem,
             this.deleteCustomerToolStripMenuItem});
             this.cmsCustomer.Name = "cmsCustomer";
@@ -110,13 +112,13 @@
             this.cmsCustomer.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsCustomer.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsCustomer.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsCustomer.Size = new System.Drawing.Size(229, 94);
+            this.cmsCustomer.Size = new System.Drawing.Size(264, 146);
             // 
             // customerInfoStripMenuItem1
             // 
             this.customerInfoStripMenuItem1.Image = global::MiniStore.Properties.Resources.user_31;
             this.customerInfoStripMenuItem1.Name = "customerInfoStripMenuItem1";
-            this.customerInfoStripMenuItem1.Size = new System.Drawing.Size(228, 30);
+            this.customerInfoStripMenuItem1.Size = new System.Drawing.Size(263, 30);
             this.customerInfoStripMenuItem1.Text = "Customer Info";
             this.customerInfoStripMenuItem1.Click += new System.EventHandler(this.customerInfoStripMenuItem1_Click);
             // 
@@ -124,7 +126,7 @@
             // 
             this.editCustToolStripMenuItem.Image = global::MiniStore.Properties.Resources.edit;
             this.editCustToolStripMenuItem.Name = "editCustToolStripMenuItem";
-            this.editCustToolStripMenuItem.Size = new System.Drawing.Size(228, 30);
+            this.editCustToolStripMenuItem.Size = new System.Drawing.Size(263, 30);
             this.editCustToolStripMenuItem.Text = "Edit Customer";
             this.editCustToolStripMenuItem.Click += new System.EventHandler(this.editCustToolStripMenuItem_Click);
             // 
@@ -133,7 +135,7 @@
             this.deleteCustomerToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
             this.deleteCustomerToolStripMenuItem.Image = global::MiniStore.Properties.Resources.trash;
             this.deleteCustomerToolStripMenuItem.Name = "deleteCustomerToolStripMenuItem";
-            this.deleteCustomerToolStripMenuItem.Size = new System.Drawing.Size(228, 30);
+            this.deleteCustomerToolStripMenuItem.Size = new System.Drawing.Size(263, 30);
             this.deleteCustomerToolStripMenuItem.Text = "Delete Customer";
             this.deleteCustomerToolStripMenuItem.Click += new System.EventHandler(this.deleteCustomerToolStripMenuItem_Click);
             // 
@@ -148,6 +150,14 @@
             this.lblCustomersCounter.Size = new System.Drawing.Size(181, 22);
             this.lblCustomersCounter.TabIndex = 20;
             this.lblCustomersCounter.Text = "Showing N customers";
+            // 
+            // copyPhoneNumberToolStripMenuItem1
+            // 
+            this.copyPhoneNumberToolStripMenuItem1.Image = global::MiniStore.Properties.Resources.receipt;
+            this.copyPhoneNumberToolStripMenuItem1.Name = "copyPhoneNumberToolStripMenuItem1";
+            this.copyPhoneNumberToolStripMenuItem1.Size = new System.Drawing.Size(263, 30);
+            this.copyPhoneNumberToolStripMenuItem1.Text = "Copy Phone Number";
+            this.copyPhoneNumberToolStripMenuItem1.Click += new System.EventHandler(this.copyPhoneNumberToolStripMenuItem1_Click);
             // 
             // ctrlTableOfCustomers
             // 
@@ -174,5 +184,6 @@
         private System.Windows.Forms.ToolStripMenuItem editCustToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerInfoStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem copyPhoneNumberToolStripMenuItem1;
     }
 }
