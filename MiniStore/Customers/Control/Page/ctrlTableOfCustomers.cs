@@ -20,9 +20,9 @@ namespace MiniStore.Customers.Control.Page
         {
             InitializeComponent();
         }
-        public void LoadData()
+        public async void LoadData()
         {
-            _dtCustomers = clsCustomers.GetAllCustomers();
+            _dtCustomers = await clsCustomers.GetAllCustomers();
             dgvTableCustomers.DataSource = _dtCustomers;
             if(_dtCustomers.Rows.Count > 0)
             {

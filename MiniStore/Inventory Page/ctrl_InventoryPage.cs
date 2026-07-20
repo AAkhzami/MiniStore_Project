@@ -25,7 +25,7 @@ namespace MiniStore.Inventory_Page
         public event ProductDeactivatedEventHandler OnProductDeactivated;
         private async void ctrl_InventoryPage_Load(object sender, EventArgs e)
         {
-            DataTable dt = clsCategories.GetAllCategories();
+            DataTable dt = await clsCategories.GetAllCategories();
             foreach (DataRow row in dt.Rows)
             {
                 cbInventory_Categories.Items.Add(row["Name"].ToString());

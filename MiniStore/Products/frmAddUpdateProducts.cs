@@ -99,10 +99,10 @@ namespace MiniStore.Products
             }
         }
 
-        private void frmAddUpdateProducts_Load(object sender, EventArgs e)
+        private async void frmAddUpdateProducts_Load(object sender, EventArgs e)
         {
 
-            DataTable dt = clsCategories.GetAllCategories();
+            DataTable dt = await clsCategories.GetAllCategories();
 
             foreach (DataRow row in dt.Rows)
             {
@@ -219,10 +219,10 @@ namespace MiniStore.Products
             }
 
         }
-        void Frm_NewCategoryDataSaved(string NewCategory)
+        async void Frm_NewCategoryDataSaved(string NewCategory)
         {
             cbCategory.Items.Clear();
-            DataTable dt = clsCategories.GetAllCategories();
+            DataTable dt = await clsCategories.GetAllCategories();
             foreach (DataRow row in dt.Rows)
             {
                 cbCategory.Items.Add(row["Name"].ToString());

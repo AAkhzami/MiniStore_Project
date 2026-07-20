@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 
 namespace MiniStoreDB_DataAccess_Layer
 {
@@ -141,7 +142,7 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return rowsAffected > 0;
         }
-        public static DataTable GetAllCategories()
+        public static async Task<DataTable> GetAllCategories()
         {
             DataTable dt = new DataTable();
             string query = @"select * FROM Categories";
@@ -152,7 +153,7 @@ namespace MiniStoreDB_DataAccess_Layer
                 try
                 {
                     connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
                     {
                         if (reader.HasRows)
                         {

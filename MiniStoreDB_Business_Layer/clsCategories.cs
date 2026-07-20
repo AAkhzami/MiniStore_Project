@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 namespace MiniStoreDB_Business_Layer
 {
     public class clsCategories
@@ -88,9 +89,9 @@ namespace MiniStoreDB_Business_Layer
             return clsCategoriesData.DeleteCategoriesByID(CategoryID);
         }
 
-        public static DataTable GetAllCategories()
+        public static async Task<DataTable> GetAllCategories()
         {
-            return clsCategoriesData.GetAllCategories();
+            return await clsCategoriesData.GetAllCategories();
         }
 
     }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 namespace MiniStoreDB_Business_Layer
 {
     public class clsCustomers
@@ -102,9 +103,9 @@ namespace MiniStoreDB_Business_Layer
             return clsCustomersData.DeleteCustomersByID(CustomerID);
         }
 
-        public static DataTable GetAllCustomers()
+        public static async Task<DataTable> GetAllCustomers()
         {
-            return clsCustomersData.GetAllCustomers();
+            return await clsCustomersData.GetAllCustomers();
         }
         
         public static int GetCustomersCount()
