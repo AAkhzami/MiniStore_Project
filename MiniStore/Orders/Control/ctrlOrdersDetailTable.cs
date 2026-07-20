@@ -18,10 +18,10 @@ namespace MiniStore.Orders.Control
         {
             InitializeComponent();
         }
-        public void DataLoad(int customerID)
+        public async Task DataLoad(int customerID)
         {
             _customerID = customerID;
-            DataTable dt = clsOrderDetails.GetOrdersDetailForCustomer(customerID);
+            DataTable dt = await clsOrderDetails.GetOrdersDetailForCustomer(customerID);
             dgvOrders.DataSource = dt;
             if(dgvOrders.Rows.Count > 0 )
             {

@@ -20,13 +20,13 @@ namespace MiniStore.Customers
             _CustomerID = CustomerID;
         }
 
-        private void frmCustomerStatistics_Load(object sender, EventArgs e)
+        private async void frmCustomerStatistics_Load(object sender, EventArgs e)
         {
             if(_CustomerID != -1)
             {
                 ctrlCustomerInfo1.LoadData(clsCustomers.Find(_CustomerID));
                 ctrlCustomerStatistics1.LoadData(_CustomerID);
-                ctrlOrdersDetailTable1.DataLoad(_CustomerID);
+                await ctrlOrdersDetailTable1.DataLoad(_CustomerID);
             }
         }
     }
