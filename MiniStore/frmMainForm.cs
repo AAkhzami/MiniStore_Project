@@ -28,11 +28,11 @@ namespace MiniStore
         private async Task LoadDataToTopSellingProducts()
         {
             DataTable dtGetAllTopProducts = await clsProducts.GetReportOfProducts();
-            DataTable dtFormat = dtGetAllTopProducts.DefaultView.ToTable(false, "ProductName", "Price",
-                                                             "CategoryName", "StockQuantity", "Revenue", "CategoryRank");
-            dgvTopSellingProducts.DataSource = dtFormat;
-            if (dgvTopSellingProducts.Rows.Count > 0)
+            if (dtGetAllTopProducts.Rows.Count > 0)
             {
+                DataTable dtFormat = dtGetAllTopProducts.DefaultView.ToTable(false, "ProductName", "Price",
+                                                                 "CategoryName", "StockQuantity", "Revenue", "CategoryRank");
+                dgvTopSellingProducts.DataSource = dtFormat;
 
                 dgvTopSellingProducts.Columns[0].HeaderText = "Product";
                 dgvTopSellingProducts.Columns[0].Width = 200;

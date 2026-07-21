@@ -23,7 +23,6 @@ D:\Programming\Projects\MiniStore_Project\MiniStore\bin\Debug\clsUsersData.dll
 D:\Programming\Projects\MiniStore_Project\MiniStore\bin\Debug\MiniStoreDB_Business_Layer.pdb
 D:\Programming\Projects\MiniStore_Project\MiniStore\bin\Debug\clsUsersData.pdb
 D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.csproj.AssemblyReference.cache
-D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Form1.resources
 D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Properties.Resources.resources
 D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.csproj.GenerateResource.cache
 D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.csproj.CoreCompileInputs.cache
@@ -59,3 +58,32 @@ C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Users.control.ctrlUserInfo.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Users.Current_User.ctrlCurrentUserPage.resources
 C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.csproj.ResolveComReference.cache
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.csproj.ResolveComReference.cache
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Category.frmNewCategory.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Customers.ctrlCustomerInfo.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Customers.ctrlCustomerStatistics.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Customers.Control.Page.ctrlCustomersPage.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Customers.Control.Page.ctrlSearchOnCustomer.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Customers.Control.Page.ctrlTableOfCustomers.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Customers.frmAddUpdateCustomer.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Customers.frmCustomerInfo.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Customers.frmCustomerStatistics.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.frmLogin.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.frmMainForm.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Inventory_Page.ctrl_InventoryPage.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Orders.Control.ctrlOrdersDetailTable.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Orders.frmShowOrder.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.POS_Page.ctrlCart.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.POS_Page.ctrlInvoiceSummary.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.POS_Page.ctrlPOSPage.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.POS_Page.ctrlSearchProducts.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Products.Control.ctrlProductInfo.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Products.frmAddStock.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Products.frmAddUpdateProducts.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Products.frmProductDetails.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Users.control.ctrlListUsers.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Users.control.ctrlSearchOnUser.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Users.control.ctrlUserInfo.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Users.control.ctrUsersPage.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Users.Current_User.ctrlCurrentUserPage.resources
+D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Users.frmAddUpdateUser.resources
