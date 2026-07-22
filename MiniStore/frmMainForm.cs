@@ -19,6 +19,7 @@ namespace MiniStore
     {
         frmLogin frmLogin = null;
         bool isLoggingOut = false;
+        Color mainBtnColor = Color.FromArgb(17, 55, 106);
 
         public frmMainForm(frmLogin login)
         {
@@ -92,6 +93,14 @@ namespace MiniStore
         private void btnNextPage(object sender, EventArgs e)
         {
             int pageIndex = Convert.ToInt32(((Guna.UI2.WinForms.Guna2Button)sender).Tag);
+            Color SelectedColor = Color.FromArgb(15, 87, 221);
+            btnDashboard.FillColor = mainBtnColor;
+            btnInventory.FillColor = mainBtnColor;
+            btnSalesPOS.FillColor = mainBtnColor;
+            btnCustomers.FillColor = mainBtnColor;
+            btnUsers.FillColor = mainBtnColor;
+
+            ((Guna.UI2.WinForms.Guna2Button)sender).FillColor = SelectedColor;
             ChangePage(pageIndex);
         }
         
@@ -110,6 +119,13 @@ namespace MiniStore
 
         private async void ChangePage(int pagenumber)
         {
+
+            btnDashboard.FillColor = mainBtnColor;
+            btnInventory.FillColor = mainBtnColor;
+            btnSalesPOS.FillColor = mainBtnColor;
+            btnCustomers.FillColor = mainBtnColor;
+            btnUsers.FillColor = mainBtnColor;
+
             tcMainScreen.SelectedIndex = pagenumber;
             await PageSetting(pagenumber);
         }
