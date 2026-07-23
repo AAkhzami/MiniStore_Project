@@ -127,6 +127,12 @@
     <Compile Include="Inventory Page\ctrl_InventoryPage.Designer.cs">
       <DependentUpon>ctrl_InventoryPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory Page\frmProductInventoryLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory Page\frmProductInventoryLogs.Designer.cs">
+      <DependentUpon>frmProductInventoryLogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Orders\Control\ctrlOrdersDetailTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -260,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory Page\ctrl_InventoryPage.resx">
       <DependentUpon>ctrl_InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory Page\frmProductInventoryLogs.resx">
+      <DependentUpon>frmProductInventoryLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Orders\Control\ctrlOrdersDetailTable.resx">
       <DependentUpon>ctrlOrdersDetailTable.cs</DependentUpon>
@@ -502,6 +511,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\downloads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
