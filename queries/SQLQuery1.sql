@@ -240,6 +240,15 @@ begin
 	return @CountStock;
 end;
 
+create Function dbo.GetProductStockLogs
+(@ProductID int)
+Returns Table
+as
+return
+(
+	select * from InventoryLogs
+	where ProductID = @ProductID
+);
 
 ------ Store Procedures
 
@@ -277,22 +286,6 @@ begin
 	where UserID = @UserID and IsDeleted = 0;
 end
 
---create procedure SP_GETOrderInformationAtDate
---@Date date,
---@TodaySales decimal(10,3) OUTPUT,
---@TodayOrder int OUTPUT
---as
---begin
---	select
---		@TodaySales = SUM(TotalAmount),
---		@TodayOrder = COUNT(*)
---	from 
---	Orders
---	where OrderDate >= CAST(@Date as DATE)
---	and OrderDate < CAST(DATEADD(DAY,1,@Date) as DATE);
---end
-
-
 create procedure dbo.SP_GetTotalOrdersAtDate
 @Date date,
 @TodayOrders int OutPut
@@ -318,3 +311,4 @@ begin
 	where OrderDate >= CAST(@Date as DATE)
 	and OrderDate < CAST(DATEADD(DAY,1,@Date) as DATE);
 end
+

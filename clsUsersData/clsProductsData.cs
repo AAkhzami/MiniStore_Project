@@ -241,5 +241,31 @@ namespace MiniStoreDB_DataAccess_Layer
             }
             return count;
         }
+        public static async Task<DataTable> GetProductStockLogsByID(int ProductID)
+        {
+            DataTable dt = new DataTable();
+            string query = @"SELECT * FROM [dbo].[GetProductStockLogs] (@ProductID)";
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@ProductID", ProductID);
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        if (reader.HasRows)
+                        {
+                            dt.Load(reader);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+            return dt;
+        }
     }
 }
