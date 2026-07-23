@@ -55,9 +55,9 @@
             this.lblTitle.Location = new System.Drawing.Point(162, 126);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(30, 30, 30, 10);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(332, 45);
+            this.lblTitle.Size = new System.Drawing.Size(313, 45);
             this.lblTitle.TabIndex = 41;
-            this.lblTitle.Text = "Add New Customer";
+            this.lblTitle.Text = "Product Stock Log";
             // 
             // pbLogo_Of_Page
             // 
