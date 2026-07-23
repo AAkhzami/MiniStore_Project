@@ -13,9 +13,11 @@ namespace MiniStore.Inventory_Page
 {
     public partial class frmProductInventoryLogs : Form
     {
-        public frmProductInventoryLogs()
+        int _productID = -1;
+        public frmProductInventoryLogs(int productID)
         {
             InitializeComponent();
+            this._productID = productID; 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace MiniStore.Inventory_Page
         }
         public async void LoadData()
         {
-            DataTable dtAllProductStockLog = await clsCustomers.GetAllCustomers();
+            DataTable dtAllProductStockLog = await clsProducts.GetProductStockLogsByID(this._productID);
             if (dtAllProductStockLog.Rows.Count > 0)
             {
                 DataTable dtLog = dtAllProductStockLog.DefaultView.ToTable(false, "OldStock", "NewStock", "ChangeDate");

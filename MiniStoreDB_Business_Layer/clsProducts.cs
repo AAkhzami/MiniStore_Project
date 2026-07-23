@@ -126,5 +126,9 @@ namespace MiniStoreDB_Business_Layer
         {
             return await clsProductsData.GetProductsInformationPerPage(pageNumber, pageSize);
         }
+        public static async Task<DataTable> GetProductStockLogsByID(int ProductID)
+        {
+            return await clsProductsData.GetProductStockLogsByID(ProductID);
+        }
     }
 }
