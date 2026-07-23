@@ -87,3 +87,4 @@ D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Users.co
 D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Users.control.ctrUsersPage.resources
 D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Users.Current_User.ctrlCurrentUserPage.resources
 D:\Programming\Projects\MiniStore_Project\MiniStore\obj\Debug\MiniStore.Users.frmAddUpdateUser.resources
+C:\Users\Abdullrahman\Desktop\Programing\Database Courses\Projects-C21\MiniStore Project\MiniStore\obj\Debug\MiniStore.Inventory_Page.frmProductInventoryLogs.resources

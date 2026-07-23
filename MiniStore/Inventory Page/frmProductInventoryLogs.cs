@@ -24,7 +24,7 @@ namespace MiniStore.Inventory_Page
         {
             this.Close();
         }
-        public async void LoadData()
+        async void LoadData()
         {
             DataTable dtAllProductStockLog = await clsProducts.GetProductStockLogsByID(this._productID);
             if (dtAllProductStockLog.Rows.Count > 0)

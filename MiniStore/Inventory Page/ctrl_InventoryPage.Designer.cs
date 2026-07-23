@@ -34,6 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgvInventoryProducts = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.cmsInventoryPage = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.editProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAtiveProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.disableDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddNewProduct = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel10 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.cbSearchType = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -48,17 +54,14 @@
             this.lblCounterProductsPerPage = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.cmsInventoryPage = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.editProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmAtiveProduct = new System.Windows.Forms.ToolStripMenuItem();
-            this.disableDeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.stockHistoryToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventoryProducts)).BeginInit();
+            this.cmsInventoryPage.SuspendLayout();
             this.guna2ShadowPanel10.SuspendLayout();
             this.guna2ShadowPanel11.SuspendLayout();
-            this.cmsInventoryPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -122,6 +125,75 @@
             this.dgvInventoryProducts.ThemeStyle.ReadOnly = true;
             this.dgvInventoryProducts.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvInventoryProducts.ThemeStyle.RowsStyle.Height = 60;
+            // 
+            // cmsInventoryPage
+            // 
+            this.cmsInventoryPage.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cmsInventoryPage.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.cmsInventoryPage.ImageScalingSize = new System.Drawing.Size(18, 18);
+            this.cmsInventoryPage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editProductToolStripMenuItem,
+            this.addStockToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.stockHistoryToolStripMenuItem1,
+            this.toolStripSeparator1,
+            this.tsmAtiveProduct,
+            this.disableDeleteToolStripMenuItem,
+            this.viewDetailsToolStripMenuItem});
+            this.cmsInventoryPage.Name = "cmsInventoryPage";
+            this.cmsInventoryPage.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.cmsInventoryPage.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsInventoryPage.RenderStyle.ColorTable = null;
+            this.cmsInventoryPage.RenderStyle.RoundedEdges = true;
+            this.cmsInventoryPage.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsInventoryPage.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmsInventoryPage.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsInventoryPage.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsInventoryPage.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsInventoryPage.Size = new System.Drawing.Size(237, 242);
+            this.cmsInventoryPage.Opening += new System.ComponentModel.CancelEventHandler(this.cmsInventoryPage_Opening);
+            // 
+            // editProductToolStripMenuItem
+            // 
+            this.editProductToolStripMenuItem.Image = global::MiniStore.Properties.Resources.edit;
+            this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
+            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.editProductToolStripMenuItem.Text = "Edit Product";
+            this.editProductToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.editProductToolStripMenuItem.Click += new System.EventHandler(this.editProductToolStripMenuItem_Click);
+            // 
+            // addStockToolStripMenuItem
+            // 
+            this.addStockToolStripMenuItem.Image = global::MiniStore.Properties.Resources.add_2;
+            this.addStockToolStripMenuItem.Name = "addStockToolStripMenuItem";
+            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.addStockToolStripMenuItem.Text = "Add Stock";
+            this.addStockToolStripMenuItem.Click += new System.EventHandler(this.addStockToolStripMenuItem_Click);
+            // 
+            // tsmAtiveProduct
+            // 
+            this.tsmAtiveProduct.Enabled = false;
+            this.tsmAtiveProduct.Name = "tsmAtiveProduct";
+            this.tsmAtiveProduct.Size = new System.Drawing.Size(236, 34);
+            this.tsmAtiveProduct.Text = "Active";
+            this.tsmAtiveProduct.Click += new System.EventHandler(this.tsmActiveProduct_Click);
+            // 
+            // disableDeleteToolStripMenuItem
+            // 
+            this.disableDeleteToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.disableDeleteToolStripMenuItem.Image = global::MiniStore.Properties.Resources.trash;
+            this.disableDeleteToolStripMenuItem.Name = "disableDeleteToolStripMenuItem";
+            this.disableDeleteToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.disableDeleteToolStripMenuItem.Text = "Disable/Delete";
+            this.disableDeleteToolStripMenuItem.Click += new System.EventHandler(this.disableDeleteToolStripMenuItem_Click);
+            // 
+            // viewDetailsToolStripMenuItem
+            // 
+            this.viewDetailsToolStripMenuItem.Image = global::MiniStore.Properties.Resources.view;
+            this.viewDetailsToolStripMenuItem.Name = "viewDetailsToolStripMenuItem";
+            this.viewDetailsToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.viewDetailsToolStripMenuItem.Text = "View Details";
+            this.viewDetailsToolStripMenuItem.Click += new System.EventHandler(this.viewDetailsToolStripMenuItem_Click);
             // 
             // btnAddNewProduct
             // 
@@ -366,71 +438,22 @@
             this.label21.TabIndex = 13;
             this.label21.Text = "Inventory";
             // 
-            // cmsInventoryPage
+            // toolStripSeparator1
             // 
-            this.cmsInventoryPage.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cmsInventoryPage.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.cmsInventoryPage.ImageScalingSize = new System.Drawing.Size(18, 18);
-            this.cmsInventoryPage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editProductToolStripMenuItem,
-            this.addStockToolStripMenuItem,
-            this.tsmAtiveProduct,
-            this.disableDeleteToolStripMenuItem,
-            this.viewDetailsToolStripMenuItem});
-            this.cmsInventoryPage.Name = "cmsInventoryPage";
-            this.cmsInventoryPage.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.cmsInventoryPage.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.cmsInventoryPage.RenderStyle.ColorTable = null;
-            this.cmsInventoryPage.RenderStyle.RoundedEdges = true;
-            this.cmsInventoryPage.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.cmsInventoryPage.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cmsInventoryPage.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.cmsInventoryPage.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.cmsInventoryPage.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsInventoryPage.Size = new System.Drawing.Size(237, 174);
-            this.cmsInventoryPage.Opening += new System.ComponentModel.CancelEventHandler(this.cmsInventoryPage_Opening);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(233, 6);
             // 
-            // editProductToolStripMenuItem
+            // stockHistoryToolStripMenuItem1
             // 
-            this.editProductToolStripMenuItem.Image = global::MiniStore.Properties.Resources.edit;
-            this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
-            this.editProductToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.editProductToolStripMenuItem.Text = "Edit Product";
-            this.editProductToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
-            this.editProductToolStripMenuItem.Click += new System.EventHandler(this.editProductToolStripMenuItem_Click);
+            this.stockHistoryToolStripMenuItem1.Name = "stockHistoryToolStripMenuItem1";
+            this.stockHistoryToolStripMenuItem1.Size = new System.Drawing.Size(236, 34);
+            this.stockHistoryToolStripMenuItem1.Text = "Stock History";
+            this.stockHistoryToolStripMenuItem1.Click += new System.EventHandler(this.stockHistoryToolStripMenuItem1_Click);
             // 
-            // addStockToolStripMenuItem
+            // toolStripSeparator2
             // 
-            this.addStockToolStripMenuItem.Image = global::MiniStore.Properties.Resources.add_2;
-            this.addStockToolStripMenuItem.Name = "addStockToolStripMenuItem";
-            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.addStockToolStripMenuItem.Text = "Add Stock";
-            this.addStockToolStripMenuItem.Click += new System.EventHandler(this.addStockToolStripMenuItem_Click);
-            // 
-            // tsmAtiveProduct
-            // 
-            this.tsmAtiveProduct.Enabled = false;
-            this.tsmAtiveProduct.Name = "tsmAtiveProduct";
-            this.tsmAtiveProduct.Size = new System.Drawing.Size(236, 34);
-            this.tsmAtiveProduct.Text = "Active";
-            this.tsmAtiveProduct.Click += new System.EventHandler(this.tsmActiveProduct_Click);
-            // 
-            // disableDeleteToolStripMenuItem
-            // 
-            this.disableDeleteToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.disableDeleteToolStripMenuItem.Image = global::MiniStore.Properties.Resources.trash;
-            this.disableDeleteToolStripMenuItem.Name = "disableDeleteToolStripMenuItem";
-            this.disableDeleteToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.disableDeleteToolStripMenuItem.Text = "Disable/Delete";
-            this.disableDeleteToolStripMenuItem.Click += new System.EventHandler(this.disableDeleteToolStripMenuItem_Click);
-            // 
-            // viewDetailsToolStripMenuItem
-            // 
-            this.viewDetailsToolStripMenuItem.Image = global::MiniStore.Properties.Resources.view;
-            this.viewDetailsToolStripMenuItem.Name = "viewDetailsToolStripMenuItem";
-            this.viewDetailsToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
-            this.viewDetailsToolStripMenuItem.Text = "View Details";
-            this.viewDetailsToolStripMenuItem.Click += new System.EventHandler(this.viewDetailsToolStripMenuItem_Click);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(233, 6);
             // 
             // ctrl_InventoryPage
             // 
@@ -445,10 +468,10 @@
             this.Load += new System.EventHandler(this.ctrl_InventoryPage_Load);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventoryProducts)).EndInit();
+            this.cmsInventoryPage.ResumeLayout(false);
             this.guna2ShadowPanel10.ResumeLayout(false);
             this.guna2ShadowPanel11.ResumeLayout(false);
             this.guna2ShadowPanel11.PerformLayout();
-            this.cmsInventoryPage.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,5 +501,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmAtiveProduct;
         private System.Windows.Forms.ToolStripMenuItem disableDeleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem stockHistoryToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

@@ -296,5 +296,12 @@ namespace MiniStore.Inventory_Page
             frmProductDetails frm = new frmProductDetails(productID);
             frm.ShowDialog();
         }
+
+        private void stockHistoryToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int productID = (int)dgvInventoryProducts.CurrentRow.Cells[0].Value;
+            frmProductInventoryLogs frm = new frmProductInventoryLogs(productID);
+            frm.ShowDialog();
+        }
     }
 }
